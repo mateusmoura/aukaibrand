@@ -1,0 +1,129 @@
+Mensaje de Bienvenida
+	i18n_input
+		name = welcome_message
+		description = Escribe un mensaje de bienvenida
+
+Facebook
+	checkbox
+		name = show_footer_fb_like_box
+		description = Mostrar caja de Facebook en el footer (se debe configurar la página de Facebook en 'Información de contacto')
+	checkbox
+		name = show_product_fb_comment_box
+		description = Mostrar caja de comentarios de Facebook en la vista de un producto
+	text
+		name = fb_admins
+		description = ID del usuario moderador de los comentarios de Facebook (obtener <a target='_blank' href='http://findmyfacebookid.com/'>aquí</a>)
+
+Fuentes
+	font
+		name = headings
+		description = Títulos
+		values
+			Georgia,"Times New Roman",serif = Georgia
+			Arial,sans-serif = Arial
+			Helvetica,Arial,sans-serif = Helvetica
+			"Times New Roman",Times,serif = Times New Roman
+			Verdana,Geneva,sans-serif = Verdana
+			Tahoma,Geneva,sans-serif = Tahoma			
+			"Palatino Linotype","Book Antiqua",Palatino,serif = Palatino Linotype
+			Impact,Charcoal,sans-serif = Impact
+			"Open Sans",sans-serif = Open Sans
+	font
+		name = navigationBar
+		description = Barra de navegación
+		values
+			Georgia,"Times New Roman",serif = Georgia
+			Arial,sans-serif = Arial
+			Helvetica,Arial,sans-serif = Helvetica
+			"Times New Roman",Times,serif = Times New Roman
+			Verdana,Geneva,sans-serif = Verdana
+			Tahoma,Geneva,sans-serif = Tahoma			
+			"Palatino Linotype","Book Antiqua",Palatino,serif = Palatino Linotype
+			Impact,Charcoal,sans-serif = Impact
+			"Open Sans",sans-serif = Open Sans
+	font
+		name = navigationCategories
+		description = Categorías
+		values
+			Georgia,"Times New Roman",serif = Georgia
+			Arial,sans-serif = Arial
+			Helvetica,Arial,sans-serif = Helvetica
+			"Times New Roman",Times,serif = Times New Roman
+			Verdana,Geneva,sans-serif = Verdana
+			Tahoma,Geneva,sans-serif = Tahoma			
+			"Palatino Linotype","Book Antiqua",Palatino,serif = Palatino Linotype
+			Impact,Charcoal,sans-serif = Impact
+			"Open Sans",sans-serif = Open Sans
+	font
+		name = rest
+		description = Resto del sitio
+		values
+			Georgia,"Times New Roman",serif = Georgia
+			Arial,sans-serif = Arial
+			Helvetica,Arial,sans-serif = Helvetica
+			"Times New Roman",Times,serif = Times New Roman
+			Verdana,Geneva,sans-serif = Verdana
+			Tahoma,Geneva,sans-serif = Tahoma			
+			"Palatino Linotype","Book Antiqua",Palatino,serif = Palatino Linotype
+			Impact,Charcoal,sans-serif = Impact
+			"Open Sans",sans-serif = Open Sans
+
+Colores
+	color
+		name = border_color
+		description = Bordes
+	
+	color
+		name = button_color
+		description = Fondos y botones
+		
+	color
+		name = links_color
+		description = Títulos y links
+		
+	color
+		name = links_hover
+		description = Links resaltados
+
+Página de inicio
+	dropdown
+		name = home_display
+		description = ¿Qué mostrar en la página de inicio?
+		values
+			products = Productos Destacados
+			slider = Slider
+			both = Ambos
+	checkbox
+		name = slider_auto
+		description = Cambiar la imagen de manera automática en el slider
+	gallery
+		name = slider
+		description = Selecciona las imágenes del slider (recomendamos que todas las imágenes sean del mismo tamaño con un ancho de 720px)
+		gallery_image = Selecciona una imagen
+		gallery_link = Link de la imagen (opcional)
+		gallery_width = 720
+
+Banners
+	image
+		original = banner-home.jpg
+		description = Elige un banner para la página de inicio (recomendamos utilizar imágenes de 728x90 px)
+	i18n_input
+		name = banner_home_url
+		description = Link para el banner de la página de inicio (opcional)
+	image
+		original = banner-products.jpg
+		description = Elige un banner para el listado de productos (recomendamos utilizar imágenes de 728x90 px)
+	i18n_input
+		name = banner_products_url
+		description = Link para el banner del listado de productos (opcional)
+	image
+		original = banner-sidebar.jpg
+		description = Elige un banner para la barra lateral (recomendamos utilizar imágenes de 120x600 px)
+	i18n_input
+		name = banner_sidebar_url
+		description = Link para el banner de la barra lateral (opcional)
+
+Listado de productos
+	checkbox
+		name = infinite_scrolling
+		description = ¿Cargar productos automáticamente a medida que el visitante se desplaza?

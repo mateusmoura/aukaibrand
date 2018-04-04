@@ -1,0 +1,139 @@
+Colores
+	color
+		name = navBackground
+		description = Barra de navegación
+	color
+		name = navText
+		description = Textos en botones de barra de navegación
+	color
+		name = logoFooterText
+		description = Texto del logo y links al final de la página
+Tipo de Letra
+	font
+		name = headings
+		description = Títulos
+		values
+			Helvetica,Arial,sans-serif = Helvetica
+			"Open Sans",sans-serif = Open Sans
+			Arial,sans-serif = Arial
+			"Times New Roman",Times,serif = Times New Roman
+			Georgia,"Times New Roman",serif = Georgia
+			Verdana,Geneva,sans-serif = Verdana
+			Tahoma,Geneva,sans-serif = Tahoma
+			"Palatino Linotype","Book Antiqua",Palatino,serif = Palatino Linotype
+			Impact,Charcoal,sans-serif = Impact
+	font
+		name = navigation
+		description = Barra de navegación
+		values
+			Helvetica,Arial,sans-serif = Helvetica
+			"Open Sans",sans-serif = Open Sans
+			Arial,sans-serif = Arial
+			"Times New Roman",Times,serif = Times New Roman
+			Georgia,"Times New Roman",serif = Georgia
+			Verdana,Geneva,sans-serif = Verdana
+			Tahoma,Geneva,sans-serif = Tahoma
+			"Palatino Linotype","Book Antiqua",Palatino,serif = Palatino Linotype
+			Impact,Charcoal,sans-serif = Impact
+	font
+		name = rest
+		description = Resto del sitio
+		values
+			Helvetica,Arial,sans-serif = Helvetica
+			Arial,sans-serif = Arial
+			"Open Sans",sans-serif = Open Sans
+			"Times New Roman",Times,serif = Times New Roman
+			Georgia,"Times New Roman",serif = Georgia
+			Verdana,Geneva,sans-serif = Verdana
+			Tahoma,Geneva,sans-serif = Tahoma
+			"Palatino Linotype","Book Antiqua",Palatino,serif = Palatino Linotype
+			Impact,Charcoal,sans-serif = Impact
+Imágenes
+	gallery
+		name = slider
+		description = Selecciona las imágenes que van a ir pasando en la página de inicio
+		gallery_image = Selecciona una imagen
+		gallery_link = [Opcional] Página web a la que quieres que te lleve la imagen al hacer click
+		gallery_width = 920
+	checkbox
+		name = slider_auto
+		description = Pasar las imágenes de forma automática
+	image
+		original = banner-home.jpg
+		description = Banner para la página de inicio (recomendamos utilizar imágenes de 728x90 px)
+	i18n_input
+		name = banner_home_url
+		description = [Opcional] Página web a la que quieres que te lleve el banner de la página de inicio al hacer click
+	image
+		original = banner-products.jpg
+		description = Banner para las páginas de categorias (recomendamos utilizar imágenes de 728x90 px)
+	i18n_input
+		name = banner_products_url
+		description = [Opcional] Página web a la que quieres que te lleve el banner de las páginas de categorías al hacer click
+	image
+		original = banner-sidebar.jpg
+		description = Banner para la barra lateral (recomendamos utilizar imágenes de 160x600 px)
+	i18n_input
+		name = banner_sidebar_url
+		description = [Opcional] Página web a la que quieres que te lleve el banner de la barra lateral al hacer click
+Social
+	checkbox
+		name = show_footer_fb_like_box
+		description = Mostrar el recuadro de 'Me gusta' de tu Página de Facebook en la página de inicio (tienes que configurar la página de Facebook en 'Información de contacto')
+	checkbox
+		name = show_product_fb_comment_box
+		description = Permitir que tus clientes te dejen comentarios con su usuario de Facebook en la página de producto
+	text
+		name = fb_admins
+		description = Para moderar los comentarios de Facebook necesitamos tu ID de Facebook (puedes obtenerlo <a target='_blank' href='http://findmyfacebookid.com/'>aquí</a>)
+Opciones generales
+	dropdown
+		name = background
+		description = Elige una imagen de fondo prediseñada
+		values
+			bg.png      = Madera Negra Fina
+			wood-d.jpg  = Madera Negra Gruesa
+			wood-l.jpg  = Madera Marrón Claro Gruesa
+			wood-m.jpg  = Madera Marrón Oscuro Gruesa
+			galaxy.jpg  = Constelaciones
+			leather.jpg = Cuero
+	image
+		original = custom_background.jpg
+		description = o sube tu propia imagen de fondo
+	checkbox
+		name = infinite_scrolling
+		description = ¿Permitir que en el listado de productos tus clientes carguen nuevos productos cuando llegan al final de la página?
+	text
+		name = cart_minimum_value
+		description = Monto mínimo de compra
+	checkbox
+		name = continue_buying
+		description = Mostrar el botón de 'Seguir comprando' en el carrito de compras
+Banner de Servicios
+	checkbox
+		name = banner_services
+		description = Mostrar el banner de servicios en toda la tienda (se verá arriba del footer)
+	checkbox
+		name = banner_services_home
+		description = Mostrar el banner de servicios solo en la home (se verá debajo del slider)
+	checkbox
+		name = banner_services_category
+		description = Mostrar el banner de servicios en la lista de productos (se verá arriba de los productos)
+	i18n_input
+		name = banner_services_01_title
+		description = Título del banner para envíos
+	i18n_input
+		name = banner_services_01_description
+		description = Descripción del banner para envíos
+	i18n_input
+		name = banner_services_02_title
+		description = Título del banner para tarjetas de crédito
+	i18n_input
+		name = banner_services_02_description
+		description = Descripción del banner para tarjetas de crédito
+	i18n_input
+		name = banner_services_03_title
+		description = Título del banner para seguridad
+	i18n_input
+		name = banner_services_03_description
+		description = Descripción del banner para seguridad

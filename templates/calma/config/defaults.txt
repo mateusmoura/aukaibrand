@@ -1,0 +1,15 @@
+bg_color              = #003C3D
+bg_top                = #f1f1f1
+bg_bottom             = #ffffff
+nav_main_color	      = #7FAD97
+nav_secondary_color   = #D9FFED
+nav_hover_color       = #84DBC8
+nav_active_text_color = #262626
+border_color          = #E8E8E8
+text_color            = #262626
+link_color            = #F5701B
+link_hover_color      = #E24B1B
+slider_auto           = 1
+infinite_scrolling    = 1
+show_footer_fb_like_box = 0
+show_product_fb_comment_box = 0

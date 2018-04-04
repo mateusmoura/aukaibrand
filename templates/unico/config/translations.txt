@@ -1,0 +1,394 @@
+es "Ver Detalles"
+pt "Ver Detalhes"
+en "View Details"
+
+es "El diseño Unico te permite elegir tu mejor producto y destacarlo junto con otros productos secundarios."
+pt "O layout Unico permite que você selecione o seu melhor produto e mostra-ló com outros produtos secundários."
+en "Unico theme allows to choose your best product and show it on the front page, surrounded by secondary products."
+
+es "1 ítem" 
+pt "1 item"
+en "1 item"
+
+es "{1} ítems" 
+pt "{1} itens"
+en "{1} items"
+
+es "En hasta {1} cuotas de {2} sin interés"
+pt "Em até {1}x de {2} sem juros"
+en "In up to {1} installments of {2} without interest"
+
+es "En hasta {1} cuotas en tarjeta de crédito"
+pt "Em até {1}x no cartão"
+en "In up to {1} installments"
+
+es "Ver el detalle de las cuotas"
+pt "Ver detalhes das parcelas"
+en "See installments details"
+
+es "Productos" 
+pt "Produtos"
+en "Products"
+
+es "No podemos ofrecerte {1} unidades de {2}. Solamente tenemos {3} unidades." 
+pt "Não podemos te oferecer {1} unidades do produto {2}. No momento, somente possuímos {3} unidades"
+en "We cannot offer you {1} units of {2}. We only have {3} left in stock."
+
+es "Iniciar sesión"
+pt "Login"
+en "Log in"
+
+es "Crear cuenta"
+pt "Cadastre-se"
+en "Register"
+
+es "Cerrar sesión"
+pt "Sair"
+en "Log out"
+
+es "Mi cuenta"
+pt "Minha conta"
+en "My account"
+
+es "Carrito vacío" 
+pt "Carrinho vazio"
+en "Empty cart"
+
+es "No hay suficiente stock para agregar este producto al carrito."  
+pt "Desculpe, mas não há estoque suficiente para incluir este produto ao carrinho."
+en "There's not enough stock left to add this product to the shopping cart."
+
+es "No hay productos en esta categoría."
+pt "Não existem produtos nesta categoria."
+en "There are no products in this category yet."
+
+es "Seguir comprando..."  
+pt "Continuar comprando..."
+en "Continue shopping..."
+
+es "Agregando..."  
+pt "Incluindo..."
+en "Adding..."
+
+es "pág."  
+pt "pág."
+en "page"
+
+es "Este es un sitio de ejemplo creado con <a target="_blank" href="http://www.tiendanube.com">Tienda Nube</a>"  
+pt "Este é um exemplo de site criado com <a target="_blank" href="http://www.tiendanube.com">Tienda Nube</a>"
+en "This is a sample site created with <a target="_blank" href="http://www.tiendanube.com">Tienda Nube</a>"
+
+es "t:"  
+pt "Tel:"
+en "Tel:"
+
+es "e:"  
+pt "e-mail:"
+en "Email:"
+
+es "Buscar"  
+pt "Buscar"
+en "Search"
+
+es "Inicio"  
+pt "Home"
+en "Home"
+
+es "Carrito de Compras"  
+pt "Carrinho de Compras"
+en "Shopping Cart"
+
+es "Producto"  
+pt "Produto"
+en "Product"
+
+es "Cantidad"  
+pt "Quantidade"
+en "Quantity"
+
+es "Precio"  
+pt "Preço"
+en "Price"
+
+es "Stock"
+pt "Estoque"
+en "Stock"
+
+es "Subtotal"  
+pt "Subtotal"
+en "Subtotal"
+
+es "Eliminar"  
+pt "Remover"
+en "Remove"
+
+es "Total"  
+pt "Total"
+en "Total"
+
+es "Actualizar Cantidades"  
+pt "Alterar Quantidades"
+en "Update quantities"
+
+es "Iniciar Compra"  
+pt "Finalizar Compra"
+en "Go to Checkout"
+
+es "El carrito de compras está vacío."  
+pt "O carrinho de compras está vazio."
+en "The shopping cart is empty."
+
+es "Contacto"  
+pt "Contato"
+en "Contact"
+
+es "Dirección"  
+pt "Endereço"
+en "Address"
+
+es "Email"  
+pt "E-mail"
+en "Email"
+
+es "Teléfono"  
+pt "Telefone"
+en "Phone"
+
+es "Siguenos en"
+pt "Siga-nos no"
+en "Follow us"
+
+es "El mensaje ha sido enviado con éxito, muchas gracias."  
+pt "A mensagem foi enviada com sucesso, muito obrigado."
+en "The message has been sent, thank you."
+
+es "Debes completar los datos de contacto."  
+pt "Verifique os dados digitados para que possamos entrar em contato."
+en "You must fill in your contact details."
+
+es "Nombre"  
+pt "Nome Completo"
+en "Name"
+
+es "Mensaje"  
+pt "Mensagem"
+en "Message"
+
+es "No completar este campo"
+pt "Não preencher este campo"
+en "Do not fill this field"
+
+es "Opcional"
+pt "Opcional"
+en "Optional"
+
+es "Enviar"  
+pt "Enviar"
+en "Send"
+
+es "Compartí este producto"  
+pt "Compartilhar este produto"
+en "Share this product"
+
+es "Agregar al carrito"  
+pt "Comprar"
+en "Add to cart"
+
+es "Anterior"
+pt "Anterior"
+en "Previous"
+
+es "Siguiente"
+pt "Seguinte"
+en "Next"
+
+es "Consultar precio"
+en "Contact for price"
+pt "Preço sob Consulta"
+
+es "Sin stock"  
+pt "Esgotado"
+en "Out of stock"
+
+es "Medios de pago"
+pt "Formas de pagamento"
+en "Payment methods"
+
+es "Formas de envío"
+pt "Formas de envio"
+en "Shipping methods"
+
+es "Ingrese aquí su código postal para calcular su costo de envío"
+pt "Digite aqui o seu CEP para calcular o frete"
+en "Enter your zipcode to calculate your shipping cost"
+
+es "Calcular costo de envío"
+pt "Calcular Frete"
+en "Calculate shipping"
+
+es "El código postal es inválido."
+pt "O CEP está inválido."
+en "The zipcode is not valid."
+
+es "Vea las opciones de envío para su código postal abajo"
+pt "Veja os valores para o seu CEP abaixo"
+en "Your shipping options are the following"
+
+es "No hay costos de envío para el código postal dado."
+pt "Não há frete disponível para o CEP informado."
+en "Shipping is not available for your zipcode."
+
+es "Error"  
+pt "Erro"
+en "Error"
+
+es "Página no encontrada." 
+pt "Página não encontrada."
+en "Page not found."
+
+es "La página que estás buscando no existe. De todos modos te invitamos a que mires los productos debajo." 
+pt "Desculpe, mas a página que você está procurando não existe. De qualquer forma, nós convidamos você a olhar para os produtos abaixo."
+en "The page you're looking for doesn't exist. However, we invite you to take a look at the following products."
+
+es "Bienvenidos!"  
+pt "Bem-vindo!"
+en "Welcome!"
+
+es "Resultados de búsqueda"
+pt "Resultados da pesquisa"
+en "Search results"
+
+es "Mueve el mouse sobre la foto para hacer zoom"
+pt "Passe o mouse e veja mais detalhes"
+en "Move your mouse over the image to zoom"
+
+es "Cargando..."
+pt "Carregando..."
+en "Loading..."
+
+es "No hay resultados para ""{1}""."
+pt "Nenhum resultado para ""{1}""."
+en "There are no results for ""{1}""."
+
+es "Si"
+pt "Sim"
+en "Yes"
+
+es "No"
+pt "Não"
+en "No"
+
+es "Consultar"
+pt "Sob Consulta"
+en "Contact"
+
+--- Sections ---
+es "Producto Único"
+pt "Único Produto"
+
+es "Pon aquí el producto principal de tu sitio"
+pt "Coloque aqui o produto principal da sua loja"
+
+es "Otros Destacados"
+pt "Outros Destaques"
+
+es "Pon aquí el resto de los productos que deseas destacar"
+pt "Coloque aqui o restante dos produtos que deseja destacar"
+
+--- Settings ---
+es "Mensajes para tu cliente"
+pt "Mensagens para seu cliente"
+
+es "Escribe un mensaje breve sobre tu mejor producto"
+pt "Escreva uma mensagem curta sobre o seu melhor produto. Por Exemplo: É muito fácil de utilizar, de lavar e de guardar!"
+
+es "Escribe un mensaje breve sobre tus productos secundarios"
+pt "Escreva uma mensagem curta sobre seus produtos secundários. Por exemplo: Veja também estes nossos produtos, pois o preço e a qualidade são ótimas!"
+
+es "Barra de navegación"
+pt "Barra de navegação"
+
+es "Fuentes"
+pt "Fontes"
+
+es "Títulos"
+pt "Títulos"
+
+es "Resto del sitio"
+pt "Resto do site"
+
+es "Colores"
+pt "Cores"
+
+es "Textos"
+pt "Textos"
+
+es "Botones"
+pt "Botões"
+
+es "Degradé en los botones"
+pt "Gradiente em botões"
+
+es "Botones al pasar el mouse encima"
+pt "Botões em foco"
+
+es "Página de inicio"
+pt "Home"
+
+es "¿Mostrar slider en la página de inicio?"
+pt "Mostrar Slide Show na home?"
+
+es "Cambiar la imagen de manera automática en el slider"
+pt "Alterar a imagem de maneira automática no Slide Show"
+
+es "Selecciona las imágenes del slider (recomendamos que todas las imágenes sean del mismo tamaño con un ancho de 810px)"
+pt "Selecione as imagens do Slide Show (recomendamos que todas as imagens sejam do mesmo tamanho com uma largura de 810px)"
+
+es "Selecciona una imagen"
+pt "Anexar uma imagem"
+
+es "Link de la imagen (opcional)"
+pt "Link para onde a imagem levará (opcional)"
+
+es "Banners"
+pt "Banners"
+
+es "Elige un banner para la página de inicio (recomendamos utilizar imágenes de 728x90 px)"
+pt "Escolha um banner para o Home (recomendamos utilizar imagens de 728x90 px)"
+
+es "Link para el banner de la página de inicio (opcional)"
+pt "Link para o banner da home (opcional)"
+
+es "Elige un banner para el listado de productos (recomendamos utilizar imágenes de 728x90 px)"
+pt "Escolha um banner para a lista de produtos (recomendamos utilizar imagens de 728x90 px)"
+
+es "Link para el banner del listado de productos (opcional)"
+pt "Link para o banner da lista de produtos (opcional)"
+
+es "Listado de productos"
+pt "Lista de Produtos"
+
+es "¿Cargar productos automáticamente a medida que el visitante se desplaza?"
+pt "Você deseja carregar automaticamente os produtos a medida em que o seu cliente desce a barra de rolagem?"
+
+es "Mostrar caja de Facebook en el footer (se debe configurar la página de Facebook en 'Información de contacto')"
+pt "Mostrar a caixa do Facebook no rodapé (é necessário antes preencher sua página do Facebook em 'Informação de contato')"
+
+es "Mostrar caja de comentarios de Facebook en la vista de un producto"
+pt "Mostrar a caixa dos comentários do Facebook na página de um produto"
+
+es "ID del usuario moderador de los comentarios de Facebook (obtener <a target='_blank' href='http://findmyfacebookid.com/'>aquí</a>)"
+pt "ID do usuário moderador dos comentários do Facebook (obter <a target='_blank' href='http://findmyfacebookid.com/'>aqui</a>)"
+
+--- Variants ---
+es "Naranja"
+pt "Laranja"
+
+es "Azul"
+pt "Azul"
+
+es "Verde"
+pt "Verde"
+
+es "Violeta"
+pt "Violeta"

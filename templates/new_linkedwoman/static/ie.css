@@ -1,0 +1,37 @@
+#product-listing .product,
+.dest-gral,
+.dest{
+	float:left;
+	margin-left:10px;
+	margin-top:10px;
+}
+
+.product-table{
+	margin-bottom:10px;
+	border-spacing:0;
+}
+
+/* Navigation */
+#navigation{
+	display:block;
+    overflow:hidden;
+}
+
+#menu{
+	display:block;
+	float:left;
+}
+
+.mobile {
+    display: none;
+}
+
+#newsletter input[type="news"], #newsletter input[type="text"] {
+background: rgba(255, 255, 255, 0.2); /* browsers */
+filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#ccffffff', endColorstr='#ccffffff'); /* IE */
+}
+
+#newsletter input.btn {
+background: rgba(255, 255, 255, 0.4); /* browsers */
+filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#66ffffff', endColorstr='#66ffffff'); /* IE */
+}

@@ -1,0 +1,51 @@
+Variante Verde
+	bg_color              = #003C3D
+	bg_top                = #f1f1f1
+	bg_bottom             = #ffffff
+	nav_main_color	      = #7FAD97
+	nav_secondary_color   = #D9FFED
+	nav_hover_color       = #84DBC8
+	nav_active_text_color = #262626
+	border_color          = #E8E8E8
+	text_color            = #262626
+	link_color            = #F5701B
+	link_hover_color      = #E24B1B
+
+Variante Gris
+	bg_color              = #f5f5f5
+	bg_top                = #ffffff
+	bg_bottom             = #ffffff
+	nav_main_color	      = #f5f5f5
+	nav_secondary_color   = #fbfbf8
+	nav_hover_color       = #A7B8C4
+	nav_active_text_color = #236385
+	border_color          = #D9DBDD
+	text_color            = #444444
+	link_color            = #318AB9
+	link_hover_color      = #236385
+
+Variante Crema
+	bg_color              = #FCFFDE
+	bg_top                = #FCFFDE
+	bg_bottom             = #FCFFDE
+	nav_main_color	      = #B0A27F
+	nav_secondary_color   = #F0DDAD
+	nav_hover_color       = #DB7323
+	nav_active_text_color = #140409
+	border_color          = #FCFFDE
+	text_color            = #140409
+	link_color            = #DB7323
+	link_hover_color      = #BD631E
+	
+Variante Rosa
+	bg_color              = #281246
+	bg_top                = #F0F0F0
+	bg_bottom             = #F0F0F0
+	nav_main_color	      = #F0788C
+	nav_secondary_color   = #F6B1C3
+	nav_hover_color       = #DE264C
+	nav_active_text_color = #24151C
+	border_color          = #F6B1C3
+	text_color            = #24151C
+	link_color            = #A20D1E
+	link_hover_color      = #DE264C

@@ -1,0 +1,16 @@
+solo_product_message_es = Personaliza este texto en Opciones de Diseño
+solo_product_message_pt = Personalizar este texto em Opções de Design
+solo_product_message_en = Customize this text in Design Options
+
+related_product_message_es = Algunos de mis mejores productos
+related_product_message_pt = Veja alguns dos meus produtos
+related_product_message_en = Some of my best products
+
+main_color					= #EF5411
+button_color_from			= #FA5B0F
+button_color_to				= #FF6517
+button_color_hover			= #FF6D1F
+
+infinite_scrolling = 1
+show_footer_fb_like_box = 0
+show_product_fb_comment_box = 0

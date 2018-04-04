@@ -1,0 +1,372 @@
+Colores de tu marca
+	title
+		title = Probá nuestras combinaciones
+	subtitle
+		subtitle = ¡Elegí la combinación que más te guste! 
+	subtitle
+		subtitle = <a target='_blank' href='http://ayuda.tiendanube.com/customer/portal/articles/1668847/?utm_source=admin-desktop&utm_medium=feature-page&utm_campaign=help'>¿Cómo cambio los colores de mi diseño?</a>
+	palettes
+		palettes
+			palette_1
+				primary_color = #0CE8DD
+				secondary_color = #151515
+				fondo_color = #F9F9F2
+				texto_color = #808080	
+				logo_bg = #FFFFFF
+			palette_2
+				primary_color = #E84848
+				secondary_color = #C9C9C9
+				fondo_color = #F5F5F5
+				texto_color = #808080	
+				logo_bg = #FFFFFF
+			palette_3
+				primary_color = #EFF2DD
+				secondary_color = #EE4848
+				fondo_color = #5C3551
+				texto_color = #EFF2DD	
+				logo_bg = #EE4848
+	title
+		title = Configuración avanzada
+	color
+		name = primary_color
+		description = Color principal de tu marca
+	color
+		name = secondary_color
+		description = Color secundario de tu marca
+	color
+		name = fondo_color
+		description = Color de fondo
+	color
+		name = texto_color
+		description = Color de los textos
+	color
+		name = logo_bg
+		description = Color de fondo del logo
+		
+Tipo de letra
+	font
+		name = font_headings
+		description = Títulos de páginas y banners
+		values
+			"Playfair Display", Helvetica, Arial, sans-serif = Playfair
+			Arial,sans-serif = Arial
+			"Times New Roman",Times,serif = Times New Roman
+			Georgia,"Times New Roman",serif = Georgia
+			Verdana,Geneva,sans-serif = Verdana
+			Tahoma,Geneva,sans-serif = Tahoma
+			"Palatino Linotype","Book Antiqua",Palatino,serif = Palatino Linotype
+			"Open Sans",sans-serif = Open Sans
+			"Slabo 27px", serif = Slabo
+			"Lora", serif = Lora			
+			"Droid Sans", Sans-serif = Droid Sans
+	font
+		name = font_rest
+		description = Texto en el resto del sitio
+		values
+			"Lato", Helvetica, Arial, sans-serif = Lato
+			Arial,sans-serif = Arial
+			"Times New Roman",Times,serif = Times New Roman
+			Georgia,"Times New Roman",serif = Georgia
+			Verdana,Geneva,sans-serif = Verdana
+			Tahoma,Geneva,sans-serif = Tahoma
+			"Palatino Linotype","Book Antiqua",Palatino,serif = Palatino Linotype
+			"Open Sans",sans-serif = Open Sans
+			"Slabo 27px", serif = Slabo
+			"Lora", serif = Lora			
+			"Droid Sans", Sans-serif = Droid Sans
+
+Carrusel de imágenes
+	gallery
+		name = slider
+		description = Elegí las imágenes que pasarán en el tope de la página de inicio, debajo del menú principal
+		gallery_image = Agregar imagen
+		gallery_link = [Opcional] Página web a la que quieres que te lleve la imagen al hacer click
+		gallery_width = 1580
+
+Menúes
+	title
+		title = Menú principal 
+	subtitle
+		subtitle = Mostrar el menú reducido (header). Este menú aparecerá en la navegación principal de tu sitio. Si aún no configuraste ninguno, podés hacerlo <a target='_blank' href='/admin/navigation/?ref=submenu'>desde acá</a>
+	checkbox
+		name = sticky_header
+		description = Tus clientes verán un menú fijo cuando se desplacen hacia abajo en el sitio. 
+	
+	subtitle
+		subtitle = Elegí el menú para el final de la página (footer). Si aún no configuraste ninguno, podés hacerlo <a target='_blank' href='/admin/navigation/?ref=submenu'>desde acá</a>
+	subtitle
+		subtitle = <a target='_blank' href='http://ayuda.tiendanube.com/customer/en/portal/articles/1739847/?utm_source=admin-desktop&utm_medium=feature-page&utm_campaign=help'>¿Cómo cambio el menú inferior de mi tienda?</a>
+	menu
+		name = footer_menu
+		description = ¿Qué menú vas a mostrar al final de la página?
+
+	subtitle
+		subtitle = Elige un título para identificar el menú
+	i18n_input
+		name = footer_navigation_text
+		description = Título del menú del final de la página
+	checkbox
+		name = product_filters
+		description = Mostrar barra lateral con filtros en listado de productos
+
+Redes sociales
+	title
+		title = Facebook
+	subtitle
+		subtitle = Recuadro de 'Me gusta' de tu Página de Facebook
+	checkbox
+		name = show_footer_fb_like_box
+		description = Mostrar el recuadro de 'Me gusta' de tu Página de Facebook en la página de inicio (tienes que configurar la página de Facebook en 'Información de contacto')
+	subtitle
+		subtitle = Comentarios en el producto
+	checkbox
+		name = show_product_fb_comment_box
+		description = Permitir que tus clientes te dejen comentarios con su usuario de Facebook en la página de producto
+	subtitle
+		subtitle = Moderar comentarios de facebook
+	text
+		name = fb_admins
+		description = Para moderar los comentarios de Facebook necesitamos tu ID de tu perfil de Facebook (puedes obtenerlo <a target='_blank' href='http://findmyfacebookid.com/'>aquí</a>)
+	title
+		title = Twitter
+	subtitle
+		subtitle = Mostrar tus últimos Tweets
+	textarea
+		name = twitter_widget
+		description = Mostrar tus últimos Tweets (se debe configurar <a href='https://twitter.com/settings/widgets/' target='_blank'>un nuevo widget en Twitter</a> y copiar y pegar el HTML aquí)
+
+Newsletter
+	title
+		title = Suscripción al newsletter desde el footer
+	subtitle
+		subtitle = Elegí el título para la sección 'Newsletter' en el footer
+	i18n_input
+		name = news_footer_title_text
+		description = Texto que deseas que aparezca en el componente de Newsletter
+	i18n_input
+		name = news_footer_pitch_text
+		description = ¡Escribí algo para que tus clientes se suscriban a tu newsletter!
+
+	title
+		title = Suscripción al newsletter desde un pop-up en el inicio
+	checkbox
+		name = show_news_box
+		description = Permitir que tus clientes se registren para recibir novedades desde un pop-up en la página de inicio
+
+	subtitle
+		subtitle = Frase motivadora para el pop-up
+	i18n_input
+		name = news_popup_txt
+		description = ¡Invitá a los clientes a registrarse para recibir tus novedades!
+
+	subtitle
+		subtitle = Imagen para el pop-up
+	subtitle
+		subtitle = <a target='_blank' href='http://ayuda.tiendanube.com/customer/en/portal/articles/2081136/?utm_source=admin-desktop&utm_medium=feature-page&utm_campaign=help'>¿Qué es un pop-up y cómo lo agrego?</a>
+	image
+		original = newsletter_image.jpg
+		description = Usá una imagen atractiva para aumentar las suscripciones. Te recomendamos que midan 280 x 320 px
+
+Banners con imágenes y textos	
+
+	title
+		title = Banners para la página de inicio
+	subtitle
+		subtitle = Banner izquierdo
+	image
+		original = banner-home.jpg
+		description = Te recomendamos utilizar imágenes de 580x295 px. <a target='_blank' href='http://ayuda.tiendanube.com/customer/en/portal/articles/1616533'>¿Cuál es el tamaño recomendado del banner?</a>
+	i18n_input
+		name = banner_home_url
+		description = [Opcional] Página web a la que quieres que te lleve el banner izquierdo de la página de inicio al hacer click
+	i18n_input
+		name = banner_home_description
+		description = [Opcional] Texto del banner
+	
+	subtitle
+		subtitle = Banner derecho
+	image
+		original = banner-home-2.jpg
+		description = Te recomendamos utilizar imágenes de 580x295 px 
+	i18n_input
+		name = banner_home_url_2
+		description = [Opcional] Página web a la que quieres que te lleve el banner derecho de la página de inicio al hacer click
+	i18n_input
+		name = banner_home_description_2
+		description = [Opcional] Texto del banner
+	title
+		title = Banner para las páginas de categorías, páginas de producto y carrito de compras
+	image
+		original = banner-product-3.jpg
+		description = [Opcional] Imágen del banner (recomendamos utilizar imágenes de 1350x290px)
+	i18n_input
+		name = banner_products_description
+		description = [Opcional] Texto del banner	
+	i18n_input
+		name = banner_products_url
+		description = [Opcional] Página web a la que quieres que te lleve el banner al hacer click
+	dropdown
+		name = banner_products_align
+		description = Alineación del texto del banner
+		values
+			aligncategory_left = Izquierda
+			aligncategory_center = Centro
+			aligncategory_right = Derecha
+	
+	title
+		title = Banner para la página de contacto
+	image
+		original = banner-contact.jpg
+		description = [Opcional] Imágen del banner (recomendamos utilizar imágenes de 1350x290px)
+	i18n_input
+		name = banner_contact_description
+		description = [Opcional] Texto del banner
+	i18n_input
+		name = banner_contact_url
+		description = [Opcional] Página web a la que quieres que te lleve el banner al hacer click
+	dropdown
+		name = banner_contact_align
+		description = Alineación del texto del banner
+		values
+			aligncontact_left = Izquierda
+			aligncontact_center = Centro
+			aligncontact_right = Derecha
+
+Banners de envíos, cuotas y seguridad
+	title
+		title = Ubicación de los banners
+	checkbox
+		name = banner_services
+		description = Mostrar los banners en toda la tienda (se verá arriba del footer)
+	checkbox
+		name = banner_services_home
+		description = Mostrar los banners solo en la página principal (se verá debajo del carrusel)
+	checkbox
+		name = banner_services_category
+		description = Mostrar los banners en la lista de productos (se verá arriba de los productos)
+	
+	title
+		title = Textos de los banners
+	subtitle
+		subtitle = Banner de envíos
+	i18n_input
+		name = banner_services_01_title
+		description = Título del banner
+	i18n_input
+		name = banner_services_01_description
+		description = Descripción del banner 
+	subtitle
+		subtitle = Banner de tarjetas de crédito
+	i18n_input
+		name = banner_services_02_title
+		description = Título del banner
+	i18n_input
+		name = banner_services_02_description
+		description = Descripción del banner
+	subtitle
+		subtitle = Banner de seguridad en el sitio
+	i18n_input
+		name = banner_services_03_title
+		description = Título del banner
+	i18n_input
+		name = banner_services_03_description
+		description = Descripción del banner
+
+Opciones generales
+	title
+		title = Sellos personalizados en el footer
+	description
+		description = Podés agregar sellos de dos formas: subiendo una imagen o pegando el código Javascript o HTML
+	subtitle
+		subtitle = Imagen del sello
+	image
+		original = seal_img.jpg
+	i18n_input
+		name = seal_url
+		description = [Opcional] Página web externa a la que llevará la imagen del sello al hacer clic
+	subtitle
+		subtitle = Código Javascript o HTML del sello
+	textarea
+		name = custom_seal_code
+	title
+		title = Edición para el mensaje de bienvenida
+	i18n_input
+		name = welcome_message
+		description = Mensaje de bienvenida para la página de inicio
+	i18n_input
+		name = welcome_message_link
+		description = [Opcional] Texto para el botón de bienvenida de la página de inicio
+	i18n_input
+		name = welcome_message_link_url
+		description = [Opcional] Página web a la que quieres que te lleve la descripción de bienvenida de la página de inicio al hacer click
+	
+	title
+		title = Texto para los productos en oferta
+	i18n_input
+		name = offer_text
+		description = Texto que deseas que aparezca en el componente de Oferta
+
+	title
+		title = Texto para los productos con envío gratis
+	i18n_input
+		name = free_shipping_text
+		description = Texto que deseas que aparezca en el componente de Envio Gratis
+
+	title
+		title = Texto para los productos sin stock
+	i18n_input
+		name = out_of_stock_text
+		description = Texto que deseas que aparezca en el componente de Sin Stock
+
+	title
+		title = Texto para contacto al final de la página (footer).
+	i18n_input
+		name = footer_contact_text
+		description = Texto que deseas que aparezca en el componente de Contacto al final de la página
+	
+	title
+		title = Botón de seguir cargando productos
+	checkbox
+		name = infinite_scrolling
+		description = ¿Permitir que en el listado de productos tus clientes carguen nuevos productos cuando llegan al final de la página?
+	
+	title
+		title = Pop-up de compra rápida
+	checkbox
+		name = quick_shop
+		description = Permitir que tus clientes puedan agregar productos a su carrito rápidamente desde una ventana emergente en el listado de productos
+	
+	title
+		title = Pop-up de compra rápida texto
+	i18n_input
+		name = quick_shop_label
+		description = Texto que aparece al colocar el mouse sobre un producto que dispara la ventana emergente
+	title
+		title = Ediciones para la página de contacto
+	checkbox
+		name = show_map_on_contact
+		description = Habilitar un mapa de Google Maps con tu dirección en la página de contacto (se debe configurar la dirección en 'Información de contacto')
+
+Carrito de compras
+	subtitle
+		subtitle = Monto mínimo de compra
+	text
+		name = cart_minimum_value
+		description = ¿Cuánto es lo mínimo que pueden gastar tus clientes?
+	
+	subtitle
+		subtitle = Botón seguir comprando en el carrito de compras
+	checkbox
+		name = continue_buying
+		description = Mostrar el botón de 'Seguir comprando' en el carrito de compras
+
+Edición avanzada de CSS
+	title
+		title = Para diseñadores web
+	subtitle
+		subtitle = Esta sección es recomendada solo para quienes tengan conocimiento de CSS
+	subtitle
+		subtitle = <a target='_blank' href='http://ayuda.tiendanube.com/customer/portal/articles/2259942/?utm_source=admin-desktop&utm_medium=feature-page&utm_campaign=help'>¿Cómo edito el código CSS de mi tienda?</a>
+	textarea
+		name = css_code
+		description = Acá podés escribir código CSS para que se muestre en tu sitio web.

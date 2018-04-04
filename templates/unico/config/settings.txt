@@ -1,0 +1,107 @@
+Mensajes para tu cliente
+	i18n_input
+		name = solo_product_message
+		description = Escribe un mensaje breve sobre tu mejor producto
+		
+	i18n_input
+		name = related_product_message
+		description = Escribe un mensaje breve sobre tus productos secundarios
+
+Fuentes
+	font
+		name = headings
+		description = Títulos
+		values
+			Helvetica,Arial,sans-serif = Helvetica
+			"Open Sans",sans-serif = Open Sans
+			Arial,sans-serif = Arial
+			"Times New Roman",Times,serif = Times New Roman
+			Georgia,"Times New Roman",serif = Georgia
+			Verdana,Geneva,sans-serif = Verdana
+			Tahoma,Geneva,sans-serif = Tahoma			
+			"Palatino Linotype","Book Antiqua",Palatino,serif = Palatino Linotype
+			Impact,Charcoal,sans-serif = Impact
+	font
+		name = navigation
+		description = Barra de navegación
+		values
+			Helvetica,Arial,sans-serif = Helvetica
+			"Open Sans",sans-serif = Open Sans
+			Arial,sans-serif = Arial
+			"Times New Roman",Times,serif = Times New Roman
+			Georgia,"Times New Roman",serif = Georgia
+			Verdana,Geneva,sans-serif = Verdana
+			Tahoma,Geneva,sans-serif = Tahoma			
+			"Palatino Linotype","Book Antiqua",Palatino,serif = Palatino Linotype
+			Impact,Charcoal,sans-serif = Impact
+	font
+		name = rest
+		description = Resto del sitio
+		values
+			Helvetica,Arial,sans-serif = Helvetica
+			Arial,sans-serif = Arial
+			"Open Sans",sans-serif = Open Sans
+			"Times New Roman",Times,serif = Times New Roman
+			Georgia,"Times New Roman",serif = Georgia
+			Verdana,Geneva,sans-serif = Verdana
+			Tahoma,Geneva,sans-serif = Tahoma			
+			"Palatino Linotype","Book Antiqua",Palatino,serif = Palatino Linotype
+			Impact,Charcoal,sans-serif = Impact
+		
+Colores
+	color
+		name = main_color
+		description = Textos
+	color
+		name = button_color_from
+		description = Botones
+	color
+		name = button_color_to
+		description = Degradé en los botones
+	color
+		name = button_color_hover
+		description = Botones al pasar el mouse encima
+
+Página de inicio
+	checkbox
+		name = home_slider
+		description = ¿Mostrar slider en la página de inicio?
+	checkbox
+		name = slider_auto
+		description = Cambiar la imagen de manera automática en el slider
+	gallery
+		name = slider
+		description = Selecciona las imágenes del slider (recomendamos que todas las imágenes sean del mismo tamaño con un ancho de 810px)
+		gallery_image = Selecciona una imagen
+		gallery_link = Link de la imagen (opcional)
+		gallery_width = 810
+
+Banners
+	image
+		original = banner-home.jpg
+		description = Elige un banner para la página de inicio (recomendamos utilizar imágenes de 728x90 px)
+	i18n_input
+		name = banner_home_url
+		description = Link para el banner de la página de inicio (opcional)
+	image
+		original = banner-products.jpg
+		description = Elige un banner para el listado de productos (recomendamos utilizar imágenes de 728x90 px)
+	i18n_input
+		name = banner_products_url
+		description = Link para el banner del listado de productos (opcional)
+
+Facebook
+	checkbox
+		name = show_footer_fb_like_box
+		description = Mostrar caja de Facebook en el footer (se debe configurar la página de Facebook en 'Información de contacto')
+	checkbox
+		name = show_product_fb_comment_box
+		description = Mostrar caja de comentarios de Facebook en la vista de un producto
+	text
+		name = fb_admins
+		description = ID del usuario moderador de los comentarios de Facebook (obtener <a target='_blank' href='http://findmyfacebookid.com/'>aquí</a>)
+
+Listado de productos
+	checkbox
+		name = infinite_scrolling
+		description = ¿Cargar productos automáticamente a medida que el visitante se desplaza?

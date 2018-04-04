@@ -1,0 +1,41 @@
+Variante Blanca
+	background_color   = #ffffff
+	background_pattern = trama-man
+	invert_pattern     = 0
+	footer_text        = #000000
+	nav_text           = #535353
+	nav_text_hover     = #a8a8a8
+	nav_background     = #ffffff
+	nav_border         = #e8e8e8
+	nav_cart           = #707070
+	title_color        = #535353
+	title_background   = #f8f8f8
+	content_border     = #d2d2d2
+
+Variante Negra
+	background_color   = #000000
+	background_pattern = trama-man6
+	invert_pattern     = 1
+	footer_text        = #ffffff
+	nav_text           = #535353
+	nav_text_hover     = #a8a8a8
+	nav_background     = #ffffff
+	nav_border         = #e8e8e8
+	nav_cart           = #707070
+	title_color        = #535353
+	title_background   = #f8f8f8
+	content_border     = #d2d2d2
+
+Variante Naranja
+	background_color   = #eb690b
+	background_pattern = trama-man5
+	invert_pattern     = 1
+	footer_text        = #000000
+	nav_text           = #000000
+	nav_text_hover     = #606060
+	nav_background     = #ffffff
+	nav_border         = #f58533
+	nav_cart           = #1b1b1b
+	title_color        = #ffffff
+	title_background   = #1b1b1b
+	content_border     = #313131

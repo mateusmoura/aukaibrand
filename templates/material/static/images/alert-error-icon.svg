@@ -1,0 +1,8 @@
+<svg id="svg_alert_error" xmlns="http://www.w3.org/2000/svg" viewBox="-467 269 24 24">
+	<style>
+		#svg_alert_error .st0{fill:none;}
+		#svg_alert_error .icon{fill:white;}
+	</style>
+	<path class="st0" d="M-467 269h24v24h-24v-24z"/>
+	<path class="icon" d="M-455 271c-5.5 0-10 4.5-10 10s4.5 10 10 10 10-4.5 10-10-4.5-10-10-10zm1 15h-2v-2h2v2zm0-4h-2v-6h2v6z"/>
+</svg>

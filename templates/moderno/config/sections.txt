@@ -1,0 +1,6 @@
+slider
+	name = Pasador de imágenes
+	description = Los productos del pasador de imágenes rotan en la página principal de tu tienda
+home
+	name = Secundario
+	description = Estos productos son listados en la parte de abajo de la página principal de tu tienda

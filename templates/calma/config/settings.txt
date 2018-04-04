@@ -1,0 +1,129 @@
+Fondo
+	color
+		name = bg_color
+		description = Color de fondo
+	image
+		original = background.jpg
+		description = O sube una imágen de fondo
+	color
+		name = bg_top
+		description = Primer color del degradé del fondo del contenido
+	color
+		name = bg_bottom
+		description = Segundo color del degradé del fondo del contenido
+
+Fuentes
+	font
+		name = headings
+		description = Títulos
+		values
+			Helvetica,Arial,sans-serif = Helvetica
+			"Open Sans",sans-serif = Open Sans
+			Arial,sans-serif = Arial
+			"Times New Roman",Times,serif = Times New Roman
+			Georgia,"Times New Roman",serif = Georgia
+			Verdana,Geneva,sans-serif = Verdana
+			Tahoma,Geneva,sans-serif = Tahoma			
+			"Palatino Linotype","Book Antiqua",Palatino,serif = Palatino Linotype
+			Impact,Charcoal,sans-serif = Impact
+	font
+		name = navigation
+		description = Barra de navegación
+		values
+			Helvetica,Arial,sans-serif = Helvetica
+			"Open Sans",sans-serif = Open Sans
+			Arial,sans-serif = Arial
+			"Times New Roman",Times,serif = Times New Roman
+			Georgia,"Times New Roman",serif = Georgia
+			Verdana,Geneva,sans-serif = Verdana
+			Tahoma,Geneva,sans-serif = Tahoma			
+			"Palatino Linotype","Book Antiqua",Palatino,serif = Palatino Linotype
+			Impact,Charcoal,sans-serif = Impact
+	font
+		name = rest
+		description = Resto del sitio
+		values
+			Helvetica,Arial,sans-serif = Helvetica
+			Arial,sans-serif = Arial
+			"Open Sans",sans-serif = Open Sans
+			"Times New Roman",Times,serif = Times New Roman
+			Georgia,"Times New Roman",serif = Georgia
+			Verdana,Geneva,sans-serif = Verdana
+			Tahoma,Geneva,sans-serif = Tahoma			
+			"Palatino Linotype","Book Antiqua",Palatino,serif = Palatino Linotype
+			Impact,Charcoal,sans-serif = Impact
+
+Textos
+	color
+		name = text_color
+		description = Color del texto
+	color
+		name = link_color
+		description = Color de los links
+	color
+		name = link_hover_color
+		description = Color de los links al posar el mouse
+		
+Navegación
+	color
+		name = nav_main_color
+		description = Color de la navegación principal
+	color
+		name = nav_secondary_color
+		description = Color de la navegación secundaria
+	color
+		name = nav_hover_color
+		description = Color al posar el mouse de la navegación
+	color
+		name = nav_active_text_color
+		description = Color del texto de la sección activa de la navegación
+	color
+		name = border_color
+		description = Color de los bordes
+
+Página de inicio
+	checkbox
+		name = slider_auto
+		description = Cambiar la imagen de manera automática en el slider
+	gallery
+		name = slider
+		description = Selecciona las imágenes del slider (recomendamos que todas las imágenes sean del mismo tamaño con un ancho de 615px)
+		gallery_image = Selecciona una imagen
+		gallery_link = Link de la imagen (opcional)
+		gallery_width = 615
+
+Facebook
+	checkbox
+		name = show_footer_fb_like_box
+		description = Mostrar caja de Facebook en el footer (se debe configurar la página de Facebook en 'Información de contacto')
+	checkbox
+		name = show_product_fb_comment_box
+		description = Mostrar caja de comentarios de Facebook en la vista de un producto
+	text
+		name = fb_admins
+		description = ID del usuario moderador de los comentarios de Facebook (obtener <a target='_blank' href='http://findmyfacebookid.com/'>aquí</a>)
+
+Banners
+	image
+		original = banner-home.jpg
+		description = Elige un banner para la página de inicio (recomendamos utilizar imágenes de 468x60 px)
+	i18n_input
+		name = banner_home_url
+		description = Link para el banner de la página de inicio (opcional)
+	image
+		original = banner-products.jpg
+		description = Elige un banner para el listado de productos (recomendamos utilizar imágenes de 468x60 px)
+	i18n_input
+		name = banner_products_url
+		description = Link para el banner del listado de productos (opcional)
+	image
+		original = banner-sidebar.jpg
+		description = Elige un banner para la barra lateral (recomendamos utilizar imágenes de 160x600 px)
+	i18n_input
+		name = banner_sidebar_url
+		description = Link para el banner de la barra lateral (opcional)
+
+Listado de productos
+	checkbox
+		name = infinite_scrolling
+		description = ¿Cargar productos automáticamente a medida que el visitante se desplaza?

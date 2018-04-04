@@ -1,0 +1,9 @@
+Variante Blanca
+	background_color   = #ffffff
+	background_pattern = none
+	invert_pattern     = 0
+	nav_text           = #34434F
+	nav_text_hover     = #F54B3E
+	title_color        = #F54B3E
+	title_background   = #ffffff
+	rest_color         = #000000

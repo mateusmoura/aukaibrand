@@ -1,0 +1,23 @@
+Naranja
+	main_color					= #EF5411
+	button_color_from			= #FA5B0F
+	button_color_to				= #FF6517
+	button_color_hover			= #FF6D1F
+
+Azul
+	main_color					= #081640
+	button_color_from			= #59888C
+	button_color_to				= #223F59
+	button_color_hover			= #629599
+	
+Verde
+	main_color					= #00AB09
+	button_color_from			= #008C0B
+	button_color_to				= #118C05
+	button_color_hover			= #077F00
+
+Violeta
+	main_color					= #8B007A
+	button_color_from			= #7F006F
+	button_color_to				= #AB0095
+	button_color_hover			= #650058

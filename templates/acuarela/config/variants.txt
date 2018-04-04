@@ -1,0 +1,23 @@
+Variante Roja
+	button_color		= #7A1631
+	links_color		 	= #CF423C
+	border_color     	= #FFE294
+	links_hover        	= #AE0000
+
+Variante Naranja
+	button_color		= #FF8C19
+	links_color		 	= #000000
+	border_color     	= #FFB508
+	links_hover        	= #000000
+
+Variante Azul
+	button_color		= #144156
+	links_color		 	= #F20C0C
+	border_color     	= #bed9ee
+	links_hover        	= #327C8C
+	
+Variante Violeta
+	button_color		= #000000
+	links_color		 	= #C102B4
+	border_color     	= #C102B4
+	links_hover        	= #73086C

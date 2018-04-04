@@ -1,0 +1,18 @@
+Variante Verde
+	primary_color   = #0CE8DD
+	secondary_color = #151515
+	fondo_color     = #F9F9F2
+	base_color   	= #FFFFFF
+	texto_color     = #808080
+Variante Naranja
+	primary_color   = #E6673D
+	secondary_color = #35231F
+	fondo_color     = #F4ECE1
+	base_color   	= #FFFFFF
+	texto_color     = #7C7C7C
+Variante Violeta
+	primary_color   = #6F4D8E
+	secondary_color = #4E3D66
+	fondo_color     = #EDEDED
+	base_color   	= #FFFFFF
+	texto_color     = #000000

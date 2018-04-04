@@ -1,0 +1,7 @@
+slider
+	name = Slide Show
+	description = Os produtos do Slide Show passam em forma de destaque na Home da sua loja (banner rotativo)
+
+home
+	name = Destaque Secundário
+	description = Estes produtos são listados na parte inferior da Home da sua loja

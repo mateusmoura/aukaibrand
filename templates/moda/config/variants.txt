@@ -1,0 +1,44 @@
+Variação Vermelha
+	navBackground 	= #ffffff
+	selectedSection = #ca0000
+	colorTitles		= #999999
+	textButtons		= #fff
+	colorButtons	= #c00
+	navText       	= #000000
+	textHeaderInfo	= #000000
+	textTitleProduct = #000000
+	footerTitle		= #999999
+	linkSidebar		= #CA0000
+	sublinkSidebar  = #4c4c4c
+	logoText		= #000000
+	textPrices		= #b50a0a
+
+Variação Preto
+	navBackground 	= #000000
+	selectedSection = #999999
+	colorTitles		= #333333
+	textButtons		= #fff
+	colorButtons	= #c00
+	navText       	= #ffffff
+	textHeaderInfo	= #000000
+	textTitleProduct = #000000
+	footerTitle		= #999999
+	linkSidebar		= #999999
+	sublinkSidebar  = #4c4c4c
+	logoText		= #000000
+	textPrices		= #b50a0a
+	
+Variação Bege
+	navBackground 	= #ffffff
+	selectedSection = #e6ba6d
+	colorTitles		= #999999
+	textButtons		= #fff
+	colorButtons	= #c00
+	navText       	= #000000
+	textHeaderInfo	= #000000
+	textTitleProduct = #e6ba6d
+	footerTitle		= #999999
+	linkSidebar		= #e6ba6d
+	sublinkSidebar  = #4c4c4c
+	logoText		= #000000
+	textPrices		= #b50a0a

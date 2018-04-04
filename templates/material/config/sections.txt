@@ -1,0 +1,7 @@
+slider
+	name = Carrusel de imágenes de productos
+	description = Los productos del carrusel rotarán en la página principal de tu tienda
+
+primary
+	name = Principal
+	description = Pon aquí los productos que más quieras destacar

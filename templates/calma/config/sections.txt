@@ -1,0 +1,7 @@
+main
+	name = Producto Principal
+	description = Pon aquí el producto principal de tu sitio
+
+secondary
+	name = Otros Destacados
+	description = Pon aquí el resto de los productos que deseas destacar

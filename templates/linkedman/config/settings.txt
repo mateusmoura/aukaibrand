@@ -1,0 +1,158 @@
+Bordes
+	checkbox
+		name = image_borders
+		description = ¿Agregar bordes a las imágenes?
+
+Fondo
+	image
+		original = default-background.jpg
+		description = Subir una imagen de fondo
+
+	patterns
+		name = background_pattern
+		description = Si no, elige una trama de fondo
+		patterns
+			trama-man = tramas/trama-man.png
+			trama-man2 = tramas/trama-man2.png
+			trama-man3 = tramas/trama-man3.png
+			trama-man4 = tramas/trama-man4.png
+			trama-man5 = tramas/trama-man5.png
+			trama-man6 = tramas/trama-man6.png
+			trama-man7 = tramas/trama-man7.png
+			trama-man8 = tramas/trama-man8.png
+			trama-man9 = tramas/trama-man9.png
+			trama-man10 = tramas/trama-man10.png
+			trama-man11 = tramas/trama-man11.png
+			trama-man12 = tramas/trama-man12.png
+			trama-man13 = tramas/trama-man13.png
+			trama-man14 = tramas/trama-man14.png
+			trama-woman = tramas/trama-woman.png
+	checkbox
+		name = invert_pattern
+		description = ¿Adaptar la trama para fondos oscuros?
+
+Página de inicio
+	dropdown
+		name = home_display
+		description = ¿Qué mostrar en la página de inicio?
+		values
+			products = Productos Destacados
+			slider = Slider
+			both = Ambos
+	checkbox
+		name = slider_auto
+		description = Cambiar la imagen de manera automática en el slider
+	gallery
+		name = slider
+		description = Selecciona las imágenes del slider (recomendamos que todas las imágenes sean del mismo tamaño con un ancho de 940px)
+		gallery_image = Selecciona una imagen
+		gallery_link = Link de la imagen (opcional)
+		gallery_width = 940
+
+Banners
+	image
+		original = banner-home.jpg
+		description = Elige un banner para la página de inicio (recomendamos utilizar imágenes de 728x90 px)
+	i18n_input
+		name = banner_home_url
+		description = Link para el banner de la página de inicio (opcional)
+	image
+		original = banner-products.jpg
+		description = Elige un banner para el listado de productos (recomendamos utilizar imágenes de 728x90 px)
+	i18n_input
+		name = banner_products_url
+		description = Link para el banner del listado de productos (opcional)
+
+Facebook
+	checkbox
+		name = show_footer_fb_like_box
+		description = Mostrar caja de Facebook en el footer (se debe configurar la página de Facebook en 'Información de contacto')
+	checkbox
+		name = show_product_fb_comment_box
+		description = Mostrar caja de comentarios de Facebook en la vista de un producto
+	text
+		name = fb_admins
+		description = ID del usuario moderador de los comentarios de Facebook (obtener <a target='_blank' href='http://findmyfacebookid.com/'>aquí</a>)
+
+Listado de productos
+	checkbox
+		name = infinite_scrolling
+		description = ¿Cargar productos automáticamente a medida que el visitante se desplaza?
+
+Mensaje de Bienvenida
+	i18n_input
+		name = welcome_message
+		description = Escribe un mensaje de bienvenida
+		
+Fuentes
+	font
+		name = headings
+		description = Títulos
+		values
+			Arial,sans-serif = Arial
+			Helvetica,Arial,sans-serif = Helvetica
+			"Times New Roman",Times,serif = Times New Roman
+			Georgia,"Times New Roman",serif = Georgia
+			Verdana,Geneva,sans-serif = Verdana
+			Tahoma,Geneva,sans-serif = Tahoma			
+			"Palatino Linotype","Book Antiqua",Palatino,serif = Palatino Linotype
+			Impact,Charcoal,sans-serif = Impact
+			"Open Sans",sans-serif = Open Sans
+	font
+		name = navigation
+		description = Navegación
+		values
+			Arial,sans-serif = Arial
+			Helvetica,Arial,sans-serif = Helvetica
+			"Times New Roman",Times,serif = Times New Roman
+			Georgia,"Times New Roman",serif = Georgia
+			Verdana,Geneva,sans-serif = Verdana
+			Tahoma,Geneva,sans-serif = Tahoma			
+			"Palatino Linotype","Book Antiqua",Palatino,serif = Palatino Linotype
+			Impact,Charcoal,sans-serif = Impact
+			"Open Sans",sans-serif = Open Sans
+	font
+		name = rest
+		description = Resto del sitio
+		values
+			Arial,sans-serif = Arial
+			Helvetica,Arial,sans-serif = Helvetica
+			"Times New Roman",Times,serif = Times New Roman
+			Georgia,"Times New Roman",serif = Georgia
+			Verdana,Geneva,sans-serif = Verdana
+			Tahoma,Geneva,sans-serif = Tahoma			
+			"Palatino Linotype","Book Antiqua",Palatino,serif = Palatino Linotype
+			Impact,Charcoal,sans-serif = Impact
+			"Open Sans",sans-serif = Open Sans
+
+Colores
+	color
+		name = background_color
+		description = Color de fondo
+	color
+		name = footer_text
+		description = Texto de contacto
+	color
+		name = nav_text
+		description = Texto en la barra de navegación
+	color
+		name = nav_text_hover
+		description = Texto en la barra de navegación (posando el mouse)
+	color
+		name = nav_background
+		description = Fondo de la barra de navegación
+	color
+		name = nav_border
+		description = Bordes en la barra de navegación
+	color
+		name = nav_cart
+		description = Fondo del resumen del carrito en la barra de navegación
+	color
+		name = title_color
+		description = Texto del título de las páginas
+	color
+		name = title_background
+		description = Fondo del título de las páginas
+	color
+		name = content_border
+		description = Bordes del contenido de las páginas

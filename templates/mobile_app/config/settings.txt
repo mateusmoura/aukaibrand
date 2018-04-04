@@ -1,0 +1,4 @@
+Colores
+	color
+		name = brand_color
+		description = Color principal de tu marca

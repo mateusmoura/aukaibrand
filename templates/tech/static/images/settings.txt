@@ -1,0 +1,186 @@
+Opciones Generales
+	i18n_input
+		name = welcome_message
+		description = Escribe un mensaje de bienvenida
+	image
+		original = default-background.jpg
+		description = Subir una imagen de fondo
+	checkbox
+		name = quick_shop
+		description = Mostrar el componente de Quick Shop en los listados de productos
+	i18n_input
+		name = quick_shop_label
+		description = Escribe el texto que deseas que aparezca en el componente de Quick Shop
+Colores
+	color
+		name = background_color
+		description = Color de fondo
+	color
+		name = background_social_icons
+		description = Color de fondo de los iconos sociales
+	color
+		name = color_icon
+		description = Color del icono social
+	color
+		name = color_nostock
+		description = Color de fondo de producto sin stock
+	color
+		name = color_sale
+		description = Color de fondo de producto en oferta	
+	color
+		name = footer_text
+		description = Texto de contacto
+	color
+		name = nav_text
+		description = Texto en la barra de navegación
+	color
+		name = nav_text_hover
+		description = Texto en la barra de navegación (posando el mouse)
+	color
+		name = nav_background
+		description = Fondo de la barra de navegación
+	color
+		name = nav_border
+		description = Bordes en la barra de navegación
+	color
+		name = nav_cart
+		description = Fondo del resumen del carrito en la barra de navegación
+	color
+		name = title_color
+		description = Texto del título de las páginas
+	color
+		name = title_background
+		description = Fondo del título de las páginas
+	color
+		name = content_border
+		description = Bordes del contenido de las páginas
+	color
+		name = footer_bg
+		description = Fondo del footer
+	color
+		name = rest_color
+		description = Resto del sitio
+
+Fuentes
+	font
+		name = font_headings
+		description = Títulos
+		values
+			Arial,sans-serif = Arial
+			Helvetica,Arial,sans-serif = Helvetica
+			"Times New Roman",Times,serif = Times New Roman
+			Georgia,"Times New Roman",serif = Georgia
+			Verdana,Geneva,sans-serif = Verdana
+			Tahoma,Geneva,sans-serif = Tahoma
+			"Palatino Linotype","Book Antiqua",Palatino,serif = Palatino Linotype
+			Impact,Charcoal,sans-serif = Impact
+			"Open Sans",sans-serif = Open Sans
+			"Open Sans Condensed",sans-serif = Open Sans Condensed
+	font
+		name = font_navigation
+		description = Navegación
+		values
+			Arial,sans-serif = Arial
+			Helvetica,Arial,sans-serif = Helvetica
+			"Times New Roman",Times,serif = Times New Roman
+			Georgia,"Times New Roman",serif = Georgia
+			Verdana,Geneva,sans-serif = Verdana
+			Tahoma,Geneva,sans-serif = Tahoma
+			"Palatino Linotype","Book Antiqua",Palatino,serif = Palatino Linotype
+			Impact,Charcoal,sans-serif = Impact
+			"Open Sans",sans-serif = Open Sans
+			"Open Sans Condensed",sans-serif = Open Sans Condensed
+	font
+		name = font_buttons
+		description = Botones del sitio
+		values
+			Arial,sans-serif = Arial
+			Helvetica,Arial,sans-serif = Helvetica
+			"Times New Roman",Times,serif = Times New Roman
+			Georgia,"Times New Roman",serif = Georgia
+			Verdana,Geneva,sans-serif = Verdana
+			Tahoma,Geneva,sans-serif = Tahoma
+			"Palatino Linotype","Book Antiqua",Palatino,serif = Palatino Linotype
+			Impact,Charcoal,sans-serif = Impact
+			"Open Sans",sans-serif = Open Sans
+			"Open Sans Condensed",sans-serif = Open Sans Condensed
+	font
+		name = font_rest
+		description = Resto del sitio
+		values
+			Arial,sans-serif = Arial
+			Helvetica,Arial,sans-serif = Helvetica
+			"Times New Roman",Times,serif = Times New Roman
+			Georgia,"Times New Roman",serif = Georgia
+			Verdana,Geneva,sans-serif = Verdana
+			Tahoma,Geneva,sans-serif = Tahoma
+			"Palatino Linotype","Book Antiqua",Palatino,serif = Palatino Linotype
+			Impact,Charcoal,sans-serif = Impact
+			"Open Sans",sans-serif = Open Sans
+			"Open Sans Condensed",sans-serif = Open Sans Condensed
+			
+Menu Superior
+	dropdown
+		name = menu_fixed
+		description = Menu Fixed
+		values
+			affix = Menu fixed
+			no = Menu standard
+Página de Inicio
+	dropdown
+		name = home_display
+		description = ¿Qué mostrar en la página de inicio?
+		values
+			products = Productos destacados
+			slider = Slider
+			both = Ambos
+	checkbox
+		name = slider_auto
+		description = Cambiar la imagen de manera automática en el slider
+	gallery
+		name = slider
+		description = Selecciona las imágenes del slider (recomendamos que todas las imágenes sean del mismo tamaño con un ancho de 980px)
+		gallery_image = Selecciona una imagen
+		gallery_link = Link de la imagen (opcional)
+		gallery_width = 980
+	image
+		original = banner-home.jpg
+		description = Elige un banner (recomendamos utilizar imágenes de 728x90 px)
+	i18n_input
+		name = banner_home_url
+		description = Link para el banner (opcional)
+	checkbox
+		name = show_footer_fb_like_box
+		description = Mostrar caja de Facebook (se debe configurar la página de Facebook en 'Información de contacto')
+	textarea
+		name = twitter_widget
+		description = Mostrar últimos Tweets (se debe configurar <a href='https://twitter.com/settings/widgets/' target='_blank'>un nuevo widget en Twitter</a> y copiar y pegar el HTML aquí)
+Footer
+	menu
+		name = footer_menu
+		description = ¿Que menú deseas mostrar?
+Página de Categorías
+	checkbox
+		name = infinite_scrolling
+		description = ¿Cargar productos automáticamente a medida que el visitante se desplaza?
+	image
+		original = banner-products.jpg
+		description = Elige un banner (recomendamos utilizar imágenes de 728x90 px)
+	i18n_input
+		name = banner_products_url
+		description = Link para el banner (opcional)
+Página de Producto
+	checkbox
+		name = show_product_fb_comment_box
+		description = Mostrar caja de comentarios de Facebook
+	text
+		name = fb_admins
+		description = ID del usuario moderador de los comentarios de Facebook (obtener <a target='_blank' href='http://findmyfacebookid.com/'>aquí</a>)
+
+Página de Contacto
+	image
+		original = foto-contacto.jpg
+		description = Elige un banner (recomendamos utilizar imágenes de 728x90 px)
+	i18n_input
+		name = foto_contacto_url
+		description = Link para el banner (opcional)

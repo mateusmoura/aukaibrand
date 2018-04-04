@@ -1,0 +1,8 @@
+{
+    "preview": {
+        "compiled_assets": [
+            "custom.css.tpl",
+            "main-color.scss.tpl"
+        ]
+    }
+}

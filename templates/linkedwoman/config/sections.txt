@@ -1,0 +1,7 @@
+primary
+	name = Principal
+	description = Pon aquí los productos que más quieras destacar
+	
+secondary
+	name = Secundario
+	description = Pon aquí productos destacados de menor importancia

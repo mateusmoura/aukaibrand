@@ -1,0 +1,485 @@
+.siteBarContainer {
+	background:none repeat scroll 0 0 #FFFBE5;
+	border-bottom:1px solid #CCCCCC;
+	color:#666666;
+	left:0;
+	padding: 7px 0 0 0;
+	position:static;
+	margin-bottom: 5px;
+	text-align:center;
+	top:0;
+	width:100%;	
+	height: 25px;
+	line-height: 25px;
+	overflow:hidden;
+}
+
+.siteBarContainer a{
+	font-weight: bold;
+}
+
+.additional-checkout-buttons {
+  text-align: center;
+}
+
+.additional-checkout-buttons p {
+  margin: 12px 0;
+}
+
+#auth{
+	text-align:right;
+	margin-top:2px;
+	font-size:12px;
+}
+
+#auth a{
+    margin-left:6px;
+}
+
+/* Adjustments */
+
+#index #buy, #home #buy {
+	text-align: center;
+	clear: both;
+}
+
+#index #buy span, #home #buy span {
+	font-size: 36px;
+	font-weight:normal;
+	padding-left: 10px;
+}
+
+
+div#notes {
+	width: 400px;
+}
+
+/* Newsletter */
+
+div#overview input.field {
+	font-size: 13px;
+	color: #74695D;
+	width: 95%;
+	padding: 4px;
+}
+
+/* Customer Styles */
+
+#return_to_store { display: none }
+
+body.customer #admin_header h2.title, body.customer .template_header h2.title, #guest h3.title {
+    font-size: 48px;
+    line-height: 1.42em;
+    padding: 20px 0 15px;
+    border-bottom: none;
+}
+
+#customer_orders, #order_details, #order_notes, #customer, #recover-password {
+    width: 555px;
+}
+
+body.customer .group, .customer_address form, #add_address form { border-color: #EEE }
+
+div.action_return, .flash { margin-top: 20px }
+
+.action_bottom { border-top: none; margin-bottom: 20px }
+
+#customer, #guest { height: 300px }
+
+#recover-email { width: 200px }
+
+#login_password input[type="password"] { width: 135px }
+
+#customer_email { width: 340px }
+
+body.customers input.large { width: 340px }
+
+body.customer th.total { text-align: right }
+
+/* Button styles */
+
+a.button, input.button, div.button {
+	display:-moz-inline-stack;
+	display:inline-block;
+	zoom:1;
+	*display:inline;
+	color: white;
+	padding: 0 20px;
+	margin: 0;
+	font-weight: bold;
+	border: none;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+div.button {
+	cursor:default;
+	text-align: center;
+}
+
+.button.no-stock{
+	width:120px;
+	margin-top: 15px;
+}
+
+a.button:hover, input.button:hover {
+	text-decoration: none;
+	color: white;
+}
+
+#buy-this, #checkout input.checkout, #add, input.comment, #contact input.button, #contact-product  {
+	font-size: 28px;
+	height: 55px;
+	line-height: 55px;
+}
+
+
+#checkout input.checkout, input#update {
+font-size: 22px;
+}
+
+input#update {
+	height: 55px;
+	line-height: 55px;
+	width: 170px;
+	background-color: #bfbfbf;
+	background: -moz-linear-gradient(top, #bfbfbf, #7c7c7c);
+	background: -webkit-gradient(linear, center top, center bottom, from(#bfbfbf), to(#7c7c7c));
+}
+
+.bigger{
+	cursor: pointer;
+	font-size: 22px;
+	height: 55px;
+	line-height: 55px;
+}
+
+input#subscribe {
+	font-size: 16px;
+	height: 32px;
+	line-height: 32px;
+	font-weigth: normal;
+	background-color: #bfbfbf;
+	background: -moz-linear-gradient(top, #bfbfbf, #7c7c7c);
+	background: -webkit-gradient(linear, center top, center bottom, from(#bfbfbf), to(#7c7c7c));
+}
+
+
+#contact .contentBox {
+	margin-left: 8px;
+    margin-top: 7px;
+}
+
+#contact .contact_form label {
+	display: inline-block;
+	vertical-align: top;
+	width: 100px;
+}
+
+#contact .contact_form span.mini-text {
+	font-size: 12px;
+	font-weight: normal;
+}
+
+#contact .contact_form .field input, #contact .contact_form .field  textarea {
+	display: inline-block;
+	vertical-align: middle;
+	width: 320px;
+}
+
+#contact .contact_form .field {
+	margin-bottom: 10px;
+	overflow: hidden;
+}
+
+#contact .contact_form .field.err{
+	background:url("error.png") no-repeat right top;
+}
+
+#contact .contact_form .field.err input{
+	background: #F1D3D3;
+	padding: 1px;
+	border: 2px solid #CB4D4D;
+	margin: 1px 0;
+}
+
+#contact .contact_form .field.winnie-pooh {
+    display: none;
+}
+
+#contact .success{
+	margin-bottom: 15px;
+}
+
+#contact .form{
+	width:463px;
+}
+
+#contact .submit{
+	overflow:hidden;
+	width:430px;
+}
+
+#contact input.button {
+	margin-top: 14px;
+	float:right;
+}
+
+#contact input.button:hover, #contact-product:hover, #buy #add {
+	cursor: pointer;	
+}
+
+#buy #add {
+	width: 285px;
+}
+
+#footer {
+	font-size: 12px;
+	overflow: hidden;
+}
+
+#footer .col-1 {
+	float:left;
+}
+
+#footer .col-2 {
+	float:right;
+}
+
+#footer .col-1 p a{text-decoration:underline;}
+#footer .col-1 p a:hover{text-decoration:none;}
+
+#footer .payments, #footer .shipping{display:inline-block;}
+#footer .social {text-align:right;}
+
+.shareDiv {
+	margin-top: 32px;
+    overflow: hidden;
+    padding: 0 90px;
+    text-align: center;
+}
+
+.shareDiv div {
+	float: left;
+	width: 100px;	
+}
+
+.hidden {
+	display: none;	
+}
+
+#missing div#slider div#prev p, div#slider div#next p {
+	height: 17px;	
+}
+
+.thumbnail-container {
+	overflow: hidden;
+    padding-top: 15px;	
+}
+
+.thumbnail-container div {
+	float: left;
+    height: 115px;
+    margin-right: 14px;
+}
+
+div#finder {
+	padding: 10px 0 0 0;
+	clear:left;
+}
+
+#contact .success{
+	margin-bottom: 15px;
+}
+
+
+#contact .form{
+	width:463px;
+}
+
+#contact .submit{
+	overflow:hidden;
+	width:430px;
+}
+
+#contact input.button {
+	margin-top: 14px;
+	float:right;
+}
+
+#contact input.button:hover, #contact-product:hover, #buy #add {
+	cursor: pointer;	
+}
+
+#buy #add {
+	width: 292px;
+}
+
+.shareDiv {
+	margin-top: 32px;
+    overflow: hidden;
+    padding: 0 90px;
+    text-align: center;
+}
+
+.shareDiv div {
+	float: left;
+	width: 100px;	
+}
+
+.hidden {
+	display: none;	
+}
+
+#missing div#slider div#prev p, div#slider div#next p {
+	height: 17px;	
+}
+
+.thumbnail-container {
+	overflow: hidden;
+    padding-top: 15px;	
+}
+
+.thumbnail-container div {
+	float: left;
+    height: 115px;
+    margin-right: 14px;
+}
+
+div#finder {
+	padding: 10px 0 0 0;
+	clear:left;
+}
+
+/* Color Settings */
+a, div#header h2 a:hover, div.entry h2.title a:hover, div#comments p#posted, div#comments p#error, div#hello .email, #contact .success {
+	color: #EF5411;
+}
+
+div#finder input.submit {
+	background-color: #FA5B0F;
+}
+
+div#finder input.submit:hover {
+	background-color: #FF6D1F;
+}
+
+#buy-this, #checkout input.checkout, #add, input.comment, #contact input.button, #contact-product, .green-gradient  {
+	background-color: #FA5B0F;
+	background: -moz-linear-gradient(top, #FA5B0F, #FF6517 );
+	background: -webkit-gradient(linear, center top, center bottom, from(#FA5B0F), to(#FF6517));
+}
+
+/* This are not configurable so far */
+#buy-this:hover, #checkout input.checkout:hover, #add:hover, input.comment:hover, #contact input.button:hover, #contact-product:hover, .green-gradient:hover {
+	background: -moz-linear-gradient(top, #FF6D1F, #FF6D1F);
+	background: -webkit-gradient(linear, center top, center bottom, from(#FF6D1F), to(#FF6D1F));
+}
+
+.gray-gradient {
+	background: -moz-linear-gradient(top, #bfbfbf, #7c7c7c) !important;
+	background: -webkit-gradient(linear, center top, center bottom, from(#bfbfbf), to(#7c7c7c)) !important;
+}
+
+.seals a {
+	float: right;
+}
+.seals {
+	overflow: hidden;
+	margin-top: 20px;
+	margin-bottom: 20px;	
+}
+
+.infinite-scroll-loading {
+    background: url(loading-infinite-scroll.gif) no-repeat center;
+    display: block;
+    height: 80px;
+    clear: left;
+}
+
+.installments{
+	font-size: 0.8em;
+}
+
+.banner{
+    margin:10px auto;
+    text-align: center;
+}
+
+.banner img {
+    max-width: 800px;
+}
+
+.hidden {
+	display: none;
+}
+
+.error {
+	color: #AA0000;
+	text-align:center;
+}
+
+.cloud-zoom-big{
+    background-color:#fff;
+}
+
+#shipping-calculator {
+    margin-top: 10px;
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+#shipping-calculator input {
+    margin-left: 10px;
+    margin-right: 20px;
+    width: 90px;
+}
+
+#shipping-calculator input[type="radio"] {
+	width: 15px;
+}
+
+#shipping-calculator .loading {
+	background: url(loading.gif) no-repeat center;
+    display: inline-block;
+    height: 32px;
+    width: 32px;
+    vertical-align: middle;
+    margin-left: 20px;
+}
+
+#invalid-zipcode {
+	color: #f00;
+	margin-left: 20px;
+}
+
+#shipping-calculator ul.shipping-list li {
+	display: block;
+	float: none;
+	text-align: left;
+	margin-bottom: 10px;
+}
+
+#shipping-calculator ul.shipping-list {
+    display: block;
+    margin: auto;
+    padding: 20px 0 0;
+    width: 540px;
+    border-bottom: none;
+}
+
+#shipping-calculator ul.shipping-list img {
+	vertical-align: middle;
+	margin-right: 20px;
+}
+
+.contentBox.theme-light.slider-wrapper {
+    padding:0;
+    width:810px;
+}
+
+.afip img {
+	max-height: 40px;
+	vertical-align: middle;
+}

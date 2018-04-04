@@ -1,0 +1,14 @@
+Variante Azul
+	navBackground = #40B9ED
+	navText       = #AADCF2
+	background    = bg.png
+
+Variante Verde
+	navBackground = #02a324
+	navText       = #99F2AC
+	background    = wood-d.jpg
+
+Variante Roja
+	navBackground = #b70101
+	navText       = #d37d7d
+	background    = wood-l.jpg

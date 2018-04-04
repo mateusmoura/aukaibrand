@@ -1,0 +1,41 @@
+Elegante
+	background_color   = #ffffff
+	background_pattern = trama-woman
+	invert_pattern     = 0
+	footer_text        = #3D2822
+	nav_text           = #3D2822
+	nav_text_hover     = #8D7872
+	nav_background     = #F5E9D9
+	nav_border         = #EDD8BA
+	nav_cart           = #3D2822
+	title_color        = #3D2822
+	title_background   = #F5E9D9
+	content_border     = #EDD8BA
+
+Distinguido
+	background_color   = #FFD6D6
+	background_pattern = trama-man14
+	invert_pattern     = 0
+	footer_text        = #3D2822
+	nav_text           = #3D2822
+	nav_text_hover     = #8D7872
+	nav_background     = #FFD6D6
+	nav_border         = #CBA09F
+	nav_cart           = #3D2822
+	title_color        = #3D2822
+	title_background   = #FFD6D6
+	content_border     = #CBA09F
+
+Refinado
+	background_color   = #3D2822
+	background_pattern = trama-man4
+	invert_pattern     = 1
+	footer_text        = #ffffff
+	nav_text           = #3D2822
+	nav_text_hover     = #8D7872
+	nav_background     = #F5E9D9
+	nav_border         = #EDD8BA
+	nav_cart           = #3D2822
+	title_color        = #3D2822
+	title_background   = #F5E9D9
+	content_border     = #EDD8BA

@@ -1,0 +1,9 @@
+button_color		= #7A1631
+links_color		 	= #CF423C
+border_color     	= #FFE294
+links_hover        	= #AE0000
+home_display        = products
+slider_auto         = 1
+infinite_scrolling  = 1
+show_footer_fb_like_box = 0
+show_product_fb_comment_box = 0

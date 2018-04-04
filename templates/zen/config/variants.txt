@@ -1,0 +1,17 @@
+Zen
+	background_color   			= #FFFFFF
+	background_color_secondary	= #BF9B77
+	text_color					= #434343
+	brand_color					= #86E1C6
+
+Mobilia
+	background_color   			= #5C45FF
+	background_color_secondary	= #5C45FF
+	text_color					= #ffffff
+	brand_color					= #393742
+	font_logo           = "Source Sans Pro", sans-serif
+	font_headings      	= "Source Sans Pro", sans-serif
+	font_headingsprods  = "Source Sans Pro", sans-serif
+	font_navigation  = "Source Sans Pro", sans-serif
+	font_buttons     = "Source Sans Pro", sans-serif
+	font_rest        = "Source Sans Pro", sans-serif

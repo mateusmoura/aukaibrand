@@ -1,0 +1,15 @@
+primary
+	name = Productos destacados
+	description = PEstos productos van a sobresalir del resto
+
+recent
+	name = Productos recientes
+	description = Son tus productos recién llegados
+
+offer
+	name = Productos en oferta
+	description = Serán los productos con un precio promocional
+
+coming
+	name = Próximamente
+	description = Elegí esto para mostrar los productos que están por llegar

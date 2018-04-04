@@ -1,0 +1,394 @@
+es "carrito vacío"
+pt "carrinho vazio"
+en "your cart is empty"
+
+es "1 ítem en tu carrito"
+pt "1 item no seu carrinho"
+en "1 item in your cart"
+
+es "{1} ítems en tu carrito"
+pt "{1} items no seu carrinho"
+en "{1} items in your cart"
+
+es "Iniciar sesión"
+pt "Login"
+en "Log in"
+
+es "Crear cuenta"
+pt "Cadastre-se"
+en "Register"
+
+es "Cerrar sesión"
+pt "Sair"
+en "Log out"
+
+es "Mi cuenta"
+pt "Minha conta"
+en "My account"
+
+es "Inicio"  
+pt "Home"
+en "Home"
+
+es "Resultados de búsqueda"
+pt "Resultados da pesquisa"
+en "Search results"
+
+es "Buscar..."  
+pt "Buscar..."
+en "Search..."
+
+es "No podemos ofrecerte {1} unidades de {2}. Solamente tenemos {3} unidades." 
+pt "Não podemos te oferecer {1} unidades do produto {2}. No momento, somente possuímos {3} unidades"
+en "We cannot offer you {1} units of {2}. We only have {3} left in stock."
+
+es "Copyright &copy; {1} {2}. Todos los derechos reservados."
+pt "Copyright &copy; {1} {2}. Todos os direitos reservados."
+en "Copyright &copy; {1} {2}. All Rights Reserved."
+
+es "En hasta {1} cuotas de {2} sin interés"
+pt "Em até {1}x de {2} sem juros"
+en "In up to {1} installments of {2} without interest"
+
+es "En hasta {1} cuotas en tarjeta de crédito"
+pt "Em até {1}x no cartão"
+en "In up to {1} installments"
+
+es "Ver el detalle de las cuotas"
+pt "Ver detalhes das parcelas"
+en "See installments details"
+
+es "Contacto"  
+pt "Contato"
+en "Contact"
+
+es "Carrito"
+pt "Carrinho"
+en "Shopping Cart"
+
+es "Carrito de Compras"
+pt "Carrinho de Compras"
+en "Shopping Cart"
+
+es "Producto"
+pt "Produto"
+en "Product"
+
+es "Cantidad"
+pt "Quantidade"
+en "Quantity"
+
+es "Precio"
+pt "Preço"
+en "Price"
+
+es "Stock"
+pt "Estoque"
+en "Stock"
+
+es "Subtotal"
+pt "Subtotal"
+en "Subtotal"
+
+es "Ver detalles"
+pt "Ver detalhes"
+en "See details"
+
+es "eliminar"
+pt "remover"
+en "remove"
+
+es "Total"
+pt "Total"
+en "Total"
+
+es "Cambiar Cantidades"
+pt "Alterar Quantidades"
+en "Update quantities"
+
+es "Iniciar compra"
+pt "Finalizar compra"
+en "Go to checkout"
+
+es "El carrito de compras está vacío."
+pt "O carrinho de compras está vazio."
+en "The shopping cart is empty."
+
+es "1 ítem en tu carrito"
+pt "1 ítem no seu carrinho"
+en "1 item in your cart"
+
+es "{1} ítems en tu carrito"
+pt "{1} itens no seu carrinho"
+en "{1} items in your cart"
+
+es "Carrito vacío"
+pt "Carrinho vazio"
+en "Empty cart"
+
+es "Sin stock"  
+pt "Esgotado"
+en "Out of stock"
+
+es "No hay suficiente stock para agregar este producto al carrito."
+pt "Desculpe, mas não há estoque suficiente para incluir este produto ao carrinho."
+en "There's not enough stock left to add this product to the shopping cart."
+
+es "Buscador"
+pt "Buscador"
+en "Search"
+
+es "No hay productos en esta categoría."
+pt "Não existem produtos nesta categoria."
+en "There are no products in this category yet."
+
+es "Error"
+pt "Erro"
+en "Error"
+
+es "Destacados"
+pt "Produtos em Destaque"
+en "Featured Products"
+
+es "Agregar al carrito"  
+pt "Comprar"
+en "Add to cart"
+
+es "Agregando..."
+pt "Incluindo..."
+en "Adding..."
+
+es "El mensaje ha sido enviado con éxito, muchas gracias."
+pt "A mensagem foi enviada com sucesso, muito obrigado."
+en "The message has been sent, thank you."
+
+es "Nombre"
+pt "Nome Completo"
+en "Name"
+
+es "Email"
+pt "E-mail"
+en "Email"
+
+es "Dirección"
+pt "Endereço"
+en "Address
+
+es "Síguenos en"
+pt "Siga-nos no"
+en "Follow us on"
+
+es "Teléfono"
+pt "Telefone"
+en "Phone"
+
+es "Mensaje"
+pt "Mensagem"
+en "Message"
+
+es "No completar este campo"
+pt "Não preencher este campo"
+en "Do not fill this field"
+
+es "Opcional"
+pt "Opcional"
+en "Optional"
+
+es "Enviar"
+pt "Enviar"
+en "Send"
+
+es "Ingrese aquí su código postal para calcular su costo de envío"
+pt "Digite aqui o seu CEP para calcular o frete"
+en "Enter your zipcode to calculate your shipping cost"
+
+es "Calcular costo de envío"
+pt "Calcular Frete"
+en "Calculate shipping"
+
+es "El código postal es inválido."
+pt "O CEP está inválido."
+en "The zipcode is not valid."
+
+es "Vea las opciones de envío para su código postal abajo"
+pt "Veja os valores para o seu CEP abaixo"
+en "Your shipping options are the following"
+
+es "No hay costos de envío para el código postal dado."
+pt "Não há frete disponível para o CEP informado."
+en "Shipping is not available for your zipcode."
+
+es "La página que estás buscando no existe."
+pt "Desculpe, mas a página que você está procurando não existe."
+en "The page you're looking for doesn't exist."
+
+es "Quizás te interesen los siguientes productos."
+pt "Talvez você se interesse pelos seguintes produtos."
+en "Maybe you'll be interested in the following products."
+
+es "Anterior"
+pt "Anterior"
+en "Previous"
+
+es "Siguiente"
+pt "Seguinte"
+en "Next"
+
+es "Cargando..."
+pt "Carregando..."
+en "Loading..."
+
+es "No hay resultados para ""{1}""."
+pt "Nenhum resultado para ""{1}""."
+en "There are no results for ""{1}""."
+
+es "Si"
+pt "Sim"
+en "Yes"
+
+es "No"
+pt "Não"
+en "No"
+
+es "Consultar"
+pt "Sob Consulta"
+en "Contact"
+
+es "Consultar precio"
+pt "Preço sob Consulta"
+en "Contact for price"
+
+--- Sections ---
+es "Producto Principal"
+pt "Produto Principal"
+
+es "Pon aquí el producto principal de tu sitio"
+pt "Coloque aqui o produto principal da sua loja"
+
+es "Otros Destacados"
+pt "Outros Destaques"
+
+es "Pon aquí el resto de los productos que deseas destacar"
+pt "Coloque aqui os outros produtos que deseja destacar"
+
+--- Settings ---
+es "Fondo"
+pt "Fundo"
+
+es "Color de fondo"
+pt "Cor de fundo"
+
+es "O sube una imágen de fondo"
+pt "Ou anexe uma imagem para o fundo"
+
+es "Primer color del degradé del fondo del contenido"
+pt "Primeira cor do degradé do conteúdo do fundo"
+
+es "Segundo color del degradé del fondo del contenido"
+pt "Segunda cor do degradé do conteúdo do fundo"
+
+es "Barra de navegación"
+pt "Barra de navegação"
+
+es "Fuentes"
+pt "Fontes"
+
+es "Títulos"
+pt "Títulos"
+
+es "Resto del sitio"
+pt "Resto do site"
+
+es "Textos"
+pt "Textos"
+
+es "Color del texto"
+pt "Cor dos textos"
+
+es "Color de los links"
+pt "Cor dos links"
+
+es "Color de los links al posar el mouse"
+pt "Cor dos links ao passar o mouse"
+
+es "Navegación"
+pt "Navegação"
+
+es "Color de la navegación principal"
+pt "Cor da navegação principal"
+
+es "Color de la navegación secundaria"
+pt "Cor da navegação secundária"
+
+es "Color al posar el mouse de la navegación"
+pt "Cor ao passar o mouse na navegação"
+
+es "Color del texto de la sección activa de la navegación"
+pt "Cor do texto na seção ativa da navegação"
+
+es "Color de los bordes"
+pt "Cor das bordas"
+
+es "Página de inicio"
+pt "Home"
+
+es "Cambiar la imagen de manera automática en el slider"
+pt "Alterar a imagem de maneira automática no Slide Show"
+
+es "Selecciona las imágenes del slider (recomendamos que todas las imágenes sean del mismo tamaño con un ancho de 615px)"
+pt "Selecione as imagens do Slide Show (recomendamos que todas as imagens sejam do mesmo tamanho com uma largura de 615px)"
+
+es "Selecciona una imagen"
+pt "Anexar uma imagem"
+
+es "Link de la imagen (opcional)"
+pt "Link para onde a imagem levará (opcional)"
+
+es "Banners"
+pt "Banners"
+
+es "Elige un banner para la página de inicio (recomendamos utilizar imágenes de 468x60 px)"
+pt "Escolha um banner para o Home (recomendamos utilizar imagens de 468x60 px)"
+
+es "Link para el banner de la página de inicio (opcional)"
+pt "Link para o banner da home (opcional)"
+
+es "Elige un banner para el listado de productos (recomendamos utilizar imágenes de 468x60 px)"
+pt "Escolha um banner para a lista de produtos (recomendamos utilizar imagens de 468x60 px)"
+
+es "Link para el banner del listado de productos (opcional)"
+pt "Link para o banner da lista de produtos (opcional)"
+
+es "Elige un banner para la barra lateral (recomendamos utilizar imágenes de 160x600 px)"
+pt "Escolha um banner para a barra lateral (recomendamos utilizar imagens de 160x600 px)"
+
+pt "Link para o banner da barra lateral (opcional)"
+es "Link para el banner de la barra lateral (opcional)"
+
+es "Listado de productos"
+pt "Lista de Produtos"
+
+es "¿Cargar productos automáticamente a medida que el visitante se desplaza?"
+pt "Você deseja carregar automaticamente os produtos a medida em que o seu cliente desce a barra de rolagem?"
+
+es "Mostrar caja de Facebook en el footer (se debe configurar la página de Facebook en 'Información de contacto')"
+pt "Mostrar a caixa do Facebook no rodapé (é necessário antes preencher sua página do Facebook em 'Informação de contato')"
+
+es "Mostrar caja de comentarios de Facebook en la vista de un producto"
+pt "Mostrar a caixa dos comentários do Facebook na página de um produto"
+
+es "ID del usuario moderador de los comentarios de Facebook (obtener <a target='_blank' href='http://findmyfacebookid.com/'>aquí</a>)"
+pt "ID do usuário moderador dos comentários do Facebook (obter <a target='_blank' href='http://findmyfacebookid.com/'>aqui</a>)"
+
+--- Variants ---
+es "Variante Verde"
+pt "Variação Verde"
+
+es "Variante Gris"
+pt "Variação Cinza"
+
+es "Variante Crema"
+pt "Variação Creme"
+
+es "Variante Rosa"
+pt "Variação Rosa"

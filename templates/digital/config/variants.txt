@@ -1,0 +1,32 @@
+Variação Azul
+	navBackground 	= #5388d5
+	navText       	= #FFFFFF
+	textHeaderInfo	= #000000
+	footerTitle		= #798ca7
+	background    	= background_azul.jpg
+	linkSidebar		= #3D79D0
+	logoText		= #000000
+	sublinkSidebar  = #4c4c4c
+	backgroundCart	= #b6d2fa
+
+Variação Cinza
+	navBackground 	= #606060
+	navText       	= #FFFFFF
+	textHeaderInfo	= #000000
+	footerTitle		= #3c3c3d
+	background    	= background_cinza.jpg
+	linkSidebar		= #000000
+	logoText		= #000000
+	sublinkSidebar  = #4c4c4c
+	backgroundCart	= #cdcdcd
+
+Variação Vermelha
+	navBackground 	= #e00019
+	navText       	= #FFFFFF
+	textHeaderInfo	= #000000
+	footerTitle		= #B50B0B
+	background    	= background_vermelho.jpg
+	linkSidebar		= #e00019
+	logoText		= #000000
+	sublinkSidebar  = #4c4c4c
+	backgroundCart	= #cdcdcd

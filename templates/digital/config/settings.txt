@@ -1,0 +1,175 @@
+Cores
+	color
+		name = innerBackground
+		description = Cor de fundo
+	color
+		name = navBackground
+		description = Barra de navegação
+	color
+		name = navText
+		description = Textos em botões de barra de navegação
+	color
+		name = logoText
+		description = Texto para slogan
+	color
+		name = textHeaderInfo
+		description = Texto de telefone e e-mail
+	color
+		name = linkSidebar
+		description = Cor das categorias da barra lateral
+	color
+		name = sublinkSidebar
+		description = Cor das sub-categorias da barra lateral
+	color
+		name = backgroundCart
+		description = Cor de fundo do carrinho de compras
+Fontes
+	font
+		name = headings
+		description = Titulos
+		values
+			"Open Sans",sans-serif = Open Sans
+			Arial,sans-serif = Arial
+			Helvetica,Arial,sans-serif = Helvetica
+			"Times New Roman",Times,serif = Times New Roman
+			Georgia,"Times New Roman",serif = Georgia
+			Verdana,Geneva,sans-serif = Verdana
+			Tahoma,Geneva,sans-serif = Tahoma
+			"Palatino Linotype","Book Antiqua",Palatino,serif = Palatino Linotype
+			Impact,Charcoal,sans-serif = Impact
+	font
+		name = navigationBar
+		description = Barra de navegação
+		values
+			"Open Sans",sans-serif = Open Sans
+			Arial,sans-serif = Arial
+			Helvetica,Arial,sans-serif = Helvetica
+			"Times New Roman",Times,serif = Times New Roman
+			Georgia,"Times New Roman",serif = Georgia
+			Verdana,Geneva,sans-serif = Verdana
+			Tahoma,Geneva,sans-serif = Tahoma
+			"Palatino Linotype","Book Antiqua",Palatino,serif = Palatino Linotype
+			Impact,Charcoal,sans-serif = Impact
+	font
+		name = navigationCategories
+		description = Categorias da barra lateral
+		values
+			"Open Sans",sans-serif = Open Sans
+			Arial,sans-serif = Arial
+			Helvetica,Arial,sans-serif = Helvetica
+			"Times New Roman",Times,serif = Times New Roman
+			Georgia,"Times New Roman",serif = Georgia
+			Verdana,Geneva,sans-serif = Verdana
+			Tahoma,Geneva,sans-serif = Tahoma
+			"Palatino Linotype","Book Antiqua",Palatino,serif = Palatino Linotype
+			Impact,Charcoal,sans-serif = Impact
+	font
+		name = rest
+		description = Resto do site
+		values
+			"Open Sans",sans-serif = Open Sans
+			Arial,sans-serif = Arial
+			Helvetica,Arial,sans-serif = Helvetica
+			"Times New Roman",Times,serif = Times New Roman
+			Georgia,"Times New Roman",serif = Georgia
+			Verdana,Geneva,sans-serif = Verdana
+			Tahoma,Geneva,sans-serif = Tahoma
+			"Palatino Linotype","Book Antiqua",Palatino,serif = Palatino Linotype
+			Impact,Charcoal,sans-serif = Impact
+Imagens
+	gallery
+		name = slider
+		description = Selecione as imagens que você utilizará no Slide Show
+		gallery_image = Anexar uma imagem
+		gallery_link = [Opcional] Endereço do site que o usuário entrará ao clicar na imagem
+		gallery_width = 690
+	checkbox
+		name = slider_auto
+		description = Alterar a imagem de maneira automática no Slide Show
+	image
+		original = banner.jpg
+		description = Banner para a home (recomendamos utilizar imagens de 468x60 px)
+	i18n_input
+		name = banner_url
+		description = [Opcional] Endereço do site que o usuário entrará ao clicar no banner da home
+	image
+		original = banner-seccion.jpg
+		description = Banner para as páginas de categorias (recomendamos utilizar imagens de 468x60 px)
+	i18n_input
+		name = banner_seccion_url
+		description = [Opcional] Endereço do site que o usuário entrará ao clicar no banner das páginas de categorias
+	image
+		original = banner-sidebar.jpg
+		description = Banner para a barra lateral (recomendamos utilizar imagens de 160x600 px)
+	i18n_input
+		name = banner_sidebar_url
+		description = [Opcional] Endereço do site que o usuário entrará ao clicar no banner da barra lateral
+Menus
+	menu
+		name = footer_menu
+		description = Que menu você deseja mostrar no final da página?
+Social
+	checkbox
+		name = fb_sidebar_likebox
+		description = Mostrar a caixa do Facebook no rodapé (é necessário antes preencher sua página do Facebook em 'Informação de contato')
+	checkbox
+		name = show_product_fb_comment_box
+		description = Mostrar a caixa dos comentários do Facebook na página de um produto
+	text
+		name = fb_admins
+		description = ID do usuário moderador dos comentários do Facebook (obter <a target='_blank' href='http://findmyfacebookid.com/'>aqui</a>)
+Opções gerais
+	checkbox
+		name = expand_subcategories
+		description = Deseja deixar as sub-categorias no menu lateral sempre visíveis?
+	i18n_input
+		name = description_store
+		description = Breve descrição da sua loja
+	dropdown
+		name = background
+		description = Escolha uma imagem de fundo pré-configurada
+		values
+			background_azul.jpg  = Degrade Azul
+			background_cinza.jpg  = Degrade Cinza
+			background_preto.jpg = Degrade Preto
+			background_vermelho.jpg  = Degrade Vermelho
+	image
+		original = custom_background.jpg
+		description = ou faça o upload da sua própria imagem de fundo
+	checkbox
+		name = infinite_scrolling
+		description = Permitir que na apresentação dos produtos, os seus clientes carreguem novos produtos quando chegarem ao final da página?
+	text
+		name = cart_minimum_value
+		description = Valor mínimo de compra
+	checkbox
+		name = continue_buying
+		description = Mostrar o botão de 'Continuar comprando' no carrinho de compras
+Banner de Servicios
+	checkbox
+		name = banner_services
+		description = Mostrar el banner de servicios en toda la tienda (se verá arriba del footer)
+	checkbox
+		name = banner_services_home
+		description = Mostrar el banner de servicios solo en la home (se verá debajo del slider)
+	checkbox
+		name = banner_services_category
+		description = Mostrar el banner de servicios en la lista de productos (se verá arriba de los productos)
+	i18n_input
+		name = banner_services_01_title
+		description = Título del banner para envíos
+	i18n_input
+		name = banner_services_01_description
+		description = Descripción del banner para envíos
+	i18n_input
+		name = banner_services_02_title
+		description = Título del banner para tarjetas de crédito
+	i18n_input
+		name = banner_services_02_description
+		description = Descripción del banner para tarjetas de crédito
+	i18n_input
+		name = banner_services_03_title
+		description = Título del banner para seguridad
+	i18n_input
+		name = banner_services_03_description
+		description = Descripción del banner para seguridad
