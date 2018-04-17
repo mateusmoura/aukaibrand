@@ -1,0 +1,29 @@
+Brogue
+	base = true
+	vertical = clothing_accesories
+	background_color = #ffffff
+	primary_color = #0053cd
+	secondary_color = #e93b68
+	text_primary_color = #36393d
+	line_color = #cccccc
+Hall
+	vertical = home_garden
+	background_color = #F9F9F9
+	primary_color = #71BF98	
+	secondary_color = #BF0F82
+	text_primary_color = #21241F 
+	line_color = #cccccc
+Strech
+	vertical = health_beauty
+	background_color = #FFFFFB
+	primary_color = #273E5B	
+	secondary_color = #F8CECB
+	text_primary_color = #5F6A79
+	line_color = #7D7D7D
+Tartan
+	vertical = clothing
+	background_color = #FCFCF7
+	primary_color = #79D9B6	
+	secondary_color = #D9687F
+	text_primary_color = #2C2F36	
+	line_color = #6AC0F2
