@@ -212,7 +212,6 @@ body {
   background-color: $white-color;
   -webkit-transform: translateZ(0);
   will-change: transform;
-  display: none;
   position: fixed;
   overflow-y: auto;
   overflow-x: hidden;
@@ -225,7 +224,12 @@ body {
   max-width: 315px;
   width: calc(100% - 60px);
   z-index: 1002;
-  transition: all 0.4s cubic-bezier(0.46, 0.01, 0.32, 1);
+  @include transition(all 0.4s cubic-bezier(0.46, 0.01, 0.32, 1));
+
+  &.nav__bar--opended {
+    display: block;
+    left: 0;
+  }
 
   &-close {
     padding: 20px;

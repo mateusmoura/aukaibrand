@@ -34,12 +34,14 @@ if (!Function.prototype.bind) {
   };
 }
 
-var site = {
+const site = {
   /*
   * Funcionalidades GLOBAL onde e chamado em todas as páginas do projeto.
   */
-  global: function(){
-    var _collapse = $('.collapse');
+  global: () => {
+    const _collapse = $('.collapse');
+
+    site.menu();
 
     // MM.Mascarar();
     // for (var i = _collapse.length - 1; i >= 0; i--) {
@@ -49,90 +51,67 @@ var site = {
     // MM.Modal();
     // MM.ValidarFormularios($('form.validate'));
 
-    // var data = [
-    //   {
-    //     "title": "All Day Event",
-    //     "start": "2015-12-01",
-    //     'description': 'Hurrayyyyyyyyyy',
-    //   },
-    //   {
-    //     "title": "Long Event",
-    //     "start": "2015-12-07",
-    //     "image": "http://www.skiheavenly.com/~/media/heavenly/images/732x260%20header%20images/events-heavenly-header.ashx",
-    //     "end": "2015-12-10"
-    //   },
-    //   {
-    //     "id": "999",
-    //     "title": "Repeating Event",
-    //     "start": "2015-12-09T16:00:00-05:00"
-    //   },
-    //   {
-    //     "id": "999",
-    //     "title": "Repeating Event",
-    //     "start": "2015-12-16T16:00:00-05:00"
-    //   },
-    //   {
-    //     "title": "Conference",
-    //     "start": "2015-12-11",
-    //     "end": "2015-12-13"
-    //   },
-    //   {
-    //     "title": "Meeting",
-    //     "start": "2015-12-12T10:30:00-05:00",
-    //     "end": "2015-12-12T12:30:00-05:00"
-    //   },
-    //   {
-    //     "title": "Lunch",
-    //     "start": "2015-12-12T12:00:00-05:00"
-    //   },
-    //   {
-    //     "title": "Meeting",
-    //     "image": "http://www.skiheavenly.com/~/media/heavenly/images/732x260%20header%20images/events-heavenly-header.ashx",
-    //     "start": "2015-12-12T14:30:00-05:00"
-    //   },
-    //   {
-    //     "title": "Happy Hour",
-    //     "start": "2015-12-12T17:30:00-05:00"
-    //   },
-    //   {
-    //     "title": "Dinner",
-    //     "start": "2015-12-12T20:00:00"
-    //   },
-    //   {
-    //     "title": "Birthday Party",
-    //     "start": "2015-12-13T07:00:00-05:00"
-    //   },
-    //   {
-    //     "title": "Click for Google",
-    //     "url": "http://google.com/",
-    //     "start": "2015-12-28"
-    //   },
-    //   {
-    //     "title": "Click for Google",
-    //     "url": "http://google.com/",
-    //     "start": "2016-01-02"
-    //   }
-    // ];
-
     if($('main').hasClass('about')) {
-      this.home();
+      site.home();
     }
-
     // MM.Calendar($('.block__fullcalendar'), data);
   },
+  /* Menu functions */
+  menu: () => {
+    const header = $('header');
+    const options = $('.options', header);
+    const nav_mobile = $('.nav__bar--mobile');
+
+    $('.options__nav a', options).on('click', () => {
+      // nav_mobile.find('.nav__bar--links').toggleClass('nav__bar--mobile-expanded');
+      // nav_mobile.find('.nav__bar--has-dropdown').toggleClass('nav__bar--expanded');
+      nav_mobile.addClass('nav__bar--opended');
+
+      return false;
+    });
+
+    $('.btn-close').on('click', () => {
+      nav_mobile.removeClass('nav__bar--opended');
+
+      return false;
+    });
+
+    $('.nav__bar--has-dropdown a', nav_mobile).on('click', (e) => {
+      const btn = $(e.currentTarget);
+
+      btn.parents('ul').addClass('nav__bar--mobile-expanded');
+      btn.parent().addClass('nav__bar--expanded');
+
+      return false;
+    });
+
+    $('.nav__bar--dropdown-close a', nav_mobile).on('click', (e) => {
+      const btn = $(e.currentTarget);
+
+      btn.parents('.nav__bar--expanded, .nav__bar--links').removeClass('nav__bar--expanded nav__bar--mobile-expanded');
+    });
+
+    $('.nav__bar--has-dropdown', header).on('mouseover', (e) => {
+      $(e.currentTarget).addClass('nav-hover');
+      header.addClass('dropdown-opened');
+    }).on('mouseout', (e) => {
+      $(e.currentTarget).removeClass('nav-hover');
+      header.removeClass('dropdown-opened');
+    });
+  },
   /* Home page */
-  home: function () {
+  home: () => {
     
   },
   /*
   * Callback quando salva um evento na modal.
   */
-  registerEvent: function () {
+  registerEvent: () => {
     console.log('Callback modal');
   }
 }
 
 
-$( function(){
+$(() => {
   site.global();
 });

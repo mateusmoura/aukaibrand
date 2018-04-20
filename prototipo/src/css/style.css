@@ -312,7 +312,6 @@ body {
   background-color: #ffffff;
   -webkit-transform: translateZ(0);
   will-change: transform;
-  display: none;
   position: fixed;
   overflow-y: auto;
   overflow-x: hidden;
@@ -325,22 +324,32 @@ body {
   max-width: 315px;
   width: calc(100% - 60px);
   z-index: 1002;
+  -webkit-transition: all 0.4s cubic-bezier(0.46, 0.01, 0.32, 1);
+  -moz-transition: all 0.4s cubic-bezier(0.46, 0.01, 0.32, 1);
+  -ms-transition: all 0.4s cubic-bezier(0.46, 0.01, 0.32, 1);
+  -o-transition: all 0.4s cubic-bezier(0.46, 0.01, 0.32, 1);
   transition: all 0.4s cubic-bezier(0.46, 0.01, 0.32, 1);
 }
 
-/* line 230, src/sass/_header.scss */
+/* line 229, src/sass/_header.scss */
+.nav__bar--mobile.nav__bar--opended {
+  display: block;
+  left: 0;
+}
+
+/* line 234, src/sass/_header.scss */
 .nav__bar--mobile-close {
   padding: 20px;
   height: auto;
 }
 
-/* line 234, src/sass/_header.scss */
+/* line 238, src/sass/_header.scss */
 .nav__bar--mobile-close .btn-close {
   background-color: transparent;
   color: #494d51;
 }
 
-/* line 240, src/sass/_header.scss */
+/* line 244, src/sass/_header.scss */
 .nav__bar--mobile .nav__bar--links {
   background: #ffffff;
   margin: 40px 0 0;
@@ -357,12 +366,12 @@ body {
   transition: all 0.25s ease-in;
 }
 
-/* line 251, src/sass/_header.scss */
+/* line 255, src/sass/_header.scss */
 .nav__bar--mobile .nav__bar--links.nav__bar--mobile-expanded {
   left: -100%;
 }
 
-/* line 255, src/sass/_header.scss */
+/* line 259, src/sass/_header.scss */
 .nav__bar--mobile .nav__bar--links .nav__bar--has-dropdown {
   background: transparent;
   padding-bottom: 25px;
@@ -375,12 +384,12 @@ body {
   width: 100%;
 }
 
-/* line 266, src/sass/_header.scss */
+/* line 270, src/sass/_header.scss */
 .nav__bar--mobile .nav__bar--links .nav__bar--has-dropdown.nav__bar--expanded {
   z-index: 2;
 }
 
-/* line 269, src/sass/_header.scss */
+/* line 273, src/sass/_header.scss */
 .nav__bar--mobile .nav__bar--links .nav__bar--has-dropdown.nav__bar--expanded .nav__bar--dropdown {
   height: 100%;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=$value)";
@@ -390,7 +399,7 @@ body {
   opacity: 1;
 }
 
-/* line 275, src/sass/_header.scss */
+/* line 279, src/sass/_header.scss */
 .nav__bar--mobile .nav__bar--links .nav__bar--has-dropdown .nav__bar--link {
   padding: 0;
   color: #494d51;
@@ -398,7 +407,7 @@ body {
   font-size: 21px;
 }
 
-/* line 282, src/sass/_header.scss */
+/* line 286, src/sass/_header.scss */
 .nav__bar--mobile .nav__bar--links .nav__bar--has-dropdown .nav__bar--dropdown {
   margin: 0;
   height: 0;
@@ -425,17 +434,17 @@ body {
   backface-visibility: hidden;
 }
 
-/* line 300, src/sass/_header.scss */
+/* line 304, src/sass/_header.scss */
 .nav__bar--mobile .nav__bar--links .nav__bar--has-dropdown .nav__bar--dropdown-close .nav__bar--link {
   font-size: 13px;
 }
 
-/* line 303, src/sass/_header.scss */
+/* line 307, src/sass/_header.scss */
 .nav__bar--mobile .nav__bar--links .nav__bar--has-dropdown .nav__bar--dropdown-close .nav__bar--link i {
   margin-right: 10px;
 }
 
-/* line 309, src/sass/_header.scss */
+/* line 313, src/sass/_header.scss */
 .nav__bar--mobile .nav__bar--links .nav__bar--has-dropdown .nav__bar--dropdown li {
   padding-bottom: 20px;
   background: transparent;
