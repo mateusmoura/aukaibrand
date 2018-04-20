@@ -34,13 +34,26 @@ body {
 
     iframe {
       height: 100vh !important;
+
+      @include desktops {
+        height: calc(100vh + 200px) !important;
+      }
     }
 
     .inline-YTPlayer{
       height: 100vh !important;
+      margin: 0 auto;
+
+      @include desktops {
+        height: calc(100vh + 200px) !important;
+      }
 
       #youtube-player {
         height: 100vh !important;
+
+        @include desktops {
+          height: calc(100vh + 200px) !important;
+        }
       }
     }
   }
@@ -73,5 +86,12 @@ body {
         font-size: 12px;
       }
     }
+  }
+
+  &__carousel {
+    background-color: $white-color;
+    text-align: center;
+    height: calc(100vh);
+    position: relative;
   }
 }
