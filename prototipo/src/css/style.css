@@ -488,6 +488,31 @@ body {
 }
 
 /* line 27, src/sass/_default.scss */
+.section__video {
+  text-align: center;
+  height: calc(100vh - 60px);
+  position: relative;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+/* line 35, src/sass/_default.scss */
+.section__video iframe {
+  height: 100vh !important;
+}
+
+/* line 39, src/sass/_default.scss */
+.section__video .inline-YTPlayer {
+  height: 100vh !important;
+}
+
+/* line 42, src/sass/_default.scss */
+.section__video .inline-YTPlayer #youtube-player {
+  height: 100vh !important;
+}
+
+/* line 48, src/sass/_default.scss */
 .section__text {
   color: #ffffff;
   text-align: center;
@@ -495,7 +520,7 @@ body {
   z-index: 2;
 }
 
-/* line 34, src/sass/_default.scss */
+/* line 55, src/sass/_default.scss */
 .section__link {
   display: block;
   position: absolute;
@@ -505,7 +530,7 @@ body {
   bottom: 0;
 }
 
-/* line 42, src/sass/_default.scss */
+/* line 63, src/sass/_default.scss */
 .section__link .section__text {
   position: absolute;
   left: 50%;
@@ -518,7 +543,7 @@ body {
   transform: translate3d(-50%, 0, 0);
 }
 
-/* line 49, src/sass/_default.scss */
+/* line 70, src/sass/_default.scss */
 .section__link .section__text span {
   display: block;
   margin-bottom: 20px;

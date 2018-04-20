@@ -51,7 +51,7 @@ const site = {
     // MM.Modal();
     // MM.ValidarFormularios($('form.validate'));
 
-    if($('main').hasClass('about')) {
+    if($('body').hasClass('home')) {
       site.home();
     }
     // MM.Calendar($('.block__fullcalendar'), data);
@@ -101,7 +101,23 @@ const site = {
   },
   /* Home page */
   home: () => {
-    
+    const section_video = $('.section__video');
+
+    console.log('====================================');
+    console.log(section_video);
+    console.log('====================================');
+
+    for (let i = 0; i < section_video.length; i++) {
+      const element = $(section_video[i]);
+
+      if ($.fn.YTPlayer) {
+        element.find('#youtube-player').YTPlayer();
+      } else {
+        element.hide();
+        element.parent().css('background-image', `url("${element.data('video-poster')}")`);
+      }
+      
+    }
   },
   /*
   * Callback quando salva um evento na modal.

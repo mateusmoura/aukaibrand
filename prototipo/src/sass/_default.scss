@@ -24,6 +24,27 @@ body {
     background-repeat: no-repeat;
   }
 
+  &__video {
+    text-align: center;
+    height: calc(100vh - 60px);
+    position: relative;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    iframe {
+      height: 100vh !important;
+    }
+
+    .inline-YTPlayer{
+      height: 100vh !important;
+
+      #youtube-player {
+        height: 100vh !important;
+      }
+    }
+  }
+
   &__text {
     color: $white-color;
     text-align: center;
