@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+@@include('includes/head.html')
+
+<body>
+    @@include('includes/navigation-mobile.html')
+
+  <!-- HEADER -->
+  <header class="header"> <!-- dropdown-opened -->
+    <div class="header__content">
+      <h1 class="logo"><a href="/"><img src="../images/aukai_logo.png" alt="Aukai Brand" /></a></h1>
+
+      @@include('includes/navigation.html')
+
+      <div class="options">
+        <div class="options__nav">
+          <a href="/"><i class="fas fa-bars"></i></a>
+        </div>
+        <div class="options__search">
+          <a href="/"><i class="fas fa-search"></i></a>
+        </div>
+        <div class="options__account">
+          <a href="/"><i class="far fa-user"></i></a>
+        </div>
+        <div class="options__minicart">
+          <a href="/"><i class="fas fa-shopping-cart"></i></a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container-fluid">
+        <div class="row no-gutters">
+          <div class="col-12">
+            <div class="section__image" style="background-image: url('../images/produtos/home_man.jpg');">
+              <a href="/" class="section__link">
+                <div class="section__text">
+                  <span>Shop</span>
+                  Man
+                </div>
+              </a>
+            </div>
+          </div>
+  
+          <div class="col-12">
+            <div class="section__image" style="background-image: url('../images/produtos/home_woman.jpg');">
+              <a href="/" class="section__link">
+                <div class="section__text">
+                  <span>Shop</span>
+                  Woman
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container-fluid">
+        <div class="row no-gutters">
+          <div class="col-12">
+            <div class="section__image" style="background-image: url('../images/produtos/home_fine.jpg');">
+              <a href="/" class="section__link">
+                <div class="section__text">
+                  <span>Shop</span>
+                  Fine
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  @@include('includes/footer.html')
+
+  @@include('includes/scripts.html')
+</body>
+
+</html>

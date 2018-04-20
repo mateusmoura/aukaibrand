@@ -1,0 +1,320 @@
+/**
+ TODO:
+  - Fazer JS do hover do menu ( desktop );
+  - Fazer JS para abrir e fechar o menu ( mobile );
+  - Remover o background cinza;
+**/
+
+body {
+  background-color: gray;
+}
+
+.header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  padding: 0;
+  background: transparent;
+  z-index: 2;
+
+  &.dropdown-opened {
+    .header__content {
+      .nav__bar {
+        .nav__bar--links {
+          > li {
+            > .nav__bar--link {
+              color: $text-color;
+            }
+          }
+        }
+      }
+
+      .options {
+         > div {
+           a {
+            color: $text-color;
+           }
+         }
+      }
+    }
+  }
+
+  &__content {
+    height: 60px;
+    background-color: $white-color;
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+
+    @include desktops {
+      background-color: transparent;
+      height: auto;
+      width: auto;
+    }
+
+    .logo {
+      display: block;
+      text-align: center;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 50%;
+      width: 100%;
+      max-width: 96px;
+      margin: 0 auto;
+      z-index: 3;
+      left: 0;
+      right: 0;
+      @include transform(translateY(-50%));
+
+      img {
+        width: 100%;
+        vertical-align: inherit;
+      }
+
+      @include desktops {
+        left: 25px;
+        right: auto;
+      }
+    }
+
+    .nav__bar {
+      display: none;
+
+      @include desktops {
+        display: block;
+      }
+
+      .nav__bar--links {
+        margin: 0;
+        text-align: center;
+        padding-left: 40px;
+        list-style: none;
+
+        > li {
+          > .nav__bar--link {
+            padding: 0px;
+            margin: 20px 22px 15px;
+            background: transparent;
+            position: relative;
+            z-index: 1;
+            color: $white-color;
+            @include transition(all 0.25s ease-out);
+            display: inline-block;
+            font-size: 16px;
+            line-height: 1.6;
+            font-weight: 400;
+          }
+        }
+      }
+
+      .nav__bar--has-dropdown {
+        position: static;
+        display: inline-block;
+
+        &::before {
+          content: " ";
+          background-color: $white-color;
+          position: absolute;
+          left: 0;
+          right: 0;
+          height: 60px;
+          display: none;
+        }
+
+        &.nav-hover {
+          &::before {
+            display: block;
+          }
+
+          .nav__bar--dropdown {
+            display: block;
+          }
+        }
+
+        .nav__bar--dropdown {
+          left: 0;
+          right: 0;
+          background: #ffffff;
+          text-align: center;
+          top: 60px;
+          display: none;
+          position: absolute;
+          margin: 0;
+          z-index: 5;
+
+          > li {
+            position: static;
+            display: inline-block;
+
+            > .nav__bar--link {
+              display: inline-block;
+              color: $text-color;
+              margin: 75px 22px 112px;
+              padding: 0;
+            }
+          }
+        }
+      }
+    }
+
+    .options {
+      position: absolute;
+      top: 50%;
+      right: 20px;
+      left: 20px;
+      text-align: right;
+      display: inline-block;
+      vertical-align: top;
+      line-height: 1;
+      box-sizing: border-box;
+      width: auto;
+      @include transform(translateY(-50%));
+
+      @include desktops {
+        right: 25px;
+        left: auto;
+      }
+
+      & > div {
+        margin: 0 7px;
+        display: inline-block;
+        vertical-align: top;
+        margin: 0 13px;
+        cursor: pointer;
+
+        a {
+          color: $text-color;
+
+          @include desktops {
+            color: $white-color;
+          }
+        }
+      }
+
+      .options__nav {
+        float: left;
+
+        @include desktops {
+          display: none;
+        }
+      }
+
+      .options__search {
+        float: left;
+      }
+    }
+  }
+}
+
+.nav__bar--mobile {
+  background-color: $white-color;
+  -webkit-transform: translateZ(0);
+  will-change: transform;
+  display: none;
+  position: fixed;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  top: 0;
+  bottom: 0;
+  left: -315px;
+  padding: 0;
+  border: none;
+  max-width: 315px;
+  width: calc(100% - 60px);
+  z-index: 1002;
+  transition: all 0.4s cubic-bezier(0.46, 0.01, 0.32, 1);
+
+  &-close {
+    padding: 20px;
+    height: auto;
+
+    .btn-close {
+      background-color: transparent;
+      color: $text-color;
+    }
+  }
+
+  .nav__bar--links {
+    background: #ffffff;
+    margin: 40px 0 0;
+    width: 200%;
+    position: relative;
+    left: 0;
+    height: calc(100vh - 160px);
+    list-style: none;
+    padding: 0;
+    @include transition(all 0.25s ease-in);
+
+    &.nav__bar--mobile-expanded {
+      left: -100%;
+    }
+
+    .nav__bar--has-dropdown {
+      background: transparent;
+      padding-bottom: 25px;
+      padding-left: 20px;
+      padding-right: 20px;
+      position: initial;
+      z-index: 1;
+      margin-bottom: 0;
+      display: table;
+      width: 100%;
+
+      &.nav__bar--expanded {
+        z-index: 2;
+
+        .nav__bar--dropdown {
+          height: 100%;
+          @include opacity(1);
+        }
+      }
+
+      .nav__bar--link {
+        padding: 0;
+        color: $text-color;
+        line-height: 1;
+        font-size: 21px;
+      }
+
+      .nav__bar--dropdown {
+        margin: 0;
+        height: 0;
+        @include opacity(0);
+        top: 0;
+        position: absolute;
+        right: 20px;
+        left: calc(50% + 20px);
+        max-height: 100%;
+        visibility: visible;
+        overflow: hidden;
+        list-style: none;
+        padding: 0;
+        @include transition(all 300ms cubic-bezier(0.57, 0.06, 0.05, 0.95))
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+
+        &-close {
+          .nav__bar--link {
+            font-size: 13px;
+
+            i {
+              margin-right: 10px;
+            }
+          }
+        }
+
+        li {
+          padding-bottom: 20px;
+          background: transparent;
+          padding-bottom: 25px;
+          position: initial;
+          margin-bottom: 0;
+          z-index: 1;
+        }
+      }
+    }
+  }
+}
