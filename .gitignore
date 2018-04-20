@@ -1,5 +1,5 @@
 .DS_Store
 .vscode/ftp-sync.json
 ftp-sync.json
-.vscode
-/.vscode/
+nuvem/.vscode/
+nuvem/
