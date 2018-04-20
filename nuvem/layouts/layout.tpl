@@ -185,9 +185,7 @@
                   <a href="{{ store.url }}" class="logo-text {% if has_logo %} hidden {% endif %}">{{ store.name }}</a>
                 {% endif %}
               </div>
-              <ul class="js-desktop-nav hidden-xs desktop-nav">
-                {% snipplet "navigation/navigation.tpl" %}
-              </ul>
+
               <div class="d-flex">
                 <div class="desktop-search">
                   <div class="js-search-container">
@@ -284,19 +282,17 @@
         <div class="nav-head-main">
           <div class="logo-container">
             {% if template == 'home' %}
-                          <h1 class="mobile-logo-home">
-                      {% endif %}
-                          <div id="logo" class="logo-img-container {% if not has_logo %}hidden{% endif %}">
-                              {{ store.logo('large') | img_tag('', {class: 'logo-img'}) | a_tag(store.url) }}
-                          </div>
-                          <a id="no-logo" class="logo-text {% if has_logo %} hidden {% endif %}" href="{{ store.url }}">{{ store.name }}</a>
-                      {% if template == 'home' %}
-                          </h1>
-                      {% endif %}
+                <h1 class="mobile-logo-home">
+            {% endif %}
+                <div id="logo" class="logo-img-container {% if not has_logo %}hidden{% endif %}">
+                    {{ store.logo('large') | img_tag('', {class: 'logo-img'}) | a_tag(store.url) }}
+                </div>
+                <a id="no-logo" class="logo-text {% if has_logo %} hidden {% endif %}" href="{{ store.url }}">{{ store.name }}</a>
+            {% if template == 'home' %}
+                </h1>
+            {% endif %}
           </div>
-          <ul class="js-desktop-nav hidden-xs desktop-nav">
-            {% snipplet "navigation/navigation.tpl" %}
-          </ul>
+          
           <div class="d-flex hidden-xs">
             <div class="desktop-search">
               <div class="js-search-container">
