@@ -1,0 +1,1 @@
+{"version":3,"file":"../category.css","sources":["category.scss"],"sourcesContent":["\n\n.section-category {\n  .section-image {\n    height: auto;\n  }\n}"],"names":[],"mappings":";AAEA,AACE,iBADe,CACf,cAAc,CAAC;EACb,MAAM,EAAE,IAAI;CACb"}

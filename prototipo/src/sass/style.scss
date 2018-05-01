@@ -2,6 +2,8 @@
 @import 'partials/mixins';
 @import 'partials/variables';
 @import 'partials/media-query';
+@import 'node_modules/animate-sass/animate';
 
 @import 'header';
 @import 'default';
+@import 'category';

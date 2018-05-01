@@ -12,6 +12,11 @@ $border-color: #d6dbe2;
 $gray : #cccccc;
 $dark-navy : #071e33;
 
+/*============ ANIMATE CSS =============*/
+
+$base-duration: .3s;
+$use-fade: true;
+
 /*============ COLOR CLASSES =============*/
 .text-primary {
 	color: $primary-color!important;
