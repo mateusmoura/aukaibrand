@@ -992,6 +992,128 @@ body {
   z-index: 1;
 }
 
+/* line 1, src/sass/_footer.scss */
+.footer {
+  background-color: #000;
+  padding-top: 50px;
+}
+
+/* line 5, src/sass/_footer.scss */
+.footer__social {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+/* line 9, src/sass/_footer.scss */
+.footer__social ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 12, src/sass/_footer.scss */
+.footer__social ul li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+/* line 16, src/sass/_footer.scss */
+.footer__social ul li a {
+  color: #ffffff;
+}
+
+/* line 23, src/sass/_footer.scss */
+.footer__info {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+/* line 27, src/sass/_footer.scss */
+.footer__info h4 {
+  color: #ffffff;
+  font-size: 20px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+/* line 34, src/sass/_footer.scss */
+.footer__info-text {
+  margin: 0 auto;
+  max-width: 240px;
+}
+
+/* line 38, src/sass/_footer.scss */
+.footer__info-text p {
+  color: #ffffff;
+  font-size: 14px;
+}
+
+/* line 45, src/sass/_footer.scss */
+.footer__info-link a {
+  font-size: 14px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+/* line 53, src/sass/_footer.scss */
+.footer__menus {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+/* line 57, src/sass/_footer.scss */
+.footer__menus h6 {
+  color: #ffffff;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+/* line 64, src/sass/_footer.scss */
+.footer__menus ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 12px;
+}
+
+/* line 68, src/sass/_footer.scss */
+.footer__menus ul li {
+  margin-bottom: 5px;
+}
+
+/* line 72, src/sass/_footer.scss */
+.footer__menus ul a {
+  color: #b3b3b3;
+  font-size: 12px;
+}
+
+@media (min-width: 992px) {
+  /* line 80, src/sass/_footer.scss */
+  .footer__order-1 {
+    order: 1;
+  }
+}
+
+@media (min-width: 992px) {
+  /* line 86, src/sass/_footer.scss */
+  .footer__order-2 {
+    order: 2;
+  }
+}
+
+@media (min-width: 992px) {
+  /* line 92, src/sass/_footer.scss */
+  .footer__order-3 {
+    order: 3;
+  }
+}
+
+/* line 97, src/sass/_footer.scss */
+.footer__order-3 .footer__menus {
+  display: none;
+}
+
 /* line 1, src/sass/_default.scss */
 body {
   padding-top: 60px;
@@ -1123,6 +1245,17 @@ body {
   text-align: center;
   height: calc(100vh);
   position: relative;
+}
+
+/* line 101, src/sass/_default.scss */
+.section__carousel .carousel {
+  overflow: hidden;
+  height: 100%;
+}
+
+/* line 106, src/sass/_default.scss */
+.section__carousel .carousel-item {
+  overflow: hidden;
 }
 
 /* line 4, src/sass/_category.scss */

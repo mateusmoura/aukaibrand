@@ -97,5 +97,14 @@ body {
     text-align: center;
     height: calc(100vh);
     position: relative;
+
+    .carousel {
+      overflow: hidden;
+      height: 100%;
+    }
+
+    .carousel-item {
+      overflow: hidden;
+    }
   }
 }
