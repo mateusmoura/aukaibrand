@@ -1,64 +1,65 @@
 /*=== MIXINS ===*/
 /*=== VARIABLES ===*/
 /*============ ANIMATE CSS =============*/
+/*============ Bootstrap CSS =============*/
 /*============ COLOR CLASSES =============*/
-/* line 21, src/sass/partials/_variables.scss */
+/* line 24, src/sass/partials/_variables.scss */
 .text-primary {
   color: #F45C5D !important;
 }
 
-/* line 24, src/sass/partials/_variables.scss */
+/* line 27, src/sass/partials/_variables.scss */
 .text-white {
   color: #ffffff !important;
 }
 
-/* line 27, src/sass/partials/_variables.scss */
+/* line 30, src/sass/partials/_variables.scss */
 .bg-sand {
   background-color: #f5f5f6;
 }
 
-/* line 30, src/sass/partials/_variables.scss */
+/* line 33, src/sass/partials/_variables.scss */
 .bg-gray {
   background-color: #cccccc;
 }
 
-/* line 33, src/sass/partials/_variables.scss */
+/* line 36, src/sass/partials/_variables.scss */
 .bg-primary {
   background-color: #F45C5D !important;
 }
 
-/* line 36, src/sass/partials/_variables.scss */
+/* line 39, src/sass/partials/_variables.scss */
 .no-bg {
   background-color: transparent;
 }
 
-/* line 39, src/sass/partials/_variables.scss */
+/* line 42, src/sass/partials/_variables.scss */
 .bordered {
   border: 1px solid #d6dbe2;
 }
 
-/* line 43, src/sass/partials/_variables.scss */
+/* line 46, src/sass/partials/_variables.scss */
 .brd-gray {
   border-color: #cccccc !important;
 }
 
-/* line 46, src/sass/partials/_variables.scss */
+/* line 49, src/sass/partials/_variables.scss */
 .brd-primary {
   border-color: #F45C5D !important;
 }
 
 /* Background Colors */
-/* line 51, src/sass/partials/_variables.scss */
+/* line 54, src/sass/partials/_variables.scss */
 .bg-white {
   background-color: #ffffff !important;
 }
 
-/* line 54, src/sass/partials/_variables.scss */
+/* line 57, src/sass/partials/_variables.scss */
 .bg-dark {
   background-color: #1d2025 !important;
 }
 
-/* line 57, src/sass/partials/_variables.scss */
+/* line 60, src/sass/partials/_variables.scss */
 .bg-faded {
   background-color: #f5f5f6;
 }
@@ -603,17 +604,10 @@ body {
 }
 
 /**
- TODO:
-  - Fazer JS do hover do menu ( desktop );
-  - Fazer JS para abrir e fechar o menu ( mobile );
-  - Remover o background cinza;
+ @TODO:
+  
 **/
-/* line 8, src/sass/_header.scss */
-body {
-  background-color: gray;
-}
-
-/* line 12, src/sass/_header.scss */
+/* line 6, src/sass/_header.scss */
 .header {
   position: fixed;
   left: 0;
@@ -624,17 +618,17 @@ body {
   z-index: 52;
 }
 
-/* line 26, src/sass/_header.scss */
+/* line 20, src/sass/_header.scss */
 .header.dropdown-opened .header__content .nav__bar .nav__bar--links > li > .nav__bar--link {
   color: #494d51;
 }
 
-/* line 35, src/sass/_header.scss */
+/* line 29, src/sass/_header.scss */
 .header.dropdown-opened .header__content .options > div a {
   color: #494d51;
 }
 
-/* line 43, src/sass/_header.scss */
+/* line 37, src/sass/_header.scss */
 .header__content {
   height: 60px;
   background-color: #ffffff;
@@ -644,7 +638,7 @@ body {
 }
 
 @media (min-width: 992px) {
-  /* line 43, src/sass/_header.scss */
+  /* line 37, src/sass/_header.scss */
   .header__content {
     background-color: transparent;
     height: auto;
@@ -652,7 +646,7 @@ body {
   }
 }
 
-/* line 56, src/sass/_header.scss */
+/* line 50, src/sass/_header.scss */
 .header__content .logo {
   display: block;
   text-align: center;
@@ -673,33 +667,33 @@ body {
   transform: translateY(-50%);
 }
 
-/* line 71, src/sass/_header.scss */
+/* line 65, src/sass/_header.scss */
 .header__content .logo img {
   width: 100%;
   vertical-align: inherit;
 }
 
 @media (min-width: 992px) {
-  /* line 56, src/sass/_header.scss */
+  /* line 50, src/sass/_header.scss */
   .header__content .logo {
     left: 25px;
     right: auto;
   }
 }
 
-/* line 82, src/sass/_header.scss */
+/* line 76, src/sass/_header.scss */
 .header__content .nav__bar {
   display: none;
 }
 
 @media (min-width: 992px) {
-  /* line 82, src/sass/_header.scss */
+  /* line 76, src/sass/_header.scss */
   .header__content .nav__bar {
     display: block;
   }
 }
 
-/* line 89, src/sass/_header.scss */
+/* line 83, src/sass/_header.scss */
 .header__content .nav__bar .nav__bar--links {
   margin: 0;
   text-align: center;
@@ -707,7 +701,7 @@ body {
   list-style: none;
 }
 
-/* line 96, src/sass/_header.scss */
+/* line 90, src/sass/_header.scss */
 .header__content .nav__bar .nav__bar--links > li > .nav__bar--link {
   padding: 0px;
   margin: 20px 22px 15px;
@@ -726,13 +720,13 @@ body {
   font-weight: 400;
 }
 
-/* line 112, src/sass/_header.scss */
+/* line 106, src/sass/_header.scss */
 .header__content .nav__bar .nav__bar--has-dropdown {
   position: static;
   display: inline-block;
 }
 
-/* line 116, src/sass/_header.scss */
+/* line 110, src/sass/_header.scss */
 .header__content .nav__bar .nav__bar--has-dropdown::before {
   content: " ";
   background-color: #ffffff;
@@ -743,17 +737,17 @@ body {
   display: none;
 }
 
-/* line 127, src/sass/_header.scss */
+/* line 121, src/sass/_header.scss */
 .header__content .nav__bar .nav__bar--has-dropdown.nav-hover::before {
   display: block;
 }
 
-/* line 131, src/sass/_header.scss */
+/* line 125, src/sass/_header.scss */
 .header__content .nav__bar .nav__bar--has-dropdown.nav-hover .nav__bar--dropdown {
   display: block;
 }
 
-/* line 136, src/sass/_header.scss */
+/* line 130, src/sass/_header.scss */
 .header__content .nav__bar .nav__bar--has-dropdown .nav__bar--dropdown {
   left: 0;
   right: 0;
@@ -766,13 +760,13 @@ body {
   z-index: 5;
 }
 
-/* line 147, src/sass/_header.scss */
+/* line 141, src/sass/_header.scss */
 .header__content .nav__bar .nav__bar--has-dropdown .nav__bar--dropdown > li {
   position: static;
   display: inline-block;
 }
 
-/* line 151, src/sass/_header.scss */
+/* line 145, src/sass/_header.scss */
 .header__content .nav__bar .nav__bar--has-dropdown .nav__bar--dropdown > li > .nav__bar--link {
   display: inline-block;
   color: #494d51;
@@ -780,7 +774,7 @@ body {
   padding: 0;
 }
 
-/* line 162, src/sass/_header.scss */
+/* line 156, src/sass/_header.scss */
 .header__content .options {
   position: absolute;
   top: 50%;
@@ -800,14 +794,14 @@ body {
 }
 
 @media (min-width: 992px) {
-  /* line 162, src/sass/_header.scss */
+  /* line 156, src/sass/_header.scss */
   .header__content .options {
     right: 25px;
     left: auto;
   }
 }
 
-/* line 180, src/sass/_header.scss */
+/* line 174, src/sass/_header.scss */
 .header__content .options > div {
   margin: 0 7px;
   display: inline-block;
@@ -816,36 +810,36 @@ body {
   cursor: pointer;
 }
 
-/* line 187, src/sass/_header.scss */
+/* line 181, src/sass/_header.scss */
 .header__content .options > div a {
   color: #494d51;
 }
 
 @media (min-width: 992px) {
-  /* line 187, src/sass/_header.scss */
+  /* line 181, src/sass/_header.scss */
   .header__content .options > div a {
     color: #ffffff;
   }
 }
 
-/* line 196, src/sass/_header.scss */
+/* line 190, src/sass/_header.scss */
 .header__content .options .options__nav {
   float: left;
 }
 
 @media (min-width: 992px) {
-  /* line 196, src/sass/_header.scss */
+  /* line 190, src/sass/_header.scss */
   .header__content .options .options__nav {
     display: none;
   }
 }
 
-/* line 204, src/sass/_header.scss */
+/* line 198, src/sass/_header.scss */
 .header__content .options .options__search {
   float: left;
 }
 
-/* line 211, src/sass/_header.scss */
+/* line 205, src/sass/_header.scss */
 .nav__bar--mobile {
   background-color: #ffffff;
   -webkit-transform: translateZ(0);
@@ -869,25 +863,25 @@ body {
   transition: all 0.4s cubic-bezier(0.46, 0.01, 0.32, 1);
 }
 
-/* line 229, src/sass/_header.scss */
+/* line 223, src/sass/_header.scss */
 .nav__bar--mobile.nav__bar--opended {
   display: block;
   left: 0;
 }
 
-/* line 234, src/sass/_header.scss */
+/* line 228, src/sass/_header.scss */
 .nav__bar--mobile-close {
   padding: 20px;
   height: auto;
 }
 
-/* line 238, src/sass/_header.scss */
+/* line 232, src/sass/_header.scss */
 .nav__bar--mobile-close .btn-close {
   background-color: transparent;
   color: #494d51;
 }
 
-/* line 244, src/sass/_header.scss */
+/* line 238, src/sass/_header.scss */
 .nav__bar--mobile .nav__bar--links {
   background: #ffffff;
   margin: 40px 0 0;
@@ -904,12 +898,12 @@ body {
   transition: all 0.25s ease-in;
 }
 
-/* line 255, src/sass/_header.scss */
+/* line 249, src/sass/_header.scss */
 .nav__bar--mobile .nav__bar--links.nav__bar--mobile-expanded {
   left: -100%;
 }
 
-/* line 259, src/sass/_header.scss */
+/* line 253, src/sass/_header.scss */
 .nav__bar--mobile .nav__bar--links .nav__bar--has-dropdown {
   background: transparent;
   padding-bottom: 25px;
@@ -922,12 +916,12 @@ body {
   width: 100%;
 }
 
-/* line 270, src/sass/_header.scss */
+/* line 264, src/sass/_header.scss */
 .nav__bar--mobile .nav__bar--links .nav__bar--has-dropdown.nav__bar--expanded {
   z-index: 2;
 }
 
-/* line 273, src/sass/_header.scss */
+/* line 267, src/sass/_header.scss */
 .nav__bar--mobile .nav__bar--links .nav__bar--has-dropdown.nav__bar--expanded .nav__bar--dropdown {
   height: 100%;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=$value)";
@@ -937,7 +931,7 @@ body {
   opacity: 1;
 }
 
-/* line 279, src/sass/_header.scss */
+/* line 273, src/sass/_header.scss */
 .nav__bar--mobile .nav__bar--links .nav__bar--has-dropdown .nav__bar--link {
   padding: 0;
   color: #494d51;
@@ -945,7 +939,7 @@ body {
   font-size: 21px;
 }
 
-/* line 286, src/sass/_header.scss */
+/* line 280, src/sass/_header.scss */
 .nav__bar--mobile .nav__bar--links .nav__bar--has-dropdown .nav__bar--dropdown {
   margin: 0;
   height: 0;
@@ -972,17 +966,17 @@ body {
   backface-visibility: hidden;
 }
 
-/* line 304, src/sass/_header.scss */
+/* line 298, src/sass/_header.scss */
 .nav__bar--mobile .nav__bar--links .nav__bar--has-dropdown .nav__bar--dropdown-close .nav__bar--link {
   font-size: 13px;
 }
 
-/* line 307, src/sass/_header.scss */
+/* line 301, src/sass/_header.scss */
 .nav__bar--mobile .nav__bar--links .nav__bar--has-dropdown .nav__bar--dropdown-close .nav__bar--link i {
   margin-right: 10px;
 }
 
-/* line 313, src/sass/_header.scss */
+/* line 307, src/sass/_header.scss */
 .nav__bar--mobile .nav__bar--links .nav__bar--has-dropdown .nav__bar--dropdown li {
   padding-bottom: 20px;
   background: transparent;
@@ -1323,6 +1317,268 @@ body {
 /* line 60, src/sass/_category.scss */
 .section-category .section__image .product-info-wrapper span {
   font-size: 12px;
+}
+
+@media (min-width: 992px) {
+  /* line 1, src/sass/_product.scss */
+  .section-product {
+    padding-top: 80px;
+  }
+}
+
+@media (min-width: 992px) {
+  /* line 6, src/sass/_product.scss */
+  .section-product__content {
+    margin: 0 auto;
+    max-width: 960px;
+  }
+}
+
+/* line 13, src/sass/_product.scss */
+.section-product .breadcrumb {
+  background-color: transparent;
+}
+
+@media (min-width: 992px) {
+  /* line 13, src/sass/_product.scss */
+  .section-product .breadcrumb {
+    margin: 0 auto;
+    max-width: 960px;
+    margin-bottom: 1rem;
+  }
+}
+
+/* line 22, src/sass/_product.scss */
+.section-product .breadcrumb .breadcrumb-item {
+  color: #b3b3b3;
+  font-size: 12px;
+}
+
+/* line 26, src/sass/_product.scss */
+.section-product .breadcrumb .breadcrumb-item::before {
+  color: #b3b3b3;
+  content: "|";
+}
+
+/* line 32, src/sass/_product.scss */
+.section-product .breadcrumb .breadcrumb-item:first-child::before {
+  content: "";
+}
+
+/* line 37, src/sass/_product.scss */
+.section-product .breadcrumb .breadcrumb-item a {
+  color: #b3b3b3;
+}
+
+/* line 41, src/sass/_product.scss */
+.section-product .breadcrumb .breadcrumb-item.active {
+  color: #35434b;
+}
+
+/* line 47, src/sass/_product.scss */
+.section-product .product-carousel {
+  margin-bottom: 45px;
+}
+
+/* line 51, src/sass/_product.scss */
+.section-product .product-details {
+  text-align: center;
+}
+
+/* line 54, src/sass/_product.scss */
+.section-product .product-details h1 {
+  color: #35434b;
+  font-size: 38px;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+/* line 62, src/sass/_product.scss */
+.section-product .product-details__description {
+  background-color: #ebece6;
+  margin-left: -15px;
+  margin-right: -15px;
+  padding: 30px 0;
+}
+
+@media (min-width: 992px) {
+  /* line 68, src/sass/_product.scss */
+  .section-product .product-details__description .container {
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 992px) {
+  /* line 73, src/sass/_product.scss */
+  .section-product .product-details__description .container .col-lg-4 {
+    padding-right: 20px;
+  }
+}
+
+/* line 80, src/sass/_product.scss */
+.section-product .product-details__description h2 {
+  color: #35434b;
+  font-size: 18px;
+  margin-bottom: 25px;
+  font-weight: 400;
+}
+
+/* line 87, src/sass/_product.scss */
+.section-product .product-details__description-column {
+  margin-bottom: 30px;
+}
+
+/* line 91, src/sass/_product.scss */
+.section-product .product-details__description p {
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+/* line 98, src/sass/_product.scss */
+.section-product .product-price {
+  color: #35434b;
+  font-size: 20px;
+  display: inline-block;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+/* line 111, src/sass/_product.scss */
+.section-product .product-color h4, .section-product .product-size h4, .section-product .product-social h4 {
+  color: #35434b;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+/* line 117, src/sass/_product.scss */
+.section-product .product-color ul, .section-product .product-size ul, .section-product .product-social ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 120, src/sass/_product.scss */
+.section-product .product-color ul li, .section-product .product-size ul li, .section-product .product-social ul li {
+  display: inline-block;
+}
+
+/* line 125, src/sass/_product.scss */
+.section-product .product-color .btn-radius, .section-product .product-size .btn-radius, .section-product .product-social .btn-radius {
+  border-radius: 50%;
+}
+
+/* line 130, src/sass/_product.scss */
+.section-product .product-size {
+  margin-bottom: 15px;
+}
+
+/* line 133, src/sass/_product.scss */
+.section-product .product-size .btn-size {
+  background-color: #ffffff;
+  border: solid 1px #000000;
+  color: #35434b;
+  font-size: 12px;
+  height: 25px;
+  width: 25px;
+  padding: 0;
+  line-height: 24px;
+  text-align: center;
+}
+
+/* line 144, src/sass/_product.scss */
+.section-product .product-size .btn-size:hover, .section-product .product-size .btn-size:focus, .section-product .product-size .btn-size:active, .section-product .product-size .btn-size.btn-selected, .section-product .product-size .btn-size.btn-active {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+/* line 151, src/sass/_product.scss */
+.section-product .product-color {
+  margin-bottom: 15px;
+}
+
+/* line 154, src/sass/_product.scss */
+.section-product .product-color .btn-color {
+  font: "{0/0} a";
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+  background-color: gray;
+  color: gray;
+  height: 25px;
+  width: 25px;
+  padding: 0;
+  line-height: 24px;
+  text-align: center;
+  text-indent: -999em;
+  overflow: hidden;
+}
+
+/* line 168, src/sass/_product.scss */
+.section-product .product-guide {
+  margin-bottom: 15px;
+}
+
+/* line 171, src/sass/_product.scss */
+.section-product .product-guide .btn-link {
+  color: #292929;
+  font-size: 12px;
+}
+
+/* line 177, src/sass/_product.scss */
+.section-product .product-quantity {
+  margin-bottom: 30px;
+}
+
+/* line 180, src/sass/_product.scss */
+.section-product .product-quantity label {
+  display: block;
+  color: #35434b;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+/* line 187, src/sass/_product.scss */
+.section-product .product-quantity select {
+  margin: 0 auto;
+  max-width: 80px;
+  margin-right: 0 !important;
+}
+
+/* line 194, src/sass/_product.scss */
+.section-product .btn-add-to-cart {
+  width: 100%;
+  min-width: 250px;
+  max-width: 350px;
+  margin-bottom: 25px;
+  border-radius: 0;
+  background-color: #000000;
+  border-color: #000000;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+/* line 205, src/sass/_product.scss */
+.section-product .btn-add-to-cart:hover, .section-product .btn-add-to-cart:focus, .section-product .btn-add-to-cart:active {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* line 211, src/sass/_product.scss */
+.section-product .product-social {
+  margin-bottom: 45px;
+}
+
+/* line 214, src/sass/_product.scss */
+.section-product .product-social li {
+  margin: 0 5px;
+}
+
+/* line 218, src/sass/_product.scss */
+.section-product .product-social a {
+  color: #4d4d4d;
+  font-size: 20px;
 }
 
 /*# sourceMappingURL=maps/style.css.map */
