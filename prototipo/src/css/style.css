@@ -1109,29 +1109,34 @@ body {
 }
 
 /* line 1, src/sass/_default.scss */
+html {
+  margin-top: 0 !important;
+}
+
+/* line 5, src/sass/_default.scss */
 body {
   padding-top: 60px;
 }
 
 @media (min-width: 992px) {
-  /* line 1, src/sass/_default.scss */
+  /* line 5, src/sass/_default.scss */
   body {
     padding-top: 0;
   }
 }
 
-/* line 10, src/sass/_default.scss */
+/* line 14, src/sass/_default.scss */
 .section {
   text-align: center;
 }
 
-/* line 13, src/sass/_default.scss */
+/* line 17, src/sass/_default.scss */
 .section .container-fluid {
   padding-left: 0;
   padding-right: 0;
 }
 
-/* line 18, src/sass/_default.scss */
+/* line 22, src/sass/_default.scss */
 .section__image {
   text-align: center;
   height: calc(100vh - 60px);
@@ -1142,13 +1147,13 @@ body {
 }
 
 @media (min-width: 992px) {
-  /* line 18, src/sass/_default.scss */
+  /* line 22, src/sass/_default.scss */
   .section__image {
     height: calc(100vh);
   }
 }
 
-/* line 31, src/sass/_default.scss */
+/* line 35, src/sass/_default.scss */
 .section__video {
   text-align: center;
   height: calc(100vh - 60px);
@@ -1158,44 +1163,44 @@ body {
   background-repeat: no-repeat;
 }
 
-/* line 39, src/sass/_default.scss */
+/* line 43, src/sass/_default.scss */
 .section__video iframe {
   height: 100vh !important;
 }
 
 @media (min-width: 992px) {
-  /* line 39, src/sass/_default.scss */
+  /* line 43, src/sass/_default.scss */
   .section__video iframe {
     height: calc(100vh + 200px) !important;
   }
 }
 
-/* line 47, src/sass/_default.scss */
+/* line 51, src/sass/_default.scss */
 .section__video .inline-YTPlayer {
   height: 100vh !important;
   margin: 0 auto;
 }
 
 @media (min-width: 992px) {
-  /* line 47, src/sass/_default.scss */
+  /* line 51, src/sass/_default.scss */
   .section__video .inline-YTPlayer {
     height: calc(100vh + 200px) !important;
   }
 }
 
-/* line 55, src/sass/_default.scss */
+/* line 59, src/sass/_default.scss */
 .section__video .inline-YTPlayer #youtube-player {
   height: 100vh !important;
 }
 
 @media (min-width: 992px) {
-  /* line 55, src/sass/_default.scss */
+  /* line 59, src/sass/_default.scss */
   .section__video .inline-YTPlayer #youtube-player {
     height: calc(100vh + 200px) !important;
   }
 }
 
-/* line 65, src/sass/_default.scss */
+/* line 69, src/sass/_default.scss */
 .section__text {
   color: #ffffff;
   text-align: center;
@@ -1203,7 +1208,7 @@ body {
   z-index: 2;
 }
 
-/* line 72, src/sass/_default.scss */
+/* line 76, src/sass/_default.scss */
 .section__link {
   display: block;
   position: absolute;
@@ -1213,7 +1218,7 @@ body {
   bottom: 0;
 }
 
-/* line 80, src/sass/_default.scss */
+/* line 84, src/sass/_default.scss */
 .section__link .section__text {
   position: absolute;
   left: 50%;
@@ -1226,14 +1231,14 @@ body {
   transform: translate3d(-50%, 0, 0);
 }
 
-/* line 87, src/sass/_default.scss */
+/* line 91, src/sass/_default.scss */
 .section__link .section__text span {
   display: block;
   margin-bottom: 20px;
   font-size: 12px;
 }
 
-/* line 95, src/sass/_default.scss */
+/* line 99, src/sass/_default.scss */
 .section__carousel {
   background-color: #ffffff;
   text-align: center;
@@ -1241,13 +1246,13 @@ body {
   position: relative;
 }
 
-/* line 101, src/sass/_default.scss */
+/* line 105, src/sass/_default.scss */
 .section__carousel .carousel {
   overflow: hidden;
   height: 100%;
 }
 
-/* line 106, src/sass/_default.scss */
+/* line 110, src/sass/_default.scss */
 .section__carousel .carousel-item {
   overflow: hidden;
 }

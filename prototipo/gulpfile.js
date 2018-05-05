@@ -11,8 +11,9 @@ const livereload = require('gulp-livereload');
 const config = {
   srcDir: 'src/',
   assetDir: 'assets/',
-  wordpressDir: '../wordpress/wp-content/themes/fisk_brasilia_2018/',
+  nuvemDir: '../nuvem/',
   production: !!util.env.production,
+  nuvem: !!util.env.nuvem,
 };
 
 gulp.task('lint', () =>
@@ -32,7 +33,7 @@ gulp.task('fileinclude', () => {
 });
 
 // Sass to css conversion
-gulp.task('sass', () =>
+gulp.task('sass', () => 
   (gulp.src(`${config.srcDir}/sass/*.scss`)
     .pipe(config.production ? util.noop() : sourcemaps.init())
     .pipe(sass({
@@ -40,9 +41,24 @@ gulp.task('sass', () =>
       outputStyle: 'expanded',
       sourceComments: 'normal',
     }).on('error', sass.logError))
+    //.pipe(config.production ? util.noop() : sourcemaps.write('./maps'))
+    //.pipe(gulp.dest(config.production ? `${config.assetDir}/css` : `${config.srcDir}/css`))
     .pipe(config.production ? util.noop() : sourcemaps.write('./maps'))
-    .pipe(gulp.dest(config.production ? `${config.assetDir}/css` : `${config.srcDir}/css`))
+    .pipe(gulp.dest(config.production ? `${config.assetDir}/css` : `${config.nuvemDir}static/css/new/`))
     .pipe(config.production ? util.noop() : browserSync.stream())));
+
+// Sass to css conversion IN NUVEM SHOP
+gulp.task('sassnuvem', () => 
+  (gulp.src(`${config.nuvemDir}static/sass/*.scss`)
+    .pipe(sourcemaps.init())
+    .pipe(sass({
+      errLogToConsole: true,
+      outputStyle: 'expanded',
+      sourceComments: 'normal',
+    }).on('error', sass.logError))
+    .pipe(sourcemaps.write('./maps'))
+    .pipe(gulp.dest(`${config.nuvemDir}static/css/new/`))
+    .pipe(browserSync.stream())));
 
 gulp.task('styles', () => (
   gulp.src(`${config.srcDir}/css/{**/,}*.*`)
@@ -79,22 +95,27 @@ gulp.task('javascript', () => (
     .pipe(gulp.dest(`${config.assetDir}/js`))
 ));
 
+const serverTasks = config.nuvem ? ['sassnuvem'] : ['sass', 'fileinclude'];
+
 // Static Server + hot reload + watching scss/js/html files
-gulp.task('serve', ['sass', 'fileinclude'], () => {
+gulp.task('serve', serverTasks, () => {
   browserSync.init({
     server: {
       baseDir: config.srcDir,
     },
     port: 9595,
   });
-
-  gulp.watch([`${config.srcDir}/sass/*.scss`, `${config.srcDir}/sass/*/*.scss`], ['sass']);
-  gulp.watch([`${config.srcDir}/js/*.js`, `${config.srcDir}/js/{**/,}*.js`], ['js']);
-  gulp.watch([`${config.srcDir}/*.html`, `${config.srcDir}/includes/*.html`], ['fileinclude']).on('change', () => {
-    setTimeout(() => {
-      browserSync.reload();
-    }, 1000);
-  });
+  if (config.nuvem) {
+    gulp.watch([`${config.nuvemDir}static/sass/*.scss`, `${config.nuvemDir}static/sass/*/*.scss`], ['sassnuvem']);
+  } else {
+    gulp.watch([`${config.srcDir}/sass/*.scss`, `${config.srcDir}/sass/*/*.scss`], ['sass']);
+    gulp.watch([`${config.srcDir}/js/*.js`, `${config.srcDir}/js/{**/,}*.js`], ['js']);
+    gulp.watch([`${config.srcDir}/*.html`, `${config.srcDir}/includes/*.html`], ['fileinclude']).on('change', () => {
+      setTimeout(() => {
+        browserSync.reload();
+      }, 1000);
+    });
+  }
 });
 
 const tasks = config.production ? ['sass', 'fileinclude', 'images', 'javascript'] : ['serve'];

@@ -48,6 +48,7 @@
         {% endif %}
     {% endif %}
     {# Watch out before upgrading bootstrap as these files have some custom changes #}
+    {#
     {{ 'css/bootstrap.css' | static_url | css_tag }}
     {{ 'css/bootstrap-responsive.css' | static_url | css_tag }}
     {{ '//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css' | css_tag }}
@@ -55,6 +56,7 @@
     {{ 'css/style.css' | static_url | css_tag }}
     {{ 'css/main-color.scss.tpl' | static_url | css_tag }}
     {{ '//fonts.googleapis.com/css?family=Lato:700,900,400italic,700italic|Open+Sans:400,300,700|Slabo+27px|Oswald:400,300,700|Lora:400,700|Montserrat:400,700|Source+Sans+Pro:400,300,700|Droid+Sans:400,700|Roboto+Condensed:400italic,700italic,300,400,700|Istok+Web:400,700,400italic,700italic|Arvo:400,700,400italic,700italic|Paytone+One|Raleway:700|Lato:700|Ubuntu:700|Roboto+Slab:700' | css_tag }}
+    #}
     {% set nojquery = true %}
     {{ "//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" | script_tag }}
     {{ 'js/jquery.cookie.js' | common_cdn | script_tag }}
@@ -115,7 +117,7 @@
         }
     </script>
     {% endif %}
-    {{back_to_admin}}
+    {{ back_to_admin }}
 
     {# start main content #}
 
@@ -166,12 +168,49 @@
                             <a href="/"><i class="fas fa-search"></i></a>
                         </div>
                         <div class="options__account">
-                            <a href="/"><i class="far fa-user"></i></a>
+                            <a href="{{ store.customer_login_url }}"><i class="far fa-user"></i></a>
+
+                            {# 
+                                {% if store.has_accounts %}
+                                    <div class="options__account--menu">
+                                        {% if not customer %}
+                                            {% if 'mandatory' not in store.customer_accounts %}
+                                                {{ "Cadastre-se" | translate | a_tag(store.customer_register_url) }} <span class="divider">-</span>
+                                            {% endif %}
+                                            {{ "Login" | translate | a_tag(store.customer_login_url) }}
+                                        {% else %}
+                                            {{ "Minha conta" | translate | a_tag(store.customer_home_url) }} <span class="divider">-</span>
+                                            {{ "Sair" | translate | a_tag(store.customer_logout_url) }}
+                                        {% endif %}
+                                    </div>
+                                {% endif %}
+                            #}
                         </div>
                         <div class="options__minicart">
                             <a href="/"><i class="fas fa-shopping-cart"></i></a>
                         </div>
+
+                        {% if languages | length > 1 %}
+                            <div class="options__language">
+                                <div class="languages">
+                                    {% for language in languages %}
+                                        {% set class = language.active ? "active" : "" %}
+                                        <a href="{{ language.url }}" class="{{ class }}">{{ language.country | flag_url | img_tag(language.name) }}</a>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        {% endif %}
                     </div>
+                </div>
+
+                <div class="header__search">
+                    <button type="button" class="btn btn-close">
+                        <i class="fas fa-times"></i>
+                    </button>
+
+                    <form action="{{ store.search_url }}" method="get">
+                        <input class="field-search" type="text" name="q" placeholder="{{ 'buscar' | translate }}"/>
+                    </form>
                 </div>
             </header>
 
@@ -233,56 +272,16 @@
 
         <!-- FIM DO NOVO LAYOUT -->
 
-        <!-- Pushy Menu -->
-        <nav class="pushy pushy-left">
-            <ul>
-                {% snipplet "navigation-mobile.tpl" %}
-            </ul>
-        </nav>
+        <!-- LAYOUT ANTIGO -->
 
-        <!-- Site Overlay -->
-        <div class="site-overlay"></div>
+        
         <div id="container">
             <div class="wrapper" id="topper">
                 <div class="row-fluid">
                     <div class="container">
-                        <div class="mobile mobile-nav {% if languages | length > 1 %}mobile-nav-lang{% endif %}">
-                            <div class="menu-btn"><i class="fa fa-bars"></i></div>
-                        </div>
-                        {% if languages | length > 1 %}
-                            <div class="span4">
-                                <div class="languages">
-                                    {% for language in languages %}
-                                        {% set class = language.active ? "active" : "" %}
-                                        <a href="{{ language.url }}" class="{{ class }}">{{ language.country | flag_url | img_tag(language.name) }}</a>
-                                    {% endfor %}
-                                </div>
-                            </div>
-                            {% endif %}
-                        <div class="span8">
-                            <div class="access-top">
-                                {% if store.has_accounts %}
-                                    <div id="auth" >
-                                        {% if not customer %}
-                                            {% if 'mandatory' not in store.customer_accounts %}
-                                                {{ "Crear cuenta" | translate | a_tag(store.customer_register_url) }} <span class="divider">-</span>
-                                            {% endif %}
-                                            {{ "Iniciar sesión" | translate | a_tag(store.customer_login_url) }}
-                                        {% else %}
-                                            {{ "Mi cuenta" | translate | a_tag(store.customer_home_url) }} <span class="divider">-</span>
-                                            {{ "Cerrar sesión" | translate | a_tag(store.customer_logout_url) }}
-                                        {% endif %}
-                                    </div>
-                                {% endif %}
-                                <div class="searchbox">
-                                    <form action="{{ store.search_url }}" method="get">
-                                        <input class="text-input" type="text" name="q" placeholder="{{ 'buscar' | translate }}"/>
-                                        <i class="fa fa-search"></i>
-                                        <input class="submit-button" type="submit" value=""/>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
+                        
+
+                        
                     </div>
                 </div>
             </div>

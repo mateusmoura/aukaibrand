@@ -1,6 +1,6 @@
 {
     "remotePath": "./",
-
+   
     "port": 21,
     "secure": false,
     "protocol": "ftp",
@@ -16,7 +16,7 @@
     ],
     "generatedFiles": {
         "uploadOnSave": true,
-        "extensionsToInclude": [".tpl"],
+        "extensionsToInclude": [".tpl", ".css", ".js", ".scss", ".map"],
         "path": "../"
     }
 }

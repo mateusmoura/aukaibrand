@@ -198,6 +198,24 @@
       .options__search {
         float: left;
       }
+
+      .options__account {
+        display: none;
+
+        
+
+        @include desktops {
+          display: block;
+        }
+
+        &--menu {
+          background-color: $white-color;
+
+          a {
+            
+          }
+        }
+      }
     }
   }
 }
