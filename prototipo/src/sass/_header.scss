@@ -103,7 +103,7 @@
         }
       }
 
-      .nav__bar--has-dropdown {
+      .nav__bar--has-dropdown, .nav__bar--is-link {
         position: static;
         display: inline-block;
 
@@ -250,7 +250,7 @@
       left: -100%;
     }
 
-    .nav__bar--has-dropdown {
+    .nav__bar--has-dropdown, .nav__bar--is-link {
       background: transparent;
       padding-bottom: 25px;
       padding-left: 20px;

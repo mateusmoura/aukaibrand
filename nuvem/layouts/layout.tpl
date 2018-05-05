@@ -59,6 +59,22 @@
     {{ "//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" | script_tag }}
     {{ 'js/jquery.cookie.js' | common_cdn | script_tag }}
 
+    <!-- NOVO SITE -->
+    {{ 'css/new/bootstrap/bootstrap.min.css' | static_url | css_tag }}
+    {{ '//use.fontawesome.com/releases/v5.0.10/css/all.css' | css_tag }}
+    {{ 'css/new/animate.css' | static_url | css_tag }}
+
+    {{ 'css/new/style.css' | static_url | css_tag }}
+
+        <!-- javascript -->
+
+        {{ 'js/new/bootstrap/bootstrap.bundle.min.js' | static_url | script_tag }}
+        {{ 'js/new/plugins/jquery.mb.YTPlayer.js' | static_url | script_tag }}
+        {{ 'js/new/base.js' | static_url | script_tag }}
+
+    <link href="{{ 'images/new/favicon.png' | static_url }}" rel="shortcut icon">
+    <!-- FIM NOVO SITE -->
+
     {% if params.preview %}
         {{ 'js/instatheme.js' | static_url | script_tag }}
     {% endif %}
@@ -153,14 +169,6 @@
                             <a href="/"><i class="far fa-user"></i></a>
                         </div>
                         <div class="options__minicart">
-                            {% if not store.is_catalog and template != 'cart' %}
-                                {% if settings.ajax_cart %}
-                                    {% snipplet "cart_ajax.tpl" as "cart" %}
-                                {% else %}
-                                    {% snipplet "cart.tpl" as "cart" %}
-                                {% endif %}
-                            {% endif %}
-
                             <a href="/"><i class="fas fa-shopping-cart"></i></a>
                         </div>
                     </div>

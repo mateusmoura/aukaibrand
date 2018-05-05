@@ -721,13 +721,13 @@ body {
 }
 
 /* line 106, src/sass/_header.scss */
-.header__content .nav__bar .nav__bar--has-dropdown {
+.header__content .nav__bar .nav__bar--has-dropdown, .header__content .nav__bar .nav__bar--is-link {
   position: static;
   display: inline-block;
 }
 
 /* line 110, src/sass/_header.scss */
-.header__content .nav__bar .nav__bar--has-dropdown::before {
+.header__content .nav__bar .nav__bar--has-dropdown::before, .header__content .nav__bar .nav__bar--is-link::before {
   content: " ";
   background-color: #ffffff;
   position: absolute;
@@ -738,17 +738,17 @@ body {
 }
 
 /* line 121, src/sass/_header.scss */
-.header__content .nav__bar .nav__bar--has-dropdown.nav-hover::before {
+.header__content .nav__bar .nav__bar--has-dropdown.nav-hover::before, .header__content .nav__bar .nav__bar--is-link.nav-hover::before {
   display: block;
 }
 
 /* line 125, src/sass/_header.scss */
-.header__content .nav__bar .nav__bar--has-dropdown.nav-hover .nav__bar--dropdown {
+.header__content .nav__bar .nav__bar--has-dropdown.nav-hover .nav__bar--dropdown, .header__content .nav__bar .nav__bar--is-link.nav-hover .nav__bar--dropdown {
   display: block;
 }
 
 /* line 130, src/sass/_header.scss */
-.header__content .nav__bar .nav__bar--has-dropdown .nav__bar--dropdown {
+.header__content .nav__bar .nav__bar--has-dropdown .nav__bar--dropdown, .header__content .nav__bar .nav__bar--is-link .nav__bar--dropdown {
   left: 0;
   right: 0;
   background: #ffffff;
@@ -761,13 +761,13 @@ body {
 }
 
 /* line 141, src/sass/_header.scss */
-.header__content .nav__bar .nav__bar--has-dropdown .nav__bar--dropdown > li {
+.header__content .nav__bar .nav__bar--has-dropdown .nav__bar--dropdown > li, .header__content .nav__bar .nav__bar--is-link .nav__bar--dropdown > li {
   position: static;
   display: inline-block;
 }
 
 /* line 145, src/sass/_header.scss */
-.header__content .nav__bar .nav__bar--has-dropdown .nav__bar--dropdown > li > .nav__bar--link {
+.header__content .nav__bar .nav__bar--has-dropdown .nav__bar--dropdown > li > .nav__bar--link, .header__content .nav__bar .nav__bar--is-link .nav__bar--dropdown > li > .nav__bar--link {
   display: inline-block;
   color: #494d51;
   margin: 75px 22px 112px;
@@ -904,7 +904,7 @@ body {
 }
 
 /* line 253, src/sass/_header.scss */
-.nav__bar--mobile .nav__bar--links .nav__bar--has-dropdown {
+.nav__bar--mobile .nav__bar--links .nav__bar--has-dropdown, .nav__bar--mobile .nav__bar--links .nav__bar--is-link {
   background: transparent;
   padding-bottom: 25px;
   padding-left: 20px;
@@ -917,12 +917,12 @@ body {
 }
 
 /* line 264, src/sass/_header.scss */
-.nav__bar--mobile .nav__bar--links .nav__bar--has-dropdown.nav__bar--expanded {
+.nav__bar--mobile .nav__bar--links .nav__bar--has-dropdown.nav__bar--expanded, .nav__bar--mobile .nav__bar--links .nav__bar--is-link.nav__bar--expanded {
   z-index: 2;
 }
 
 /* line 267, src/sass/_header.scss */
-.nav__bar--mobile .nav__bar--links .nav__bar--has-dropdown.nav__bar--expanded .nav__bar--dropdown {
+.nav__bar--mobile .nav__bar--links .nav__bar--has-dropdown.nav__bar--expanded .nav__bar--dropdown, .nav__bar--mobile .nav__bar--links .nav__bar--is-link.nav__bar--expanded .nav__bar--dropdown {
   height: 100%;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=$value)";
   filter: alpha(opacity=1);
@@ -932,7 +932,7 @@ body {
 }
 
 /* line 273, src/sass/_header.scss */
-.nav__bar--mobile .nav__bar--links .nav__bar--has-dropdown .nav__bar--link {
+.nav__bar--mobile .nav__bar--links .nav__bar--has-dropdown .nav__bar--link, .nav__bar--mobile .nav__bar--links .nav__bar--is-link .nav__bar--link {
   padding: 0;
   color: #494d51;
   line-height: 1;
@@ -940,7 +940,7 @@ body {
 }
 
 /* line 280, src/sass/_header.scss */
-.nav__bar--mobile .nav__bar--links .nav__bar--has-dropdown .nav__bar--dropdown {
+.nav__bar--mobile .nav__bar--links .nav__bar--has-dropdown .nav__bar--dropdown, .nav__bar--mobile .nav__bar--links .nav__bar--is-link .nav__bar--dropdown {
   margin: 0;
   height: 0;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=$value)";
@@ -967,17 +967,17 @@ body {
 }
 
 /* line 298, src/sass/_header.scss */
-.nav__bar--mobile .nav__bar--links .nav__bar--has-dropdown .nav__bar--dropdown-close .nav__bar--link {
+.nav__bar--mobile .nav__bar--links .nav__bar--has-dropdown .nav__bar--dropdown-close .nav__bar--link, .nav__bar--mobile .nav__bar--links .nav__bar--is-link .nav__bar--dropdown-close .nav__bar--link {
   font-size: 13px;
 }
 
 /* line 301, src/sass/_header.scss */
-.nav__bar--mobile .nav__bar--links .nav__bar--has-dropdown .nav__bar--dropdown-close .nav__bar--link i {
+.nav__bar--mobile .nav__bar--links .nav__bar--has-dropdown .nav__bar--dropdown-close .nav__bar--link i, .nav__bar--mobile .nav__bar--links .nav__bar--is-link .nav__bar--dropdown-close .nav__bar--link i {
   margin-right: 10px;
 }
 
 /* line 307, src/sass/_header.scss */
-.nav__bar--mobile .nav__bar--links .nav__bar--has-dropdown .nav__bar--dropdown li {
+.nav__bar--mobile .nav__bar--links .nav__bar--has-dropdown .nav__bar--dropdown li, .nav__bar--mobile .nav__bar--links .nav__bar--is-link .nav__bar--dropdown li {
   padding-bottom: 20px;
   background: transparent;
   padding-bottom: 25px;

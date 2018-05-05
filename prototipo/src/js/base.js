@@ -76,7 +76,7 @@ const site = {
       return false;
     });
 
-    $('.nav__bar--has-dropdown a', nav_mobile).on('click', (e) => {
+    $('.nav__bar--has-dropdown > a', nav_mobile).on('click', (e) => {
       const btn = $(e.currentTarget);
 
       btn.parents('ul').addClass('nav__bar--mobile-expanded');
