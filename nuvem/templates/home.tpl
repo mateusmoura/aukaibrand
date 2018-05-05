@@ -1,3 +1,88 @@
+<!-- NOVO SITE -->
+    <div class="page-home">
+        <section class="section">
+            <div class="container-fluid">
+                <div class="row no-gutters">
+                    {% snipplet "home/category-section-1.tpl" %}
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container-fluid">
+                <div class="row no-gutters">
+                    {% snipplet "home/category-section-2.tpl" %}
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container-fluid">
+                <div class="row no-gutters">
+                <div class="col-12">
+                    <div class="section__video">
+                    <div  id="youtube-player" 
+                        data-property="{videoURL:'b29-FYXYoUY', containment:'self', stopMovieOnBlur: false, showControls:true, autoPlay:true, loop:true, vol:50, mute:true, startAt:10, stopAt:300, opacity:1, addRaster:true, quality:'large', optimizeDisplay:true, addFilters: {grayscale: 50,sepia: 80,opacity: 30}}"
+                        data-video-poster="{{ 'images/new/produtos/home_video.jpg' | static_url }}"></div>
+
+                    <a href="/" class="section__link">
+                        <div class="section__text">
+                        <span>Inspired discoveries</span>
+                        Journal
+                        </div>
+                    </a>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container-fluid">
+                <div class="row no-gutters">
+                <div class="col-12">
+                    <div class="section__carousel">
+                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src="{{ 'images/new/carousel/image_1.jpg' | static_url }}" alt="First slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="{{ 'images/new/carousel/image_2.jpg' | static_url }}" alt="Second slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="{{ 'images/new/carousel/image_3.jpg' | static_url }}" alt="Third slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="{{ 'images/new/carousel/image_4.jpg' | static_url }}" alt="Four slide">
+                        </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </section>
+    </div>
+<!-- FIM NOVO SITE -->
+
+
+
+
 <!-- Modal -->
 {% if settings.show_news_box %}
     {% include 'snipplets/newsletter-popup.tpl' %}

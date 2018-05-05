@@ -174,6 +174,12 @@
                     </div>
                 </div>
             </header>
+
+            <main>
+                {% template_content %}
+            </main>
+
+
         <!-- FIM DO NOVO LAYOUT -->
 
         <!-- Pushy Menu -->
@@ -186,136 +192,138 @@
         <!-- Site Overlay -->
         <div class="site-overlay"></div>
         <div id="container">
-        <div class="wrapper" id="topper">
-            <div class="row-fluid">
-                <div class="container">
-                    <div class="mobile mobile-nav {% if languages | length > 1 %}mobile-nav-lang{% endif %}">
-                        <div class="menu-btn"><i class="fa fa-bars"></i></div>
-                    </div>
-                    {% if languages | length > 1 %}
-                        <div class="span4">
-                            <div class="languages">
-                                {% for language in languages %}
-                                    {% set class = language.active ? "active" : "" %}
-                                    <a href="{{ language.url }}" class="{{ class }}">{{ language.country | flag_url | img_tag(language.name) }}</a>
-                                {% endfor %}
-                            </div>
-                        </div>
-                        {% endif %}
-                    <div class="span8">
-                        <div class="access-top">
-                            {% if store.has_accounts %}
-                                <div id="auth" >
-                                    {% if not customer %}
-                                        {% if 'mandatory' not in store.customer_accounts %}
-                                            {{ "Crear cuenta" | translate | a_tag(store.customer_register_url) }} <span class="divider">-</span>
-                                        {% endif %}
-                                        {{ "Iniciar sesión" | translate | a_tag(store.customer_login_url) }}
-                                    {% else %}
-                                        {{ "Mi cuenta" | translate | a_tag(store.customer_home_url) }} <span class="divider">-</span>
-                                        {{ "Cerrar sesión" | translate | a_tag(store.customer_logout_url) }}
-                                    {% endif %}
-                                </div>
-                            {% endif %}
-                            <div class="searchbox">
-                                <form action="{{ store.search_url }}" method="get">
-                                    <input class="text-input" type="text" name="q" placeholder="{{ 'buscar' | translate }}"/>
-                                    <i class="fa fa-search"></i>
-                                    <input class="submit-button" type="submit" value=""/>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="wrapper" id="header">
-            <div class="row-fluid">
-                <div class="container">
-                    <div class="span5">
-                        {% if template == 'home' %}
-                            {% if has_logo %}
-                                <h1 class="img logo">
-                                    {{ store.logo  | img_tag(store.name) | a_tag(store.url)}}
-                                </h1>
-                                <div id="no-logo-wrapper" class="hidden">
-                                    <div class="logo text-only">
-                                        <a href="{{ store.url }}">{{ store.name }}</a>
-                                    </div>
-                                </div>
-                            {% else %}
-                                <div class="img logo hidden">
-                                    {{ store.logo  | img_tag(store.name) | a_tag(store.url)}}
-                                </div>
-                                <h1 id="no-logo-wrapper">
-                                    <div class="logo text-only">
-                                        <a href="{{ store.url }}">{{ store.name }}</a>
-                                    </div>
-                                </h1>                        
-                            {% endif %}
-                        {% else %}  
-                            <div class="img logo {% if not has_logo %}hidden{% endif %}">
-                                {{ store.logo  | img_tag(store.name) | a_tag(store.url)}}
-                            </div>
-                            <div id="no-logo-wrapper" {% if has_logo %}class="hidden"{% endif %}>
-                                <div class="logo text-only">
-                                    <a href="{{ store.url }}">{{ store.name }}</a>
-                                </div>
-                            </div>
-                        {% endif %}
-                    </div>
-                    <div class="span7">
-                        <div class="info-head">
-                            {% if store.email %}
-                                {{ store.email | mailto }}
-                            {% endif %}
-                            <div class="cart-snipplet">
-                            {% if not store.is_catalog and template != 'cart' %}
-                                {% if settings.ajax_cart %}
-                                    {% snipplet "cart_ajax.tpl" as "cart" %}
-                                {% else %}
-                                    {% snipplet "cart.tpl" as "cart" %}
-                                {% endif %}
-                            {% endif %}
-                            </div>
-                        </div>
-
-                    </div>
-                    <div id="navigation">
-                            <ul id="menu" class="sf-menu hidden-phone">
-                                {% snipplet "navigation.tpl" %}
-                            </ul>
-                        </div>
-                </div>
-            </div>
-        </div>
-
-        {% if settings.slim_menu %}
-            <div class="wrapper hidden-phone" id="header-slim">
+            <div class="wrapper" id="topper">
                 <div class="row-fluid">
                     <div class="container">
-                        <div class="span4 slim-logo">
-                            <div class="logo {% if not has_logo %}text-only{% endif %}">
-                                {% if "slim-logo.jpg" | has_custom_image %}
-                                    {{ "slim-logo.jpg" | static_url | img_tag | a_tag(store.url) }}
-                                {% elseif has_logo %}
-                                    {{ store.logo | img_tag | a_tag(store.url) }}
-                                {% else %}
-                                    <a href="{{ store.url }}">{{ store.name }}</a>
-                                {% endif %}
-                            </div>
+                        <div class="mobile mobile-nav {% if languages | length > 1 %}mobile-nav-lang{% endif %}">
+                            <div class="menu-btn"><i class="fa fa-bars"></i></div>
                         </div>
-                        <div id="navigation" class="span8 slim-navigation">
-                            <ul id="menu-slim" class="sf-menu">
-                                {% snipplet "navigation.tpl" %}
-                            </ul>
+                        {% if languages | length > 1 %}
+                            <div class="span4">
+                                <div class="languages">
+                                    {% for language in languages %}
+                                        {% set class = language.active ? "active" : "" %}
+                                        <a href="{{ language.url }}" class="{{ class }}">{{ language.country | flag_url | img_tag(language.name) }}</a>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                            {% endif %}
+                        <div class="span8">
+                            <div class="access-top">
+                                {% if store.has_accounts %}
+                                    <div id="auth" >
+                                        {% if not customer %}
+                                            {% if 'mandatory' not in store.customer_accounts %}
+                                                {{ "Crear cuenta" | translate | a_tag(store.customer_register_url) }} <span class="divider">-</span>
+                                            {% endif %}
+                                            {{ "Iniciar sesión" | translate | a_tag(store.customer_login_url) }}
+                                        {% else %}
+                                            {{ "Mi cuenta" | translate | a_tag(store.customer_home_url) }} <span class="divider">-</span>
+                                            {{ "Cerrar sesión" | translate | a_tag(store.customer_logout_url) }}
+                                        {% endif %}
+                                    </div>
+                                {% endif %}
+                                <div class="searchbox">
+                                    <form action="{{ store.search_url }}" method="get">
+                                        <input class="text-input" type="text" name="q" placeholder="{{ 'buscar' | translate }}"/>
+                                        <i class="fa fa-search"></i>
+                                        <input class="submit-button" type="submit" value=""/>
+                                    </form>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        {% endif %}
+            <div class="wrapper" id="header">
+                <div class="row-fluid">
+                    <div class="container">
+                        <div class="span5">
+                            {% if template == 'home' %}
+                                {% if has_logo %}
+                                    <h1 class="img logo">
+                                        {{ store.logo  | img_tag(store.name) | a_tag(store.url)}}
+                                    </h1>
+                                    <div id="no-logo-wrapper" class="hidden">
+                                        <div class="logo text-only">
+                                            <a href="{{ store.url }}">{{ store.name }}</a>
+                                        </div>
+                                    </div>
+                                {% else %}
+                                    <div class="img logo hidden">
+                                        {{ store.logo  | img_tag(store.name) | a_tag(store.url)}}
+                                    </div>
+                                    <h1 id="no-logo-wrapper">
+                                        <div class="logo text-only">
+                                            <a href="{{ store.url }}">{{ store.name }}</a>
+                                        </div>
+                                    </h1>                        
+                                {% endif %}
+                            {% else %}  
+                                <div class="img logo {% if not has_logo %}hidden{% endif %}">
+                                    {{ store.logo  | img_tag(store.name) | a_tag(store.url)}}
+                                </div>
+                                <div id="no-logo-wrapper" {% if has_logo %}class="hidden"{% endif %}>
+                                    <div class="logo text-only">
+                                        <a href="{{ store.url }}">{{ store.name }}</a>
+                                    </div>
+                                </div>
+                            {% endif %}
+                        </div>
+                        <div class="span7">
+                            <div class="info-head">
+                                {% if store.email %}
+                                    {{ store.email | mailto }}
+                                {% endif %}
+                                <div class="cart-snipplet">
+                                {% if not store.is_catalog and template != 'cart' %}
+                                    {% if settings.ajax_cart %}
+                                        {% snipplet "cart_ajax.tpl" as "cart" %}
+                                    {% else %}
+                                        {% snipplet "cart.tpl" as "cart" %}
+                                    {% endif %}
+                                {% endif %}
+                                </div>
+                            </div>
+
+                        </div>
+                        <div id="navigation">
+                                <ul id="menu" class="sf-menu hidden-phone">
+                                    {% snipplet "navigation.tpl" %}
+                                </ul>
+                            </div>
+                    </div>
+                </div>
+            </div>
+
+            {% if settings.slim_menu %}
+                <div class="wrapper hidden-phone" id="header-slim">
+                    <div class="row-fluid">
+                        <div class="container">
+                            <div class="span4 slim-logo">
+                                <div class="logo {% if not has_logo %}text-only{% endif %}">
+                                    {% if "slim-logo.jpg" | has_custom_image %}
+                                        {{ "slim-logo.jpg" | static_url | img_tag | a_tag(store.url) }}
+                                    {% elseif has_logo %}
+                                        {{ store.logo | img_tag | a_tag(store.url) }}
+                                    {% else %}
+                                        <a href="{{ store.url }}">{{ store.name }}</a>
+                                    {% endif %}
+                                </div>
+                            </div>
+                            <div id="navigation" class="span8 slim-navigation">
+                                <ul id="menu-slim" class="sf-menu">
+                                    {% snipplet "navigation.tpl" %}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
 
         {% template_content %}
+
+
         <div class="banner-services-footer">
             {% if settings.banner_services %}
                 {% include 'snipplets/banner-services.tpl' %}

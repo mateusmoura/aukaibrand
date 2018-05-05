@@ -51,7 +51,7 @@ const site = {
     // MM.Modal();
     // MM.ValidarFormularios($('form.validate'));
 
-    if($('body').hasClass('home')) {
+    if($('body').hasClass('home') || $('.page-home').length) {
       site.home();
     }
     // MM.Calendar($('.block__fullcalendar'), data);
@@ -103,21 +103,18 @@ const site = {
   home: () => {
     const section_video = $('.section__video');
 
-    console.log('====================================');
-    console.log(section_video);
-    console.log('====================================');
-
-    for (let i = 0; i < section_video.length; i++) {
-      const element = $(section_video[i]);
-
-      if ($.fn.YTPlayer) {
-        element.find('#youtube-player').YTPlayer();
-      } else {
-        element.hide();
-        element.parent().css('background-image', `url("${element.data('video-poster')}")`);
+    setTimeout(() => {
+      for (let i = 0; i < section_video.length; i++) {
+        const element = $(section_video[i]);
+  
+        if ($.fn.YTPlayer) {
+          element.find('#youtube-player').YTPlayer();
+        } else {
+          element.hide();
+          element.parent().css('background-image', `url("${element.data('video-poster')}")`);
+        }
       }
-      
-    }
+    }, 2000);
   },
   /*
   * Callback quando salva um evento na modal.
