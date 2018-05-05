@@ -80,9 +80,6 @@
     </div>
 <!-- FIM NOVO SITE -->
 
-
-
-
 <!-- Modal -->
 {% if settings.show_news_box %}
     {% include 'snipplets/newsletter-popup.tpl' %}
