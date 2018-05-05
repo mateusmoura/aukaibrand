@@ -3,7 +3,7 @@
 {% endif %}
 {% for product in products %}
 	{% if loop.index % 4 == 1 %}
-    	<div class="row">
+    	<div class="product-row">
     {% endif %}
     {% include 'snipplets/single_product.tpl' %}
     {% if loop.index % 4 == 0 or loop.last %}

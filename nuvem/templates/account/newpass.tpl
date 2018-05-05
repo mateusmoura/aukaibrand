@@ -1,21 +1,33 @@
-<div class="container">
-    <div class="title-container">
-        <h1 class="title">{{ (customer.password ? 'Cambiar Contraseña' : 'Activar cuenta') | translate }}</h1>
-    </div>
-    <div class="row visible-when-content-ready">
-        <form action="" method="post" class="col-sm-6 col-sm-offset-3 m-bottom">
-            {% if failure %}
-                <div class="alert alert-danger">{{ 'Las contraseñas no coinciden.' | translate }}</div>
-            {% endif %}
-            <div class="form-group">
-                <label for="password">{{ 'Contraseña' | translate }}</label>
-                <input class="form-control" type="password" name="password" id="password" autocomplete="off"/>
+<div class="row-fluid">
+    <div class="container">
+        <div class="headerBox-List">
+            <div class="span8">
+                <h1>{{ (customer.password ? 'Cambiar Contraseña' : 'Activar cuenta') | translate }}</h1>
             </div>
-            <div class="form-group">
-                <label for="password_confirm">{{ 'Confirmar Contraseña' | translate }}</label>
-                <input class="form-control" type="password" name="password_confirm" id="password_confirm" autocomplete="off"/>
-            </div>
-            <input class="btn btn-secondary full-width-xs m-bottom pull-right" type="submit" value="{{ (customer.password ? 'Cambiar contraseña' : 'Activar cuenta')  | translate }}" />
-        </form>
+        </div>
+        <div class="account-form-wrapper span6 offset3 sst">
+            <form action="" method="post" class="form-horizontal">
+                {% if failure %}
+                    <div class="st alert alert-error">{{ 'Las contraseñas no coinciden.' | translate }}</div>
+                {% endif %}
+                <div class="control-group">
+                    <label class="control-label" for="password">{{ 'Contraseña' | translate }}</label>
+                    <div class="controls">
+                        <input type="password" name="password" id="password" />
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="password_confirm">{{ 'Confirmar Contraseña' | translate }}</label>
+                    <div class="controls">
+                        <input type="password" name="password_confirm" id="password_confirm" />
+                    </div>
+                </div>
+                <div class="control-group">
+                    <div class="controls">
+                        <input class="submit_button" type="submit" value="{{ (customer.password ? 'Cambiar contraseña' : 'Activar cuenta')  | translate }}" />
+                    </div>
+                </div>
+            </form>
+        </div>
     </div>
 </div>

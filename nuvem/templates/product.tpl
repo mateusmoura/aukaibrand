@@ -1,262 +1,244 @@
-{% if product.compare_at_price > product.price %}
-    {% set price_discount_percentage = ((product.compare_at_price) - (product.price)) * 100 / (product.compare_at_price) %}
-{% endif %}
-<div class="container js-product-container js-product-detail">
-    <div itemscope itemtype="http://schema.org/Product">
-        <div class="row m-bottom m-bottom-half-xs">
+<div class="row-fluid">
+	<div class="container">
+
+        <div class="bread-container pull-right">
             {% snipplet "breadcrumbs.tpl" %}
         </div>
-        <div class="row" id="single-product" data-variants="{{product.variants_object | json_encode }}">
-            <div id="product-slider-container" class="js-product-image-container product-slider-container visible-xs {% if product.images_count == 1 %} product-single-image {% endif %}" {% if product.images_count > 1 %} style="visibility:hidden; height:0;"{% endif %}>      
-                {% if product.images_count > 1 %}
-                    <ul id="product-slider" class="slider">
-                        {% for image in product.images %}
-                          <li class="js-product-slide slider-slide product-slide" data-image="{{image.id}}" data-image-position="{{loop.index0}}" data-zoom-url="{{ image | product_image_url('original') }}">{{ image | product_image_url('big') | img_tag(image.alt, {class: 'js-image-open-mobile-zoom product-slider-image'}) }}</li>
-                        {% endfor %}
-                    </ul>
-                {% else %}
-                    <div class="js-product-active-image visible-when-content-ready slider" data-zoom-url="{{ product.featured_image | product_image_url('original') }}">
-                        {{ product.featured_image | product_image_url('large') | img_tag(product.featured_image.alt, {class: 'js-image-open-mobile-zoom product-slider-image'}) }}
-                    </div>
-                {% endif %}
-                  <div class="labels-floating m-left-quarter">
-                    <div class="label label-circle label-secondary {% if not product.promotional_offer %}js-offer-label{% endif %} {% if product.promotional_offer and not product.promotional_offer.script.is_percentage_off %}promo-pill{% endif %}" {% if (not product.compare_at_price and not product.promotional_offer) or not product.display_price %}style="display:none;"{% endif %}>
-                        {% if product.promotional_offer and not product.promotional_offer.script.is_percentage_off and not product.promotional_offer.script.is_discount_for_quantity %}
-                            {% if store.country == 'BR' %}
-                                {{ "Leve {1} Pague {2}" | translate(product.promotional_offer.script.quantity_to_take, product.promotional_offer.script.quantity_to_pay) }}
+
+        <div id="single-product" itemscope itemtype="http://schema.org/Product">
+            <div id="single-product-container" class="productContainer" data-variants="{{product.variants_object | json_encode }}">
+                <div class="span6">
+                    <div class="imagecol">
+                        <div class="mobile-bxslider">
+                            {% if product.images_count > 1 %}
+                                <ul class="bxslider" id="productbxslider">
+                                    {% for image in product.images %}
+                                      <li class="product-slider" data-image="{{image.id}}" data-image-position="{{loop.index0}}">{{ image | product_image_url('big') | img_tag(image.alt) }}</li>
+                                    {% endfor %}
+                                </ul>
                             {% else %}
-                                {{ product.promotional_offer.script.type }}
+                                {{ product.featured_image | product_image_url('large') | img_tag(product.featured_image.alt) }}
                             {% endif %}
-                        {% else %}
-                            {{ settings.offer_text }}
-                        {% endif %}
-                    </div>
-                    <div class="label label-circle label-primary js-stock-label label-overlap" {% if product.has_stock %}style="display:none;"{% endif %}>{{ settings.no_stock_text }}</div>
-                    {% if product.free_shipping %}
-                        <div class=
-                        "label label-circle label-primary-dark label-overlap">{{ settings.free_shipping_text }}</div>
-                    {% endif %}
-                </div>
-                <a href="#" class="js-open-mobile-zoom visible-when-content-ready visible-xs btn-floating">
-                    <div class="zoom-svg-icon svg-icon-text">
-                        {% include 'snipplets/svg/arrows-alt.tpl' %}
-                    </div>
-                </a>
-            </div>
-            {% snipplet 'placeholders/product-detail-image-placeholder.tpl' %}
-            <div class="col-xs-12 col-sm-6 product-img-col hidden-xs visible-when-content-ready">
-                <div class="row">
-                    <div class="desktop-featured-product p-relative">
-                        <a href="#" class="js-product-prev btn-product-slider btn-product-prev visible-when-content-ready {% if product.images_count == 1 %}hidden{% endif %}">
-                            <i class="fa fa-angle-left"></i>
-                        </a>
-                        <div class="desktop-product-image-container">
-                            <div class="labels-floating">
-                                <div class="label label-circle label-secondary {% if not product.promotional_offer %}js-offer-label{% endif %} {% if product.promotional_offer and not product.promotional_offer.script.is_percentage_off %}promo-pill{% endif %}" {% if (not product.compare_at_price and not product.promotional_offer) or not product.display_price %}style="display:none;"{% endif %}>
-                                    {% if product.promotional_offer and not product.promotional_offer.script.is_percentage_off and not product.promotional_offer.script.is_discount_for_quantity %}
-                                        {% if store.country == 'BR' %}
-                                            {{ "Leve {1} Pague {2}" | translate(product.promotional_offer.script.quantity_to_take, product.promotional_offer.script.quantity_to_pay) }}
-                                        {% else %}
-                                            {{ product.promotional_offer.script.type }}
-                                        {% endif %}
-                                    {% else %}
-                                        {{ settings.offer_text }}
-                                    {% endif %}
+                              {% if not product.available %}
+                                <div class="circle out-of-stock">
+                                    <p>{{ "Sin stock" | translate }}</p>
                                 </div>
-                                <div class="js-stock-label label label-circle label-primary label-overlap" {% if product.has_stock %}style="display:none;"{% endif %}>{{ settings.no_stock_text }}</div>
-                                {% if product.free_shipping %}
-                                    <div class="label label-circle label-primary-dark label-overlap">{{ settings.free_shipping_text }}</div>
+                             {% endif %}
+                            {% if product.free_shipping %}
+                                <div class="circle free-shipping">
+                                    <p>{{ "Envío sin cargo" | translate }}</p>
+                                </div>
+                            {% endif %}
+                            <div class="circle offer" {% if not product.compare_at_price %}style="display:none;"{% else %} style="display:block;"{% endif %}>
+                                <p>{{ "Oferta" | translate }}</p>
+                            </div>
+                        </div>
+                            <div class="imagecolContent desktop-featured-product">
+                            	{% if not product.available %}
+                                    <div class="circle out-of-stock">
+                                        <p>{{ "Sin stock" | translate }}</p>
+                                    </div>
+                                {% endif %}
+                                 {% if product.free_shipping %}
+                                    <div class="circle free-shipping">
+                                        <p>{{ "Envío sin cargo" | translate }}</p>
+                                    </div>
+                                {% endif %}
+                                <div class="circle offer" {% if not product.compare_at_price %}style="display:none;"{% else %} style="display:block;"{% endif %}>
+                                    <p>{{ "Oferta" | translate }}</p>
+                                </div>
+                                {% if product.featured_image %}
+                                    <a href="{{ product.featured_image | product_image_url('original') }}" id="zoom" class="cloud-zoom" rel="position: 'inside', showTitle: false, loading: '{{ 'Cargando...' | translate }}'">
+                                        {{ product.featured_image | product_image_url('large') | img_tag(product.featured_image.alt) }}
+                                    </a>
+                                {% else %}
+                                    {{ product.featured_image | product_image_url('large') | img_tag(product.featured_image.alt) }}
                                 {% endif %}
                             </div>
-                            {% if product.featured_image %}
-                                <a href="{{ product.featured_image | product_image_url('original') }}" id="zoom" class="cloud-zoom" rel="position: 'inside', showTitle: false, loading: '{{ 'Cargando...' | translate }}'" style="visibility:hidden;">
-                                    {{ product.featured_image | product_image_url('large') | img_tag(product.name, {class: 'product-desktop-img img-responsive'}) }}
-                                </a>
-                            {% else %}
-                                {{ product.featured_image | product_image_url('large') | img_tag(product.name, {class: 'product-desktop-img img-responsive'}) }}
+
+                            {% if product.images_count > 1 %}
+                                <div id="tS2" class="jThumbnailScroller desktop-featured-product">
+                                    <div class="jTscrollerContainer">
+                                        <div class="jTscroller">
+                                            {% for image in product.images %}
+                                                <a href="{{ image | product_image_url('original') }}" class="cloud-zoom-gallery" rel="useZoom: 'zoom', smallImage: '{{ image | product_image_url('original') }}' " data-image="{{image.id}}">
+                                                    {{ image | product_image_url('thumb') | img_tag(image.alt) }}
+                                                </a>
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+                                    <a href="#" class="jTscrollerPrevButton"></a>
+                                    <a href="#" class="jTscrollerNextButton"></a>
+                                </div>
                             {% endif %}
-                        </div>
-                        <a href="#" class="js-product-next btn-product-slider btn-product-next visible-when-content-ready {% if product.images_count == 1 %}hidden{% endif %}">
-                            <i class="fa fa-angle-right"></i>
-                        </a>
-                    </div>
+					</div>
                 </div>
-                <div class="row">
-                    {% if product.images_count > 1 %}
-                        <div class="thumbs visible-when-content-ready">
-                            {% for image in product.images %}
-                                <a href="{{ image | product_image_url('original') }}" class="js-product-thumb-zoom cloud-zoom-gallery thumb-link" rel="useZoom: 'zoom', smallImage: '{{ image | product_image_url('large') }}' " data-image="{{image.id}}">
-                                    <span>
-                                    {{ image | product_image_url('large') | img_tag(image.alt, {class: 'thumb-image'}) }}
-                                    </span>
-                                </a>
-                            {% endfor %}
-                        </div>
-                    {% endif %}
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-6 product-form-container">
-                <h1 itemprop="name" class="product-name">{{ product.name }}</h1>
-                <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-                    {% if product.promotional_offer.script.is_percentage_off %}
-                        <input class="js-promotional-parameter" type="hidden" value="{{product.promotional_offer.parameters.percent}}">
-                    {% endif %}
-                    <div class="product-price-container">
-                        <h4 id="compare_price_display" class="js-compare-price-display product-price-compare price-compare m-bottom-quarter-xs" {% if not product.compare_at_price or not product.display_price %}style="display:none;"{% endif %}>
-                        {% if product.compare_at_price %}
-                            {{ product.compare_at_price | money }}
-                        {% endif %}
-                        </h4>
-                        <h2 class="h1 product-price js-price-display d-inline" {% if not product.display_price %}style="display:none;"{% endif %} id="price_display" itemprop="price" {% if product.display_price %} content="{{ product.price / 100 }}"{% endif %}>
-                        {% if product.display_price %}
-                            {{ product.price | money }}
-                        {% endif %}
-                        </h2>
-                        <span class="js-offer-label"{% if not product.compare_at_price or not product.display_price %}style="display:none;"{% endif %}>
-                            <span>
-                                <span class="js-offer-percentage">{{ price_discount_percentage |round }}</span>% OFF
-                            </span>
-                        </span>
-                        <meta itemprop="priceCurrency" content="{{ product.currency }}" />
-                        {% if product.stock_control %}
-                            <meta itemprop="inventoryLevel" content="{{ product.stock }}" />
-                            <meta itemprop="availability" href="http://schema.org/{{ product.stock ? 'InStock' : 'OutOfStock' }}" content="{{ product.stock ? 'In stock' : 'Out of stock' }}" />
-                        {% endif %}
-                    
-                        {% if product.promotional_offer and not product.promotional_offer.script.is_percentage_off and product.display_price %}
-                        <div class="row-fluid">
-                            {% if product.promotional_offer.script.is_discount_for_quantity %}
-                                {% for threshold in product.promotional_offer.parameters %}
-                                    <h4 class="promo-title"><strong>{{ "¡{1}% OFF comprando {2} o más un.!" | translate(threshold.discount_decimal_percentage * 100, threshold.quantity) }}</strong></h4>
-                                {% endfor %}
-                            {% else %}
-                                <h4 class="promo-title"><strong>{{ "¡Llevá {1} y pagá {2}!" | translate(product.promotional_offer.script.quantity_to_take, product.promotional_offer.script.quantity_to_pay) }}</strong></h4>
-                            {% endif %}
-                            {% if product.promotional_offer.scope_type == 'categories' %}
-                                <p class="promo-message">{{ "Válido para" | translate }} {{ "este producto y todos los de la categoría" | translate }}:  
-                                {% for scope_value in product.promotional_offer.scope_value_info %}
-                                   {{ scope_value.name }}{% if not loop.last %}, {% else %}.{% endif %}
-                                {% endfor %}</br>{{ "Podés combinar esta promoción con otros productos de la misma categoría." | translate }}</p>
-                            {% elseif product.promotional_offer.scope_type == 'all'  %}<p class="promo-message">{{ "Vas a poder aprovechar esta promoción en cualquier producto de la tienda." | translate }}</p>
-                            {% endif %}    
-                        </div> 
-                        {% endif %}
-                    </div>
-                </div>
-                <meta itemprop="image" content="{{ 'http:' ~ product.featured_image | product_image_url('medium') }}" />
-                <meta itemprop="url" content="{{ product.social_url }}" />
-                {% if page_description %}
-                    <meta itemprop="description" content="{{ page_description }}" />
-                {% endif %}
-                {% if product.sku %}
-                    <meta itemprop="sku" content="{{ product.sku }}" />
-                {% endif %}
-                {% if product.weight %}
-                    <div itemprop="weight" itemscope itemtype="http://schema.org/QuantitativeValue" style="display:none;">
-                        <meta itemprop="unitCode" content="{{ product.weight_unit | iso_to_uncefact}}" />
-                        <meta itemprop="value" content="{{ product.weight}}" />
-                    </div>
-                {% endif %}
-                {% snipplet 'placeholders/product-detail-form-placeholder.tpl' %}
-                {# Product Installments button and info #}
-                {% if product.show_installments and product.display_price %}
-                    {% set installments_info_base_variant = product.installments_info %}
-                    {% set installments_info = product.installments_info_from_any_variant %}
-                    {% if installments_info %}
-                        <div href="#installments-modal" data-toggle="modal" class="js-refresh-installment-data js-product-payments-container visible-when-content-ready link-modal-xs-right" {% if (not product.get_max_installments) and (not product.get_max_installments(false)) %}style="display: none;"{% endif %}>
+                <div class="span6">
+                    <div class="descriptioncol">
+                        <div class="descriptioncolContent">
+
+                            <div class="row-fluid">
+                                <div class="title">
+                                    <h1 itemprop="name">{{ product.name }}</h1>
+                                </div>
+
+
+                                <div class="price-holder" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                                    <div class="price">
+                                        <span class="price" id="price_display" itemprop="price" content="{{ product.price / 100 }}" {% if not product.display_price %}style="display:none;"{% endif %}>{{ product.price | money }}</span>
+                                        <span class="price-compare">
+                                        	<span id="compare_price_display" {% if not product.compare_at_price %}class="hidden"{% endif %}>{{ product.compare_at_price | money }}</span>
+                                        </span>
+                                        <meta itemprop="priceCurrency" content="{{ product.currency }}" />
+                                        {% if product.stock_control %}
+                                            <meta itemprop="inventoryLevel" content="{{ product.stock }}" />
+                                            <meta itemprop="availability" href="http://schema.org/{{ product.stock ? 'InStock' : 'OutOfStock' }}" content="{{ product.stock ? 'In stock' : 'Out of stock' }}" />
+                                        {% endif %}
+                                    </div>
+                                </div>
+
+                                <meta itemprop="image" content="{{ 'http:' ~ product.featured_image | product_image_url('medium') }}" />
+                                <meta itemprop="url" content="{{ product.social_url }}" />
+                                {% if page_description %}
+                                    <meta itemprop="description" content="{{ page_description }}" />
+                                {% endif %}
+                                {% if product.sku %}
+                                    <meta itemprop="sku" content="{{ product.sku }}" />
+                                {% endif %}
+                                {% if product.weight %}
+                                    <div itemprop="weight" itemscope itemtype="http://schema.org/QuantitativeValue" style="display:none;">
+                                        <meta itemprop="unitCode" content="{{ product.weight_unit | iso_to_uncefact}}" />
+                                        <meta itemprop="value" content="{{ product.weight}}" />
+                                    </div>
+                                {% endif %}
+                            </div>
                             {% snipplet "installments_in_product.tpl" %}
                             {% if product.show_installments and product.display_price %}
-                                <a id="btn-installments" class="btn-link btn-link-small-extra" {% if (not product.get_max_installments) and (not product.get_max_installments(false)) %}style="display: none;"{% endif %}>
-                                    {% if store.installments_on_steroids_enabled %}
-                                        {{ "Ver medios de pago" | translate }}
-                                    {% else %}
-                                        {{ "Ver el detalle de las cuotas" | translate }}
+                                    {% set installments_info = product.installments_info %}
+                                    {% if installments_info %}
+                                        <a id="button-installments" class="button secondary" href="#InstallmentsModal" role="button" data-toggle="modal">{{ "Ver el detalle de las cuotas" | translate }}</a>
                                     {% endif %}
-                                </a>
-                                <div class="visible-xs link-modal-xs-right-icon">
-                                    {% include "snipplets/svg/angle-right.tpl" %}
-                                </div> 
                             {% endif %}
+                                <form method="post" action="{{ store.cart_url }}">
+                                <input type="hidden" name="add_to_cart" value="{{product.id}}" />
+                                {% if product.variations %}
+                                    {% include "snipplets/variants.tpl" with {'quickshop': false} %}
+                                {% endif %}
+                                <div class="row-fluid ssb sst">
+                                    {% if product.available and product.display_price %}
+                                        <div class="quantity">
+                                            <input class="spinner" value="1" type="text" name="quantity{{ item.id }}" value="{{ item.quantity }}" />
+                                        </div>
+                                   {% endif %}
+                                    <div class="addToCartButton">
+                                        {% set state = store.is_catalog ? 'catalog' : (product.available ? product.display_price ? 'cart' : 'contact' : 'nostock') %}
+                                        {% set texts = {'cart': "Agregar al carrito", 'contact': "Consultar precio", 'nostock': "Sin stock", 'catalog': "Consultar"} %}
+                                        <input type="submit" class="button addToCart js-addtocart {{state}}" value="{{ texts[state] | translate }}" {% if state == 'nostock' %}disabled{% endif %}/>
+                                    </div>
+                                </div>
+                                <div class="row-fluid">
+                                    {% snipplet "shipping_cost_calculator.tpl" with shipping_calculator_show = settings.shipping_calculator_product_page and not product.free_shipping, shipping_calculator_variant = product.selected_or_first_available_variant %}
+                                </div>
+                            </form>
+
+                            <div class="shareLinks sst">
+                                <div class="shareItem facebook product-share-button" data-network="facebook">
+                                    {{product.social_url | fb_like('store-product', 'button_count')}}
+                                </div>
+                                <div class="shareItem twitter product-share-button" data-network="twitter">
+                                    {{product.social_url | tw_share('none', 'Tweet', store.twitter_user, current_language.lang) }}
+                                </div>
+                                <div class="shareItem google product-share-button" data-network="gplus">
+                                    {{product.social_url | g_plus('medium') }}
+                                </div>
+                                <div class="shareItem pinterest product-share-button" data-network="pinterest">
+                                    {{product.social_url | pin_it('http:' ~ product.featured_image | product_image_url('original'))}}
+                                </div>
+                            </div>
+
+                            <div class="description user-content">
+                                {{ product.description }}
+                            </div>
+                            {% if settings.show_product_fb_comment_box %}
+                                <div class="fb-comments" data-href="{{ product.social_url }}" data-num-posts="5" data-width="100%"></div>
+                            {% endif %}
+
                         </div>
-                    {% endif %}
-                {% endif %}
-                <form id="product_form" method="post" action="{{ store.cart_url }}" class="visible-when-content-ready">
-                    <input type="hidden" name="add_to_cart" value="{{product.id}}" />
-                    <input type="hidden" name="preselected_gw_code">
-                    {% if product.variations %}
-                        {% include "snipplets/variants.tpl" with {'quickshop': false} %}
-                    {% endif %}
-                    {% set state = store.is_catalog ? 'catalog' : (product.available ? product.display_price ? 'cart' : 'contact' : 'nostock') %}
-                    {% set texts = {'cart': "Agregar al carrito", 'contact': "Consultar precio", 'catalog': "Consultar", 'nostock' : settings.no_stock_text} %}
-                    <input type="submit" class="js-prod-submit-form js-addtocart btn btn-primary btn-block m-top m-bottom d-inline-block {{ state }}" value="{{ texts[state] | translate }}" {% if state == 'nostock' %}disabled{% endif %} />
-                    {% if settings.shipping_calculator_product_page and not product.free_shipping %}
-                        <div id="product-shipping-container" class="product-shipping-calculator" {% if not product.display_price %}style="display:none;"{% endif %}>
-                            {% include "snipplets/shipping_cost_calculator.tpl" with {'shipping_calculator_show' : settings.shipping_calculator_product_page and not product.free_shipping, 'shipping_calculator_variant' : product.selected_or_first_available_variant, 'calculator_big': true} %}
-                        </div>
-                    {% endif %}
-                    {% include 'snipplets/social-widgets.tpl'%}
-                    {% if not settings.show_description_bottom %}
-                        <div class="description user-content m-top">{{ product.description }}</div>
-                    {% endif %}
-                </form>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
-	<div class="row visible-when-content-ready">
-		{% if settings.show_description_bottom %}
-    		<div class="col-xs-12 user-content m-top">
-    			<div class="description user-content">{{ product.description }}</div>
-    		</div>
-		{% endif %}	
-		<div class="col-xs-12 visible-when-content-ready">
-			<div class="comments-area m-top">
-                {% if settings.show_product_fb_comment_box %}
-				    <div class="fb-comments" data-href="{{ product.social_url }}" data-num-posts="5" data-width="100%"></div>
-                {% endif %}
-            </div>
-		</div>
-	</div>
-    <div id="related-products">
-        {% set related_products_ids = product.metafields.related_products.related_products_ids %}
-        {% if related_products_ids %}
-            {% set related_products = related_products_ids | get_products %}
-            {% set show = (related_products | length > 0) %}
-        {% endif %}
-        {% if not show %}
-            {% set related_products = category.products | shuffle | take(4) %}
-            {% set show = (related_products | length > 1) %}
-        {% endif %}
-        {% if show %}
-            <div class="title-container">
-                <h2 class="subtitle">{{"Productos Relacionados" | translate}}</h2>
-            </div>
-            <div class="row">
-                <div class="col-md-12 text-center-xs">
-                    <section id="grid" class="js-masonry-grid grid clearfix">
-                        <div class="js-masonry-grid">
-                            {% for related in related_products %}
-                                {% if product.id != related.id %}
-                                    {% include 'snipplets/single_product.tpl' with {product : related} %}
-                                {% endif %}
-                            {% endfor %}
+</div>
+
+<div id="related-products">
+    {% set related_products_ids = product.metafields.related_products.related_products_ids %}
+    {% if related_products_ids %}
+        {% set related_products = related_products_ids | get_products %}
+        {% set show = (related_products | length > 0) %}
+    {% endif %}
+    {% if not show %}
+        {% set related_products = category.products | shuffle | take(4) %}
+        {% set show = (related_products | length > 1) %}
+    {% endif %}
+    {% if show %}
+        <div class="row-fluid">
+            <div class="container">
+                <div class="dest-list">
+                    {% set related_products %}
+                        {% for related in related_products %}
+                            {% if product.id != related.id %}
+                                {% include 'snipplets/single_product.tpl' with {product : related} %}
+                            {% endif %}
+                        {% endfor %}
+                    {% endset %}
+                    <h2>{{"Productos Relacionados" | translate}}</h2>
+                    <div id="tS1" class="jThumbnailScroller hidden-phone">
+                        <div class="jTscrollerContainer">
+                            <div class="jTscroller">
+                                {{ related_products }}
+                            </div>
                         </div>
-                    </section>
+                        <a href="#" class="jTscrollerPrevButton"></a>
+                        <a href="#" class="jTscrollerNextButton"></a>
+                    </div>
+
+                    <div class="visible-phone">
+                        {{ related_products }}
+                    </div>
                 </div>
-                </div>
-        {% endif %}
+            </div>
+        </div>
+    {% endif %}
+</div>
+{% if installments_info %}
+ {% set gateways = installments_info | length %}
+<div id="InstallmentsModal" class="modal hide fade{% if gateways <= '3' %} two-gates{% endif %}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <div class="installments">
+            <ul class="nav nav-tabs">
+                {% for method, installments in installments_info %}
+                    <li id="method_{{ method }}" {% if loop.first %}class="active"{% endif %}><a href="#installment_{{ method }}_{{ installment }}" data-toggle="tab">{{ method == 'paypal_multiple' ? 'PAYPAL' : (method == 'itaushopline'? 'ITAU SHOPLINE' : method | upper) }}</a></li>
+                {% endfor %}
+            </ul>
+            <div class="tab-content">
+                {% for method, installments in installments_info %}
+                            <div class="tab-pane{% if loop.first %} active{% endif %}" id="installment_{{ method }}_">
+                                <div class="span3">
+                                {% for installment, data_installment in installments %}
+                                    <span id="installment_{{ method }}_{{ installment }}" >
+                                        <strong class="installment-amount">{{ installment }}</strong> x <strong class="installment-price">{{ data_installment.installment_value_cents | money }}</strong>
+                                        {% if data_installment.without_interests %} {{ 'sin interés' | t }}{% endif %}
+                                    </span>
+                                    {% if installment == 12 %}</div><div class="span3">{% endif %}
+                                {% endfor %}
+                                </div>
+                            </div>
+                {% endfor %}
+            </div>
+        </div>
     </div>
 </div>
-
-{# Payments details #}
-
-{% include 'snipplets/payments/payments.tpl' %}
-
-<div class="js-mobile-zoom-panel mobile-zoom-panel">
-    <i class="js-mobile-zoom-spinner mobile-zoom-spinner fa fa-circle-o-notch fa-spin fa-2x"></i>
-    <div class="js-mobile-zoomed-image mobile-zoom-image-container">
-       {# Container to be filled with the zoomable image #}
-    </div>
-    <a class="js-close-mobile-zoom btn btn-default btn-floating">
-        <i class="fa fa-times fa-2x"></i>
-    </a>
-</div>
+{% endif %}

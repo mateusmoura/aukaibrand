@@ -2,3 +2,8 @@
 nuvem/.vscode/ftp-sync.json
 nuvem/.vscode/
 nuvem/
+.vscode/ftp-sync.json
+ftp-sync.json
+.vscode/
+!.vscode/*
+!.vscode/ftp-sync.json

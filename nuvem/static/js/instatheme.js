@@ -1,4 +1,4 @@
-window.tiendaNubeInstaTheme = (function($) {
+window.tiendaNubeInstaTheme = (function($, window) {
 	return {
 		waitFor: function() {
 			return [window.homeSlider];
@@ -6,8 +6,8 @@ window.tiendaNubeInstaTheme = (function($) {
 		handlers: function(instaElements) {
 			return {
 				logo: new instaElements.Logo({
-					$storeName: $('#no-logo'),
-					$logo: $('#logo')
+					$storeName: $('#no-logo-wrapper'),
+					$logo: $('.logo.img')
 				}),
 				slider: new instaElements.Slider(window.homeSlider),
 				slider_auto: new instaElements.AutoSliderCheckbox({
@@ -15,4 +15,5 @@ window.tiendaNubeInstaTheme = (function($) {
 				})
 			};
 		}
-	};})(jQuery);
+	};
+})(jQuery, window);

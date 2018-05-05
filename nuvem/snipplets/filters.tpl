@@ -16,34 +16,44 @@
     {% set color_name = 'Color' %}
     {% set size_name = 'Size' %}
 {% endif %}
+
+{% set filters %}
 <div id="filters-column">
     {% if filter_colors %}
-        <div class="container-with-border">
-            <h5>{{ 'Color' | translate }}</h5>
+        <div class="filter-container">
+            <h4>{{ 'Color' | translate }}</h4>
             {% for name,color in insta_colors %}
-                <button type="button" class="btn-filter btn-filter-color" style="background-color: {{ color[name] }};" title="{{ name }}" onclick="LS.urlAddParam('{{ color_name|replace("'","%27") }}', '{{ name|replace("'","%27") }}');">
+                <button type="button"
+                        class="color-filter"
+                        style="background-color: {{ color[name] }};"
+                        title="{{ name }}"
+                        onclick="LS.urlAddParam('{{ color_name }}', '{{ name }}');">
                 </button>
             {% endfor %}
         </div>
     {% endif %}
     {% if filter_more_colors %}
-        <div class="container-with-border">
+        <div class="filter-container">
             {% if filter_colors %}
-                <h5>{{ 'Más colores' | translate }}</h5>
+                <h4>{{ 'Más colores' | translate }}</h4>
             {% else %}
-                <h5>{{ 'Color' | translate }}</h5>
+                <h4>{{ 'Color' | translate }}</h4>
             {% endif %}
             {% for color in other_colors %}
-                <button type="button" class="btn-default btn-filter transparent" onclick="LS.urlAddParam('{{ color_name|replace("'","%27") }}', '{{ color|replace("'","%27") }}');">{{ color }}
+                <button type="button"
+                        class="size-filter"
+                        onclick="LS.urlAddParam('{{ color_name }}', '{{ color }}');">{{ color }}
                 </button>
             {% endfor %}
         </div>
     {% endif %}
     {% if filter_sizes %}
-        <div class="container-with-border">
-            <h5>{{ 'Talle' | translate }}</h5>
+        <div class="filter-container">
+            <h4>{{ 'Talle' | translate }}</h4>
             {% for size in size_properties_values %}
-                <button type="button" class="btn-default btn-filter transparent" onclick="LS.urlAddParam('{{ size_name|replace("'","%27") }}', '{{ size|replace("'","%27") }}');">{{ size }}
+                <button type="button"
+                        class="size-filter"
+                        onclick="LS.urlAddParam('{{ size_name }}', '{{ size }}');">{{ size }}
                 </button>
             {% endfor %}
         </div>
@@ -51,13 +61,32 @@
 
     {% for variants_property in variants_properties %}
         {% if filter_other %}
-            <div class="container-with-border">
-                <h5>{{ variants_property }}</h5>
+            <div class="filter-container">
+                <h4>{{ variants_property }}</h4>
                 {% for value in variants_properties_values[variants_property] %}
-                    <button type="button" class="btn-default btn-filter transparent" onclick="LS.urlAddParam('{{ variants_property|replace("'","%27") }}', '{{ value|replace("'","%27") }}');">{{value}}
+                    <button type="button"
+                            class="other-filter"
+                            onclick="LS.urlAddParam('{{ variants_property }}', '{{ value }}');">{{value}}
                     </button>
                 {% endfor %}
             </div>
         {% endif %}
     {% endfor %}
 </div>
+{% endset %}
+
+{{ filters }}
+{% if filter_colors or filter_more_colors or filter_sizes or filter_other %}
+    <button class="pull-right visible-phone btn button-filt mob-filter-trigger"><i class="fa fa-filter"></i>{{ 'Filtrar' | translate }}</button>
+    <div id="mobFilterMenu" class="mob-filter">
+        <div class="heading">
+            <h4>{{ 'Filtrar por' | translate }}</h4>
+            <span>
+                <i id="mobFilterClose" class="fa fa-times mob-filter-trigger"></i>
+            </span>
+        </div>
+        <div class="filters-scroll">
+            {{ filters }}
+        </div>
+    </div>
+{% endif %}

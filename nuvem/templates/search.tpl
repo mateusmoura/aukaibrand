@@ -1,53 +1,61 @@
 {% paginate by 16 %}
-<div class="container">
-	<div class="title-container">
-	    {% snipplet "breadcrumbs.tpl" %}
-   		<h1 class="title">{{ "Resultados de búsqueda" | translate }}</h1>
+<div class="row-fluid" id="category-page">
+	<div class="container">
+        {% if products %}
+            <div class="headerBox-List">
+                <div class="span8">
+                    <h1>{{ "Resultados de búsqueda" | translate }}</h1>
+                </div>
+                <div class="span4 breadcrumbs-wrapper">
+                    <div id="breadcrumb">
+                        <a class="goBack" title="{{ "Volver" | translate }}">{{ "Volver" | translate }}</a>
+                    </div>
+                </div>
+            </div>
+        
+             <div class="product-table">
+                {% snipplet "product_grid.tpl" %}
+            </div>
+            {% if settings.infinite_scrolling and not pages.is_last and products%}
+                <div class="load-more-container">
+                     <a id="loadMoreBtn" class="button secondary clear"><i class="fa fa-circle-o-notch fa-spin loadingSpin"></i>{{ 'Mostrar más productos' | t }}</a>
+                </div>
+            {% endif %}
+            <div class="crumbPaginationContainer bottom">
+                <div class='pagination'>
+                    {% snipplet "pagination.tpl" %}
+                </div>
+            </div>
+        {% else %}
+
+			<div class="headerBox-Error">
+                <h1>{{ "No hubo resultados para tu búsqueda" | translate }}</h1>
+            </div>
+
+            {% set primary_section_products %}
+                {% for product in sections.primary.products %}
+                    {% include 'snipplets/single_product.tpl' %}
+                {% endfor %}
+            {% endset %}
+
+            {% if sections.primary.products %}
+                <div class="dest-list">
+                    <h2>{{ "Quizás te interesen los siguientes productos." | translate }}</h2>
+                        <div id="tS1" class="jThumbnailScroller hidden-phone">
+                            <div class="jTscrollerContainer">
+                                <div class="jTscroller">
+                                    {{ primary_section_products }}
+                                </div>
+                            </div>
+                            <a href="#" class="jTscrollerPrevButton"></a>
+                            <a href="#" class="jTscrollerNextButton"></a>
+                    	</div>
+                        
+                        <div class="visible-phone">
+                            {{ primary_section_products }}
+                    	</div>
+                	</div>
+            {% endif %}
+        {% endif %}
     </div>
-	{% if products %}
-		<div class="text-center-xs">
-			<section class="js-product-table js-masonry-grid product-grid">
-				<div class="js-masonry-grid">
-					{% for product in products %}
-						{% include 'snipplets/single_product.tpl' %}
-					{% endfor %}
-				</div>
-			</section>
-			{% if settings.infinite_scrolling and not pages.is_last and products%}
-			    <div class="load-more-container clear-both m-bottom text-center">
-			        <a class="js-load-more-btn btn btn-secondary m-top m-bottom full-width-xs">
-			        	{{ 'Mostrar más productos' | t }}
-			        	<i class="js-load-more-spinner btn-spinner fa-circle-o-notch fa-spin" style="display:none;"></i>
-			        </a>
-			    </div>
-			{% endif %}
-			<div class="visible-when-content-ready" {% if settings.infinite_scrolling %}style="display:none;"{% endif %}>
-				{% snipplet "pagination.tpl" %}
-			</div>
-		</div>
-	{% else %}
-		<p class="text-secondary text-center">{{ "No hubo resultados para tu búsqueda" | translate }}</p>
-		<p class="text-center">{{ "A continuación te sugerimos algunos productos que podrían interesarte" | translate }}</p>
-		{% set related_products = sections.primary.products | take(4) | shuffle %}
-		{% if related_products | length > 1 %}
-		<div class="row">
-			<div class="col-xs-12">
-				<div class="title-container m-top">
-			   		<h2 class="subtitle">{{"Productos recomendados" | translate}}</h2>
-			    </div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-md-12">
-				<section id="grid" class="grid clearfix">
-					<div class="js-masonry-grid">
-						{% for related in related_products %}
-							{% include 'snipplets/single_product.tpl' with {product : related} %}
-						{% endfor %}
-					</div>
-				</section>
-			</div>
-		</div>
-		{% endif %}	
-	{% endif %}
 </div>

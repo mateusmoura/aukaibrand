@@ -8,8 +8,12 @@
 'created-descending': 'Más Nuevo al más Viejo',
 'best-selling': 'Más Vendidos',
 } %}
-<span>{{ 'Ordenar por:' | t }}</span>
-<select class="js-sort-by sort-by form-control full-width-xs">
+<span class="filter-by-sort">{{ 'Ordenar por:' | t }}</span>
+<span class="filter-by-sort mobile-sort visible-phone">
+	<i class="fa fa-sort-amount-asc"></i>{{ 'Ordenar' | t }}
+</span>
+<select class="sort-by">
+	<option value="Elija un criterio de orden…" class="visible-phone">Elija un criterio de orden…</option>
     {% for sort_method in sort_methods %}
         {# This is done so we only show the user sorting method when the user chooses it #}
         {% if sort_method != 'user' or category.sort_method == 'user' %}

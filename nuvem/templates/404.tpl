@@ -1,37 +1,38 @@
 {# Only remove this if you want to take away the theme onboarding advices #}
 {% set show_help = not has_products %}
-<div class="container" id="404">
-	<div class="title-container m-top">
-   		<h1 class="title">{{ "La página no existe" | translate }}</h1>
+<div class="row-fluid" id="404">
+    <div class="container">
+        <div class="headerBox-Error">
+            <h1>- {{ "Error" | translate }} -</h1>
+            <h2>{{ "404" | translate }}</h2>
+            <p>{{ "La página que estás buscando no existe." | translate }}</p>
+        </div>
+
+        {% set primary_section_products %}
+            {% for product in sections.primary.products %}
+                {% include 'snipplets/single_product.tpl' %}
+            {% endfor %}
+        {% endset %}
+
+        {% if sections.primary.products %}
+        <div class="dest-list">
+            <h2>{{ "Quizás te interesen los siguientes productos." | translate }}</h2>
+                <div id="tS1" class="jThumbnailScroller hidden-phone">
+                    <div class="jTscrollerContainer">
+                        <div class="jTscroller">
+                            {{ primary_section_products }}
+  			        	</div>
+                    </div>
+                    <a href="#" class="jTscrollerPrevButton"></a>
+                    <a href="#" class="jTscrollerNextButton"></a>
+                </div>
+                
+                <div class="visible-phone">
+                    {{ primary_section_products }}
+                </div>
+        </div>
+        {% endif %}
     </div>
-	<div class="text-center">
-		<div class="circle-box visible-when-content-ready">
-			<p class="circle-title">404</p>
-			<p class="circle-subtitle">oops!</p>
-		</div>
-		<p class="text-center">{{ "La página que estás buscando no existe." | translate }} {{ "Quizás te interesen los siguientes productos." | translate }}</p>
-		{% set related_products = sections.primary.products | take(4) | shuffle %}
-		{% if related_products | length > 1 %}
-		<div class="row">
-			<div class="col-md-12">
-				<div class="title-container m-top">
-			   		<h2 class="subtitle">{{"Productos recomendados" | translate}}</h2>
-			    </div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-md-12 text-center">
-				<section id="grid" class="grid clearfix">
-				<div class="js-masonry-grid">
-					{% for related in related_products %}
-						{% include 'snipplets/single_product.tpl' with {product : related} %}
-					{% endfor %}
-				</div>
-				</section>
-			</div>
-		</div>
-		{% endif %}	
-	</div>
 </div>
 {# Here we will add an example as a help, you can delete this after you upload your products #}
 {% if show_help %}

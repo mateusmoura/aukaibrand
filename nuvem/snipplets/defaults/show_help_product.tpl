@@ -1,151 +1,183 @@
 {# Single product that works as an example #}
-<div class="container m-top">
-    <div class="row">
-        <div class="col-xs-12 col-md-6 product-img-col visible-when-content-ready">
-            <div class="row">
-                <div class="desktop-featured-product">
-                    <div class="p-relative">
-                        <div class="current-photo-container">
-                            <div class="labels-floating">
-                                <div class="label label-circle label-secondary">{{ settings.offer_text }}</div>
-                            </div> 
-                            <a href="{{ "img/help-product-2.svg" | static_url }}" id="zoom" class="cloud-zoom pull-left full-width" rel="position: 'inside', showTitle: false, loading: '{{ 'Cargando...' | translate }}'">
-                                {% include "snipplets/svg/help-product-2.tpl" %}
-                            </a> 
+<div class="container">
+    <div id="single-product">
+        <div id="single-product-container" class="productContainer" >
+            <div class="span6">
+                <div class="imagecol">
+                    <div class="imagecolContent">
+                        <div class="circle offer">
+                            <p>{{ "Oferta" | translate }}</p>
                         </div>
+                        <a href="{{ "images/help-product-2.svg" | static_url }}" id="zoom" class="cloud-zoom" rel="position: 'inside', showTitle: false, loading: 'Cargando...'" >
+                            {{ "images/help-product-2.svg" | static_url | img_tag }}
+                        </a>
+                        <div id="cloud-zoom-big" class="cloud-zoom-big cloud-zoom-show-help">
+                        </div>
+                    </div>
+                    <div id="tS2" class="jThumbnailScroller">
+                        <div class="jTscrollerContainer">
+                            <div class="jTscroller">
+                                <a id="red" href="{{ "images/help-product-44.svg" | static_url }}" class="cloud-zoom-gallery" rel="useZoom: 'zoom', smallImage: '{{ "images/help-product-44.svg" | static_url }}' ">
+                                    {{ "images/help-product-44.svg" | static_url | img_tag }}
+                                </a>
+                                <a id="green" href="{{ "images/help-product-45.svg" | static_url }}" class="cloud-zoom-gallery" rel="useZoom: 'zoom', smallImage: '{{ "images/help-product-45.svg" | static_url }}' ">
+                                    {{ "images/help-product-45.svg" | static_url | img_tag }}
+                                </a>
+                                <a id="blue" href="{{ "images/help-product-2.svg" | static_url }}" class="cloud-zoom-gallery" rel="useZoom: 'zoom', smallImage: '{{ "images/help-product-2.svg" | static_url }}' ">
+                                    {{ "images/help-product-2.svg" | static_url | img_tag }}
+                                </a>
+                            </div>
+                        </div>
+                        <a href="#" class="jTscrollerPrevButton"></a>
+                        <a href="#" class="jTscrollerNextButton"></a>
                     </div>
                 </div>
             </div>
-            <div class="row hidden-xs m-top"> 
-                <div class="thumbs visible-when-content-ready">   
-                    <a id="red" href="{{ "img/help-product-44.svg" | static_url }}" class="cloud-zoom-gallery thumb-link col-md-4 p-none" rel="useZoom: 'zoom', smallImage: '{{ "images/help-product-44.svg" | static_url }}' ">
-                        <span>
-                        {% include "snipplets/svg/help-product-2-green.tpl" %}
-                        </span>
-                    </a> 
-                    <a id="red" href="{{ "img/help-product-45.svg" | static_url }}" class="cloud-zoom-gallery thumb-link col-md-4 p-none" rel="useZoom: 'zoom', smallImage: '{{ "images/help-product-45.svg" | static_url }}' ">
-                        <span>
-                        {% include "snipplets/svg/help-product-2-red.tpl" %}
-                        </span>
-                    </a> 
-                </div> 
+            <div class="span6">
+                <div class="descriptioncol">
+                    <div class="descriptioncolContent">
+                        <div class="row-fluid">
+                            <div class="title">
+                                <h1 itemprop="name">{{ "Producto de ejemplo" | translate }}</h1>
+                            </div>
+                            <div class="price-holder" itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
+                                <div class="price">
+                                    <span class="price01" id="price_display" itemprop="price" content="1000.50">{{ "100050" | money }}</span>
+                                    <span class="price02 hidden" itemprop="price" content="1200.50">{{ "120050" | money }}</span>
+									<span class="price-compare">
+									<span id="compare_price_display">{{ "1890.00" | money }}</span>
+									</span>
+                                    <meta itemprop="priceCurrency" content="ARS">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="installments">
+                        <h5>{{ "En hasta 12 cuotas con tarjeta de crédito" | translate }}</h5>
+                    </div>
+                    <form id="product_form" method="post" action="">
+                        <input type="hidden" name="add_to_cart" value="2243561">
+                        <div class="fancyContainer">
+                            <div class="span4">
+                                <div class="attributeLine">
+                                    <label class="variation-label" for="variation_1">{{ "Talle" | translate }}</label>
+                                    <select id="variation_1" name="variation[0]">
+                                        <option value="s" selected="selected">{{ "S" | translate }}</option>
+                                        <option value="m">{{ "M" | translate }}</option>
+                                        <option value="l">{{ "L" | translate }}</option>
+                                        <option value="xl">{{ "XL" | translate }}</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="span4">
+                                <div class="attributeLine">
+                                    <label class="variation-label" for="color_variant">{{ "Color" | translate }}</label>
+                                    <select id="color_variant" name="color_variant">
+                                        <option value="blue" selected="selected">{{ "Azul" | translate }}</option>
+                                        <option value="green">{{ "Verde" | translate }}</option>
+                                        <option value="red">{{ "Rojo" | translate }}</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="span4">
+                                <div class="attributeLine">
+                                    <label class="variation-label" for="variation_3">{{ "Material" | translate }}</label>
+                                    <select id="variation_3" name="variation[2]">
+                                        <option value="Resorte" selected="selected">{{ "Denim" | translate }}</option>
+                                        <option value="Ganchito">{{ "Algodón" | translate }}</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        {% if store.country == 'BR' %}
+                            <div id="shipping-calculator">
+                                <div id="shipping-calculator-form-example">
+                                    <div class="ssb">{{ "Ingrese aquí su código postal para calcular su costo de envío" | translate }}:</div>
+                                    <input type="text" name="zipcode" value="{{ cart.shipping_zipcode }}" class="shipping-zipcode">
+                                    <button class="button calculate-shipping-button">{{ "Calcular costo de envío" | translate }}</button>
+                                    <span class="loading" style="display: none;"><i class="fa fa-circle-o-notch fa-spin"></i></span>
+                                    <span class='alert alert-error invalid-zipcode' style="display: none;">{{ "El código postal es inválido." | translate }}</span>
+                                </div>
+                                {# response #}
+                                <div id="shipping-calculator-response-example" style="display: none;">
+                                    <span>{{ "Este es un ejemplo de opciones de envío para un código postal" | translate }}</span>
+                                    <ul class="shipping-list">
+                                        <li>
+                                            <label for="shipping-1">
+                                                <span><img src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/shipping/br/correios/pac@2x.png">Correios - PAC - 6 dias úteis - R$19,10</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label for="shipping-2">
+                                                <span><img src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/shipping/br/correios/sedex@2x.png">Correios - SEDEX - 1 dia útil - R$43,00</span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                    <input type="hidden" name="after_calculation" value="1">
+                                    <input type="hidden" name="zipcode" value="32682558">
+                                </div>
+                            </div>
+                        {% endif %}
+                        <div class="quantity">
+                            <input class="spinner" value="1" type="text" name="quantity{{ item.id }}" value="1">
+                        </div>
+                        <div class="addToCartButton">
+                            <input type="submit" href="#" class="button addToCart js-addtocart cart" value="{{ "Agregar al carrito" | translate }}" disabled>
+                        </div>
+                    </form>
+                    <!-- SHARE BUTTONS -->
+                    <div class="shareLinks">
+                        <div class="shareItem facebook">
+                            <iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Ffacebook.com&amp;width&amp;layout=button_count&amp;action=like&amp;show_faces=false&amp;share=false&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:21px; width:130px;" allowTransparency="true"></iframe>
+                        </div>
+                        <div class="shareItem twitter">
+                            <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.twitter.com">Tweet</a>
+                        </div>
+                    </div>
+                    <div class="description user-content" itemscope="" itemtype="http://schema.org/Product">
+                        <p>{{ "¡Este es un producto de ejemplo! Para poder probar el proceso de compra, debes" | translate }}
+                            <a href="/admin/products" target="_top">{{ "agregar tus propios productos." | translate }}</a>
+                        </p>
+                    </div>
+                    <div class="fb-comments" data-href="/" data-num-posts="5" data-width="100%"></div>
+                </div>
             </div>
         </div>
-        <div class="col-xs-12 col-md-6 product-form-container">
-            <h1 itemprop="name" class="product-name">{{ "Producto de ejemplo" | translate }}</h1>
-            <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-                <div class="product-price-container">
-                    <h4 id="compare_price_display" class="product-price-compare price-compare m-bottom-quarter-xs">{{ "1200.50" | money }}</h4>
-                    <h2 class="h1 product-price js-price-display d-inline" id="price_display">{{ "1890.00" | money }}</h2>
-                </div>
-            </div>
-            <div class="row-fluid m-bottom">
-                <h5>{{ "En hasta 12 cuotas con tarjeta de crédito" | translate }}</h5>
-            </div>
-            <form id="product_form" method="post" action="">
-                <div class="product-variants">
-                    <input type="hidden" name="add_to_cart" value="2243561">
-                        <div class="desktop-product-variation variant-container col-md-4 col-sm-4 col-xs-12">
-                            <label class="variant-label" for="variation_1">{{ "Talle" | translate }}</label>
-                            <div class="select-container">
-                                <select id="variation_1" class="form-control select" name="variation[0]">
-                                    <option value="s" selected="selected">{{ "S" | translate }}</option>
-                                    <option value="m">{{ "M" | translate }}</option>
-                                    <option value="l">{{ "L" | translate }}</option>
-                                    <option value="xl">{{ "XL" | translate }}</option>
-                                </select> 
-                            </div>
-                        </div>
-                        <div class="desktop-product-variation variant-container col-md-4 col-sm-4 col-xs-12"> 
-                            <label class="variant-label" for="color_variant">{{ "Color" | translate }}</label>
-                            <div class="select-container">
-                                <select id="color_variant" class="form-control select" name="color_variant">
-                                    <option value="blue" selected="selected">{{ "Azul" | translate }}</option>
-                                    <option value="green">{{ "Verde" | translate }}</option>
-                                    <option value="red">{{ "Rojo" | translate }}</option>
-                                </select> 
-                            </div>
-                        </div>
-                        <div class="desktop-product-variation variant-container col-md-4 col-sm-4 col-xs-12"> 
-                            <label class="variant-label" for="variation_3">{{ "Material" | translate }}</label>
-                            <div class="select-container">
-                                <select id="variation_3" class="form-control select" name="variation[2]">
-                                    <option value="Resorte" selected="selected">{{ "Denim" | translate }}</option>
-                                    <option value="Ganchito">{{ "Algodón" | translate }}</option>
-                                </select> 
-                            </div>
-                        </div>
-                    </div>
-                {% if store.country == 'BR' %}
-                <div id="shipping-calculator" class="shipping-calculator row text-center m-bottom">
-                    <div class="col-md-12"> 
-                        <div id="shipping-calculator-form-example" class="shipping-calculator-form cart-detail-shipping"> 
-                            <h4 class="shipping-calculator_label {% if template != 'cart' %} full-width m-none p-top-half p-bottom-half{% endif %} p-top-half-xs m-none-xs text-left"> {{ "Calculá el costo de tu envío" | translate }}:</h4>
-                            <input type="text" name="zipcode" value="{{ cart.shipping_zipcode }}"  class="form-control m-top-half-xs m-none" >
-                            <button class="btn btn-secondary btn-append btn-small calculate-shipping-button m-bottom-half m-top-half-xs">{{ "Calcular costo de envío" | translate }}</button>
-                            <p class="loading" style="display:none;"><i class="fa fa-refresh fa-spin"></i></p>
-                            <p id="invalid-zipcode" style="display:none;">{{ "El código postal es inválido." | translate }}</p>
-                        </div>
-                    </div>
-                    {# response #}
-                    <div id="shipping-calculator-response-example" style="display: none;">
-                        <span>{{ "Este es un ejemplo de opciones de envío para un código postal" | translate }}</span>
-                        <ul class="shipping-list">
-                            <li>
-                                <label for="shipping-1">
-                                    <span><img src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/shipping/br/correios/pac@2x.png">Correios - PAC - 6 dias úteis - R$19,10</span>
-                                </label>
-                            </li>
-                            <li>
-                                <label for="shipping-2">
-                                    <span><img src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/shipping/br/correios/sedex@2x.png">Correios - SEDEX - 1 dia útil - R$43,00</span>
-                                </label>
-                            </li>
-                        </ul>
-                        <input type="hidden" name="after_calculation" value="1">
-                        <input type="hidden" name="zipcode" value="32682558">
-                    </div>
-                </div>
-                {% endif %}
-                <input type="submit" href="#" class="btn btn-primary btn-block m-bottom m-top d-inline-block" value="{{ "Agregar al carrito" | translate }}" disabled>
-            </form> 
-        </div>
-        <div class="col-xs-12 user-content">
-            <p>{{ "¡Este es un producto de ejemplo! Para poder probar el proceso de compra, debes" | translate }}
-                <a href="/admin/products" target="_top">{{ "agregar tus propios productos." | translate }}</a>
-            </p>
-        </div>  
     </div>
 </div>
 {% if show_help %}
     <script type="text/javascript">
-        LS.ready.then(function(){
-            $(document).ready(function(){
-                var $shipping_calculator = $("#shipping-calculator");
-                var $invalid_zipcode = $("#invalid-zipcode");
-                var $shipping_calculator_loading = $shipping_calculator.find(".loading")
-                $("#calculate-shipping-button-example").click(function() {
-                    $invalid_zipcode.hide(1);
-                    $shipping_calculator_loading.show( 1 ).delay( 1800 ).hide(1);
-                    event.preventDefault(); // cancel default behavior
-                    if( $("#shipping-zipcode").val().length === 8 || $("#shipping-zipcode").val().length === 9 ) {
-                        $("#shipping-calculator-form-example, #shipping-calculator-response-example").toggle();
-                    } else {
-                        $("#invalid-zipcode").delay( 1800 ).show(1);
-                    }
-                });
-                $('#color_variant').change(function(){
-                    var $values_color = $( "select#color_variant option:selected" ).val();
-                    $('#' + $values_color).click();
-                    if ( $values_color == 'green'){
-                        $(".price02").show();
-                        $(".price01").hide();
-                    } else {
-                        $(".price02").hide();
-                        $(".price01").show();
-                    }
-                });
+        $(document).ready(function(){
+            var $shipping_calculator = $("#shipping-calculator");
+            var $invalid_zipcode = $("#invalid-zipcode");
+            var $shipping_calculator_loading = $shipping_calculator.find(".loading")
+            $("#calculate-shipping-button-example").click(function() {
+                $invalid_zipcode.hide(1);
+                $shipping_calculator_loading.show( 1 ).delay( 1800 ).hide(1);
+                event.preventDefault(); // cancel default behavior
+                if( $("#shipping-zipcode").val().length === 8 || $("#shipping-zipcode").val().length === 9 ) {
+                    $("#shipping-calculator-form-example, #shipping-calculator-response-example").toggle();
+                } else {
+                    $("#invalid-zipcode").delay( 1800 ).show(1);
+                }
             });
+
+
+
+            $('#color_variant').change(function(){
+                var $values_color = $( "select#color_variant option:selected" ).val();
+                $('#' + $values_color).click();
+                if ( $values_color == 'green'){
+                    $(".price02").show();
+                    $(".price01").hide();
+                } else {
+                    $(".price02").hide();
+                    $(".price01").show();
+                }
+            });
+
         });
+
+
     </script>
 {% endif %}

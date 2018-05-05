@@ -1,35 +1,49 @@
 {# Single snipplet that work as credit cards example #}
-<div class="example-payment-send col-md-4">
-    <h4 class="footer-title">{{ 'Ejemplos de medios de pago' | translate }}</h4>
-    <div class="align-pay-ship">
-        {% if store.country == 'BR' %}
-            {% for payment_method in [ 'visa','mastercard', 'amex', 'diners', 'pagseguro', 'moip' ] %}
-              {{ payment_method | payment_logo | img_tag('', {class : 'footer-payship-img', height : 30}) }}
-            {% endfor %}
-        {% else %}
-            {% for payment_method in [ 'visa','mastercard', 'amex', 'diners', 'mercadopago' ] %}
-              {{ payment_method | payment_logo | img_tag('', {class : 'footer-payship-img', height : 30}) }}
-            {% endfor %}
-            {% if store.country == 'AR' %}
-                {% for payment_method in [ 'ar/pagofacil','ar/rapipago', 'ar/tarjeta-naranja' ] %}
-                  {{ payment_method | payment_logo | img_tag('', {class : 'footer-payship-img', height : 30}) }}
-                {% endfor %}                                
+<div id="wrapper-pay">
+    <div class="row-fluid">
+        <div class="container">
+            {% if store.country == 'BR' %}
+                <div class="span8">
+                    <div class="payments">
+                        {{ "visa" | payment_logo | img_tag('', {class : 'img-logo', height : 40}) }}
+                        {{ "mastercard" | payment_logo | img_tag('', {class : 'img-logo', height : 40}) }}
+                        {{ "amex" | payment_logo | img_tag('', {class : 'img-logo', height : 40}) }}
+                        {{ "diners" | payment_logo | img_tag('', {class : 'img-logo', height : 40}) }}
+                        {{ "pagseguro" | payment_logo | img_tag('', {class : 'img-logo', height : 40}) }}
+                        {{ "moip" | payment_logo | img_tag('', {class : 'img-logo', height : 40}) }}
+                    </div>
+                </div>
+                <div class="span4">
+                    <div class="shipping">
+                        {{ "br/correios" | shipping_logo | img_tag('', {class : 'img-logo', height : 40}) }}
+                        {{ "br/jadlog" | shipping_logo | img_tag('', {class : 'img-logo', height : 40}) }}
+                    </div>
+                </div>
+            {% else %}
+                <div class="span8">
+                    <div class="payments">
+                        {{ "visa" | payment_logo | img_tag('', {class : 'img-logo', height : 40}) }}
+                        {{ "mastercard" | payment_logo | img_tag('', {class : 'img-logo', height : 40}) }}
+                        {{ "amex" | payment_logo | img_tag('', {class : 'img-logo', height : 40}) }}
+                        {{ "diners" | payment_logo | img_tag('', {class : 'img-logo', height : 40}) }}
+                        {% if store.country == 'AR' %}
+                            {{ "ar/pagofacil" | payment_logo | img_tag('', {class : 'img-logo', height : 40}) }}
+                            {{ "ar/rapipago" | payment_logo | img_tag('', {class : 'img-logo', height : 40}) }}
+                            {{ "ar/tarjeta-naranja" | payment_logo | img_tag('', {class : 'img-logo', height : 40}) }}
+                        {% endif %}
+                        {{ "mercadopago" | payment_logo | img_tag('', {class : 'img-logo', height : 40}) }}
+                    </div>
+                </div>
+                <div class="span4">
+                    <div class="shipping">
+                        {{ "fedex" | shipping_logo | img_tag('', {class : 'img-logo', height : 40}) }}
+                        {{ "ups" | shipping_logo | img_tag('', {class : 'img-logo', height : 40}) }}
+                        {% if store.country == 'AR' %}
+                            {{ "ar/oca" | shipping_logo | img_tag('', {class : 'img-logo', height : 40}) }}
+                        {% endif %}
+                    </div>
+                </div>
             {% endif %}
-        {% endif %}
-    </div> 
-    <h4 class="footer-title">{{ 'Ejemplos de formas de envío' | translate }}</h4>
-    <div class="align-pay-ship">
-        {% if store.country == 'BR' %}
-            {% for shipping_method in [ 'br/correios','br/jadlog' ] %}
-              {{ shipping_method | shipping_logo | img_tag('', {class : 'footer-payship-img', height : 30}) }}
-            {% endfor %}
-        {% else %}
-            {% for shipping_method in [ 'fedex','ups' ] %}
-              {{ shipping_method | shipping_logo | img_tag('', {class : 'footer-payship-img', height : 30}) }}
-            {% endfor %}
-            {% if store.country == 'AR' %}
-                {{ "ar/oca" | shipping_logo | img_tag('', {class : 'footer-payship-img', height : 30}) }}
-            {% endif %}
-        {% endif %}
-    </div> 
+        </div>
+    </div>
 </div>

@@ -1,6 +1,4 @@
-<div class="col-sm-2 visible-when-content-ready text-center">
-    {% snipplet "categories.tpl" %}
-    <div class="hidden-xs">
-	    {% snipplet "filters.tpl" %}
-	</div>
+<div class="span2 variants-container"> 
+	{% snipplet "categories.tpl" %}   
+    {% snipplet "filters.tpl" %}
 </div>
