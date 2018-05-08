@@ -16,6 +16,14 @@
   .section__image {
     height: 100%;
 
+    @include desktops {
+      &:hover, &:focus {
+        .product-info-wrapper {
+          @include opacity(1);
+        }
+      }
+    }
+
     .section__link {
       position: static;
 
@@ -48,9 +56,17 @@
       min-height: 70px;
       bottom: 0;
       position: absolute;
+      padding-bottom: 15px;
       z-index: 10;
       text-align: center;
       width: 100%;
+      @include transition(all 0.4s cubic-bezier(0.46, 0.01, 0.32, 1));
+
+      @include desktops {
+        bottom: auto;
+        top: 10%;
+        @include opacity(0);
+      }
 
       p {
         margin: 0 0 4px 0;
@@ -59,6 +75,27 @@
 
       span {
         font-size: 12px;
+      }
+
+      a {
+        color: #494d51;
+        font-size: 14px;
+      }
+    }
+
+    .product-actions {
+      display: flex;
+    }
+
+    .product-add-cart {
+      display: none;
+
+      @include desktops {
+        display: block;
+      }
+
+      .fancyContainerQuickshop-quantity {
+        display: none;
       }
     }
   }
