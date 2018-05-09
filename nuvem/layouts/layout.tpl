@@ -52,19 +52,20 @@
     {{ 'css/bootstrap.css' | static_url | css_tag }}
     {{ 'css/bootstrap-responsive.css' | static_url | css_tag }}
     {{ '//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css' | css_tag }}
+    #}
     {{ 'js/pushy/pushy.css' | static_url | css_tag }}
+    {#
     {{ 'css/style.css' | static_url | css_tag }}
+    
     {{ 'css/main-color.scss.tpl' | static_url | css_tag }}
     {{ '//fonts.googleapis.com/css?family=Lato:700,900,400italic,700italic|Open+Sans:400,300,700|Slabo+27px|Oswald:400,300,700|Lora:400,700|Montserrat:400,700|Source+Sans+Pro:400,300,700|Droid+Sans:400,700|Roboto+Condensed:400italic,700italic,300,400,700|Istok+Web:400,700,400italic,700italic|Arvo:400,700,400italic,700italic|Paytone+One|Raleway:700|Lato:700|Ubuntu:700|Roboto+Slab:700' | css_tag }}
     #}
+    
     {% set nojquery = true %}
     {{ "//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" | script_tag }}
     {{ 'js/jquery.cookie.js' | common_cdn | script_tag }}
 
     <!-- NOVO SITE -->
-    {#
-    {{ 'css/new/bootstrap/bootstrap.min.css' | static_url | css_tag }}
-    #}
     {{ '//use.fontawesome.com/releases/v5.0.10/css/all.css' | css_tag }}
     {{ 'css/new/animate.css' | static_url | css_tag }}
 
