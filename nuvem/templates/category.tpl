@@ -7,7 +7,6 @@
 
 <!-- FIM NOVO SITE -->
 
-
 {% set show_sidebar = settings.product_filters and (filter_categories or insta_colors or other_colors or size_properties_values or variants_properties) %}
 {% paginate by 16 %}
 {# Only remove this if you want to take away the theme onboarding advices #}
@@ -15,6 +14,8 @@
 {% if settings.category_banner_top %} 
     {% include 'snipplets/banner.tpl' %}
 {% endif %} 
+{#
+
 <div class="row-fluid" id="category-page">
 	<div class="container">        
         {% if products %}
@@ -73,14 +74,12 @@
             </div>
         </div>
 
-            
-	
         {% elseif show_help %}
             {% snipplet 'defaults/show_help_category.tpl' %}
         {% endif %}
-
     </div>
 </div>
+#}
 {% if settings.category_banner_bottom %} 
     {% include 'snipplets/banner.tpl' %}
 {% endif %} 

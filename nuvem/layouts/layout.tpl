@@ -62,7 +62,9 @@
     {{ 'js/jquery.cookie.js' | common_cdn | script_tag }}
 
     <!-- NOVO SITE -->
+    {#
     {{ 'css/new/bootstrap/bootstrap.min.css' | static_url | css_tag }}
+    #}
     {{ '//use.fontawesome.com/releases/v5.0.10/css/all.css' | css_tag }}
     {{ 'css/new/animate.css' | static_url | css_tag }}
 
@@ -120,6 +122,8 @@
     {{ back_to_admin }}
 
     {# start main content #}
+        <!-- Site Overlay -->
+        <div class="site-overlay"></div>
 
         <!-- INICIO DO NOVO LAYOUT -->
             {% snipplet "navigation-mobile.tpl" %}
@@ -274,112 +278,13 @@
 
         <!-- LAYOUT ANTIGO -->
 
-        
-        <div id="container">
-            <div class="wrapper" id="topper">
-                <div class="row-fluid">
-                    <div class="container">
-                        
 
-                        
-                    </div>
-                </div>
-            </div>
-            <div class="wrapper" id="header">
-                <div class="row-fluid">
-                    <div class="container">
-                        <div class="span5">
-                            {% if template == 'home' %}
-                                {% if has_logo %}
-                                    <h1 class="img logo">
-                                        {{ store.logo  | img_tag(store.name) | a_tag(store.url)}}
-                                    </h1>
-                                    <div id="no-logo-wrapper" class="hidden">
-                                        <div class="logo text-only">
-                                            <a href="{{ store.url }}">{{ store.name }}</a>
-                                        </div>
-                                    </div>
-                                {% else %}
-                                    <div class="img logo hidden">
-                                        {{ store.logo  | img_tag(store.name) | a_tag(store.url)}}
-                                    </div>
-                                    <h1 id="no-logo-wrapper">
-                                        <div class="logo text-only">
-                                            <a href="{{ store.url }}">{{ store.name }}</a>
-                                        </div>
-                                    </h1>                        
-                                {% endif %}
-                            {% else %}  
-                                <div class="img logo {% if not has_logo %}hidden{% endif %}">
-                                    {{ store.logo  | img_tag(store.name) | a_tag(store.url)}}
-                                </div>
-                                <div id="no-logo-wrapper" {% if has_logo %}class="hidden"{% endif %}>
-                                    <div class="logo text-only">
-                                        <a href="{{ store.url }}">{{ store.name }}</a>
-                                    </div>
-                                </div>
-                            {% endif %}
-                        </div>
-                        <div class="span7">
-                            <div class="info-head">
-                                {% if store.email %}
-                                    {{ store.email | mailto }}
-                                {% endif %}
-                                <div class="cart-snipplet">
-                                {% if not store.is_catalog and template != 'cart' %}
-                                    {% if settings.ajax_cart %}
-                                        {% snipplet "cart_ajax.tpl" as "cart" %}
-                                    {% else %}
-                                        {% snipplet "cart.tpl" as "cart" %}
-                                    {% endif %}
-                                {% endif %}
-                                </div>
-                            </div>
-
-                        </div>
-                        <div id="navigation">
-                                <ul id="menu" class="sf-menu hidden-phone">
-                                    {% snipplet "navigation.tpl" %}
-                                </ul>
-                            </div>
-                    </div>
-                </div>
-            </div>
-
-            {% if settings.slim_menu %}
-                <div class="wrapper hidden-phone" id="header-slim">
-                    <div class="row-fluid">
-                        <div class="container">
-                            <div class="span4 slim-logo">
-                                <div class="logo {% if not has_logo %}text-only{% endif %}">
-                                    {% if "slim-logo.jpg" | has_custom_image %}
-                                        {{ "slim-logo.jpg" | static_url | img_tag | a_tag(store.url) }}
-                                    {% elseif has_logo %}
-                                        {{ store.logo | img_tag | a_tag(store.url) }}
-                                    {% else %}
-                                        <a href="{{ store.url }}">{{ store.name }}</a>
-                                    {% endif %}
-                                </div>
-                            </div>
-                            <div id="navigation" class="span8 slim-navigation">
-                                <ul id="menu-slim" class="sf-menu">
-                                    {% snipplet "navigation.tpl" %}
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            {% endif %}
-
-        {% template_content %}
-
-
-        <div class="banner-services-footer">
+        <!-- <div class="banner-services-footer">
             {% if settings.banner_services %}
                 {% include 'snipplets/banner-services.tpl' %}
             {% endif %}
-        </div>
-        {% if store.facebook or store.twitter or store.google_plus or store.pinterest or store.instagram %}
+        </div> -->
+        <!-- {% if store.facebook or store.twitter or store.google_plus or store.pinterest or store.instagram %}
             <div id="wrapper-social">
                 <div class="row-fluid">
                     <div class="container">
@@ -394,48 +299,39 @@
             </div>
         {% elseif show_help  %}
             {% snipplet "defaults/show_help_social.tpl" %}
-        {% endif %}
+        {% endif %} -->
 
-        <div id="wrapper-foot">
-            <div class="row-fluid">
-                <div class="container">
-                    {% set newsletter_span = store.phone or store.address ? 6 : 9 %}
-                    <div class="span{{ newsletter_span }}">
-                        <span class="subheader">{{ "Newsletter" | translate }}</span>
-                        {% if settings.news_txt %}
-                            <p>{{ settings.news_txt }}</p>
-                        {% endif %}
-                        {% snipplet "newsletter.tpl" %}
-                    </div>
-                    <div class="span3">
-                        <span class="subheader">{{ "Más información" | translate }}</span>
-                        <ul class="foot-nav">
-                            {% snipplet "navigation-foot.tpl" %}
-                        </ul>
-                    </div>
-                    {% if store.phone or store.address or store.blog %}
-                        <div class="span3">
-                            <span class="subheader">{{ "Datos de contacto" | translate }}</span>
-                            <ul class="foot-nav">
-                                {% if store.phone %}
-                                    <li><strong>{{ store.phone }}</strong></li>
-                                {% endif %}
-                                {% if store.address %}
-                                    <li>{{ store.address }}</li>
-                                {% endif %}
-                                {% if store.blog %}
-                                    <li class="blog"><a target="_blank" href="{{ store.blog }}">{{ store.blog }}</a></li>
-                                {% endif %}
-                                {% if store.email %}
-                                    <li class="email">{{ store.email | mailto }}</li>
-                                {% endif %}
-                            </ul>
-                        </div>
+        {% set newsletter_span = store.phone or store.address ? 6 : 9 %}
+        <!-- <div class="span{{ newsletter_span }}">
+            <span class="subheader">{{ "Newsletter" | translate }}</span>
+            {% if settings.news_txt %}
+                <p>{{ settings.news_txt }}</p>
+            {% endif %}
+            {% snipplet "newsletter.tpl" %}
+        </div> -->
+        
+        <!-- {% if store.phone or store.address or store.blog %}
+            <div class="span3">
+                <span class="subheader">{{ "Datos de contacto" | translate }}</span>
+                <ul class="foot-nav">
+                    {% if store.phone %}
+                        <li><strong>{{ store.phone }}</strong></li>
                     {% endif %}
-                </div>
+                    {% if store.address %}
+                        <li>{{ store.address }}</li>
+                    {% endif %}
+                    {% if store.blog %}
+                        <li class="blog"><a target="_blank" href="{{ store.blog }}">{{ store.blog }}</a></li>
+                    {% endif %}
+                    {% if store.email %}
+                        <li class="email">{{ store.email | mailto }}</li>
+                    {% endif %}
+                </ul>
             </div>
-        </div>
-        {% if settings.payments or settings.shipping %}
+        {% endif %} -->
+
+
+       <!-- {% if settings.payments or settings.shipping %}
             <div id="wrapper-pay">
                 <div class="row-fluid">
                     <div class="container">
@@ -461,7 +357,9 @@
             {# This is a snipplet to show the user the payment and send methods the first time they visit the store #}
             {% snipplet "defaults/show_help_footer.tpl" %}
             {% endif %}
-        {% endif %}
+        {% endif %} -->
+
+
         <div id="wrapper-legal">
             <div class="row-fluid">
                 <div class="container">
@@ -541,8 +439,6 @@
                     {{ "Subir" | translate }} ^
                 </div>
             </div>
-        </div>
-
         </div>
 
     {{ '//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js' | script_tag }}

@@ -122,6 +122,7 @@
 {% endif %}
 {# END of show default products in the home page #}
 
+{#
 {% if not show_help %}
     {% if sections.primary.products %}
         <div class="row-fluid">
@@ -154,6 +155,8 @@
         </div>
     {% endif %}
 {% endif %}
+#}
+
 {% if settings.welcome_message or show_help %}
     <div class="row-fluid">
         <div class="container">
