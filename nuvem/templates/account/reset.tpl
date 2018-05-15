@@ -1,3 +1,48 @@
+<section class="section-reset">
+    <div class="container-fluid">
+        {% snipplet "breadcrumbs.tpl" %}
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="section-reset__form">
+                <form action="" method="post" class="form-horizontal">
+                    <h1>
+                        {{ "Cambiar Contraseña" | translate }}
+
+                        <small class="text-muted">{{ 'Te enviaremos un email para que puedas cambiar tu contraseña.' | translate }}</small>
+                    </h1>
+
+                    {% if failure %}
+                        <div class="col-12">
+                            <div class="alert alert-danger" role="alert">{{ 'No existe ningún cliente con el email ingresado.' | translate }}</div>
+                        </div>
+                    {% elseif success %}
+                        <div class="col-12">
+                            <div class="alert alert-success" role="alert">{{ 'Te enviamos un email a {1}' | translate(email) }}</div>
+                        </div>
+                    {% endif %}
+                    <div class="col-12">
+                        <div class="form-group">
+                            <label for="email">{{ 'Email' | translate }}</label>
+                            <input class="form-control" autocorrect="off" autocapitalize="off" type="email" name="email" id="email" value="{{ email }}" />
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="control-group">
+                            <button type="submit" class="btn btn-dark btn-block">{{ 'Enviar email' | translate }}</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{#
+
 <div class="row-fluid">
     <div class="container">
         <div class="headerBox-List">
@@ -31,3 +76,5 @@
         </div>
     </div>
 </div>
+
+#}

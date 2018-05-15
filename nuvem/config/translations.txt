@@ -1544,3 +1544,9 @@ en ""
 
 pt "Por"
 en ""
+
+pt "Ainda não tem uma conta?"
+en "Dont't have an account?"
+
+pt "Cadastrar"
+en "Sign up"
