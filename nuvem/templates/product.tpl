@@ -3,7 +3,7 @@
         {% snipplet "breadcrumbs.tpl" %}
     </div>
 
-    <div class="row no-gutters section-product__content" itemscope itemtype="http://schema.org/Product" data-variants="{{product.variants_object | json_encode }}">
+    <div class="row no-gutters section-product__content section-product__viewer" itemscope itemtype="http://schema.org/Product" data-variants="{{product.variants_object | json_encode }}">
         <div class="col-12 col-lg-6">
             <div class="mobile-bxslider">
                 {% if product.images_count > 1 %}
@@ -82,13 +82,16 @@
 
                 <div class="product-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
                     <div class="price">
-                        <span>
-                            {{ "De" | translate }}
-                            <span class="price" id="price_display" itemprop="price" content="{{ product.price / 100 }}" {% if not product.display_price %}style="display:none;"{% endif %}><strike>{{ product.price | money }}</strike></span>
-                        </span>
                         <span class="price-compare">
-                            {{ "Por" | translate }}
+                            {{ "De" | translate }}
+                            <strike>
                             <span id="compare_price_display" {% if not product.compare_at_price %}class="hidden"{% endif %}>{{ product.compare_at_price | money }}</span>
+                            </strike>
+                        </span>
+
+                        <span>
+                            {{ "Por" | translate }}
+                            <span class="price" id="price_display" itemprop="price" content="{{ product.price / 100 }}" {% if not product.display_price %}style="display:none;"{% endif %}>{{ product.price | money }}</span>
                         </span>
                         <meta itemprop="priceCurrency" content="{{ product.currency }}" />
                         {% if product.stock_control %}
@@ -210,48 +213,36 @@
             </div>
         </div>
     </div>
-</section>
 
-<div id="related-products">
-    {% set related_products_ids = product.metafields.related_products.related_products_ids %}
-    {% if related_products_ids %}
-        {% set related_products = related_products_ids | get_products %}
-        {% set show = (related_products | length > 0) %}
-    {% endif %}
-    {% if not show %}
-        {% set related_products = category.products | shuffle | take(4) %}
-        {% set show = (related_products | length > 1) %}
-    {% endif %}
-    {% if show %}
-        <div class="row-fluid">
-            <div class="container">
-                <div class="dest-list">
-                    {% set related_products %}
-                        {% for related in related_products %}
-                            {% if product.id != related.id %}
-                                {% include 'snipplets/single_product.tpl' with {product : related} %}
-                            {% endif %}
-                        {% endfor %}
-                    {% endset %}
-                    <h2>{{"Productos Relacionados" | translate}}</h2>
-                    <div id="tS1" class="jThumbnailScroller hidden-phone">
-                        <div class="jTscrollerContainer">
-                            <div class="jTscroller">
-                                {{ related_products }}
-                            </div>
-                        </div>
-                        <a href="#" class="jTscrollerPrevButton"></a>
-                        <a href="#" class="jTscrollerNextButton"></a>
-                    </div>
-
-                    <div class="visible-phone">
-                        {{ related_products }}
-                    </div>
-                </div>
+    <div id="related-products" class="section-category section-related-products">
+        {% set related_products_ids = product.metafields.related_products.related_products_ids %}
+        {% if related_products_ids %}
+            {% set related_products = related_products_ids | get_products %}
+            {% set show = (related_products | length > 0) %}
+        {% endif %}
+        {% if not show %}
+            {% set related_products = category.products | shuffle | take(4) %}
+            {% set show = (related_products | length > 1) %}
+        {% endif %}
+        {% if show %}
+            <div class="section-product__content">
+                <h2>{{"Productos Relacionados" | translate}}</h2>
             </div>
-        </div>
-    {% endif %}
-</div>
+
+            <div class="row no-gutters section-product__content section-category--list">
+                {% set related_products %}
+                    {% for related in related_products %}
+                        {% if product.id != related.id %}
+                            {% include 'snipplets/product/single-product.tpl' with {product : related} %}
+                        {% endif %}
+                    {% endfor %}
+                {% endset %}
+                
+                {{ related_products }}
+            </div>
+        {% endif %}
+    </div>
+</section>
 
 {% if installments_info %}
 {% set gateways = installments_info | length %}

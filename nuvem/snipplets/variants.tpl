@@ -67,7 +67,7 @@
               {% if quickshop %}
                   onchange="LS.changeVariant(changeVariant, '#quick{{ product.id }} .productContainer')">
               {% else %}
-                  onchange="LS.changeVariant(changeVariant, '.section-product__content')">
+                  onchange="LS.changeVariant(changeVariant, '.section-product__viewer')">
               {% endif %}
                   {% for option in variation.options %}
                       <option value="{{ option.id }}" {% if product.default_options[variation.id] == option.id %}selected="selected"{% endif %}>{{ option.name }}</option>
