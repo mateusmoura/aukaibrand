@@ -174,23 +174,27 @@
                             <a href="/"><i class="fas fa-search"></i></a>
                         </div>
                         <div class="options__account">
-                            <a href="{{ store.customer_login_url }}"><i class="far fa-user"></i></a>
+                            {% if store.has_accounts %}
+                                <div class="options__account--menu">
+                                    {% if not customer %}
+                                        {#
+                                        {% if 'mandatory' not in store.customer_accounts %}
+                                            {{ "Cadastre-se" | translate | a_tag(store.customer_register_url) }} <span class="divider">-</span>
+                                        {% endif %}
+                                        {{ "Login" | translate | a_tag(store.customer_login_url) }}
+                                        #}
 
-                            {# 
-                                {% if store.has_accounts %}
-                                    <div class="options__account--menu">
-                                        {% if not customer %}
-                                            {% if 'mandatory' not in store.customer_accounts %}
-                                                {{ "Cadastre-se" | translate | a_tag(store.customer_register_url) }} <span class="divider">-</span>
-                                            {% endif %}
-                                            {{ "Login" | translate | a_tag(store.customer_login_url) }}
-                                        {% else %}
+                                        <a href="{{ store.customer_login_url }}"><i class="far fa-user"></i></a>
+                                    {% else %}
+                                        {#
                                             {{ "Minha conta" | translate | a_tag(store.customer_home_url) }} <span class="divider">-</span>
                                             {{ "Sair" | translate | a_tag(store.customer_logout_url) }}
-                                        {% endif %}
-                                    </div>
-                                {% endif %}
-                            #}
+                                        #}
+
+                                        <a href="{{ store.customer_home_url }}"><i class="far fa-user"></i></a>
+                                    {% endif %}
+                                </div>
+                            {% endif %}
                         </div>
                         <div class="options__minicart">
                             <a href="/"><i class="fas fa-shopping-cart"></i></a>
