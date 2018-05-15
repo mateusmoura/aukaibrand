@@ -82,8 +82,12 @@
 
                 <div class="product-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
                     <div class="price">
-                        <span class="price" id="price_display" itemprop="price" content="{{ product.price / 100 }}" {% if not product.display_price %}style="display:none;"{% endif %}>{{ product.price | money }}</span>
+                        <span>
+                            {{ "De" | translate }}
+                            <span class="price" id="price_display" itemprop="price" content="{{ product.price / 100 }}" {% if not product.display_price %}style="display:none;"{% endif %}><strike>{{ product.price | money }}</strike></span>
+                        </span>
                         <span class="price-compare">
+                            {{ "Por" | translate }}
                             <span id="compare_price_display" {% if not product.compare_at_price %}class="hidden"{% endif %}>{{ product.compare_at_price | money }}</span>
                         </span>
                         <meta itemprop="priceCurrency" content="{{ product.currency }}" />
@@ -250,32 +254,41 @@
 </div>
 
 {% if installments_info %}
- {% set gateways = installments_info | length %}
-<div id="InstallmentsModal" class="modal hide fade{% if gateways <= '3' %} two-gates{% endif %}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-body">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-        <div class="installments">
-            <ul class="nav nav-tabs">
-                {% for method, installments in installments_info %}
-                    <li id="method_{{ method }}" {% if loop.first %}class="active"{% endif %}><a href="#installment_{{ method }}_{{ installment }}" data-toggle="tab">{{ method == 'paypal_multiple' ? 'PAYPAL' : (method == 'itaushopline'? 'ITAU SHOPLINE' : method | upper) }}</a></li>
-                {% endfor %}
-            </ul>
-            <div class="tab-content">
-                {% for method, installments in installments_info %}
-                            <div class="tab-pane{% if loop.first %} active{% endif %}" id="installment_{{ method }}_">
-                                <div class="span3">
-                                {% for installment, data_installment in installments %}
-                                    <span id="installment_{{ method }}_{{ installment }}" >
-                                        <strong class="installment-amount">{{ installment }}</strong> x <strong class="installment-price">{{ data_installment.installment_value_cents | money }}</strong>
-                                        {% if data_installment.without_interests %} {{ 'sin interés' | t }}{% endif %}
-                                    </span>
-                                    {% if installment == 12 %}</div><div class="span3">{% endif %}
-                                {% endfor %}
+{% set gateways = installments_info | length %}
+    <div id="InstallmentsModal"  class="modal fade{% if gateways <= '3' %} two-gates{% endif %}" id="sizeGuide" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Detalhes das parcelas</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="installments">
+                        <ul class="nav nav-tabs">
+                            {% for method, installments in installments_info %}
+                                <li id="method_{{ method }}" {% if loop.first %}class="active"{% endif %}><a href="#installment_{{ method }}_{{ installment }}" data-toggle="tab">{{ method == 'paypal_multiple' ? 'PAYPAL' : (method == 'itaushopline'? 'ITAU SHOPLINE' : method | upper) }}</a></li>
+                            {% endfor %}
+                        </ul>
+                        <div class="tab-content">
+                            {% for method, installments in installments_info %}
+                                <div class="tab-pane{% if loop.first %} active{% endif %}" id="installment_{{ method }}_">
+                                    <div class="span3">
+                                    {% for installment, data_installment in installments %}
+                                        <span id="installment_{{ method }}_{{ installment }}" >
+                                            <strong class="installment-amount">{{ installment }}</strong> x <strong class="installment-price">{{ data_installment.installment_value_cents | money }}</strong>
+                                            {% if data_installment.without_interests %} {{ 'sin interés' | t }}{% endif %}
+                                        </span>
+                                        {% if installment == 12 %}</div><div class="span3">{% endif %}
+                                    {% endfor %}
+                                    </div>
                                 </div>
-                            </div>
-                {% endfor %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-</div>
 {% endif %}

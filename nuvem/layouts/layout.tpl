@@ -58,6 +58,7 @@
     {{ 'css/style.css' | static_url | css_tag }}
     
     {{ 'css/main-color.scss.tpl' | static_url | css_tag }}
+    
     {{ '//fonts.googleapis.com/css?family=Lato:700,900,400italic,700italic|Open+Sans:400,300,700|Slabo+27px|Oswald:400,300,700|Lora:400,700|Montserrat:400,700|Source+Sans+Pro:400,300,700|Droid+Sans:400,700|Roboto+Condensed:400italic,700italic,300,400,700|Istok+Web:400,700,400italic,700italic|Arvo:400,700,400italic,700italic|Paytone+One|Raleway:700|Lato:700|Ubuntu:700|Roboto+Slab:700' | css_tag }}
     #}
     
@@ -512,6 +513,7 @@
         $("#shipping-variant-id").val(variant.id);
 
         var parent = $("body");
+
         if (variant.element){
             parent = $(variant.element);
         }
@@ -632,6 +634,9 @@
                 return $('.slider-wrapper');
             }
         };
+
+        
+
         window.homeSlider.create();
 
         LS.registerOnChangeVariant(function(variant){
@@ -661,6 +666,8 @@
             delay: 500
         });
 
+        
+
         $('#menu-slim').supersubs({
             minWidth:    8,
             maxWidth:    40,
@@ -673,7 +680,7 @@
             delay: 500
         });
 
-        var headerStart = $("#header").position().top;
+        /* var headerStart = $("#header").position().top;
         $(window).scroll(function(){
             var position = $(window).scrollTop();
 
@@ -682,18 +689,17 @@
             } else {
                 $("#header-slim").stop().animate({  top: -140  }, 120);
             }
-        });
-
+        }); */
 
         // Color variations - Used to select variants from colors/sizes squares
         $("a.insta-variations").click(function(e){
             e.preventDefault();
             $this = $(this);
-            $this.siblings().removeClass("selected");
+            $this.parents("ul").find(".selected").removeClass("selected");
             $this.addClass("selected");
 
             var option_id = $this.data('option');
-            $selected_option = $this.closest('.product').find('.variation-option option[value="'+option_id+'"]');
+            $selected_option = $this.closest('.section__variantes').find('.variation-option option[value="'+option_id+'"]');
             $selected_option.prop('selected', true).trigger('change');
 
             $this.closest("[class^='variation']").find('.variation-label strong').html(option_id);

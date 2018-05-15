@@ -1538,3 +1538,9 @@ en "AJAX Shopping Cart"
 es "Tus clientes pueden agregar y ver los productos que van a comprar sin necesidad de ir a otra página, ya que la información está siempre visible."
 pt "Seus clientes podem escolher produtos e conferir o que vão comprar sem a necessidade abrir outra página, já que a informação está sempre visível."
 en "Your clients will be able to add products on the fly."
+
+pt "De"
+en ""
+
+pt "Por"
+en ""
