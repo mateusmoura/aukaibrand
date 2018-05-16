@@ -1,8 +1,8 @@
 {
     "remotePath": "./",
     "host": "ftp.nuvemshop.com.br",
-    "username": "",
-    "password": "",
+    "username": "aukai",
+    "password": "2vhy6oao",
     "port": 21,
     "secure": false,
     "protocol": "ftp",

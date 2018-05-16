@@ -175,7 +175,7 @@
                         </div>
                         <div class="options__account">
                             {% if store.has_accounts %}
-                                <div class="options__account--menu">
+                                <!-- <div class="options__account--menu"> -->
                                     {% if not customer %}
                                         {#
                                         {% if 'mandatory' not in store.customer_accounts %}
@@ -193,11 +193,19 @@
 
                                         <a href="{{ store.customer_home_url }}"><i class="far fa-user"></i></a>
                                     {% endif %}
-                                </div>
+                                <!-- </div> -->
                             {% endif %}
                         </div>
                         <div class="options__minicart">
-                            <a href="/"><i class="fas fa-shopping-cart"></i></a>
+                            <div class="cart-snipplet">
+                                {% if not store.is_catalog and template != 'cart' %}
+                                    {% if settings.ajax_cart %}
+                                        {% snipplet "cart_ajax.tpl" as "cart" %}
+                                    {% else %}
+                                        {% snipplet "cart.tpl" as "cart" %}
+                                    {% endif %}
+                                {% endif %}
+                            </div>
                         </div>
 
                         {% if languages | length > 1 %}
