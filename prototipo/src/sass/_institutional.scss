@@ -1,0 +1,171 @@
+
+
+.section-institutional {
+  .container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .block-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 155px 0;
+    text-align: center;
+
+    @include desktops {
+      padding: 195px 0;
+      min-height: 80vh;
+    }
+
+    &__margin {
+      margin-bottom: 100px;
+    }
+  }
+  
+  .block-image {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+  }
+
+  .block-content {
+    margin: 0 auto;
+
+    .block-center {
+      max-width: 650px;
+      margin: 0 auto;
+
+      h2 {
+        color: $white-color;
+        font-size: 45px;
+      }
+    }
+  }
+
+  .banner {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    &-margin {
+      margin-bottom: 100px;
+    }
+
+    .banner-panel {
+      padding: 50px 0;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .banner-content {
+      padding: 0 20px;
+      margin: 0 auto;
+      width: 100%;
+
+      &__center {
+        margin: 0 auto;
+        position: relative;
+        max-width: 575px;
+        text-align: center;
+      }
+
+      &__title {
+        color: $black-color;
+        font-size: 38px;
+        margin: 24px 0;
+      }
+
+      &__text {
+        text-align: center;
+        margin: 24px 0;
+      }
+
+      &__image {
+        margin: 24px 0;
+        vertical-align: middle;
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  .box {
+    background-color: #ebede6;
+    margin-bottom: 100px;
+
+    &-fixheight {
+      max-height: 400px;
+      margin-bottom: 200px;
+
+      .box-content {
+        padding: 0;
+        align-items: flex-start;
+        justify-content: flex-start;
+      }
+    }
+
+    @include tablet {
+      padding: 100px 0;
+    }
+
+    > .row {
+      //margin: 0 -20px;
+    }
+
+    &-strip {
+      margin: 0 -20px;
+
+      @include tablet {
+        margin: 0;
+      }
+
+      img {
+        max-width: 100%;
+      }
+    }
+
+    &-content {
+      padding: 60px 0;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @include tablet {
+        
+      }
+
+      &__text {
+        &-big {
+          max-width: 60%;
+
+          p {
+            font-size: 19px;
+          }
+        }
+      }
+
+      &__title {
+        h4 {
+          font-size: 30px;
+          text-transform: uppercase;
+        }
+      }
+    }
+
+    &-flex-center {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}

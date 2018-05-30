@@ -41,10 +41,8 @@ gulp.task('sass', () =>
       outputStyle: 'expanded',
       sourceComments: 'normal',
     }).on('error', sass.logError))
-    //.pipe(config.production ? util.noop() : sourcemaps.write('./maps'))
-    //.pipe(gulp.dest(config.production ? `${config.assetDir}/css` : `${config.srcDir}/css`))
     .pipe(config.production ? util.noop() : sourcemaps.write('./maps'))
-    .pipe(gulp.dest(config.production ? `${config.assetDir}/css` : `${config.nuvemDir}static/css/new/`))
+    .pipe(gulp.dest(config.production ? `${config.assetDir}/css` : `${config.srcDir}/css`))
     .pipe(config.production ? util.noop() : browserSync.stream())));
 
 // Sass to css conversion IN NUVEM SHOP
