@@ -16,7 +16,7 @@
         <div class="page-institutional">
             <div class="container">
                 <div class="row">
-                    <div class="col-12">
+                    <div class="col-12 col-md-8 order-2">
                         <div class="page-institutional__title">
                             <h1>{{ page.name }}</h1>
                         </div>
@@ -27,7 +27,7 @@
                         
                     </div>
 
-                    <div class="col-12">
+                    <div class="col-12 col-md-4 order-1">
                         <div class="page-institutional__sidebar">
                             {% snipplet "institutional/menu.tpl" %}
                         </div>

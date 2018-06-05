@@ -698,19 +698,22 @@
         });
 
         var headerStart = $("header.header").position().top;
-        $(window).scroll(function(){
-            var position = $(window).scrollTop();
 
-            console.log(position, headerStart)
+        if (!$('.page-institutional').length) {
+            $(window).scroll(function(){
+                var position = $(window).scrollTop();
 
-            if(position > headerStart){
-                $("#header-slim").stop().animate({  top: 0  }, 500);
-                $(".header__content").addClass("header-branca");
-            } else {
-                $("#header-slim").stop().animate({  top: -140  }, 120);
-                $(".header__content").removeClass("header-branca");
-            }
-        });
+                if(position > headerStart){
+                    $("#header-slim").stop().animate({  top: 0  }, 500);
+                    $(".header__content").addClass("header-branca");
+                } else {
+                    $("#header-slim").stop().animate({  top: -140  }, 120);
+                    $(".header__content").removeClass("header-branca");
+                }
+            });
+        } else {
+            $(".header__content").addClass("header-branca");
+        }
 
         // Color variations - Used to select variants from colors/sizes squares
         $("a.insta-variations").click(function(e){
