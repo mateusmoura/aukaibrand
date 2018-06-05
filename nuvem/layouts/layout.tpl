@@ -137,7 +137,9 @@
                     {% if template == 'home' %}
                         {% if has_logo %}
                             <h1 class="img logo">
-                                {{ store.logo  | img_tag(store.name) | a_tag(store.url)}}
+                                {# {{ store.logo  | img_tag(store.name) | a_tag(store.url)}} #}
+                                <img class="logo-preta" src="{{ 'images/new/aukai_logo.png' | static_url }}" alt="Aukai Brand" />
+                                <img class="logo-branca" src="{{ 'images/new/aukai_logo-branca.png' | static_url }}" alt="Aukai Brand" />
                             </h1>
                             <div id="no-logo-wrapper" class="hidden">
                                 <div class="logo text-only">
@@ -695,16 +697,20 @@
             delay: 500
         });
 
-        /* var headerStart = $("#header").position().top;
+        var headerStart = $("header.header").position().top;
         $(window).scroll(function(){
             var position = $(window).scrollTop();
 
+            console.log(position, headerStart)
+
             if(position > headerStart){
                 $("#header-slim").stop().animate({  top: 0  }, 500);
+                $(".header__content").addClass("header-branca");
             } else {
                 $("#header-slim").stop().animate({  top: -140  }, 120);
+                $(".header__content").removeClass("header-branca");
             }
-        }); */
+        });
 
         // Color variations - Used to select variants from colors/sizes squares
         $("a.insta-variations").click(function(e){

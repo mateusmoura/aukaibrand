@@ -22,17 +22,33 @@
                 <div class="col-12">
                     <div class="section__video">
                     <div  id="youtube-player" 
-                        data-property="{videoURL:'b29-FYXYoUY', containment:'self', stopMovieOnBlur: false, showControls:true, autoPlay:true, loop:true, vol:50, mute:true, startAt:10, stopAt:300, opacity:1, addRaster:true, quality:'large', optimizeDisplay:true, addFilters: {grayscale: 50,sepia: 80,opacity: 30}}"
+                        data-property="{videoURL:'b29-FYXYoUY', containment:'self', stopMovieOnBlur: false, showControls:true, autoPlay:true, loop:true, vol:50, mute:true, startAt:10, stopAt:300, opacity:1, addRaster:true, quality:'large', optimizeDisplay:true, addFilters: {invert: 13, saturate: 180, brightness: 110}}"
                         data-video-poster="{{ 'images/new/produtos/home_video.jpg' | static_url }}"></div>
 
-                    <a href="/" class="section__link">
+                    <!-- <a href="/" class="section__link">
                         <div class="section__text">
                         <span>Inspired discoveries</span>
                         Journal
                         </div>
-                    </a>
+                    </a> -->
                     </div>
                 </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container-fluid">
+                <div class="row no-gutters">
+                    {% snipplet "home/category-section-4.tpl" %}
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container-fluid">
+                <div class="row no-gutters">
+                    {% snipplet "home/category-section-3.tpl" %}
                 </div>
             </div>
         </section>
@@ -44,32 +60,80 @@
                     <div class="section__carousel">
                     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                         <ol class="carousel-indicators">
-                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
                         </ol>
                         <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img class="d-block w-100" src="{{ 'images/new/carousel/image_1.jpg' | static_url }}" alt="First slide">
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <img class="d-block w-100" src="{{ 'images/new/carousel/carousel-foto-001.jpg' | static_url }}" alt="First slide">
+                                </div>
+
+                                <div class="col-lg-4">
+                                    <img class="d-block w-100" src="{{ 'images/new/carousel/carousel-foto-002.jpg' | static_url }}" alt="First slide">
+                                </div>
+
+                                <div class="col-lg-4">
+                                    <img class="d-block w-100" src="{{ 'images/new/carousel/carousel-foto-003.jpg' | static_url }}" alt="First slide">
+                                </div>
+                            </div>
                         </div>
                         <div class="carousel-item">
-                            <img class="d-block w-100" src="{{ 'images/new/carousel/image_2.jpg' | static_url }}" alt="Second slide">
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <img class="d-block w-100" src="{{ 'images/new/carousel/carousel-foto-004.jpg' | static_url }}" alt="First slide">
+                                </div>
+
+                                <div class="col-lg-4">
+                                    <img class="d-block w-100" src="{{ 'images/new/carousel/carousel-foto-005.jpg' | static_url }}" alt="First slide">
+                                </div>
+
+                                <div class="col-lg-4">
+                                    <img class="d-block w-100" src="{{ 'images/new/carousel/carousel-foto-006.jpg' | static_url }}" alt="First slide">
+                                </div>
+                            </div>
                         </div>
                         <div class="carousel-item">
-                            <img class="d-block w-100" src="{{ 'images/new/carousel/image_3.jpg' | static_url }}" alt="Third slide">
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <img class="d-block w-100" src="{{ 'images/new/carousel/carousel-foto-007.jpg' | static_url }}" alt="First slide">
+                                </div>
+
+                                <div class="col-lg-4">
+                                    <img class="d-block w-100" src="{{ 'images/new/carousel/carousel-foto-008.jpg' | static_url }}" alt="First slide">
+                                </div>
+
+                                <div class="col-lg-4">
+                                    <img class="d-block w-100" src="{{ 'images/new/carousel/carousel-foto-009.jpg' | static_url }}" alt="First slide">
+                                </div>
+                            </div>
                         </div>
                         <div class="carousel-item">
-                            <img class="d-block w-100" src="{{ 'images/new/carousel/image_4.jpg' | static_url }}" alt="Four slide">
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <img class="d-block w-100" src="{{ 'images/new/carousel/carousel-foto-010.jpg' | static_url }}" alt="First slide">
+                                </div>
+
+                                <div class="col-lg-4">
+                                    <img class="d-block w-100" src="{{ 'images/new/carousel/carousel-foto-011.jpg' | static_url }}" alt="First slide">
+                                </div>
+
+                                <div class="col-lg-4">
+                                    <img class="d-block w-100" src="{{ 'images/new/carousel/carousel-foto-012.jpg' | static_url }}" alt="First slide">
+                                </div>
+                            </div>
                         </div>
                         </div>
                         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
                         </a>
                         <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
                         </a>
                     </div>
                     </div>
@@ -157,6 +221,7 @@
 {% endif %}
 #}
 
+{#
 {% if settings.welcome_message or show_help %}
     <div class="row-fluid">
         <div class="container">
@@ -175,6 +240,8 @@
         </div>
     </div>
 {% endif %}
+
+#}
 {% if settings.banner_place == "middle" %} 
     {% include 'snipplets/banner.tpl' %}
 {% endif %} 
