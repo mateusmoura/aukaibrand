@@ -58,9 +58,10 @@
     {{ 'css/style.css' | static_url | css_tag }}
     
     {{ 'css/main-color.scss.tpl' | static_url | css_tag }}
-    
-    {{ '//fonts.googleapis.com/css?family=Lato:700,900,400italic,700italic|Open+Sans:400,300,700|Slabo+27px|Oswald:400,300,700|Lora:400,700|Montserrat:400,700|Source+Sans+Pro:400,300,700|Droid+Sans:400,700|Roboto+Condensed:400italic,700italic,300,400,700|Istok+Web:400,700,400italic,700italic|Arvo:400,700,400italic,700italic|Paytone+One|Raleway:700|Lato:700|Ubuntu:700|Roboto+Slab:700' | css_tag }}
+
     #}
+
+    {{ '//fonts.googleapis.com/css?family=Roboto:300,400,700' | css_tag }}
     
     {% set nojquery = true %}
     {{ "//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" | script_tag }}
@@ -240,49 +241,104 @@
             <footer class="footer">
                 <div class="container">
                     <div class="row">
-                    <div class="col-12 col-lg-4 footer__order-3">
-                        <div class="footer__social">
-                            <ul>
-                                <li>
-                                    <a href="/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                                </li>
-                                <li>
-                                    <a href="/" target="_blank"><i class="fab fa-instagram"></i></a>
-                                </li>
-                                <li>
-                                    <a href="/" target="_blank"><i class="fab fa-twitter"></i></a>
-                                </li>
-                            </ul>
+                        <div class="col-12 col-lg-4 footer__order-3">
+                            <div class="footer__social">
+                                <ul>
+                                    <li>
+                                        <a href="/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="/" target="_blank"><i class="fab fa-instagram"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="/" target="_blank"><i class="fab fa-twitter"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="footer__menus">
+                                {% snipplet "footer/menu-sobre.tpl" %}
+                            </div>
+                        </div>
+                    
+                        <div class="col-12 col-lg-4 footer__order-1">
+                            <div class="footer__info">
+                                <h4>Aukai Brand Journey</h4>
+                        
+                                <div class="footer__info-text">
+                                    <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos</p>
+                                </div>
+                        
+                                <div class="footer__info-link">
+                                    <a href="/">Take the Journey <i class="fas fa-long-arrow-alt-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="col-12 col-lg-4 footer__order-2">
+                            <div class="footer__menus">
+                                {% snipplet "footer/menu-informacoes.tpl" %}
+                            </div>
+                    
+                            <div class="footer__menus">
+                                {% snipplet "footer/menu-sobre.tpl" %}
+                            </div>
                         </div>
 
-                        <div class="footer__menus">
-                            {% snipplet "footer/menu-sobre.tpl" %}
-                        </div>
-                    </div>
-                
-                    <div class="col-12 col-lg-4 footer__order-1">
-                        <div class="footer__info">
-                            <h4>Aukai Brand Journey</h4>
-                    
-                            <div class="footer__info-text">
-                                <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos</p>
+                        <div class="col-12">
+                            <div class="copyright">
+                                <span>{{ "Copyright {1} - {2}. Todos los derechos reservados." | translate( (store.business_name ? store.business_name : store.name) ~ (store.business_id ? ' - ' ~ store.business_id : ''), "now" | date('Y') ) }}</span>
+                                {% if not show_help %}
+                                    {% if store.afip or ebit or settings.custom_seal_code or ("seal_img.jpg" | has_custom_image) %}
+                                        <div class="seals row">
+                                            {% if store.afip %}
+                                                <div class="afip">
+                                                    {{ store.afip | raw }}
+                                                </div>
+                                            {% endif %}
+                                            {% if ebit %}
+                                                <div class="ebit">
+                                                    {{ ebit }}
+                                                </div>
+                                            {% endif %}
+                                            {% if "seal_img.jpg" | has_custom_image or settings.custom_seal_code %}
+                                                <div class="custom-seals-container">
+                                                    {% if "seal_img.jpg" | has_custom_image %}
+                                                        <div class="custom-seal custom-seal-img">
+                                                            {% if settings.seal_url != '' %}
+                                                                <a href="{{ settings.seal_url }}" target="_blank">
+                                                                    {{ "seal_img.jpg" | static_url | img_tag }}
+                                                                </a>
+                                                            {% else %}
+                                                                {{ "seal_img.jpg" | static_url | img_tag }}
+                                                            {% endif %}
+                                                        </div>
+                                                    {% endif %}
+                                                    {% if settings.custom_seal_code %}
+                                                        <div class="custom-seal custom-seal-code">
+                                                            {{ settings.custom_seal_code | raw }}
+                                                        </div>
+                                                    {% endif %}
+                                                </div>
+                                            {% endif %}
+                                        </div>
+                                    {% endif %}
+                                {% else %}                     
+                                <div class="seals row" {% if store.country == 'BR' and not (store.afip or ebit) %}data-tooltip="Esses são selos de exemplo"{% endif %}>
+                                        {% if store.country == 'AR' %}
+                                            <div class="afip">
+                                                <img src="http://www.afip.gob.ar/images/f960/DATAWEB.jpg" border="0">
+                                            </div>
+                                        {% endif %}
+                                        {% if store.country == 'BR' %}
+                                            <div class="ebit">
+                                                {{ "images/ebit-exemplo.png" | static_url | img_tag }}
+                                            </div>
+                                        {% endif %}
+                                    </div>
+                                {% endif %}
                             </div>
-                    
-                            <div class="footer__info-link">
-                                <a href="/">Take the Journey <i class="fas fa-long-arrow-alt-right"></i></a>
-                            </div>
                         </div>
-                    </div>
-                
-                    <div class="col-12 col-lg-4 footer__order-2">
-                        <div class="footer__menus">
-                            {% snipplet "footer/menu-informacoes.tpl" %}
-                        </div>
-                
-                        <div class="footer__menus">
-                            {% snipplet "footer/menu-sobre.tpl" %}
-                        </div>
-                    </div>
                     </div>
                 </div>
             </footer>
@@ -395,63 +451,12 @@
                         </div>
                     </div>
                     <div class="span6">
-                        <div class="copyright">
-                            <span>{{ "Copyright {1} - {2}. Todos los derechos reservados." | translate( (store.business_name ? store.business_name : store.name) ~ (store.business_id ? ' - ' ~ store.business_id : ''), "now" | date('Y') ) }}</span>
-                            {% if not show_help %}
-                                {% if store.afip or ebit or settings.custom_seal_code or ("seal_img.jpg" | has_custom_image) %}
-                                    <div class="seals row">
-                                        {% if store.afip %}
-                                            <div class="afip">
-                                                {{ store.afip | raw }}
-                                            </div>
-                                        {% endif %}
-                                        {% if ebit %}
-                                            <div class="ebit">
-                                                {{ ebit }}
-                                            </div>
-                                        {% endif %}
-                                        {% if "seal_img.jpg" | has_custom_image or settings.custom_seal_code %}
-                                            <div class="custom-seals-container">
-                                                {% if "seal_img.jpg" | has_custom_image %}
-                                                    <div class="custom-seal custom-seal-img">
-                                                        {% if settings.seal_url != '' %}
-                                                            <a href="{{ settings.seal_url }}" target="_blank">
-                                                                {{ "seal_img.jpg" | static_url | img_tag }}
-                                                            </a>
-                                                        {% else %}
-                                                            {{ "seal_img.jpg" | static_url | img_tag }}
-                                                        {% endif %}
-                                                    </div>
-                                                {% endif %}
-                                                {% if settings.custom_seal_code %}
-                                                    <div class="custom-seal custom-seal-code">
-                                                        {{ settings.custom_seal_code | raw }}
-                                                    </div>
-                                                {% endif %}
-                                            </div>
-                                        {% endif %}
-                                    </div>
-                                {% endif %}
-                            {% else %}                     
-                            <div class="seals row" {% if store.country == 'BR' and not (store.afip or ebit) %}data-tooltip="Esses são selos de exemplo"{% endif %}>
-                                    {% if store.country == 'AR' %}
-                                        <div class="afip">
-                                            <img src="http://www.afip.gob.ar/images/f960/DATAWEB.jpg" border="0">
-                                        </div>
-                                    {% endif %}
-                                    {% if store.country == 'BR' %}
-                                        <div class="ebit">
-                                            {{ "images/ebit-exemplo.png" | static_url | img_tag }}
-                                        </div>
-                                    {% endif %}
-                                </div>
-                            {% endif %}
-                        </div>
+                        
                     </div>
                 </div>
-                <div class="top-page">
+                <!-- <div class="top-page">
                     {{ "Subir" | translate }} ^
-                </div>
+                </div> -->
             </div>
         </div>
 
@@ -646,8 +651,6 @@
                 return $('.slider-wrapper');
             }
         };
-
-        
 
         window.homeSlider.create();
 

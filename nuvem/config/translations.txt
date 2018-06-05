@@ -1550,3 +1550,6 @@ en "Dont't have an account?"
 
 pt "Cadastrar"
 en "Sign up"
+
+pt "Atendimento ao consumidor"
+en "Customer Care"
