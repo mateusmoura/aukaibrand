@@ -1,0 +1,33 @@
+.breadcrumb {
+  background-color: transparent;
+
+  @include desktops {
+    margin: 0 auto;
+    max-width: 960px;
+    margin-bottom: 1rem;
+  }
+
+  .breadcrumb-item {
+    color: #b3b3b3;
+    font-size: 12px;
+
+    &::before {
+      color: #b3b3b3;
+      content: "|";
+    }
+
+    &:first-child {
+      &::before {
+        content: "";
+      }
+    }
+
+    a {
+      color: #b3b3b3;
+    }
+
+    &.active {
+      color: #35434b;
+    }
+  }
+}

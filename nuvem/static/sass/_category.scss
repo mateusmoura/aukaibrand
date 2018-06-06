@@ -1,0 +1,147 @@
+
+
+.section-category {
+  .container-fluid {
+    padding: 0;
+  }
+
+  &--list {
+    
+    @include desktops {
+      max-height: 400px;
+      overflow: hidden;
+    }
+  }
+
+  .section__image {
+    height: 100%;
+
+    @include desktops {
+      &:hover, &:focus {
+        .product-info-wrapper
+        , .product-actions {
+          @include opacity(1);
+        }
+      }
+    }
+
+    .circle {
+      background-color: black;
+      border-radius: 50%;
+      color: white;
+      width: 70px;
+      height: 70px;
+      position: absolute;
+      right: 5px;
+      top: 5px;
+      text-align: center;
+      line-height: 77px;
+      
+      p {
+        display: inline-block;
+        vertical-align: middle;
+        line-height: normal;
+      }
+    }
+
+    .section__link {
+      position: static;
+
+      &:hover, &:focus, &active {
+        .product-image-front {
+          @extend .fadeOut;
+          display: none;
+        }
+
+        .product-image-using {
+          @extend .fadeIn;
+          display: block;
+          visibility: visible;
+        }
+      }
+    }
+
+    img {
+      @extend .animated;
+      width: 100%;
+
+      &.product-image-using {
+        visibility: hidden;
+        display: none;
+      }
+    }
+
+    .product-info-wrapper {
+      padding: 0 20px;
+      min-height: 70px;
+      bottom: 0;
+      position: absolute;
+      padding-bottom: 15px;
+      z-index: 10;
+      text-align: center;
+      width: 100%;
+      @include transition(all 0.4s cubic-bezier(0.46, 0.01, 0.32, 1));
+
+      @include desktops {
+        bottom: auto;
+        top: 0;
+        padding: 15% 0 0;
+        @include opacity(0);
+       // height: 100%;
+      }
+
+      p {
+        margin: 0 0 4px 0;
+        font-size: 14px;
+      }
+
+      span {
+        font-size: 12px;
+      }
+
+      a {
+        color: #494d51;
+        font-size: 14px;
+      }
+    }
+
+    .product-actions {
+      display: none;
+      position: absolute;
+      justify-content: center;
+      bottom: 20px;
+      left: 0;
+      width: 100%;
+      @include transition(all 0.4s cubic-bezier(0.46, 0.01, 0.32, 1));
+
+      @include desktops {
+        @include opacity(0);
+        display: flex;
+      }
+
+      .btn-addToCart, .btn-quick-viewer {
+        font-size: 12px;
+        font-weight: 400;
+        text-transform: uppercase;
+      }
+
+      .btn-quick-viewer {
+        &:hover, &:focus, &:active {
+          color: $white-color;
+        }
+      }
+    }
+
+    .product-add-cart {
+      display: none;
+
+      @include desktops {
+        display: block;
+      }
+
+      .fancyContainerQuickshop-quantity {
+        display: none;
+      }
+    }
+  }
+}

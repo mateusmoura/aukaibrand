@@ -1,0 +1,42 @@
+
+.modal-dialog {
+
+  .modal-content {
+    border-radius: 0;
+  }
+
+  .modal-body {
+    .section-product {
+      padding-top: 0;
+    }
+
+    .product-image-content {
+      margin-bottom: 10px;
+
+      .product-image {
+        text-align: center;
+      }
+    }
+
+    .product-details {
+      .product-price {
+        display: inline;
+        margin-bottom: 0;
+      }
+    }
+
+    .product-form {
+      .product-quantity {
+        margin-bottom: 10px;
+      }
+    }
+
+    .btn-add-to-cart {
+      margin-bottom: 10px;
+    }
+
+    .quick {
+      margin-bottom: 15px;
+    }
+  }
+}

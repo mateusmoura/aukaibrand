@@ -1,0 +1,22 @@
+
+@import 'partials/mixins';
+@import 'partials/variables';
+@import 'partials/media-query';
+@import 'node_modules/animate-sass/animate';
+
+@import 'bootstrap/bootstrap.scss';
+@import 'components/buttons';
+@import 'components/modal';
+@import 'components/breadcrumb';
+@import 'components/cart';
+
+@import 'header';
+@import 'footer';
+@import 'default';
+@import 'category';
+@import 'product';
+@import 'login';
+@import 'reset';
+@import 'cart';
+@import 'institutional';
+
