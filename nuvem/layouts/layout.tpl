@@ -252,27 +252,39 @@
                                     <li>
                                         <a href="/" target="_blank"><i class="fab fa-instagram"></i></a>
                                     </li>
-                                    <li>
+                                    <!-- <li>
                                         <a href="/" target="_blank"><i class="fab fa-twitter"></i></a>
-                                    </li>
+                                    </li> -->
                                 </ul>
                             </div>
 
                             <div class="footer__menus">
                                 {% snipplet "footer/menu-sobre.tpl" %}
                             </div>
+
+                            <div class="footer__newsletter">
+                                {% set newsletter_span = store.phone or store.address ? 6 : 9 %}
+                                <div class="span{{ newsletter_span }}">
+                                    <span class="subheader">{{ "Siga as últimas tendências, vendas e estilos" | translate }}</span>
+                                    {# {% if settings.news_txt %}
+                                        <p>{{ settings.news_txt }}</p>
+                                    {% endif %} #}
+
+                                    {% snipplet "newsletter.tpl" %}
+                                </div>
+                            </div>
                         </div>
                     
                         <div class="col-12 col-lg-4 footer__order-1">
                             <div class="footer__info">
-                                <h4>Aukai Brand Journey</h4>
+                                <h4>Aukai</h4>
                         
                                 <div class="footer__info-text">
-                                    <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos</p>
+                                    <p>{{ "Explore o mundo da Aukai atraves de brilhantes historias e estradas percorridas em Joias." | translate }}</p>
                                 </div>
                         
                                 <div class="footer__info-link">
-                                    <a href="/">Take the Journey <i class="fas fa-long-arrow-alt-right"></i></a>
+                                    {% snipplet "footer/link-journey.tpl" %}
                                 </div>
                             </div>
                         </div>
@@ -373,15 +385,6 @@
             {% snipplet "defaults/show_help_social.tpl" %}
         {% endif %} -->
 
-        {% set newsletter_span = store.phone or store.address ? 6 : 9 %}
-        <!-- <div class="span{{ newsletter_span }}">
-            <span class="subheader">{{ "Newsletter" | translate }}</span>
-            {% if settings.news_txt %}
-                <p>{{ settings.news_txt }}</p>
-            {% endif %}
-            {% snipplet "newsletter.tpl" %}
-        </div> -->
-        
         <!-- {% if store.phone or store.address or store.blog %}
             <div class="span3">
                 <span class="subheader">{{ "Datos de contacto" | translate }}</span>

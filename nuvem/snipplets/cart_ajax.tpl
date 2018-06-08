@@ -63,8 +63,8 @@
     {% set cart_total = (settings.cart_minimum_value * 100) %}
     <div class="span6" {{ cart.total < cart_total ? 'style="display:none"' }} id="ajax-cart-submit-div">
       <form action="{{ store.cart_url }}" method="post">
-        {# <input class="button pull-right" type="submit" name="go_to_checkout" value="{{ 'Finalizar Compra' | translate }}"/> #}
-        <button type="submit" name="go_to_checkout" class="btn btn-dark btn-block">{{ 'Finalizar Compra' | translate }}</button>
+        <input class="btn btn-dark btn-block" type="submit" name="go_to_checkout" value="{{ 'Finalizar Compra' | translate }}"/>
+        <!-- <button type="submit" name="go_to_checkout" class="btn btn-dark btn-block">{{ 'Finalizar Compra' | translate }}</button> -->
       </form>
     </div>
     <div class="span12" {{ cart.total >= cart_total ? 'style="display:none"' }} id="ajax-cart-minumum-div">

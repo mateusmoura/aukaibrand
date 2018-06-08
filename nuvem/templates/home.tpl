@@ -16,7 +16,7 @@
             </div>
         </section>
 
-        <section class="section">
+        <!-- <section class="section">
             <div class="container-fluid">
                 <div class="row no-gutters">
                 <div class="col-12">
@@ -25,14 +25,22 @@
                         data-property="{videoURL:'b29-FYXYoUY', containment:'self', stopMovieOnBlur: false, showControls:true, autoPlay:true, loop:true, vol:50, mute:true, startAt:10, stopAt:300, opacity:1, addRaster:true, quality:'large', optimizeDisplay:true, addFilters: {invert: 13, saturate: 180, brightness: 110}}"
                         data-video-poster="{{ 'images/new/produtos/home_video.jpg' | static_url }}"></div>
 
-                    <!-- <a href="/" class="section__link">
+                    <a href="/" class="section__link">
                         <div class="section__text">
                         <span>Inspired discoveries</span>
                         Journal
                         </div>
-                    </a> -->
+                    </a>
                     </div>
                 </div>
+                </div>
+            </div>
+        </section> --> 
+
+        <section class="section">
+            <div class="container-fluid">
+                <div class="row no-gutters">
+                    {% snipplet "home/category-section-5.tpl" %}
                 </div>
             </div>
         </section>
@@ -56,88 +64,146 @@
         <section class="section">
             <div class="container-fluid">
                 <div class="row no-gutters">
-                <div class="col-12">
-                    <div class="section__carousel">
-                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                        <ol class="carousel-indicators">
-                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-                        </ol>
-                        <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <div class="row">
-                                <div class="col-lg-4">
-                                    <img class="d-block w-100" src="{{ 'images/new/carousel/carousel-foto-001.jpg' | static_url }}" alt="First slide">
-                                </div>
+                    <div class="col-12">
+                        <div class="section__carousel">
+                            <div class="section__carousel--text">
+                                <h2>Aukai on the World</h2>
+                            </div>
 
-                                <div class="col-lg-4">
-                                    <img class="d-block w-100" src="{{ 'images/new/carousel/carousel-foto-002.jpg' | static_url }}" alt="First slide">
-                                </div>
+                            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                                <ol class="carousel-indicators">
+                                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                                    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                                </ol>
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <div class="row">
+                                            <div class="col-lg-4">
+                                                <figure>
+                                                    <img class="d-block w-100" src="{{ 'images/new/carousel/carousel-foto-001.jpg' | static_url }}" alt="First slide">
 
-                                <div class="col-lg-4">
-                                    <img class="d-block w-100" src="{{ 'images/new/carousel/carousel-foto-003.jpg' | static_url }}" alt="First slide">
+                                                    <figcaption>
+                                                        Sumatra - Indonésia
+                                                    </figcaption>
+                                                </figure>
+                                            </div>
+
+                                            <div class="col-lg-4">
+                                                <figure>
+                                                    <img class="d-block w-100" src="{{ 'images/new/carousel/carousel-foto-002.jpg' | static_url }}" alt="First slide">
+                                                    <figcaption>
+                                                        Mentawai - Indonésia
+                                                    </figcaption>
+                                                </figure>
+
+                                                
+                                            </div>
+
+                                            <div class="col-lg-4">
+                                                <figure>
+                                                    <img class="d-block w-100" src="{{ 'images/new/carousel/carousel-foto-003.jpg' | static_url }}" alt="First slide">
+                                                    <figcaption>
+                                                        Desert Point - Indonésia
+                                                    </figcaption>
+                                                </figure>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="row">
+                                            <div class="col-lg-4">
+                                                <figure>
+                                                    <img class="d-block w-100" src="{{ 'images/new/carousel/carousel-foto-004.jpg' | static_url }}" alt="First slide">
+
+                                                    <figcaption>
+                                                        Japão
+                                                    </figcaption>
+                                                </figure>
+                                            </div>
+
+                                            <div class="col-lg-4">
+                                                <figure>
+                                                    <img class="d-block w-100" src="{{ 'images/new/carousel/carousel-foto-005.jpg' | static_url }}" alt="First slide">
+
+                                                    <figcaption>
+                                                        Guarda do Embaú - Santa Catarina
+                                                    </figcaption>
+                                                </figure>
+                                            </div>
+
+                                            <div class="col-lg-4">
+                                                <figure>
+                                                    <img class="d-block w-100" src="{{ 'images/new/carousel/carousel-foto-006.jpg' | static_url }}" alt="First slide">
+
+                                                    <figcaption>
+                                                        Japão
+                                                    </figcaption>
+                                                </figure>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="row">
+                                            <div class="col-lg-4">
+                                                <figure>
+                                                    <img class="d-block w-100" src="{{ 'images/new/carousel/carousel-foto-007.jpg' | static_url }}" alt="First slide">
+
+                                                    <figcaption>
+                                                        Campeche - Florianópolis
+                                                    </figcaption>
+                                                </figure>
+                                            </div>
+
+                                            <div class="col-lg-4">
+                                                <figure>
+                                                    <img class="d-block w-100" src="{{ 'images/new/carousel/carousel-foto-008.jpg' | static_url }}" alt="First slide">
+
+                                                    <figcaption>
+                                                        Praia da Silveira - Garupaba
+                                                    </figcaption>
+                                                </figure>
+                                            </div>
+
+                                            <div class="col-lg-4">
+                                                <figure>
+                                                    <img class="d-block w-100" src="{{ 'images/new/carousel/carousel-foto-009.jpg' | static_url }}" alt="First slide">
+
+                                                    <figcaption>
+                                                        Sunset wake park - Goiânia
+                                                    </figcaption>
+                                                </figure>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- <div class="carousel-item">
+                                        <div class="row">
+                                            <div class="col-lg-4">
+                                                <img class="d-block w-100" src="{{ 'images/new/carousel/carousel-foto-010.jpg' | static_url }}" alt="First slide">
+                                            </div>
+
+                                            <div class="col-lg-4">
+                                                <img class="d-block w-100" src="{{ 'images/new/carousel/carousel-foto-011.jpg' | static_url }}" alt="First slide">
+                                            </div>
+
+                                            <div class="col-lg-4">
+                                                <img class="d-block w-100" src="{{ 'images/new/carousel/carousel-foto-012.jpg' | static_url }}" alt="First slide">
+                                            </div>
+                                        </div>
+                                    </div> -->
                                 </div>
+                                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
                             </div>
                         </div>
-                        <div class="carousel-item">
-                            <div class="row">
-                                <div class="col-lg-4">
-                                    <img class="d-block w-100" src="{{ 'images/new/carousel/carousel-foto-004.jpg' | static_url }}" alt="First slide">
-                                </div>
-
-                                <div class="col-lg-4">
-                                    <img class="d-block w-100" src="{{ 'images/new/carousel/carousel-foto-005.jpg' | static_url }}" alt="First slide">
-                                </div>
-
-                                <div class="col-lg-4">
-                                    <img class="d-block w-100" src="{{ 'images/new/carousel/carousel-foto-006.jpg' | static_url }}" alt="First slide">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="row">
-                                <div class="col-lg-4">
-                                    <img class="d-block w-100" src="{{ 'images/new/carousel/carousel-foto-007.jpg' | static_url }}" alt="First slide">
-                                </div>
-
-                                <div class="col-lg-4">
-                                    <img class="d-block w-100" src="{{ 'images/new/carousel/carousel-foto-008.jpg' | static_url }}" alt="First slide">
-                                </div>
-
-                                <div class="col-lg-4">
-                                    <img class="d-block w-100" src="{{ 'images/new/carousel/carousel-foto-009.jpg' | static_url }}" alt="First slide">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="row">
-                                <div class="col-lg-4">
-                                    <img class="d-block w-100" src="{{ 'images/new/carousel/carousel-foto-010.jpg' | static_url }}" alt="First slide">
-                                </div>
-
-                                <div class="col-lg-4">
-                                    <img class="d-block w-100" src="{{ 'images/new/carousel/carousel-foto-011.jpg' | static_url }}" alt="First slide">
-                                </div>
-
-                                <div class="col-lg-4">
-                                    <img class="d-block w-100" src="{{ 'images/new/carousel/carousel-foto-012.jpg' | static_url }}" alt="First slide">
-                                </div>
-                            </div>
-                        </div>
-                        </div>
-                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Next</span>
-                        </a>
                     </div>
-                    </div>
-                </div>
                 </div>
             </div>
         </section>

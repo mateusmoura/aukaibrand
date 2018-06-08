@@ -119,17 +119,25 @@
         display: flex;
       }
 
-      .btn-addToCart, .btn-quick-viewer {
+      .btn-addToCart, .btn-quick-viewer, .btn-viewer-options {
         font-size: 12px;
         font-weight: 400;
         text-transform: uppercase;
       }
 
-      .btn-quick-viewer {
+      .btn-quick-viewer, .btn-viewer-options {
         &:hover, &:focus, &:active {
           color: $white-color;
         }
       }
+
+      .btn-quick-viewer {
+        display: none;
+      }
+    }
+
+    .product-info-category {
+      display: none;
     }
 
     .product-add-cart {

@@ -87,7 +87,27 @@ body {
       left: 50%;
       font-size: 30px;
       bottom: 60px;
+      text-shadow: 1px 2px #000;
       @include transform(translate3d(-50%, 0, 0));
+
+      &--left {
+        left: 15%;
+        bottom: 30%;
+        text-shadow: 1px 2px #000;
+      }
+
+      &--center {
+        top: 50%;
+        left: 50%;
+        bottom: auto;
+        @include transform(translate(-50%, -50%));
+      }
+
+      &--border {
+        border: solid 2px $white-color;
+        padding: 5px 30px;
+        border-radius: 40px;
+      }
 
       span {
         display: block;
@@ -105,16 +125,57 @@ body {
 
     @include desktops {
       height: auto;
-      padding: 100px 30px;
+      padding: 90px 100px 180px;
+    }
+
+    &--text {
+      text-align: center;
+      margin-bottom: 90px;
+
+      h2 {
+        font-size: 45px;
+        font-weight: 700px;
+      }
     }
 
     .carousel {
-      overflow: hidden;
       height: 100%;
     }
 
     .carousel-item {
       overflow: hidden;
+    }
+
+    .carousel-control-prev, .carousel-control-next {
+      color: #000;
+    }
+
+    .carousel-control-next {
+      @include desktops {
+        right: -50px;
+      }
+    }
+
+    .carousel-control-prev {
+      @include desktops {
+        left: -50px;
+      }
+    }
+
+    .carousel-indicators {
+      @include desktops {
+        bottom: -35px;
+      }
+
+      .active {
+        @include desktops {
+          background-color: #000;
+        }
+      }
+
+      li {
+        background-color: rgba(0, 0, 0, 0.5);
+      }
     }
   }
 }

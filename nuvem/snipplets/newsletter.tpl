@@ -1,6 +1,13 @@
 <div id="newsletter">
     <form method="post" action="/winnie-pooh" onsubmit="$(this).attr('action', '');">
-        <div class="input-append">
+        <div class="form-group">
+            <input type="email" class="form-control email" name="email" placeholder="{{ "Email" | translate }}" />
+            <input type="hidden" name="message" value="{{ "Pedido de inscripción a newsletter" | translate }}" />
+            <input type="hidden" name="type" value="newsletter" />
+            <input type="submit" name="contact" class="btn" value='{{ "Enviar" | translate }}'>
+        </div>
+
+        <!-- <div class="input-append">
             <input type="text" id="name" name="name" placeholder="{{ "Nombre" | translate }}" />
             <input type="email" class="email" name="email" placeholder="{{ "Email" | translate }}" />
             <div class="winnie-pooh">
@@ -10,7 +17,7 @@
             <input type="hidden" name="message" value="{{ "Pedido de inscripción a newsletter" | translate }}" />
             <input type="hidden" name="type" value="newsletter" />
             <input type="submit" name="contact" class="btn" value='{{ "Enviar" | translate }}'>
-        </div>
+        </div> -->
     </form>
 
 	{% if contact and contact.type == 'newsletter' %}

@@ -102,7 +102,7 @@
                                 <div class="col-12 col-md-6">
                                     {% set cart_total = (settings.cart_minimum_value * 100) %}
                                     {% if cart.total >= cart_total %}
-                                        <button id="go-to-checkout" name="go_to_checkout" type="submit" class="btn btn-success btn-block btn-checkout">{{ 'Iniciar Compra' | translate }}</button>
+                                        <button id="go-to-checkout" name="go_to_checkout"  value="{{ 'Iniciar Compra' | translate }}" type="submit" class="btn btn-success btn-block btn-checkout">{{ 'Iniciar Compra' | translate }}</button>
                                     {% else %}
                                         <div class="alert alert-info" role="alert">
                                             {{ "O valor mínimo de compra (subtotal) é de" | translate }} {{ cart_total | money }}

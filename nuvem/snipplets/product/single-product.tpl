@@ -80,6 +80,10 @@
           <a class="btn btn btn-outline-secondary btn-quick-viewer" data-toggle="modal" data-target="#product{{ product.id }}" href="#quick{{ product.id }}">
             {{ settings.quick_shop_label }}
           </a>
+
+          <a href="{{ product_url_with_selected_variant }}" title="{{ product.name }}" class="btn btn btn-outline-secondary btn-viewer-options">
+            {{ "Ver opções" | translate }}
+          </a>
         </div>
       {% endif %}
 

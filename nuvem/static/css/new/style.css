@@ -9,7 +9,6 @@
 }
 
 /*============ COLOR CLASSES =============*/
-
 /* line 31, ../nuvem/static/sass/partials/_variables.scss */
 .text-primary {
   color: #F45C5D !important;
@@ -21,6 +20,7 @@
 }
 
 /* line 37, ../nuvem/static/sass/partials/_variables.scss */
+
 .bg-sand {
   background-color: #f5f5f6;
 }
@@ -11803,6 +11803,7 @@ body {
   left: 50%;
   font-size: 30px;
   bottom: 60px;
+  text-shadow: 1px 2px #000;
   -moz-transform: translate3d(-50%, 0, 0);
   -o-transform: translate3d(-50%, 0, 0);
   -ms-transform: translate3d(-50%, 0, 0);
@@ -11810,14 +11811,40 @@ body {
   transform: translate3d(-50%, 0, 0);
 }
 
-/* line 92, ../nuvem/static/sass/_default.scss */
+/* line 93, ../nuvem/static/sass/_default.scss */
+.section__link .section__text--left {
+  left: 15%;
+  bottom: 30%;
+  text-shadow: 1px 2px #000;
+}
+
+/* line 99, ../nuvem/static/sass/_default.scss */
+.section__link .section__text--center {
+  top: 50%;
+  left: 50%;
+  bottom: auto;
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+/* line 106, ../nuvem/static/sass/_default.scss */
+.section__link .section__text--border {
+  border: solid 2px #ffffff;
+  padding: 5px 30px;
+  border-radius: 40px;
+}
+
+/* line 112, ../nuvem/static/sass/_default.scss */
 .section__link .section__text span {
   display: block;
   margin-bottom: 20px;
   font-size: 12px;
 }
 
-/* line 100, ../nuvem/static/sass/_default.scss */
+/* line 120, ../nuvem/static/sass/_default.scss */
 .section__carousel {
   background-color: #ffffff;
   text-align: center;
@@ -11826,25 +11853,74 @@ body {
 }
 
 @media (min-width: 992px) {
-  /* line 100, ../nuvem/static/sass/_default.scss */
+  /* line 120, ../nuvem/static/sass/_default.scss */
   .section__carousel {
     height: auto;
-    padding: 100px 30px;
+    padding: 90px 100px 180px;
   }
 }
 
-/* line 111, ../nuvem/static/sass/_default.scss */
+/* line 131, ../nuvem/static/sass/_default.scss */
+.section__carousel--text {
+  text-align: center;
+  margin-bottom: 90px;
+}
+
+/* line 135, ../nuvem/static/sass/_default.scss */
+.section__carousel--text h2 {
+  font-size: 45px;
+  font-weight: 700px;
+}
+
+/* line 141, ../nuvem/static/sass/_default.scss */
 .section__carousel .carousel {
-  overflow: hidden;
   height: 100%;
 }
 
-/* line 116, ../nuvem/static/sass/_default.scss */
+/* line 145, ../nuvem/static/sass/_default.scss */
 .section__carousel .carousel-item {
   overflow: hidden;
 }
 
-/* line 122, ../nuvem/static/sass/_default.scss */
+/* line 149, ../nuvem/static/sass/_default.scss */
+.section__carousel .carousel-control-prev, .section__carousel .carousel-control-next {
+  color: #000;
+}
+
+@media (min-width: 992px) {
+  /* line 153, ../nuvem/static/sass/_default.scss */
+  .section__carousel .carousel-control-next {
+    right: -50px;
+  }
+}
+
+@media (min-width: 992px) {
+  /* line 159, ../nuvem/static/sass/_default.scss */
+  .section__carousel .carousel-control-prev {
+    left: -50px;
+  }
+}
+
+@media (min-width: 992px) {
+  /* line 165, ../nuvem/static/sass/_default.scss */
+  .section__carousel .carousel-indicators {
+    bottom: -35px;
+  }
+}
+
+@media (min-width: 992px) {
+  /* line 170, ../nuvem/static/sass/_default.scss */
+  .section__carousel .carousel-indicators .active {
+    background-color: #000;
+  }
+}
+
+/* line 176, ../nuvem/static/sass/_default.scss */
+.section__carousel .carousel-indicators li {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* line 183, ../nuvem/static/sass/_default.scss */
 .mb_YTPTime, .buttonBar {
   display: none !important;
 }
@@ -12008,30 +12084,40 @@ body {
 }
 
 /* line 122, ../nuvem/static/sass/_category.scss */
-.section-category .section__image .product-actions .btn-addToCart, .section-category .section__image .product-actions .btn-quick-viewer {
+.section-category .section__image .product-actions .btn-addToCart, .section-category .section__image .product-actions .btn-quick-viewer, .section-category .section__image .product-actions .btn-viewer-options {
   font-size: 12px;
   font-weight: 400;
   text-transform: uppercase;
 }
 
 /* line 129, ../nuvem/static/sass/_category.scss */
-.section-category .section__image .product-actions .btn-quick-viewer:hover, .section-category .section__image .product-actions .btn-quick-viewer:focus, .section-category .section__image .product-actions .btn-quick-viewer:active {
+.section-category .section__image .product-actions .btn-quick-viewer:hover, .section-category .section__image .product-actions .btn-quick-viewer:focus, .section-category .section__image .product-actions .btn-quick-viewer:active, .section-category .section__image .product-actions .btn-viewer-options:hover, .section-category .section__image .product-actions .btn-viewer-options:focus, .section-category .section__image .product-actions .btn-viewer-options:active {
   color: #ffffff;
 }
 
-/* line 135, ../nuvem/static/sass/_category.scss */
+/* line 134, ../nuvem/static/sass/_category.scss */
+.section-category .section__image .product-actions .btn-quick-viewer {
+  display: none;
+}
+
+/* line 139, ../nuvem/static/sass/_category.scss */
+.section-category .section__image .product-info-category {
+  display: none;
+}
+
+/* line 143, ../nuvem/static/sass/_category.scss */
 .section-category .section__image .product-add-cart {
   display: none;
 }
 
 @media (min-width: 992px) {
-  /* line 135, ../nuvem/static/sass/_category.scss */
+  /* line 143, ../nuvem/static/sass/_category.scss */
   .section-category .section__image .product-add-cart {
     display: block;
   }
 }
 
-/* line 142, ../nuvem/static/sass/_category.scss */
+/* line 150, ../nuvem/static/sass/_category.scss */
 .section-category .section__image .product-add-cart .fancyContainerQuickshop-quantity {
   display: none;
 }

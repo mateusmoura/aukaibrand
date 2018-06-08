@@ -2,7 +2,7 @@
   <div class="col-12">
       <div class="section__image" style="background-image: url('{{ 'images/new/home/home-foto-002.jpg' | static_url }}');">
           <a href="{{ item.url }}" class="section__link">
-              <div class="section__text">
+              <div class="section__text section__text--left section__text--border">
                   {{ item.name }}
               </div>
           </a>
