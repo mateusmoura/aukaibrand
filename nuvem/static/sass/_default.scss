@@ -120,8 +120,9 @@ body {
   &__carousel {
     background-color: $white-color;
     text-align: center;
-    height: calc(100vh);
+    height: auto;
     position: relative;
+    padding: 30px;
 
     @include desktops {
       height: auto;
@@ -130,7 +131,11 @@ body {
 
     &--text {
       text-align: center;
-      margin-bottom: 90px;
+      margin-bottom: 30px;
+      
+      @include desktops {
+        margin-bottom: 90px;
+      }
 
       h2 {
         font-size: 45px;
@@ -163,6 +168,8 @@ body {
     }
 
     .carousel-indicators {
+      bottom: -10px;
+
       @include desktops {
         bottom: -35px;
       }

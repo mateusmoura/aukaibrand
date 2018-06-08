@@ -4,7 +4,11 @@
             <input type="email" class="form-control email" name="email" placeholder="{{ "Email" | translate }}" />
             <input type="hidden" name="message" value="{{ "Pedido de inscripción a newsletter" | translate }}" />
             <input type="hidden" name="type" value="newsletter" />
-            <input type="submit" name="contact" class="btn" value='{{ "Enviar" | translate }}'>
+        </div>
+
+        <div class="button">
+            <input type="submit" class="btn btn-link" name="contact" value=''>
+            <i class="fas fa-long-arrow-alt-right"></i>
         </div>
 
         <!-- <div class="input-append">

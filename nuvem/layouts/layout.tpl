@@ -243,7 +243,7 @@
             <footer class="footer">
                 <div class="container">
                     <div class="row">
-                        <div class="col-12 col-lg-4 footer__order-3">
+                        <div class="col-12 col-lg-4 footer__order-4">
                             <div class="footer__social">
                                 <ul>
                                     <li>
@@ -258,24 +258,17 @@
                                 </ul>
                             </div>
 
-                            <div class="footer__menus">
-                                {% snipplet "footer/menu-sobre.tpl" %}
-                            </div>
-
                             <div class="footer__newsletter">
-                                {% set newsletter_span = store.phone or store.address ? 6 : 9 %}
-                                <div class="span{{ newsletter_span }}">
-                                    <span class="subheader">{{ "Siga as últimas tendências, vendas e estilos" | translate }}</span>
-                                    {# {% if settings.news_txt %}
-                                        <p>{{ settings.news_txt }}</p>
-                                    {% endif %} #}
+                                <span class="subheader">{{ "Siga as últimas tendências, vendas e estilos" | translate }}</span>
+                                {# {% if settings.news_txt %}
+                                    <p>{{ settings.news_txt }}</p>
+                                {% endif %} #}
 
-                                    {% snipplet "newsletter.tpl" %}
-                                </div>
+                                {% snipplet "newsletter.tpl" %}
                             </div>
                         </div>
                     
-                        <div class="col-12 col-lg-4 footer__order-1">
+                        <div class="col-12 col-lg-3 footer__order-1">
                             <div class="footer__info">
                                 <h4>Aukai</h4>
                         
@@ -289,11 +282,13 @@
                             </div>
                         </div>
                     
-                        <div class="col-12 col-lg-4 footer__order-2">
+                        <div class="col-12 col-lg-3 footer__order-2">
                             <div class="footer__menus">
                                 {% snipplet "footer/menu-informacoes.tpl" %}
                             </div>
-                    
+                        </div>
+
+                        <div class="col-12 col-lg-2 footer__order-3">
                             <div class="footer__menus">
                                 {% snipplet "footer/menu-sobre.tpl" %}
                             </div>
