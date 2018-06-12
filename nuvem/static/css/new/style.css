@@ -11,6 +11,7 @@
 /*============ COLOR CLASSES =============*/
 /* line 31, ../nuvem/static/sass/partials/_variables.scss */
 .text-primary {
+
   color: #F45C5D !important;
 }
 
@@ -20,7 +21,6 @@
 }
 
 /* line 37, ../nuvem/static/sass/partials/_variables.scss */
-
 .bg-sand {
   background-color: #f5f5f6;
 }
@@ -11923,6 +11923,41 @@ body {
 /* line 183, ../nuvem/static/sass/_default.scss */
 .mb_YTPTime, .buttonBar {
   display: none !important;
+}
+
+/* line 187, ../nuvem/static/sass/_default.scss */
+.loading {
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+/* line 196, ../nuvem/static/sass/_default.scss */
+.loading div {
+  background: #ffffff url("../../images/new/loading.gif") no-repeat center;
+  background-size: 80%;
+  text-align: center;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+/* line 208, ../nuvem/static/sass/_default.scss */
+.loading div img {
+  position: relative;
+  top: 10px;
 }
 
 /* line 4, ../nuvem/static/sass/_category.scss */

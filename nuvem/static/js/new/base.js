@@ -54,6 +54,10 @@ const site = {
     if($('body').hasClass('home') || $('.page-home').length) {
       site.home();
     }
+
+    setTimeout(() => {
+      $('div.loading').fadeOut();
+    }, 3000);
     // MM.Calendar($('.block__fullcalendar'), data);
   },
   /* Menu functions */

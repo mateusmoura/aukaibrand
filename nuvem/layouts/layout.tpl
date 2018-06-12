@@ -358,6 +358,13 @@
             </footer>
 
 
+        <div class="loading">
+            <div>
+                {{ 'images/new/favicon.png' | static_url | img_tag }}
+            </div>
+        </div>
+
+
         <!-- FIM DO NOVO LAYOUT -->
 
         <!-- LAYOUT ANTIGO -->
