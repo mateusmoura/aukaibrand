@@ -1,6 +1,11 @@
 .section-login {
   margin-bottom: 60px;
 
+  @include desktops {
+    padding-top: 120px;
+    margin-bottom: 150px;
+  }
+
   &__form  {
     max-width: 400px;
     min-width: 400px;
@@ -8,6 +13,10 @@
     justify-content: center;
     align-items: center;
     min-height: calc(80vh - 60px);
+
+    @include desktops {
+      margin: 0 auto;
+    }
 
     form {
       width: 100%;

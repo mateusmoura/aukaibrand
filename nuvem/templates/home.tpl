@@ -80,7 +80,7 @@
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
                                         <div class="row">
-                                            <div class="col-lg-4">
+                                            <div class="col-4 col-lg-4">
                                                 <figure>
                                                     <img class="d-block w-100" src="{{ 'images/new/carousel/carousel-foto-001.jpg' | static_url }}" alt="First slide">
 
@@ -90,7 +90,7 @@
                                                 </figure>
                                             </div>
 
-                                            <div class="col-lg-4">
+                                            <div class="col-4 col-lg-4">
                                                 <figure>
                                                     <img class="d-block w-100" src="{{ 'images/new/carousel/carousel-foto-002.jpg' | static_url }}" alt="First slide">
                                                     <figcaption>
@@ -101,7 +101,7 @@
                                                 
                                             </div>
 
-                                            <div class="col-lg-4">
+                                            <div class="col-4 col-lg-4">
                                                 <figure>
                                                     <img class="d-block w-100" src="{{ 'images/new/carousel/carousel-foto-003.jpg' | static_url }}" alt="First slide">
                                                     <figcaption>
@@ -113,7 +113,7 @@
                                     </div>
                                     <div class="carousel-item">
                                         <div class="row">
-                                            <div class="col-lg-4">
+                                            <div class="col-4 col-lg-4">
                                                 <figure>
                                                     <img class="d-block w-100" src="{{ 'images/new/carousel/carousel-foto-004.jpg' | static_url }}" alt="First slide">
 
@@ -123,7 +123,7 @@
                                                 </figure>
                                             </div>
 
-                                            <div class="col-lg-4">
+                                            <div class="col-4 col-lg-4">
                                                 <figure>
                                                     <img class="d-block w-100" src="{{ 'images/new/carousel/carousel-foto-005.jpg' | static_url }}" alt="First slide">
 
@@ -133,7 +133,7 @@
                                                 </figure>
                                             </div>
 
-                                            <div class="col-lg-4">
+                                            <div class="col-4 col-lg-4">
                                                 <figure>
                                                     <img class="d-block w-100" src="{{ 'images/new/carousel/carousel-foto-006.jpg' | static_url }}" alt="First slide">
 
@@ -146,7 +146,7 @@
                                     </div>
                                     <div class="carousel-item">
                                         <div class="row">
-                                            <div class="col-lg-4">
+                                            <div class="col-4 col-lg-4">
                                                 <figure>
                                                     <img class="d-block w-100" src="{{ 'images/new/carousel/carousel-foto-007.jpg' | static_url }}" alt="First slide">
 
@@ -156,7 +156,7 @@
                                                 </figure>
                                             </div>
 
-                                            <div class="col-lg-4">
+                                            <div class="col-4 col-lg-4">
                                                 <figure>
                                                     <img class="d-block w-100" src="{{ 'images/new/carousel/carousel-foto-008.jpg' | static_url }}" alt="First slide">
 
@@ -166,7 +166,7 @@
                                                 </figure>
                                             </div>
 
-                                            <div class="col-lg-4">
+                                            <div class="col-4 col-lg-4">
                                                 <figure>
                                                     <img class="d-block w-100" src="{{ 'images/new/carousel/carousel-foto-009.jpg' | static_url }}" alt="First slide">
 
@@ -179,15 +179,15 @@
                                     </div>
                                     <!-- <div class="carousel-item">
                                         <div class="row">
-                                            <div class="col-lg-4">
+                                            <div class="col-4 col-lg-4">
                                                 <img class="d-block w-100" src="{{ 'images/new/carousel/carousel-foto-010.jpg' | static_url }}" alt="First slide">
                                             </div>
 
-                                            <div class="col-lg-4">
+                                            <div class="col-4 col-lg-4">
                                                 <img class="d-block w-100" src="{{ 'images/new/carousel/carousel-foto-011.jpg' | static_url }}" alt="First slide">
                                             </div>
 
-                                            <div class="col-lg-4">
+                                            <div class="col-4 col-lg-4">
                                                 <img class="d-block w-100" src="{{ 'images/new/carousel/carousel-foto-012.jpg' | static_url }}" alt="First slide">
                                             </div>
                                         </div>

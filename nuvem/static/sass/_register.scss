@@ -1,4 +1,4 @@
-.section-reset {
+.section-register {
   margin-bottom: 60px;
 
   @include desktops {
@@ -27,9 +27,21 @@
       margin-bottom: 60px;
       text-align: center;
       font-weight: normal;
+    }
 
-      small {
+    .actions {
+      text-align: center;
+      padding-top: 20px;
+      
+      a, span {
         display: block;
+        font-size: 12px;
+      }
+
+      span {
+        a {
+          display: inline;
+        }
       }
     }
   }

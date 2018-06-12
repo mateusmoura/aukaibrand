@@ -57,7 +57,25 @@ const site = {
 
     setTimeout(() => {
       $('div.loading').fadeOut();
-    }, 3000);
+    }, 2000);
+
+    var headerStart = $("header.header").position().top;
+
+    if (!$('.page-institutional, .section-login, .section-reset, .section-register').length) {
+        $(window).scroll(function(){
+            var position = $(window).scrollTop();
+
+            if(position > headerStart){
+                $("#header-slim").stop().animate({  top: 0  }, 500);
+                $(".header__content").addClass("header-branca");
+            } else {
+                $("#header-slim").stop().animate({  top: -140  }, 120);
+                $(".header__content").removeClass("header-branca");
+            }
+        });
+    } else {
+      $(".header__content").addClass("header-branca");
+    }
     // MM.Calendar($('.block__fullcalendar'), data);
   },
   /* Menu functions */

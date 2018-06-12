@@ -10,8 +10,8 @@
 
 /*============ COLOR CLASSES =============*/
 /* line 31, ../nuvem/static/sass/partials/_variables.scss */
-.text-primary {
 
+.text-primary {
   color: #F45C5D !important;
 }
 
@@ -11636,41 +11636,107 @@ a.text-dark:hover, a.text-dark:focus {
   font-size: 12px;
 }
 
+/* line 79, ../nuvem/static/sass/_footer.scss */
+.footer__newsletter {
+  margin-bottom: 30px;
+}
+
+/* line 82, ../nuvem/static/sass/_footer.scss */
+.footer__newsletter .subheader {
+  color: #ffffff;
+  display: inline-block;
+  font-size: 12px;
+  margin-bottom: 13px;
+}
+
+/* line 89, ../nuvem/static/sass/_footer.scss */
+.footer__newsletter .form-group {
+  margin-bottom: 0;
+  width: 100%;
+}
+
+/* line 94, ../nuvem/static/sass/_footer.scss */
+.footer__newsletter input {
+  background-color: transparent;
+  border-radius: 0;
+  border: 0;
+  color: #ffffff;
+  border-bottom: 2px solid #b3b3b3;
+}
+
+/* line 101, ../nuvem/static/sass/_footer.scss */
+.footer__newsletter input:hover, .footer__newsletter input:focus, .footer__newsletter input:active {
+  background-color: transparent;
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+/* line 108, ../nuvem/static/sass/_footer.scss */
+.footer__newsletter form {
+  display: flex;
+}
+
+/* line 112, ../nuvem/static/sass/_footer.scss */
+.footer__newsletter .button {
+  position: relative;
+}
+
+/* line 115, ../nuvem/static/sass/_footer.scss */
+.footer__newsletter .button input {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+}
+
+/* line 124, ../nuvem/static/sass/_footer.scss */
+.footer__newsletter .button i {
+  position: relative;
+  z-index: 1;
+  color: #ffffff;
+  top: 4px;
+}
+
 @media (min-width: 992px) {
-  /* line 80, ../nuvem/static/sass/_footer.scss */
+  /* line 134, ../nuvem/static/sass/_footer.scss */
   .footer__order-1 {
     order: 1;
   }
 }
 
 @media (min-width: 992px) {
-  /* line 86, ../nuvem/static/sass/_footer.scss */
+  /* line 140, ../nuvem/static/sass/_footer.scss */
   .footer__order-2 {
     order: 2;
   }
-  /* line 91, ../nuvem/static/sass/_footer.scss */
-  .footer__order-2 .footer__menus:last-child {
-    display: none;
+}
+
+@media (min-width: 992px) {
+  /* line 146, ../nuvem/static/sass/_footer.scss */
+  .footer__order-3 {
+    order: 3;
   }
 }
 
-/* line 99, ../nuvem/static/sass/_footer.scss */
-.footer__order-3 .footer__menus {
+/* line 153, ../nuvem/static/sass/_footer.scss */
+.footer__order-4 .footer__menus {
   display: none;
 }
 
 @media (min-width: 992px) {
-  /* line 98, ../nuvem/static/sass/_footer.scss */
-  .footer__order-3 {
-    order: 3;
+  /* line 152, ../nuvem/static/sass/_footer.scss */
+  .footer__order-4 {
+    order: 4;
   }
-  /* line 106, ../nuvem/static/sass/_footer.scss */
-  .footer__order-3 .footer__menus {
+  /* line 160, ../nuvem/static/sass/_footer.scss */
+  .footer__order-4 .footer__menus {
     display: block;
   }
 }
 
-/* line 113, ../nuvem/static/sass/_footer.scss */
+/* line 167, ../nuvem/static/sass/_footer.scss */
 .footer .copyright {
   color: #ffffff;
   font-size: 14px;
@@ -11680,7 +11746,7 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 @media (min-width: 768px) {
-  /* line 113, ../nuvem/static/sass/_footer.scss */
+  /* line 167, ../nuvem/static/sass/_footer.scss */
   .footer .copyright {
     display: none;
   }
@@ -11848,8 +11914,9 @@ body {
 .section__carousel {
   background-color: #ffffff;
   text-align: center;
-  height: calc(100vh);
+  height: auto;
   position: relative;
+  padding: 30px;
 }
 
 @media (min-width: 992px) {
@@ -11860,72 +11927,84 @@ body {
   }
 }
 
-/* line 131, ../nuvem/static/sass/_default.scss */
+/* line 132, ../nuvem/static/sass/_default.scss */
 .section__carousel--text {
   text-align: center;
-  margin-bottom: 90px;
+  margin-bottom: 30px;
 }
 
-/* line 135, ../nuvem/static/sass/_default.scss */
+@media (min-width: 992px) {
+  /* line 132, ../nuvem/static/sass/_default.scss */
+  .section__carousel--text {
+    margin-bottom: 90px;
+  }
+}
+
+/* line 140, ../nuvem/static/sass/_default.scss */
 .section__carousel--text h2 {
   font-size: 45px;
   font-weight: 700px;
 }
 
-/* line 141, ../nuvem/static/sass/_default.scss */
+/* line 146, ../nuvem/static/sass/_default.scss */
 .section__carousel .carousel {
   height: 100%;
 }
 
-/* line 145, ../nuvem/static/sass/_default.scss */
+/* line 150, ../nuvem/static/sass/_default.scss */
 .section__carousel .carousel-item {
   overflow: hidden;
 }
 
-/* line 149, ../nuvem/static/sass/_default.scss */
+/* line 154, ../nuvem/static/sass/_default.scss */
 .section__carousel .carousel-control-prev, .section__carousel .carousel-control-next {
   color: #000;
 }
 
 @media (min-width: 992px) {
-  /* line 153, ../nuvem/static/sass/_default.scss */
+  /* line 158, ../nuvem/static/sass/_default.scss */
   .section__carousel .carousel-control-next {
     right: -50px;
   }
 }
 
 @media (min-width: 992px) {
-  /* line 159, ../nuvem/static/sass/_default.scss */
+  /* line 164, ../nuvem/static/sass/_default.scss */
   .section__carousel .carousel-control-prev {
     left: -50px;
   }
 }
 
+/* line 170, ../nuvem/static/sass/_default.scss */
+.section__carousel .carousel-indicators {
+  bottom: -10px;
+}
+
 @media (min-width: 992px) {
-  /* line 165, ../nuvem/static/sass/_default.scss */
+  /* line 170, ../nuvem/static/sass/_default.scss */
   .section__carousel .carousel-indicators {
     bottom: -35px;
   }
 }
 
 @media (min-width: 992px) {
-  /* line 170, ../nuvem/static/sass/_default.scss */
+  /* line 177, ../nuvem/static/sass/_default.scss */
   .section__carousel .carousel-indicators .active {
     background-color: #000;
   }
 }
 
-/* line 176, ../nuvem/static/sass/_default.scss */
+/* line 183, ../nuvem/static/sass/_default.scss */
 .section__carousel .carousel-indicators li {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-/* line 183, ../nuvem/static/sass/_default.scss */
+/* line 190, ../nuvem/static/sass/_default.scss */
 .mb_YTPTime, .buttonBar {
   display: none !important;
 }
 
-/* line 187, ../nuvem/static/sass/_default.scss */
+/* line 194, ../nuvem/static/sass/_default.scss */
 .loading {
   background-color: rgba(0, 0, 0, 0.8);
   position: fixed;
@@ -11936,7 +12015,7 @@ body {
   z-index: 9999;
 }
 
-/* line 196, ../nuvem/static/sass/_default.scss */
+/* line 204, ../nuvem/static/sass/_default.scss */
 .loading div {
   background: #ffffff url("../../images/new/loading.gif") no-repeat center;
   background-size: 80%;
@@ -11954,7 +12033,7 @@ body {
   transform: translate(-50%, -50%);
 }
 
-/* line 208, ../nuvem/static/sass/_default.scss */
+/* line 216, ../nuvem/static/sass/_default.scss */
 .loading div img {
   position: relative;
   top: 10px;
@@ -12692,7 +12771,15 @@ body {
   margin-bottom: 60px;
 }
 
-/* line 4, ../nuvem/static/sass/_login.scss */
+@media (min-width: 992px) {
+  /* line 1, ../nuvem/static/sass/_login.scss */
+  .section-login {
+    padding-top: 120px;
+    margin-bottom: 150px;
+  }
+}
+
+/* line 9, ../nuvem/static/sass/_login.scss */
 .section-login__form {
   max-width: 400px;
   min-width: 400px;
@@ -12702,12 +12789,19 @@ body {
   min-height: calc(80vh - 60px);
 }
 
-/* line 12, ../nuvem/static/sass/_login.scss */
+@media (min-width: 992px) {
+  /* line 9, ../nuvem/static/sass/_login.scss */
+  .section-login__form {
+    margin: 0 auto;
+  }
+}
+
+/* line 21, ../nuvem/static/sass/_login.scss */
 .section-login__form form {
   width: 100%;
 }
 
-/* line 16, ../nuvem/static/sass/_login.scss */
+/* line 25, ../nuvem/static/sass/_login.scss */
 .section-login__form h1 {
   font-size: 20px;
   margin-bottom: 60px;
@@ -12715,19 +12809,19 @@ body {
   font-weight: normal;
 }
 
-/* line 23, ../nuvem/static/sass/_login.scss */
+/* line 32, ../nuvem/static/sass/_login.scss */
 .section-login__form .actions {
   text-align: center;
   padding-top: 20px;
 }
 
-/* line 27, ../nuvem/static/sass/_login.scss */
+/* line 36, ../nuvem/static/sass/_login.scss */
 .section-login__form .actions a, .section-login__form .actions span {
   display: block;
   font-size: 12px;
 }
 
-/* line 33, ../nuvem/static/sass/_login.scss */
+/* line 42, ../nuvem/static/sass/_login.scss */
 .section-login__form .actions span a {
   display: inline;
 }
@@ -12737,7 +12831,15 @@ body {
   margin-bottom: 60px;
 }
 
-/* line 4, ../nuvem/static/sass/_reset.scss */
+@media (min-width: 992px) {
+  /* line 1, ../nuvem/static/sass/_reset.scss */
+  .section-reset {
+    padding-top: 120px;
+    margin-bottom: 150px;
+  }
+}
+
+/* line 9, ../nuvem/static/sass/_reset.scss */
 .section-reset__form {
   max-width: 400px;
   min-width: 400px;
@@ -12747,12 +12849,19 @@ body {
   min-height: calc(80vh - 60px);
 }
 
-/* line 12, ../nuvem/static/sass/_reset.scss */
+@media (min-width: 992px) {
+  /* line 9, ../nuvem/static/sass/_reset.scss */
+  .section-reset__form {
+    margin: 0 auto;
+  }
+}
+
+/* line 21, ../nuvem/static/sass/_reset.scss */
 .section-reset__form form {
   width: 100%;
 }
 
-/* line 16, ../nuvem/static/sass/_reset.scss */
+/* line 25, ../nuvem/static/sass/_reset.scss */
 .section-reset__form h1 {
   font-size: 20px;
   margin-bottom: 60px;
@@ -12760,7 +12869,7 @@ body {
   font-weight: normal;
 }
 
-/* line 22, ../nuvem/static/sass/_reset.scss */
+/* line 31, ../nuvem/static/sass/_reset.scss */
 .section-reset__form h1 small {
   display: block;
 }
@@ -13286,6 +13395,66 @@ body {
   color: #4d4d4d;
   font-size: 14px;
   font-weight: 300;
+}
+
+/* line 1, ../nuvem/static/sass/_register.scss */
+.section-register {
+  margin-bottom: 60px;
+}
+
+@media (min-width: 992px) {
+  /* line 1, ../nuvem/static/sass/_register.scss */
+  .section-register {
+    padding-top: 120px;
+    margin-bottom: 150px;
+  }
+}
+
+/* line 9, ../nuvem/static/sass/_register.scss */
+.section-register__form {
+  max-width: 400px;
+  min-width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(80vh - 60px);
+}
+
+@media (min-width: 992px) {
+  /* line 9, ../nuvem/static/sass/_register.scss */
+  .section-register__form {
+    margin: 0 auto;
+  }
+}
+
+/* line 21, ../nuvem/static/sass/_register.scss */
+.section-register__form form {
+  width: 100%;
+}
+
+/* line 25, ../nuvem/static/sass/_register.scss */
+.section-register__form h1 {
+  font-size: 20px;
+  margin-bottom: 60px;
+  text-align: center;
+  font-weight: normal;
+}
+
+/* line 32, ../nuvem/static/sass/_register.scss */
+.section-register__form .actions {
+  text-align: center;
+  padding-top: 20px;
+}
+
+/* line 36, ../nuvem/static/sass/_register.scss */
+.section-register__form .actions a, .section-register__form .actions span {
+  display: block;
+  font-size: 12px;
+}
+
+/* line 42, ../nuvem/static/sass/_register.scss */
+.section-register__form .actions span a {
+  display: inline;
 }
 
 /*# sourceMappingURL=maps/style.css.map */
