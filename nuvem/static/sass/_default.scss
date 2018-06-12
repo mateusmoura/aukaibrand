@@ -11,6 +11,22 @@ body {
   }
 }
 
+.hidden-mobile {
+  display: none;
+
+  @include desktops {
+    display: block;
+  }
+}
+
+.hidden-desktop {
+  display: block;
+
+  @include desktops {
+    display: none;
+  }
+}
+
 
 .section {
   text-align: center;

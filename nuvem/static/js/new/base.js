@@ -61,7 +61,7 @@ const site = {
 
     var headerStart = $("header.header").position().top;
 
-    if (!$('.page-institutional, .section-login, .section-reset, .section-register').length) {
+    if (!$('.page-institutional, .section-login, .section-reset, .section-register, .section-orders').length) {
         $(window).scroll(function(){
             var position = $(window).scrollTop();
 

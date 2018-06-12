@@ -1,0 +1,34 @@
+.section-orders {
+  margin-bottom: 60px;
+
+  @include desktops {
+    padding-top: 120px;
+    margin-bottom: 150px;
+  }
+
+  .card-dados {
+    margin-bottom: 50px;
+  }
+
+  .card {
+    .profile-image {
+      margin-bottom: 20px;
+    }
+  }
+
+  .card-pedidos {
+    .card-body {
+      .wrapper {
+        border-top: 1px solid rgba(0, 0, 0, 0.125);
+        padding-top: 20px;
+      }
+
+      &:nth-child(2) {
+        .wrapper {
+          border-top: 0;
+          padding-top: 20px;
+        }
+      }
+    }
+  }
+}
