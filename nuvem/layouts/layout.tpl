@@ -128,6 +128,9 @@
         <!-- Site Overlay -->
         <div class="site-overlay"></div>
 
+        <!--  FREE SHIPPING & RETURNS* -->
+        {% snipplet "free-shipping-returns.tpl" %}
+
         <!-- INICIO DO NOVO LAYOUT -->
             {% snipplet "navigation-mobile.tpl" %}
 

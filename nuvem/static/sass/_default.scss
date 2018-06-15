@@ -27,6 +27,20 @@ body {
   }
 }
 
+.banner{
+  &__free {
+    background-color: #35434b;
+    padding: 8px 0;
+    text-align: center;
+
+    a {
+      color: $white-color;
+      font-size: 14px;
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+  }
+}
 
 .section {
   text-align: center;
