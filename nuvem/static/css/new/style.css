@@ -9,6 +9,7 @@
 }
 
 /*============ COLOR CLASSES =============*/
+
 /* line 31, ../nuvem/static/sass/partials/_variables.scss */
 .text-primary {
   color: #F45C5D !important;
@@ -11043,12 +11044,24 @@ a.text-dark:hover, a.text-dark:focus {
   /* line 61, ../nuvem/static/sass/_header.scss */
   .header__content.header-branca .logo .logo-preta {
     display: block;
+    position: absolute;
   }
-  /* line 65, ../nuvem/static/sass/_header.scss */
+}
+
+@media (min-width: 992px) and (min-width: 992px) {
+  /* line 66, ../nuvem/static/sass/_header.scss */
+  .header__content.header-branca .logo .logo-preta-2 {
+    display: block;
+    width: 40px;
+  }
+}
+
+@media (min-width: 992px) {
+  /* line 73, ../nuvem/static/sass/_header.scss */
   .header__content.header-branca .logo .logo-branca {
     display: none;
   }
-  /* line 73, ../nuvem/static/sass/_header.scss */
+  /* line 81, ../nuvem/static/sass/_header.scss */
   .header__content.header-branca .nav__bar .nav__bar--links > li > .nav__bar--link {
     color: #494d51;
     transition: all 0.4s cubic-bezier(0.46, 0.01, 0.32, 1);
@@ -11056,14 +11069,14 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 @media screen and (min-width: 992px) and (prefers-reduced-motion: reduce) {
-  /* line 73, ../nuvem/static/sass/_header.scss */
+  /* line 81, ../nuvem/static/sass/_header.scss */
   .header__content.header-branca .nav__bar .nav__bar--links > li > .nav__bar--link {
     transition: none;
   }
 }
 
 @media (min-width: 992px) {
-  /* line 82, ../nuvem/static/sass/_header.scss */
+  /* line 90, ../nuvem/static/sass/_header.scss */
   .header__content.header-branca .options > div a {
     color: #494d51;
     transition: all 0.4s cubic-bezier(0.46, 0.01, 0.32, 1);
@@ -11071,13 +11084,13 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 @media screen and (min-width: 992px) and (prefers-reduced-motion: reduce) {
-  /* line 82, ../nuvem/static/sass/_header.scss */
+  /* line 90, ../nuvem/static/sass/_header.scss */
   .header__content.header-branca .options > div a {
     transition: none;
   }
 }
 
-/* line 90, ../nuvem/static/sass/_header.scss */
+/* line 98, ../nuvem/static/sass/_header.scss */
 .header__content .logo {
   display: block;
   text-align: center;
@@ -11098,52 +11111,57 @@ a.text-dark:hover, a.text-dark:focus {
   transform: translateY(-50%);
 }
 
-/* line 105, ../nuvem/static/sass/_header.scss */
+/* line 113, ../nuvem/static/sass/_header.scss */
 .header__content .logo img {
   width: 100%;
   vertical-align: inherit;
 }
 
-/* line 110, ../nuvem/static/sass/_header.scss */
+/* line 118, ../nuvem/static/sass/_header.scss */
 .header__content .logo .logo-branca {
   display: none;
 }
 
 @media (min-width: 992px) {
-  /* line 110, ../nuvem/static/sass/_header.scss */
+  /* line 118, ../nuvem/static/sass/_header.scss */
   .header__content .logo .logo-branca {
     display: block;
   }
 }
 
+/* line 126, ../nuvem/static/sass/_header.scss */
+.header__content .logo .logo-preta-2 {
+  display: none;
+}
+
 @media (min-width: 992px) {
-  /* line 118, ../nuvem/static/sass/_header.scss */
-  .header__content .logo .logo-preta {
+  /* line 130, ../nuvem/static/sass/_header.scss */
+  .header__content .logo .logo-preta, .header__content .logo .logo-preta-2 {
     display: none;
   }
 }
 
 @media (min-width: 992px) {
-  /* line 90, ../nuvem/static/sass/_header.scss */
+  /* line 98, ../nuvem/static/sass/_header.scss */
   .header__content .logo {
     left: 25px;
     right: auto;
   }
 }
 
-/* line 130, ../nuvem/static/sass/_header.scss */
+/* line 142, ../nuvem/static/sass/_header.scss */
 .header__content .nav__bar {
   display: none;
 }
 
 @media (min-width: 992px) {
-  /* line 130, ../nuvem/static/sass/_header.scss */
+  /* line 142, ../nuvem/static/sass/_header.scss */
   .header__content .nav__bar {
     display: block;
   }
 }
 
-/* line 137, ../nuvem/static/sass/_header.scss */
+/* line 149, ../nuvem/static/sass/_header.scss */
 .header__content .nav__bar .nav__bar--links {
   margin: 0;
   text-align: center;
@@ -11151,7 +11169,7 @@ a.text-dark:hover, a.text-dark:focus {
   list-style: none;
 }
 
-/* line 144, ../nuvem/static/sass/_header.scss */
+/* line 156, ../nuvem/static/sass/_header.scss */
 .header__content .nav__bar .nav__bar--links > li > .nav__bar--link {
   padding: 0px;
   margin: 20px 22px 15px;
@@ -11167,19 +11185,19 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
-  /* line 144, ../nuvem/static/sass/_header.scss */
+  /* line 156, ../nuvem/static/sass/_header.scss */
   .header__content .nav__bar .nav__bar--links > li > .nav__bar--link {
     transition: none;
   }
 }
 
-/* line 160, ../nuvem/static/sass/_header.scss */
+/* line 172, ../nuvem/static/sass/_header.scss */
 .header__content .nav__bar .nav__bar--has-dropdown, .header__content .nav__bar .nav__bar--is-link {
   position: static;
   display: inline-block;
 }
 
-/* line 164, ../nuvem/static/sass/_header.scss */
+/* line 176, ../nuvem/static/sass/_header.scss */
 .header__content .nav__bar .nav__bar--has-dropdown::before, .header__content .nav__bar .nav__bar--is-link::before {
   content: " ";
   background-color: #ffffff;
@@ -11190,17 +11208,17 @@ a.text-dark:hover, a.text-dark:focus {
   display: none;
 }
 
-/* line 175, ../nuvem/static/sass/_header.scss */
+/* line 187, ../nuvem/static/sass/_header.scss */
 .header__content .nav__bar .nav__bar--has-dropdown.nav-hover::before, .header__content .nav__bar .nav__bar--is-link.nav-hover::before {
   display: block;
 }
 
-/* line 179, ../nuvem/static/sass/_header.scss */
+/* line 191, ../nuvem/static/sass/_header.scss */
 .header__content .nav__bar .nav__bar--has-dropdown.nav-hover .nav__bar--dropdown, .header__content .nav__bar .nav__bar--is-link.nav-hover .nav__bar--dropdown {
   display: block;
 }
 
-/* line 184, ../nuvem/static/sass/_header.scss */
+/* line 196, ../nuvem/static/sass/_header.scss */
 .header__content .nav__bar .nav__bar--has-dropdown .nav__bar--dropdown, .header__content .nav__bar .nav__bar--is-link .nav__bar--dropdown {
   left: 0;
   right: 0;
@@ -11213,13 +11231,13 @@ a.text-dark:hover, a.text-dark:focus {
   z-index: 5;
 }
 
-/* line 195, ../nuvem/static/sass/_header.scss */
+/* line 207, ../nuvem/static/sass/_header.scss */
 .header__content .nav__bar .nav__bar--has-dropdown .nav__bar--dropdown > li, .header__content .nav__bar .nav__bar--is-link .nav__bar--dropdown > li {
   position: static;
   display: inline-block;
 }
 
-/* line 199, ../nuvem/static/sass/_header.scss */
+/* line 211, ../nuvem/static/sass/_header.scss */
 .header__content .nav__bar .nav__bar--has-dropdown .nav__bar--dropdown > li > .nav__bar--link, .header__content .nav__bar .nav__bar--is-link .nav__bar--dropdown > li > .nav__bar--link {
   display: inline-block;
   color: #494d51;
@@ -11227,7 +11245,7 @@ a.text-dark:hover, a.text-dark:focus {
   padding: 0;
 }
 
-/* line 210, ../nuvem/static/sass/_header.scss */
+/* line 222, ../nuvem/static/sass/_header.scss */
 .header__content .options {
   position: absolute;
   z-index: 5;
@@ -11248,14 +11266,14 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 @media (min-width: 992px) {
-  /* line 210, ../nuvem/static/sass/_header.scss */
+  /* line 222, ../nuvem/static/sass/_header.scss */
   .header__content .options {
     right: 25px;
     left: auto;
   }
 }
 
-/* line 229, ../nuvem/static/sass/_header.scss */
+/* line 241, ../nuvem/static/sass/_header.scss */
 .header__content .options > div {
   margin: 0 7px;
   display: inline-block;
@@ -11264,59 +11282,59 @@ a.text-dark:hover, a.text-dark:focus {
   cursor: pointer;
 }
 
-/* line 236, ../nuvem/static/sass/_header.scss */
+/* line 248, ../nuvem/static/sass/_header.scss */
 .header__content .options > div a {
   color: #494d51;
 }
 
 @media (min-width: 992px) {
-  /* line 236, ../nuvem/static/sass/_header.scss */
+  /* line 248, ../nuvem/static/sass/_header.scss */
   .header__content .options > div a {
     color: #ffffff;
   }
 }
 
-/* line 245, ../nuvem/static/sass/_header.scss */
+/* line 257, ../nuvem/static/sass/_header.scss */
 .header__content .options .options__nav {
   float: left;
 }
 
 @media (min-width: 992px) {
-  /* line 245, ../nuvem/static/sass/_header.scss */
+  /* line 257, ../nuvem/static/sass/_header.scss */
   .header__content .options .options__nav {
     display: none;
   }
 }
 
-/* line 253, ../nuvem/static/sass/_header.scss */
+/* line 265, ../nuvem/static/sass/_header.scss */
 .header__content .options .options__search {
   float: left;
 }
 
-/* line 258, ../nuvem/static/sass/_header.scss */
+/* line 270, ../nuvem/static/sass/_header.scss */
 .header__content .options .options__account--menu {
   background-color: #ffffff;
   position: absolute;
 }
 
-/* line 262, ../nuvem/static/sass/_header.scss */
+/* line 274, ../nuvem/static/sass/_header.scss */
 .header__content .options .options__account--menu a {
   color: #494d51;
 }
 
-/* line 268, ../nuvem/static/sass/_header.scss */
+/* line 280, ../nuvem/static/sass/_header.scss */
 .header__content .options .options__language {
   display: none;
 }
 
 @media (min-width: 768px) {
-  /* line 268, ../nuvem/static/sass/_header.scss */
+  /* line 280, ../nuvem/static/sass/_header.scss */
   .header__content .options .options__language {
     display: inline-block;
   }
 }
 
-/* line 278, ../nuvem/static/sass/_header.scss */
+/* line 290, ../nuvem/static/sass/_header.scss */
 .header__search {
   max-height: 0;
   overflow: hidden;
@@ -11336,13 +11354,13 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
-  /* line 278, ../nuvem/static/sass/_header.scss */
+  /* line 290, ../nuvem/static/sass/_header.scss */
   .header__search {
     transition: none;
   }
 }
 
-/* line 291, ../nuvem/static/sass/_header.scss */
+/* line 303, ../nuvem/static/sass/_header.scss */
 .header__search.active {
   display: block;
   max-height: 200px;
@@ -11355,7 +11373,7 @@ a.text-dark:hover, a.text-dark:focus {
   opacity: 1;
 }
 
-/* line 299, ../nuvem/static/sass/_header.scss */
+/* line 311, ../nuvem/static/sass/_header.scss */
 .header__search form {
   max-width: 800px;
   width: 100%;
@@ -11363,7 +11381,7 @@ a.text-dark:hover, a.text-dark:focus {
   position: relative;
 }
 
-/* line 305, ../nuvem/static/sass/_header.scss */
+/* line 317, ../nuvem/static/sass/_header.scss */
 .header__search form input.field-search {
   padding: 0;
   border: 0;
@@ -11377,13 +11395,13 @@ a.text-dark:hover, a.text-dark:focus {
   border-bottom: 1px solid #dbdcdd;
 }
 
-/* line 318, ../nuvem/static/sass/_header.scss */
+/* line 330, ../nuvem/static/sass/_header.scss */
 .header__search form .btn-close {
   background-color: transparent;
   color: #494d51;
 }
 
-/* line 326, ../nuvem/static/sass/_header.scss */
+/* line 338, ../nuvem/static/sass/_header.scss */
 .nav__bar--mobile {
   background-color: #ffffff;
   -webkit-transform: translateZ(0);
@@ -11404,31 +11422,31 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
-  /* line 326, ../nuvem/static/sass/_header.scss */
+  /* line 338, ../nuvem/static/sass/_header.scss */
   .nav__bar--mobile {
     transition: none;
   }
 }
 
-/* line 344, ../nuvem/static/sass/_header.scss */
+/* line 356, ../nuvem/static/sass/_header.scss */
 .nav__bar--mobile.nav__bar--opended {
   display: block;
   left: 0;
 }
 
-/* line 349, ../nuvem/static/sass/_header.scss */
+/* line 361, ../nuvem/static/sass/_header.scss */
 .nav__bar--mobile-close {
   padding: 20px;
   height: auto;
 }
 
-/* line 353, ../nuvem/static/sass/_header.scss */
+/* line 365, ../nuvem/static/sass/_header.scss */
 .nav__bar--mobile-close .btn-close {
   background-color: transparent;
   color: #494d51;
 }
 
-/* line 359, ../nuvem/static/sass/_header.scss */
+/* line 371, ../nuvem/static/sass/_header.scss */
 .nav__bar--mobile .nav__bar--links {
   background: #ffffff;
   margin: 40px 0 0;
@@ -11442,18 +11460,18 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
-  /* line 359, ../nuvem/static/sass/_header.scss */
+  /* line 371, ../nuvem/static/sass/_header.scss */
   .nav__bar--mobile .nav__bar--links {
     transition: none;
   }
 }
 
-/* line 370, ../nuvem/static/sass/_header.scss */
+/* line 382, ../nuvem/static/sass/_header.scss */
 .nav__bar--mobile .nav__bar--links.nav__bar--mobile-expanded {
   left: -100%;
 }
 
-/* line 374, ../nuvem/static/sass/_header.scss */
+/* line 386, ../nuvem/static/sass/_header.scss */
 .nav__bar--mobile .nav__bar--links .nav__bar--has-dropdown, .nav__bar--mobile .nav__bar--links .nav__bar--is-link {
   background: transparent;
   padding-bottom: 25px;
@@ -11466,12 +11484,12 @@ a.text-dark:hover, a.text-dark:focus {
   width: 100%;
 }
 
-/* line 385, ../nuvem/static/sass/_header.scss */
+/* line 397, ../nuvem/static/sass/_header.scss */
 .nav__bar--mobile .nav__bar--links .nav__bar--has-dropdown.nav__bar--expanded, .nav__bar--mobile .nav__bar--links .nav__bar--is-link.nav__bar--expanded {
   z-index: 2;
 }
 
-/* line 388, ../nuvem/static/sass/_header.scss */
+/* line 400, ../nuvem/static/sass/_header.scss */
 .nav__bar--mobile .nav__bar--links .nav__bar--has-dropdown.nav__bar--expanded .nav__bar--dropdown, .nav__bar--mobile .nav__bar--links .nav__bar--is-link.nav__bar--expanded .nav__bar--dropdown {
   height: 100%;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=$value)";
@@ -11481,7 +11499,7 @@ a.text-dark:hover, a.text-dark:focus {
   opacity: 1;
 }
 
-/* line 394, ../nuvem/static/sass/_header.scss */
+/* line 406, ../nuvem/static/sass/_header.scss */
 .nav__bar--mobile .nav__bar--links .nav__bar--has-dropdown .nav__bar--link, .nav__bar--mobile .nav__bar--links .nav__bar--is-link .nav__bar--link {
   padding: 0;
   color: #494d51;
@@ -11489,7 +11507,7 @@ a.text-dark:hover, a.text-dark:focus {
   font-size: 21px;
 }
 
-/* line 401, ../nuvem/static/sass/_header.scss */
+/* line 413, ../nuvem/static/sass/_header.scss */
 .nav__bar--mobile .nav__bar--links .nav__bar--has-dropdown .nav__bar--dropdown, .nav__bar--mobile .nav__bar--links .nav__bar--is-link .nav__bar--dropdown {
   margin: 0;
   height: 0;
@@ -11513,23 +11531,23 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
-  /* line 401, ../nuvem/static/sass/_header.scss */
+  /* line 413, ../nuvem/static/sass/_header.scss */
   .nav__bar--mobile .nav__bar--links .nav__bar--has-dropdown .nav__bar--dropdown, .nav__bar--mobile .nav__bar--links .nav__bar--is-link .nav__bar--dropdown {
     transition: none;
   }
 }
 
-/* line 419, ../nuvem/static/sass/_header.scss */
+/* line 431, ../nuvem/static/sass/_header.scss */
 .nav__bar--mobile .nav__bar--links .nav__bar--has-dropdown .nav__bar--dropdown-close .nav__bar--link, .nav__bar--mobile .nav__bar--links .nav__bar--is-link .nav__bar--dropdown-close .nav__bar--link {
   font-size: 13px;
 }
 
-/* line 422, ../nuvem/static/sass/_header.scss */
+/* line 434, ../nuvem/static/sass/_header.scss */
 .nav__bar--mobile .nav__bar--links .nav__bar--has-dropdown .nav__bar--dropdown-close .nav__bar--link i, .nav__bar--mobile .nav__bar--links .nav__bar--is-link .nav__bar--dropdown-close .nav__bar--link i {
   margin-right: 10px;
 }
 
-/* line 428, ../nuvem/static/sass/_header.scss */
+/* line 440, ../nuvem/static/sass/_header.scss */
 .nav__bar--mobile .nav__bar--links .nav__bar--has-dropdown .nav__bar--dropdown li, .nav__bar--mobile .nav__bar--links .nav__bar--is-link .nav__bar--dropdown li {
   padding-bottom: 20px;
   background: transparent;
@@ -11759,7 +11777,6 @@ html {
 /* line 5, ../nuvem/static/sass/_default.scss */
 body {
   font-family: 'Roboto', sans-serif;
-  padding-top: 60px;
 }
 
 @media (min-width: 992px) {

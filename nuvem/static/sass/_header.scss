@@ -60,6 +60,14 @@
         .logo {
           .logo-preta {
             display: block;
+            position: absolute;
+          }
+
+          .logo-preta-2 {
+            @include desktops {
+              display: block;
+              width: 40px;
+            }
           }
   
           .logo-branca {
@@ -115,7 +123,11 @@
         }
       }
 
-      .logo-preta {
+      .logo-preta-2 {
+        display: none;
+      }
+
+      .logo-preta, .logo-preta-2 {
         @include desktops {
           display: none;
         }

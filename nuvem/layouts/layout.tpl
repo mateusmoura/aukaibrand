@@ -141,7 +141,8 @@
                         {% if has_logo %}
                             <h1 class="img logo">
                                 {# {{ store.logo  | img_tag(store.name) | a_tag(store.url)}} #}
-                                <img class="logo-preta" src="{{ 'images/new/aukai_logo.png' | static_url }}" alt="Aukai Brand" />
+                                <img class="logo-preta animated" src="{{ 'images/new/aukai_logo.png' | static_url }}" alt="Aukai Brand" />
+                                <img class="logo-preta-2 animated" src="{{ 'images/new/aukai_logo-2.png' | static_url }}" alt="Aukai Brand" />
                                 <img class="logo-branca" src="{{ 'images/new/aukai_logo-branca.png' | static_url }}" alt="Aukai Brand" />
                             </h1>
                             <div id="no-logo-wrapper" class="hidden">

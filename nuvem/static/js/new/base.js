@@ -61,6 +61,7 @@ const site = {
 
     const header = $("header.header");
     const headerStart = header.position().top;
+    const documentWidth = $(document).width();
 
     if (!$('.page-institutional, .section-login, .section-reset, .section-register, .section-orders').length) {
         $(window).scroll(function(){
@@ -73,6 +74,14 @@ const site = {
                   'top': 0,
                   'position': 'fixed',
                 });
+                
+                if (documentWidth > 990) {
+                  $('.logo-preta', header).addClass('fadeOut');
+                  
+                  setTimeout(() => {
+                    $('.logo-preta-2', header).addClass('fadeIn');
+                  }, 500);
+                }
             } else {
                 $("#header-slim").stop().animate({  top: -140  }, 120);
                 $(".header__content").removeClass("header-branca");
@@ -80,6 +89,11 @@ const site = {
                   'top': 40,
                   'position': 'absolute',
                 });
+
+                if (documentWidth > 990) {
+                  $('.logo-preta', header).removeClass('fadeOut');
+                  $('.logo-preta-2', header).removeClass('fadeIn');
+                }
             }
         });
     } else {
