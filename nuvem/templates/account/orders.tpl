@@ -1,5 +1,5 @@
 <section class="section-orders">
-    <div class="container-fluid">
+    <div class="container">
         <div class="section-title">
             <h1>{{ "Mi cuenta" | translate }}</h1>
         </div>

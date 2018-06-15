@@ -21,8 +21,8 @@
 
 /* line 37, ../nuvem/static/sass/partials/_variables.scss */
 .bg-sand {
-
   background-color: #f5f5f6;
+
 }
 
 /* line 40, ../nuvem/static/sass/partials/_variables.scss */
@@ -13495,22 +13495,27 @@ body {
 }
 
 /* line 9, ../nuvem/static/sass/_orders.scss */
+.section-orders h3 {
+  margin: 15px 0 30px;
+}
+
+/* line 13, ../nuvem/static/sass/_orders.scss */
 .section-orders .card-dados {
   margin-bottom: 50px;
 }
 
-/* line 14, ../nuvem/static/sass/_orders.scss */
+/* line 18, ../nuvem/static/sass/_orders.scss */
 .section-orders .card .profile-image {
   margin-bottom: 20px;
 }
 
-/* line 21, ../nuvem/static/sass/_orders.scss */
+/* line 25, ../nuvem/static/sass/_orders.scss */
 .section-orders .card-pedidos .card-body .wrapper {
   border-top: 1px solid rgba(0, 0, 0, 0.125);
   padding-top: 20px;
 }
 
-/* line 27, ../nuvem/static/sass/_orders.scss */
+/* line 31, ../nuvem/static/sass/_orders.scss */
 .section-orders .card-pedidos .card-body:nth-child(2) .wrapper {
   border-top: 0;
   padding-top: 20px;
