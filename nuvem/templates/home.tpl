@@ -161,7 +161,7 @@
                                                     <img class="d-block w-100" src="{{ 'images/new/carousel/carousel-foto-008.jpg' | static_url }}" alt="First slide">
 
                                                     <figcaption>
-                                                        Praia da Silveira - Garupaba
+                                                        Praia da Silveira - Garopaba
                                                     </figcaption>
                                                 </figure>
                                             </div>

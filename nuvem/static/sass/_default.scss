@@ -5,9 +5,30 @@ html {
 body {
   font-family: 'Roboto', sans-serif;
   // padding-top: 60px;
+  height:100%;
 
   @include desktops {
     padding-top: 0;
+  }
+}
+
+.container-wrapper {
+  min-height: 100%;
+  position: relative;
+
+  main {
+    @include desktops {
+      padding-bottom: 302px;
+    }
+  }
+
+  footer {
+    @include desktops {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 302px; /* Height of the footer */
+    }
   }
 }
 
@@ -142,7 +163,7 @@ body {
       span {
         display: block;
         margin-bottom: 20px;
-        font-size: 12px;
+        font-size: 15px;
       }
     }
   }

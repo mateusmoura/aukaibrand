@@ -128,10 +128,12 @@
         <!-- Site Overlay -->
         <div class="site-overlay"></div>
 
-        <!--  FREE SHIPPING & RETURNS* -->
-        {% snipplet "free-shipping-returns.tpl" %}
 
-        <!-- INICIO DO NOVO LAYOUT -->
+        <div class="container-wrapper">
+            <!--  FREE SHIPPING & RETURNS* -->
+            {% snipplet "free-shipping-returns.tpl" %}
+
+            <!-- INICIO DO NOVO LAYOUT -->
             {% snipplet "navigation-mobile.tpl" %}
 
             <!-- HEADER -->
@@ -256,9 +258,9 @@
                                     <li>
                                         <a href="/" target="_blank"><i class="fab fa-instagram"></i></a>
                                     </li>
-                                    <!-- <li>
-                                        <a href="/" target="_blank"><i class="fab fa-twitter"></i></a>
-                                    </li> -->
+                                    <li>
+                                        <a href="/" target="_blank"><i class="fab fa-pinterest-p"></i></a>
+                                    </li>
                                 </ul>
                             </div>
 
@@ -355,6 +357,7 @@
                     </div>
                 </div>
             </footer>
+        </div>
 
 
         <div class="loading">

@@ -83,14 +83,14 @@
                 <div class="product-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
                     <div class="price">
                         <span class="price-compare">
-                            {{ "De" | translate }}
+                            {# {{ "De" | translate }} #}
                             <strike>
                             <span id="compare_price_display" {% if not product.compare_at_price %}class="hidden"{% endif %}>{{ product.compare_at_price | money }}</span>
                             </strike>
                         </span>
 
                         <span>
-                            {{ "Por" | translate }}
+                            {# {{ "Por" | translate }} #}
                             <span class="price" id="price_display" itemprop="price" content="{{ product.price / 100 }}" {% if not product.display_price %}style="display:none;"{% endif %}>{{ product.price | money }}</span>
                         </span>
                         <meta itemprop="priceCurrency" content="{{ product.currency }}" />
@@ -117,11 +117,11 @@
                 {% endif %}
 
 
-                {% snipplet "installments_in_product.tpl" %}
+                {# {% snipplet "installments_in_product.tpl" %} #}
                 {% if product.show_installments and product.display_price %}
                     {% set installments_info = product.installments_info %}
                     {% if installments_info %}
-                        <a id="button-installments" class="button secondary" href="#InstallmentsModal" role="button" data-toggle="modal">{{ "Ver el detalle de las cuotas" | translate }}</a>
+                        <a id="button-installments" class="button secondary btn-verdetalhes" href="#InstallmentsModal" role="button" data-toggle="modal">{{ "Ver el detalle de las cuotas" | translate }}</a>
                     {% endif %}
                 {% endif %}
 
@@ -171,7 +171,7 @@
                                 <a href="/" target="_blank"><i class="fab fa-instagram"></i></a>
                             </li>
                             <li>
-                                <a href="/" target="_blank"><i class="fab fa-twitter"></i></a>
+                                <a href="/" target="_blank"><i class="fab fa-pinterest-p"></i></a>
                             </li>
                         </ul>
                     </div>
