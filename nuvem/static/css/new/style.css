@@ -9,8 +9,8 @@
 }
 
 /*============ COLOR CLASSES =============*/
-
 /* line 31, ../nuvem/static/sass/partials/_variables.scss */
+
 .text-primary {
   color: #F45C5D !important;
 }
@@ -12147,31 +12147,33 @@ body {
 /* line 47, ../nuvem/static/sass/_category.scss */
 .section-category .section__image .section__link {
   position: static;
+  height: 100%;
 }
 
-/* line 51, ../nuvem/static/sass/_category.scss */
+/* line 52, ../nuvem/static/sass/_category.scss */
 .section-category .section__image .section__link:hover .product-image-front, .section-category .section__image .section__link:focus .product-image-front, .section-category .section__image .section__linkactive .product-image-front {
   display: none;
 }
 
-/* line 56, ../nuvem/static/sass/_category.scss */
+/* line 57, ../nuvem/static/sass/_category.scss */
 .section-category .section__image .section__link:hover .product-image-using, .section-category .section__image .section__link:focus .product-image-using, .section-category .section__image .section__linkactive .product-image-using {
   display: block;
   visibility: visible;
 }
 
-/* line 64, ../nuvem/static/sass/_category.scss */
+/* line 65, ../nuvem/static/sass/_category.scss */
 .section-category .section__image img {
+  height: 100%;
   width: 100%;
 }
 
-/* line 68, ../nuvem/static/sass/_category.scss */
+/* line 70, ../nuvem/static/sass/_category.scss */
 .section-category .section__image img.product-image-using {
   visibility: hidden;
   display: none;
 }
 
-/* line 74, ../nuvem/static/sass/_category.scss */
+/* line 76, ../nuvem/static/sass/_category.scss */
 .section-category .section__image .product-info-wrapper {
   padding: 0 20px;
   min-height: 70px;
@@ -12185,14 +12187,14 @@ body {
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
-  /* line 74, ../nuvem/static/sass/_category.scss */
+  /* line 76, ../nuvem/static/sass/_category.scss */
   .section-category .section__image .product-info-wrapper {
     transition: none;
   }
 }
 
 @media (min-width: 992px) {
-  /* line 74, ../nuvem/static/sass/_category.scss */
+  /* line 76, ../nuvem/static/sass/_category.scss */
   .section-category .section__image .product-info-wrapper {
     bottom: auto;
     top: 0;
@@ -12205,24 +12207,24 @@ body {
   }
 }
 
-/* line 93, ../nuvem/static/sass/_category.scss */
+/* line 95, ../nuvem/static/sass/_category.scss */
 .section-category .section__image .product-info-wrapper p {
   margin: 0 0 4px 0;
   font-size: 14px;
 }
 
-/* line 98, ../nuvem/static/sass/_category.scss */
+/* line 100, ../nuvem/static/sass/_category.scss */
 .section-category .section__image .product-info-wrapper span {
   font-size: 12px;
 }
 
-/* line 102, ../nuvem/static/sass/_category.scss */
+/* line 104, ../nuvem/static/sass/_category.scss */
 .section-category .section__image .product-info-wrapper a {
   color: #494d51;
   font-size: 14px;
 }
 
-/* line 108, ../nuvem/static/sass/_category.scss */
+/* line 110, ../nuvem/static/sass/_category.scss */
 .section-category .section__image .product-actions {
   display: none;
   position: absolute;
@@ -12234,14 +12236,14 @@ body {
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
-  /* line 108, ../nuvem/static/sass/_category.scss */
+  /* line 110, ../nuvem/static/sass/_category.scss */
   .section-category .section__image .product-actions {
     transition: none;
   }
 }
 
 @media (min-width: 992px) {
-  /* line 108, ../nuvem/static/sass/_category.scss */
+  /* line 110, ../nuvem/static/sass/_category.scss */
   .section-category .section__image .product-actions {
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=$value)";
     filter: alpha(opacity=0);
@@ -12252,41 +12254,41 @@ body {
   }
 }
 
-/* line 122, ../nuvem/static/sass/_category.scss */
+/* line 124, ../nuvem/static/sass/_category.scss */
 .section-category .section__image .product-actions .btn-addToCart, .section-category .section__image .product-actions .btn-quick-viewer, .section-category .section__image .product-actions .btn-viewer-options {
   font-size: 12px;
   font-weight: 400;
   text-transform: uppercase;
 }
 
-/* line 129, ../nuvem/static/sass/_category.scss */
+/* line 131, ../nuvem/static/sass/_category.scss */
 .section-category .section__image .product-actions .btn-quick-viewer:hover, .section-category .section__image .product-actions .btn-quick-viewer:focus, .section-category .section__image .product-actions .btn-quick-viewer:active, .section-category .section__image .product-actions .btn-viewer-options:hover, .section-category .section__image .product-actions .btn-viewer-options:focus, .section-category .section__image .product-actions .btn-viewer-options:active {
   color: #ffffff;
 }
 
-/* line 134, ../nuvem/static/sass/_category.scss */
+/* line 136, ../nuvem/static/sass/_category.scss */
 .section-category .section__image .product-actions .btn-quick-viewer {
   display: none;
 }
 
-/* line 139, ../nuvem/static/sass/_category.scss */
+/* line 141, ../nuvem/static/sass/_category.scss */
 .section-category .section__image .product-info-category {
   display: none;
 }
 
-/* line 143, ../nuvem/static/sass/_category.scss */
+/* line 145, ../nuvem/static/sass/_category.scss */
 .section-category .section__image .product-add-cart {
   display: none;
 }
 
 @media (min-width: 992px) {
-  /* line 143, ../nuvem/static/sass/_category.scss */
+  /* line 145, ../nuvem/static/sass/_category.scss */
   .section-category .section__image .product-add-cart {
     display: block;
   }
 }
 
-/* line 150, ../nuvem/static/sass/_category.scss */
+/* line 152, ../nuvem/static/sass/_category.scss */
 .section-category .section__image .product-add-cart .fancyContainerQuickshop-quantity {
   display: none;
 }

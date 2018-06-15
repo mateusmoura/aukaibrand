@@ -46,6 +46,7 @@
 
     .section__link {
       position: static;
+      height: 100%;
 
       &:hover, &:focus, &active {
         .product-image-front {
@@ -63,6 +64,7 @@
 
     img {
       @extend .animated;
+      height: 100%;
       width: 100%;
 
       &.product-image-using {
