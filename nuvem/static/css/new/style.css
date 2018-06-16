@@ -3,9 +3,9 @@
 /*============ ANIMATE CSS =============*/
 /*============ Bootstrap CSS =============*/
 /*============ NuvemSHOP CSS =============*/
-
 /* line 27, ../nuvem/static/sass/partials/_variables.scss */
 .hidden {
+
   display: none !important;
 }
 
@@ -11455,6 +11455,18 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 /* line 371, ../nuvem/static/sass/_header.scss */
+.nav__bar--mobile .options__language {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+
+/* line 376, ../nuvem/static/sass/_header.scss */
+.nav__bar--mobile .options__language img {
+  width: 22px;
+}
+
+/* line 381, ../nuvem/static/sass/_header.scss */
 .nav__bar--mobile .nav__bar--links {
   background: #ffffff;
   margin: 40px 0 0;
@@ -11468,18 +11480,18 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
-  /* line 371, ../nuvem/static/sass/_header.scss */
+  /* line 381, ../nuvem/static/sass/_header.scss */
   .nav__bar--mobile .nav__bar--links {
     transition: none;
   }
 }
 
-/* line 382, ../nuvem/static/sass/_header.scss */
+/* line 392, ../nuvem/static/sass/_header.scss */
 .nav__bar--mobile .nav__bar--links.nav__bar--mobile-expanded {
   left: -100%;
 }
 
-/* line 386, ../nuvem/static/sass/_header.scss */
+/* line 396, ../nuvem/static/sass/_header.scss */
 .nav__bar--mobile .nav__bar--links .nav__bar--has-dropdown, .nav__bar--mobile .nav__bar--links .nav__bar--is-link {
   background: transparent;
   padding-bottom: 25px;
@@ -11492,12 +11504,12 @@ a.text-dark:hover, a.text-dark:focus {
   width: 100%;
 }
 
-/* line 397, ../nuvem/static/sass/_header.scss */
+/* line 407, ../nuvem/static/sass/_header.scss */
 .nav__bar--mobile .nav__bar--links .nav__bar--has-dropdown.nav__bar--expanded, .nav__bar--mobile .nav__bar--links .nav__bar--is-link.nav__bar--expanded {
   z-index: 2;
 }
 
-/* line 400, ../nuvem/static/sass/_header.scss */
+/* line 410, ../nuvem/static/sass/_header.scss */
 .nav__bar--mobile .nav__bar--links .nav__bar--has-dropdown.nav__bar--expanded .nav__bar--dropdown, .nav__bar--mobile .nav__bar--links .nav__bar--is-link.nav__bar--expanded .nav__bar--dropdown {
   height: 100%;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=$value)";
@@ -11507,7 +11519,7 @@ a.text-dark:hover, a.text-dark:focus {
   opacity: 1;
 }
 
-/* line 406, ../nuvem/static/sass/_header.scss */
+/* line 416, ../nuvem/static/sass/_header.scss */
 .nav__bar--mobile .nav__bar--links .nav__bar--has-dropdown .nav__bar--link, .nav__bar--mobile .nav__bar--links .nav__bar--is-link .nav__bar--link {
   padding: 0;
   color: #494d51;
@@ -11515,7 +11527,7 @@ a.text-dark:hover, a.text-dark:focus {
   font-size: 21px;
 }
 
-/* line 413, ../nuvem/static/sass/_header.scss */
+/* line 423, ../nuvem/static/sass/_header.scss */
 .nav__bar--mobile .nav__bar--links .nav__bar--has-dropdown .nav__bar--dropdown, .nav__bar--mobile .nav__bar--links .nav__bar--is-link .nav__bar--dropdown {
   margin: 0;
   height: 0;
@@ -11539,23 +11551,23 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
-  /* line 413, ../nuvem/static/sass/_header.scss */
+  /* line 423, ../nuvem/static/sass/_header.scss */
   .nav__bar--mobile .nav__bar--links .nav__bar--has-dropdown .nav__bar--dropdown, .nav__bar--mobile .nav__bar--links .nav__bar--is-link .nav__bar--dropdown {
     transition: none;
   }
 }
 
-/* line 431, ../nuvem/static/sass/_header.scss */
+/* line 441, ../nuvem/static/sass/_header.scss */
 .nav__bar--mobile .nav__bar--links .nav__bar--has-dropdown .nav__bar--dropdown-close .nav__bar--link, .nav__bar--mobile .nav__bar--links .nav__bar--is-link .nav__bar--dropdown-close .nav__bar--link {
   font-size: 13px;
 }
 
-/* line 434, ../nuvem/static/sass/_header.scss */
+/* line 444, ../nuvem/static/sass/_header.scss */
 .nav__bar--mobile .nav__bar--links .nav__bar--has-dropdown .nav__bar--dropdown-close .nav__bar--link i, .nav__bar--mobile .nav__bar--links .nav__bar--is-link .nav__bar--dropdown-close .nav__bar--link i {
   margin-right: 10px;
 }
 
-/* line 440, ../nuvem/static/sass/_header.scss */
+/* line 450, ../nuvem/static/sass/_header.scss */
 .nav__bar--mobile .nav__bar--links .nav__bar--has-dropdown .nav__bar--dropdown li, .nav__bar--mobile .nav__bar--links .nav__bar--is-link .nav__bar--dropdown li {
   padding-bottom: 20px;
   background: transparent;

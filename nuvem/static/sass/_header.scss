@@ -368,6 +368,16 @@
     }
   }
 
+  .options__language {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+
+    img {
+      width: 22px;
+    }
+  }
+
   .nav__bar--links {
     background: #ffffff;
     margin: 40px 0 0;

@@ -5,6 +5,17 @@
       </button>
     </div>
 
+    {% if languages | length > 1 %}
+        <div class="options__language">
+            <div class="languages">
+                {% for language in languages %}
+                    {% set class = language.active ? "active" : "" %}
+                    <a href="{{ language.url }}" class="{{ class }}">{{ language.country | flag_url | img_tag(language.name) }}</a>
+                {% endfor %}
+            </div>
+        </div>
+    {% endif %}
+
     <ul class="nav__bar--links ">
         {% for item in navigation %}
             {% if item.subitems %}
