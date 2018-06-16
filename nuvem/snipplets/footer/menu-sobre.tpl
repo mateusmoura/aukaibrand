@@ -1,4 +1,4 @@
-<h6>Sobre nós</h6>
+<h6>{{ "Sobre nós" | translate }}</h6>
 
 <ul>
     {% for item in menus["footer_sobre"]  %}

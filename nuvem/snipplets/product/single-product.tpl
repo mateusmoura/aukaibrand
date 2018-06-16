@@ -99,7 +99,8 @@
               <div class="attributeLineQuickshop">
                 <label class="variation-label">
                 <div class="number">{{ stepslength + 1 }}</div>
-                <span>{{ "Escolher" | translate }} </span>
+                <span>{{ "Elegir" | translate }} </span>
+
                 <strong>{{ "Quantidade" | translate }}</strong></label>
                 <input class="spinner" type="text" name="quantity{{ item.id }}" value="1" />
               </div>

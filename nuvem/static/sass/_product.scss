@@ -1,6 +1,6 @@
 .section-product {
   @include desktops {
-    padding-top: 80px;
+    padding-top: 100px;
   }
 
   &__content {
@@ -39,12 +39,20 @@
   .product-details {
     text-align: center;
 
+    @include desktops {
+      padding-left: 90px;
+    }
+
     h1 {
       color: #35434b;
       font-size: 38px;
       text-transform: uppercase;
-      font-weight: 400;
+      font-weight: 100;
       margin-bottom: 15px;
+
+      @include desktops {
+        font-size: 30px;
+      }
     }
 
     .price-compare {
@@ -239,8 +247,13 @@
   }
 
   .imagecolContent .cloud-zoom-wrap a img{
-    max-height: 400px;
+    max-height: 260px;
+    
     margin: auto;
+
+    @include desktops {
+      max-height: 400px;
+    }
   }
   .imagecolContent .cloud-zoom-wrap .mousetrap{
     max-height: 400px!important;

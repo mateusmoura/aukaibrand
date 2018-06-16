@@ -56,6 +56,9 @@
       h2 {
         color: $white-color;
         font-size: 45px;
+        text-shadow: 2px 3px #000;
+        font-family: 'Poiret One', cursive;
+        font-weight: 700;
       }
 
       p {
@@ -96,13 +99,22 @@
 
       &__title {
         color: $black-color;
-        font-size: 38px;
+        font-size: 48px;
         margin: 24px 0;
+        font-family: 'Poiret One', cursive;
+        font-weight: 900;
+        text-shadow: 0px 0px #000;
       }
 
       &__text {
         text-align: center;
         margin: 24px 0;
+        
+        p {
+          font-family: 'Poiret One', cursive;
+          font-weight: 900;
+          font-size: 20px;
+        }
       }
 
       &__image {
@@ -165,8 +177,16 @@
           max-width: 60%;
 
           p {
+            font-family: 'Poiret One', cursive;
             font-size: 19px;
+            font-weight: 900;
           }
+        }
+
+        p {
+          font-family: 'Poiret One', cursive;
+          font-size: 18px;
+          font-weight: 900;
         }
       }
 

@@ -3,10 +3,10 @@
 {% endif %}
 {% for product in products %}
 	{% if loop.index % 4 == 1 %}
-    	<div class="product-row">
+    	<div class="row no-gutters section-category--list">
     {% endif %}
-    {% include 'snipplets/single_product.tpl' %}
+    {% include 'snipplets/product/single-product.tpl' %}
     {% if loop.index % 4 == 0 or loop.last %}
         </div>
-    {% endif %}    
+    {% endif %}
 {% endfor %}

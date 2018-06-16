@@ -1,24 +1,20 @@
-{% paginate by 16 %}
-<div class="row-fluid" id="category-page">
-	<div class="container">
-        {% if products %}
-            <div class="headerBox-List">
-                <div class="span8">
-                    <h1>{{ "Resultados de búsqueda" | translate }}</h1>
-                </div>
-                <div class="span4 breadcrumbs-wrapper">
-                    <div id="breadcrumb">
-                        <a class="goBack" title="{{ "Volver" | translate }}">{{ "Volver" | translate }}</a>
-                    </div>
-                </div>
+{% paginate by 30 %}
+<section class="section-category section-orders section-search">
+    {% if products %}
+        <div class="container">
+            <div class="section-title">
+                <h1>{{ "Resultados de búsqueda" | translate }}</h1>
+                <a class="goBack" title="{{ "Volver" | translate }}">{{ "Volver" | translate }}</a>
             </div>
-        
-             <div class="product-table">
+        </div>
+
+        <div class="container-fluid">
+            <div class="product-table">
                 {% snipplet "product_grid.tpl" %}
             </div>
             {% if settings.infinite_scrolling and not pages.is_last and products%}
                 <div class="load-more-container">
-                     <a id="loadMoreBtn" class="button secondary clear"><i class="fa fa-circle-o-notch fa-spin loadingSpin"></i>{{ 'Mostrar más productos' | t }}</a>
+                        <a id="loadMoreBtn" class="button secondary clear"><i class="fa fa-circle-o-notch fa-spin loadingSpin"></i>{{ 'Mostrar más productos' | t }}</a>
                 </div>
             {% endif %}
             <div class="crumbPaginationContainer bottom">
@@ -26,36 +22,34 @@
                     {% snipplet "pagination.tpl" %}
                 </div>
             </div>
-        {% else %}
-
-			<div class="headerBox-Error">
+        </div>
+    {% else %}
+        <div class="container">
+            <div class="section-title">
                 <h1>{{ "No hubo resultados para tu búsqueda" | translate }}</h1>
+                <h2>{{ "Quizás te interesen los siguientes productos." | translate }}</h2>
             </div>
+        </div>
 
+        <div class="container-fluid">
             {% set primary_section_products %}
+                {% if sections.primary.products and pages.is_last %}
+                    <div class="last-page" style="display:none;"></div>
+                {% endif %}
                 {% for product in sections.primary.products %}
-                    {% include 'snipplets/single_product.tpl' %}
+                    {% if loop.index % 4 == 1 %}
+                        <div class="row no-gutters section-category--list">
+                    {% endif %}
+                    {% include 'snipplets/product/single-product.tpl' %}
+                    {% if loop.index % 4 == 0 or loop.last %}
+                        </div>
+                    {% endif %}
                 {% endfor %}
             {% endset %}
 
             {% if sections.primary.products %}
-                <div class="dest-list">
-                    <h2>{{ "Quizás te interesen los siguientes productos." | translate }}</h2>
-                        <div id="tS1" class="jThumbnailScroller hidden-phone">
-                            <div class="jTscrollerContainer">
-                                <div class="jTscroller">
-                                    {{ primary_section_products }}
-                                </div>
-                            </div>
-                            <a href="#" class="jTscrollerPrevButton"></a>
-                            <a href="#" class="jTscrollerNextButton"></a>
-                    	</div>
-                        
-                        <div class="visible-phone">
-                            {{ primary_section_products }}
-                    	</div>
-                	</div>
+                {{ primary_section_products }}
             {% endif %}
-        {% endif %}
-    </div>
-</div>
+        </div>
+    {% endif %}
+</section>

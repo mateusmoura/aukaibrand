@@ -62,6 +62,7 @@
     #}
 
     {{ '//fonts.googleapis.com/css?family=Roboto:300,400,700' | css_tag }}
+    {{ '//fonts.googleapis.com/css?family=Poiret+One' | css_tag }}
     
     {% set nojquery = true %}
     {{ "//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" | script_tag }}
@@ -272,14 +273,18 @@
 
                                 {% snipplet "newsletter.tpl" %}
                             </div>
+
+                            <div class="copyright-2">
+                                <span>{{ "Copyright {1} - {2}. Todos los derechos reservados." | translate( (store.business_name ? store.business_name : store.name) ~ (store.business_id ? ' - ' ~ store.business_id : ''), "now" | date('Y') ) }}</span>
+                            </div>
                         </div>
                     
                         <div class="col-12 col-lg-3 footer__order-1">
                             <div class="footer__info">
-                                <h4>Aukai</h4>
+                                <h4>Aukai Journey</h4>
                         
                                 <div class="footer__info-text">
-                                    <p>{{ "Explore o mundo da Aukai atraves de brilhantes historias e estradas percorridas em Joias." | translate }}</p>
+                                    <p>{{ "Explore o mundo da Aukai atraves de brilhantes historias e estradas percorridas em Joias" | translate }}</p>
                                 </div>
                         
                                 <div class="footer__info-link">

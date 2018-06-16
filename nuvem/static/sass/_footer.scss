@@ -1,5 +1,5 @@
 .footer {
-  background-color: #000;
+  background-color: $black-color;
   padding-top: 50px; 
 
   &__social {
@@ -29,6 +29,8 @@
       font-size: 20px;
       margin-bottom: 20px;
       text-transform: uppercase;
+      font-family: 'Poiret One', cursive;
+      font-weight: 900;
     }
 
     &-text {
@@ -165,14 +167,27 @@
   }
 
   .copyright {
-    @include tablet {
-      display: none;
-    }
-
     color: $white-color;
     font-size: 14px;
     margin-bottom: 20px;
     text-align: center;
     display: block;
+
+    @include tablet {
+      display: none;
+    }
+
+    &-2 {
+      display: none;
+      color: $white-color;
+      font-size: 14px;
+      margin-bottom: 20px;
+      text-align: center;
+      display: block;
+
+      @include desktops {
+        display: block;
+      }
+    }
   }
 }

@@ -3,70 +3,70 @@
 /*============ ANIMATE CSS =============*/
 /*============ Bootstrap CSS =============*/
 /*============ NuvemSHOP CSS =============*/
-/* line 26, ../nuvem/static/sass/partials/_variables.scss */
+
+/* line 27, ../nuvem/static/sass/partials/_variables.scss */
 .hidden {
   display: none !important;
 }
 
 /*============ COLOR CLASSES =============*/
-/* line 31, ../nuvem/static/sass/partials/_variables.scss */
+/* line 32, ../nuvem/static/sass/partials/_variables.scss */
 .text-primary {
   color: #F45C5D !important;
 }
 
-/* line 34, ../nuvem/static/sass/partials/_variables.scss */
-
+/* line 35, ../nuvem/static/sass/partials/_variables.scss */
 .text-white {
   color: #ffffff !important;
 }
 
-/* line 37, ../nuvem/static/sass/partials/_variables.scss */
+/* line 38, ../nuvem/static/sass/partials/_variables.scss */
 .bg-sand {
   background-color: #f5f5f6;
 }
 
-/* line 40, ../nuvem/static/sass/partials/_variables.scss */
+/* line 41, ../nuvem/static/sass/partials/_variables.scss */
 .bg-gray {
   background-color: #cccccc;
 }
 
-/* line 43, ../nuvem/static/sass/partials/_variables.scss */
+/* line 44, ../nuvem/static/sass/partials/_variables.scss */
 .bg-primary {
   background-color: #F45C5D !important;
 }
 
-/* line 46, ../nuvem/static/sass/partials/_variables.scss */
+/* line 47, ../nuvem/static/sass/partials/_variables.scss */
 .no-bg {
   background-color: transparent;
 }
 
-/* line 49, ../nuvem/static/sass/partials/_variables.scss */
+/* line 50, ../nuvem/static/sass/partials/_variables.scss */
 .bordered {
   border: 1px solid #d6dbe2;
 }
 
-/* line 53, ../nuvem/static/sass/partials/_variables.scss */
+/* line 54, ../nuvem/static/sass/partials/_variables.scss */
 .brd-gray {
   border-color: #cccccc !important;
 }
 
-/* line 56, ../nuvem/static/sass/partials/_variables.scss */
+/* line 57, ../nuvem/static/sass/partials/_variables.scss */
 .brd-primary {
   border-color: #F45C5D !important;
 }
 
 /* Background Colors */
-/* line 61, ../nuvem/static/sass/partials/_variables.scss */
+/* line 62, ../nuvem/static/sass/partials/_variables.scss */
 .bg-white {
   background-color: #ffffff !important;
 }
 
-/* line 64, ../nuvem/static/sass/partials/_variables.scss */
+/* line 65, ../nuvem/static/sass/partials/_variables.scss */
 .bg-dark {
   background-color: #1d2025 !important;
 }
 
-/* line 67, ../nuvem/static/sass/partials/_variables.scss */
+/* line 68, ../nuvem/static/sass/partials/_variables.scss */
 .bg-faded {
   background-color: #f5f5f6;
 }
@@ -10888,8 +10888,8 @@ a.text-dark:hover, a.text-dark:focus {
   z-index: 99;
   cursor: inherit;
   background-color: #ffffff;
-  max-width: 500px;
-  min-width: 460px;
+  max-width: 380px;
+  min-width: 360px;
   padding: 20px 40px;
   height: 100vh;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
@@ -10903,7 +10903,15 @@ a.text-dark:hover, a.text-dark:focus {
   }
 }
 
-/* line 18, ../nuvem/static/sass/components/_cart.scss */
+@media (min-width: 992px) {
+  /* line 1, ../nuvem/static/sass/components/_cart.scss */
+  .block-cart {
+    max-width: 500px;
+    min-width: 460px;
+  }
+}
+
+/* line 23, ../nuvem/static/sass/components/_cart.scss */
 .block-cart__overlay {
   cursor: default;
   position: absolute;
@@ -10916,7 +10924,7 @@ a.text-dark:hover, a.text-dark:focus {
   height: 100vh;
 }
 
-/* line 30, ../nuvem/static/sass/components/_cart.scss */
+/* line 35, ../nuvem/static/sass/components/_cart.scss */
 .block-cart h2 {
   margin: 15px 0 0;
   padding-bottom: 15px;
@@ -10925,7 +10933,7 @@ a.text-dark:hover, a.text-dark:focus {
   text-align: left;
 }
 
-/* line 38, ../nuvem/static/sass/components/_cart.scss */
+/* line 43, ../nuvem/static/sass/components/_cart.scss */
 .block-cart__empty {
   padding: 80px 0;
   font-size: 18px;
@@ -10933,33 +10941,33 @@ a.text-dark:hover, a.text-dark:focus {
   color: #b3b3b3;
 }
 
-/* line 46, ../nuvem/static/sass/components/_cart.scss */
+/* line 51, ../nuvem/static/sass/components/_cart.scss */
 .block-cart .cart-wrapper ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-/* line 51, ../nuvem/static/sass/components/_cart.scss */
+/* line 56, ../nuvem/static/sass/components/_cart.scss */
 .block-cart .cart-wrapper .cart-list__item {
   display: flex;
   padding: 20px 0;
 }
 
-/* line 55, ../nuvem/static/sass/components/_cart.scss */
+/* line 60, ../nuvem/static/sass/components/_cart.scss */
 .block-cart .cart-wrapper .cart-list__item figure {
   height: auto;
   margin: 0;
   width: 110px;
 }
 
-/* line 61, ../nuvem/static/sass/components/_cart.scss */
+/* line 66, ../nuvem/static/sass/components/_cart.scss */
 .block-cart .cart-wrapper .cart-list__item-info {
   padding: 0 0 0 20px;
   text-align: left;
 }
 
-/* line 65, ../nuvem/static/sass/components/_cart.scss */
+/* line 70, ../nuvem/static/sass/components/_cart.scss */
 .block-cart .cart-wrapper .cart-list__item-info h5 {
   color: #000000;
   font-size: 16px;
@@ -10967,14 +10975,14 @@ a.text-dark:hover, a.text-dark:focus {
   margin-bottom: 10px;
 }
 
-/* line 72, ../nuvem/static/sass/components/_cart.scss */
+/* line 77, ../nuvem/static/sass/components/_cart.scss */
 .block-cart .cart-wrapper .cart-list__item-info li {
   font-size: 14px;
   color: #35434b;
   margin-bottom: 5px;
 }
 
-/* line 81, ../nuvem/static/sass/components/_cart.scss */
+/* line 86, ../nuvem/static/sass/components/_cart.scss */
 .block-cart .cart-wrapper .cart-footer {
   border-top: 2px solid #e6e6e6;
   padding-top: 15px;
@@ -11559,7 +11567,7 @@ a.text-dark:hover, a.text-dark:focus {
 
 /* line 1, ../nuvem/static/sass/_footer.scss */
 .footer {
-  background-color: #000;
+  background-color: #000000;
   padding-top: 50px;
 }
 
@@ -11599,34 +11607,36 @@ a.text-dark:hover, a.text-dark:focus {
   font-size: 20px;
   margin-bottom: 20px;
   text-transform: uppercase;
+  font-family: 'Poiret One', cursive;
+  font-weight: 900;
 }
 
-/* line 34, ../nuvem/static/sass/_footer.scss */
+/* line 36, ../nuvem/static/sass/_footer.scss */
 .footer__info-text {
   margin: 0 auto;
   max-width: 240px;
 }
 
-/* line 38, ../nuvem/static/sass/_footer.scss */
+/* line 40, ../nuvem/static/sass/_footer.scss */
 .footer__info-text p {
   color: #ffffff;
   font-size: 14px;
 }
 
-/* line 45, ../nuvem/static/sass/_footer.scss */
+/* line 47, ../nuvem/static/sass/_footer.scss */
 .footer__info-link a {
   font-size: 14px;
   color: #ffffff;
   text-transform: uppercase;
 }
 
-/* line 53, ../nuvem/static/sass/_footer.scss */
+/* line 55, ../nuvem/static/sass/_footer.scss */
 .footer__menus {
   text-align: center;
   margin-bottom: 45px;
 }
 
-/* line 57, ../nuvem/static/sass/_footer.scss */
+/* line 59, ../nuvem/static/sass/_footer.scss */
 .footer__menus h6 {
   color: #ffffff;
   font-size: 14px;
@@ -11634,7 +11644,7 @@ a.text-dark:hover, a.text-dark:focus {
   margin-bottom: 20px;
 }
 
-/* line 64, ../nuvem/static/sass/_footer.scss */
+/* line 66, ../nuvem/static/sass/_footer.scss */
 .footer__menus ul {
   list-style: none;
   padding: 0;
@@ -11642,23 +11652,23 @@ a.text-dark:hover, a.text-dark:focus {
   margin-bottom: 12px;
 }
 
-/* line 68, ../nuvem/static/sass/_footer.scss */
+/* line 70, ../nuvem/static/sass/_footer.scss */
 .footer__menus ul li {
   margin-bottom: 5px;
 }
 
-/* line 72, ../nuvem/static/sass/_footer.scss */
+/* line 74, ../nuvem/static/sass/_footer.scss */
 .footer__menus ul a {
   color: #b3b3b3;
   font-size: 12px;
 }
 
-/* line 79, ../nuvem/static/sass/_footer.scss */
+/* line 81, ../nuvem/static/sass/_footer.scss */
 .footer__newsletter {
   margin-bottom: 30px;
 }
 
-/* line 82, ../nuvem/static/sass/_footer.scss */
+/* line 84, ../nuvem/static/sass/_footer.scss */
 .footer__newsletter .subheader {
   color: #ffffff;
   display: inline-block;
@@ -11666,13 +11676,13 @@ a.text-dark:hover, a.text-dark:focus {
   margin-bottom: 13px;
 }
 
-/* line 89, ../nuvem/static/sass/_footer.scss */
+/* line 91, ../nuvem/static/sass/_footer.scss */
 .footer__newsletter .form-group {
   margin-bottom: 0;
   width: 100%;
 }
 
-/* line 94, ../nuvem/static/sass/_footer.scss */
+/* line 96, ../nuvem/static/sass/_footer.scss */
 .footer__newsletter input {
   background-color: transparent;
   border-radius: 0;
@@ -11681,24 +11691,24 @@ a.text-dark:hover, a.text-dark:focus {
   border-bottom: 2px solid #b3b3b3;
 }
 
-/* line 101, ../nuvem/static/sass/_footer.scss */
+/* line 103, ../nuvem/static/sass/_footer.scss */
 .footer__newsletter input:hover, .footer__newsletter input:focus, .footer__newsletter input:active {
   background-color: transparent;
   color: #ffffff;
   border-color: #ffffff;
 }
 
-/* line 108, ../nuvem/static/sass/_footer.scss */
+/* line 110, ../nuvem/static/sass/_footer.scss */
 .footer__newsletter form {
   display: flex;
 }
 
-/* line 112, ../nuvem/static/sass/_footer.scss */
+/* line 114, ../nuvem/static/sass/_footer.scss */
 .footer__newsletter .button {
   position: relative;
 }
 
-/* line 115, ../nuvem/static/sass/_footer.scss */
+/* line 117, ../nuvem/static/sass/_footer.scss */
 .footer__newsletter .button input {
   position: absolute;
   top: 0;
@@ -11708,7 +11718,7 @@ a.text-dark:hover, a.text-dark:focus {
   z-index: 2;
 }
 
-/* line 124, ../nuvem/static/sass/_footer.scss */
+/* line 126, ../nuvem/static/sass/_footer.scss */
 .footer__newsletter .button i {
   position: relative;
   z-index: 1;
@@ -11717,43 +11727,43 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 @media (min-width: 992px) {
-  /* line 134, ../nuvem/static/sass/_footer.scss */
+  /* line 136, ../nuvem/static/sass/_footer.scss */
   .footer__order-1 {
     order: 1;
   }
 }
 
 @media (min-width: 992px) {
-  /* line 140, ../nuvem/static/sass/_footer.scss */
+  /* line 142, ../nuvem/static/sass/_footer.scss */
   .footer__order-2 {
     order: 2;
   }
 }
 
 @media (min-width: 992px) {
-  /* line 146, ../nuvem/static/sass/_footer.scss */
+  /* line 148, ../nuvem/static/sass/_footer.scss */
   .footer__order-3 {
     order: 3;
   }
 }
 
-/* line 153, ../nuvem/static/sass/_footer.scss */
+/* line 155, ../nuvem/static/sass/_footer.scss */
 .footer__order-4 .footer__menus {
   display: none;
 }
 
 @media (min-width: 992px) {
-  /* line 152, ../nuvem/static/sass/_footer.scss */
+  /* line 154, ../nuvem/static/sass/_footer.scss */
   .footer__order-4 {
     order: 4;
   }
-  /* line 160, ../nuvem/static/sass/_footer.scss */
+  /* line 162, ../nuvem/static/sass/_footer.scss */
   .footer__order-4 .footer__menus {
     display: block;
   }
 }
 
-/* line 167, ../nuvem/static/sass/_footer.scss */
+/* line 169, ../nuvem/static/sass/_footer.scss */
 .footer .copyright {
   color: #ffffff;
   font-size: 14px;
@@ -11763,9 +11773,26 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 @media (min-width: 768px) {
-  /* line 167, ../nuvem/static/sass/_footer.scss */
+  /* line 169, ../nuvem/static/sass/_footer.scss */
   .footer .copyright {
     display: none;
+  }
+}
+
+/* line 180, ../nuvem/static/sass/_footer.scss */
+.footer .copyright-2 {
+  display: none;
+  color: #ffffff;
+  font-size: 14px;
+  margin-bottom: 20px;
+  text-align: center;
+  display: block;
+}
+
+@media (min-width: 992px) {
+  /* line 180, ../nuvem/static/sass/_footer.scss */
+  .footer .copyright-2 {
+    display: block;
   }
 }
 
@@ -11837,7 +11864,7 @@ body {
 
 /* line 52, ../nuvem/static/sass/_default.scss */
 .banner__free {
-  background-color: #35434b;
+  background-color: #151d33;
   padding: 8px 0;
   text-align: center;
 }
@@ -12127,23 +12154,27 @@ body {
 @media (min-width: 992px) {
   /* line 8, ../nuvem/static/sass/_category.scss */
   .section-category--list {
-    max-height: 400px;
+    max-height: 500px;
     overflow: hidden;
+  }
+  /* line 13, ../nuvem/static/sass/_category.scss */
+  .section-category--list:nth-child(2) .col-6 {
+    padding-top: 66px;
   }
 }
 
-/* line 14, ../nuvem/static/sass/_category.scss */
+/* line 18, ../nuvem/static/sass/_category.scss */
 .section-category--list .col-6, .section-category--list .col-lg-3 {
   padding: 0 3px 3px 0;
 }
 
-/* line 19, ../nuvem/static/sass/_category.scss */
+/* line 23, ../nuvem/static/sass/_category.scss */
 .section-category .section__image {
   height: 100%;
 }
 
 @media (min-width: 992px) {
-  /* line 24, ../nuvem/static/sass/_category.scss */
+  /* line 28, ../nuvem/static/sass/_category.scss */
   .section-category .section__image:hover .product-info-wrapper, .section-category .section__image:hover .product-actions, .section-category .section__image:focus .product-info-wrapper, .section-category .section__image:focus .product-actions {
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=$value)";
     filter: alpha(opacity=1);
@@ -12153,7 +12184,7 @@ body {
   }
 }
 
-/* line 31, ../nuvem/static/sass/_category.scss */
+/* line 35, ../nuvem/static/sass/_category.scss */
 .section-category .section__image .circle {
   background-color: black;
   border-radius: 50%;
@@ -12167,43 +12198,42 @@ body {
   line-height: 77px;
 }
 
-/* line 43, ../nuvem/static/sass/_category.scss */
+/* line 47, ../nuvem/static/sass/_category.scss */
 .section-category .section__image .circle p {
   display: inline-block;
   vertical-align: middle;
   line-height: normal;
 }
 
-/* line 50, ../nuvem/static/sass/_category.scss */
+/* line 54, ../nuvem/static/sass/_category.scss */
 .section-category .section__image .section__link {
   position: static;
   height: 100%;
 }
 
-/* line 55, ../nuvem/static/sass/_category.scss */
+/* line 59, ../nuvem/static/sass/_category.scss */
 .section-category .section__image .section__link:hover .product-image-front, .section-category .section__image .section__link:focus .product-image-front, .section-category .section__image .section__linkactive .product-image-front {
   display: none;
 }
 
-/* line 60, ../nuvem/static/sass/_category.scss */
+/* line 64, ../nuvem/static/sass/_category.scss */
 .section-category .section__image .section__link:hover .product-image-using, .section-category .section__image .section__link:focus .product-image-using, .section-category .section__image .section__linkactive .product-image-using {
   display: block;
   visibility: visible;
 }
 
-/* line 68, ../nuvem/static/sass/_category.scss */
+/* line 72, ../nuvem/static/sass/_category.scss */
 .section-category .section__image img {
-  height: 100%;
   width: 100%;
 }
 
-/* line 73, ../nuvem/static/sass/_category.scss */
+/* line 77, ../nuvem/static/sass/_category.scss */
 .section-category .section__image img.product-image-using {
   visibility: hidden;
   display: none;
 }
 
-/* line 79, ../nuvem/static/sass/_category.scss */
+/* line 83, ../nuvem/static/sass/_category.scss */
 .section-category .section__image .product-info-wrapper {
   padding: 0 20px;
   min-height: 70px;
@@ -12217,17 +12247,17 @@ body {
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
-  /* line 79, ../nuvem/static/sass/_category.scss */
+  /* line 83, ../nuvem/static/sass/_category.scss */
   .section-category .section__image .product-info-wrapper {
     transition: none;
   }
 }
 
 @media (min-width: 992px) {
-  /* line 79, ../nuvem/static/sass/_category.scss */
+  /* line 83, ../nuvem/static/sass/_category.scss */
   .section-category .section__image .product-info-wrapper {
     bottom: auto;
-    top: 0;
+    top: 0px;
     padding: 15% 0 0;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=$value)";
     filter: alpha(opacity=0);
@@ -12237,43 +12267,44 @@ body {
   }
 }
 
-/* line 98, ../nuvem/static/sass/_category.scss */
+/* line 102, ../nuvem/static/sass/_category.scss */
 .section-category .section__image .product-info-wrapper p {
   margin: 0 0 4px 0;
   font-size: 14px;
+  font-weight: 100;
 }
 
-/* line 103, ../nuvem/static/sass/_category.scss */
+/* line 108, ../nuvem/static/sass/_category.scss */
 .section-category .section__image .product-info-wrapper span {
   font-size: 12px;
 }
 
-/* line 107, ../nuvem/static/sass/_category.scss */
+/* line 112, ../nuvem/static/sass/_category.scss */
 .section-category .section__image .product-info-wrapper a {
-  color: #494d51;
+  color: #151d33;
   font-size: 14px;
 }
 
-/* line 113, ../nuvem/static/sass/_category.scss */
+/* line 118, ../nuvem/static/sass/_category.scss */
 .section-category .section__image .product-actions {
   display: none;
   position: absolute;
   justify-content: center;
-  bottom: 20px;
+  bottom: 15px;
   left: 0;
   width: 100%;
   transition: all 0.4s cubic-bezier(0.46, 0.01, 0.32, 1);
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
-  /* line 113, ../nuvem/static/sass/_category.scss */
+  /* line 118, ../nuvem/static/sass/_category.scss */
   .section-category .section__image .product-actions {
     transition: none;
   }
 }
 
 @media (min-width: 992px) {
-  /* line 113, ../nuvem/static/sass/_category.scss */
+  /* line 118, ../nuvem/static/sass/_category.scss */
   .section-category .section__image .product-actions {
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=$value)";
     filter: alpha(opacity=0);
@@ -12284,41 +12315,41 @@ body {
   }
 }
 
-/* line 127, ../nuvem/static/sass/_category.scss */
+/* line 132, ../nuvem/static/sass/_category.scss */
 .section-category .section__image .product-actions .btn-addToCart, .section-category .section__image .product-actions .btn-quick-viewer, .section-category .section__image .product-actions .btn-viewer-options {
   font-size: 12px;
   font-weight: 400;
   text-transform: uppercase;
 }
 
-/* line 134, ../nuvem/static/sass/_category.scss */
+/* line 139, ../nuvem/static/sass/_category.scss */
 .section-category .section__image .product-actions .btn-quick-viewer:hover, .section-category .section__image .product-actions .btn-quick-viewer:focus, .section-category .section__image .product-actions .btn-quick-viewer:active, .section-category .section__image .product-actions .btn-viewer-options:hover, .section-category .section__image .product-actions .btn-viewer-options:focus, .section-category .section__image .product-actions .btn-viewer-options:active {
   color: #ffffff;
 }
 
-/* line 139, ../nuvem/static/sass/_category.scss */
+/* line 144, ../nuvem/static/sass/_category.scss */
 .section-category .section__image .product-actions .btn-quick-viewer {
   display: none;
 }
 
-/* line 144, ../nuvem/static/sass/_category.scss */
+/* line 149, ../nuvem/static/sass/_category.scss */
 .section-category .section__image .product-info-category {
   display: none;
 }
 
-/* line 148, ../nuvem/static/sass/_category.scss */
+/* line 153, ../nuvem/static/sass/_category.scss */
 .section-category .section__image .product-add-cart {
   display: none;
 }
 
 @media (min-width: 992px) {
-  /* line 148, ../nuvem/static/sass/_category.scss */
+  /* line 153, ../nuvem/static/sass/_category.scss */
   .section-category .section__image .product-add-cart {
     display: block;
   }
 }
 
-/* line 155, ../nuvem/static/sass/_category.scss */
+/* line 160, ../nuvem/static/sass/_category.scss */
 .section-category .section__image .product-add-cart .fancyContainerQuickshop-quantity {
   display: none;
 }
@@ -12331,7 +12362,7 @@ body {
 @media (min-width: 992px) {
   /* line 1, ../nuvem/static/sass/_product.scss */
   .section-product {
-    padding-top: 80px;
+    padding-top: 100px;
   }
 }
 
@@ -12375,27 +12406,41 @@ body {
   text-align: center;
 }
 
-/* line 42, ../nuvem/static/sass/_product.scss */
+@media (min-width: 992px) {
+  /* line 39, ../nuvem/static/sass/_product.scss */
+  .section-product .product-details {
+    padding-left: 90px;
+  }
+}
+
+/* line 46, ../nuvem/static/sass/_product.scss */
 .section-product .product-details h1 {
   color: #35434b;
   font-size: 38px;
   text-transform: uppercase;
-  font-weight: 400;
+  font-weight: 100;
   margin-bottom: 15px;
 }
 
-/* line 50, ../nuvem/static/sass/_product.scss */
+@media (min-width: 992px) {
+  /* line 46, ../nuvem/static/sass/_product.scss */
+  .section-product .product-details h1 {
+    font-size: 30px;
+  }
+}
+
+/* line 58, ../nuvem/static/sass/_product.scss */
 .section-product .product-details .price-compare {
   font-size: 15px;
   color: #cccccc;
 }
 
-/* line 55, ../nuvem/static/sass/_product.scss */
+/* line 63, ../nuvem/static/sass/_product.scss */
 .section-product .product-details .btn-verdetalhes {
   display: block;
 }
 
-/* line 59, ../nuvem/static/sass/_product.scss */
+/* line 67, ../nuvem/static/sass/_product.scss */
 .section-product .product-details__description {
   background-color: #ebece6;
   margin-left: -15px;
@@ -12405,20 +12450,20 @@ body {
 }
 
 @media (min-width: 992px) {
-  /* line 66, ../nuvem/static/sass/_product.scss */
+  /* line 74, ../nuvem/static/sass/_product.scss */
   .section-product .product-details__description .container {
     margin: 0 auto;
   }
 }
 
 @media (min-width: 992px) {
-  /* line 71, ../nuvem/static/sass/_product.scss */
+  /* line 79, ../nuvem/static/sass/_product.scss */
   .section-product .product-details__description .container .col-lg-4 {
     padding-right: 20px;
   }
 }
 
-/* line 78, ../nuvem/static/sass/_product.scss */
+/* line 86, ../nuvem/static/sass/_product.scss */
 .section-product .product-details__description h2 {
   color: #35434b;
   font-size: 18px;
@@ -12426,18 +12471,18 @@ body {
   font-weight: 400;
 }
 
-/* line 85, ../nuvem/static/sass/_product.scss */
+/* line 93, ../nuvem/static/sass/_product.scss */
 .section-product .product-details__description-column {
   margin-bottom: 30px;
 }
 
-/* line 89, ../nuvem/static/sass/_product.scss */
+/* line 97, ../nuvem/static/sass/_product.scss */
 .section-product .product-details__description p {
   font-size: 14px;
   margin-bottom: 15px;
 }
 
-/* line 96, ../nuvem/static/sass/_product.scss */
+/* line 104, ../nuvem/static/sass/_product.scss */
 .section-product .product-price {
   color: #35434b;
   font-size: 20px;
@@ -12446,41 +12491,41 @@ body {
   margin-bottom: 25px;
 }
 
-/* line 105, ../nuvem/static/sass/_product.scss */
+/* line 113, ../nuvem/static/sass/_product.scss */
 .section-product .product-form form {
   overflow: hidden;
 }
 
-/* line 111, ../nuvem/static/sass/_product.scss */
+/* line 119, ../nuvem/static/sass/_product.scss */
 .section-product .product-color h4, .section-product .product-size h4, .section-product .product-social h4, .section-product .product-Cor h4, .section-product .product-Color h4 {
   color: #35434b;
   font-size: 12px;
   margin-bottom: 5px;
 }
 
-/* line 117, ../nuvem/static/sass/_product.scss */
+/* line 125, ../nuvem/static/sass/_product.scss */
 .section-product .product-color ul, .section-product .product-size ul, .section-product .product-social ul, .section-product .product-Cor ul, .section-product .product-Color ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-/* line 120, ../nuvem/static/sass/_product.scss */
+/* line 128, ../nuvem/static/sass/_product.scss */
 .section-product .product-color ul li, .section-product .product-size ul li, .section-product .product-social ul li, .section-product .product-Cor ul li, .section-product .product-Color ul li {
   display: inline-block;
 }
 
-/* line 125, ../nuvem/static/sass/_product.scss */
+/* line 133, ../nuvem/static/sass/_product.scss */
 .section-product .product-color .btn-radius, .section-product .product-size .btn-radius, .section-product .product-social .btn-radius, .section-product .product-Cor .btn-radius, .section-product .product-Color .btn-radius {
   border-radius: 50% !important;
 }
 
-/* line 130, ../nuvem/static/sass/_product.scss */
+/* line 138, ../nuvem/static/sass/_product.scss */
 .section-product .product-size {
   margin-bottom: 15px;
 }
 
-/* line 133, ../nuvem/static/sass/_product.scss */
+/* line 141, ../nuvem/static/sass/_product.scss */
 .section-product .product-size .btn-size {
   background-color: #ffffff;
   border: solid 1px #000000;
@@ -12493,18 +12538,18 @@ body {
   text-align: center;
 }
 
-/* line 144, ../nuvem/static/sass/_product.scss */
+/* line 152, ../nuvem/static/sass/_product.scss */
 .section-product .product-size .btn-size:hover, .section-product .product-size .btn-size:focus, .section-product .product-size .btn-size:active, .section-product .product-size .btn-size.btn-selected, .section-product .product-size .btn-size.btn-active, .section-product .product-size .btn-size.selected {
   background-color: #000000;
   color: #ffffff;
 }
 
-/* line 151, ../nuvem/static/sass/_product.scss */
+/* line 159, ../nuvem/static/sass/_product.scss */
 .section-product .product-color, .section-product .product-Cor, .section-product .product-Color {
   margin-bottom: 15px;
 }
 
-/* line 154, ../nuvem/static/sass/_product.scss */
+/* line 162, ../nuvem/static/sass/_product.scss */
 .section-product .product-color .btn-color, .section-product .product-Cor .btn-color, .section-product .product-Color .btn-color {
   font: 0/0 a;
   color: transparent;
@@ -12523,7 +12568,7 @@ body {
   position: relative;
 }
 
-/* line 167, ../nuvem/static/sass/_product.scss */
+/* line 175, ../nuvem/static/sass/_product.scss */
 .section-product .product-color .btn-color i, .section-product .product-Cor .btn-color i, .section-product .product-Color .btn-color i {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=$value)";
   filter: alpha(opacity=0);
@@ -12538,7 +12583,7 @@ body {
   top: 50%;
 }
 
-/* line 178, ../nuvem/static/sass/_product.scss */
+/* line 186, ../nuvem/static/sass/_product.scss */
 .section-product .product-color .btn-color:hover i, .section-product .product-color .btn-color:focus i, .section-product .product-color .btn-color:active i, .section-product .product-color .btn-color.btn-selected i, .section-product .product-color .btn-color.btn-active i, .section-product .product-color .btn-color.selected i, .section-product .product-Cor .btn-color:hover i, .section-product .product-Cor .btn-color:focus i, .section-product .product-Cor .btn-color:active i, .section-product .product-Cor .btn-color.btn-selected i, .section-product .product-Cor .btn-color.btn-active i, .section-product .product-Cor .btn-color.selected i, .section-product .product-Color .btn-color:hover i, .section-product .product-Color .btn-color:focus i, .section-product .product-Color .btn-color:active i, .section-product .product-Color .btn-color.btn-selected i, .section-product .product-Color .btn-color.btn-active i, .section-product .product-Color .btn-color.selected i {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=$value)";
   filter: alpha(opacity=1);
@@ -12547,23 +12592,23 @@ body {
   opacity: 1;
 }
 
-/* line 185, ../nuvem/static/sass/_product.scss */
+/* line 193, ../nuvem/static/sass/_product.scss */
 .section-product .product-guide {
   margin-bottom: 15px;
 }
 
-/* line 188, ../nuvem/static/sass/_product.scss */
+/* line 196, ../nuvem/static/sass/_product.scss */
 .section-product .product-guide .btn-link {
   color: #292929;
   font-size: 12px;
 }
 
-/* line 194, ../nuvem/static/sass/_product.scss */
+/* line 202, ../nuvem/static/sass/_product.scss */
 .section-product .product-quantity {
   margin-bottom: 30px;
 }
 
-/* line 197, ../nuvem/static/sass/_product.scss */
+/* line 205, ../nuvem/static/sass/_product.scss */
 .section-product .product-quantity label {
   display: block;
   color: #35434b;
@@ -12571,14 +12616,14 @@ body {
   margin-bottom: 5px;
 }
 
-/* line 204, ../nuvem/static/sass/_product.scss */
+/* line 212, ../nuvem/static/sass/_product.scss */
 .section-product .product-quantity select {
   margin: 0 auto;
   max-width: 80px;
   margin-right: 0 !important;
 }
 
-/* line 211, ../nuvem/static/sass/_product.scss */
+/* line 219, ../nuvem/static/sass/_product.scss */
 .section-product .btn-add-to-cart {
   width: 100%;
   min-width: 250px;
@@ -12591,71 +12636,78 @@ body {
   text-transform: uppercase;
 }
 
-/* line 222, ../nuvem/static/sass/_product.scss */
+/* line 230, ../nuvem/static/sass/_product.scss */
 .section-product .btn-add-to-cart:hover, .section-product .btn-add-to-cart:focus, .section-product .btn-add-to-cart:active {
   background-color: #ffffff;
   color: #000000;
 }
 
-/* line 228, ../nuvem/static/sass/_product.scss */
+/* line 236, ../nuvem/static/sass/_product.scss */
 .section-product .product-social {
   margin-bottom: 45px;
 }
 
-/* line 231, ../nuvem/static/sass/_product.scss */
+/* line 239, ../nuvem/static/sass/_product.scss */
 .section-product .product-social li {
   margin: 0 5px;
 }
 
-/* line 235, ../nuvem/static/sass/_product.scss */
+/* line 243, ../nuvem/static/sass/_product.scss */
 .section-product .product-social a {
   color: #4d4d4d;
   font-size: 20px;
 }
 
-/* line 241, ../nuvem/static/sass/_product.scss */
+/* line 249, ../nuvem/static/sass/_product.scss */
 .section-product .imagecolContent .cloud-zoom-wrap a img {
-  max-height: 400px;
+  max-height: 260px;
   margin: auto;
 }
 
-/* line 245, ../nuvem/static/sass/_product.scss */
+@media (min-width: 992px) {
+  /* line 249, ../nuvem/static/sass/_product.scss */
+  .section-product .imagecolContent .cloud-zoom-wrap a img {
+    max-height: 400px;
+  }
+}
+
+/* line 258, ../nuvem/static/sass/_product.scss */
 .section-product .imagecolContent .cloud-zoom-wrap .mousetrap {
   max-height: 400px !important;
   width: 100% !important;
 }
 
-/* line 249, ../nuvem/static/sass/_product.scss */
+/* line 262, ../nuvem/static/sass/_product.scss */
 .section-product .imagecolContent .cloud-zoom-wrap .cloud-zoom-big {
   max-height: 400px !important;
   width: 100% !important;
   background-repeat: no-repeat;
 }
 
-/* line 254, ../nuvem/static/sass/_product.scss */
+/* line 267, ../nuvem/static/sass/_product.scss */
 .section-product .imagecolContent {
   position: relative;
   margin-bottom: 30px;
 }
 
-/* line 258, ../nuvem/static/sass/_product.scss */
+/* line 271, ../nuvem/static/sass/_product.scss */
 .section-product .mobile-bxslider {
   display: none;
 }
 
-/* line 263, ../nuvem/static/sass/_product.scss */
+/* line 276, ../nuvem/static/sass/_product.scss */
 .section-product .jThumbnailScroller {
   position: relative;
   padding: 0;
   overflow: hidden;
 }
 
-/* line 264, ../nuvem/static/sass/_product.scss */
+/* line 277, ../nuvem/static/sass/_product.scss */
 .section-product .jThumbnailScroller .jTscrollerContainer {
   position: absolute;
 }
 
-/* line 265, ../nuvem/static/sass/_product.scss */
+/* line 278, ../nuvem/static/sass/_product.scss */
 .section-product .jThumbnailScroller .jTscroller {
   position: relative;
   height: 100%;
@@ -12666,28 +12718,28 @@ body {
   *display: inline;
 }
 
-/* line 266, ../nuvem/static/sass/_product.scss */
+/* line 279, ../nuvem/static/sass/_product.scss */
 .section-product .jThumbnailScroller .jTscrollerNextButton, .section-product .jThumbnailScroller .jTscrollerPrevButton {
   position: absolute;
   display: block;
 }
 
-/* line 267, ../nuvem/static/sass/_product.scss */
+/* line 280, ../nuvem/static/sass/_product.scss */
 .section-product .jThumbnailScroller .jTscrollerNextButton {
   background: url(../images/arrows.png) no-repeat center right;
 }
 
-/* line 268, ../nuvem/static/sass/_product.scss */
+/* line 281, ../nuvem/static/sass/_product.scss */
 .section-product .jThumbnailScroller .jTscrollerPrevButton {
   background: url(../images/arrows.png) no-repeat center left;
 }
 
-/* line 269, ../nuvem/static/sass/_product.scss */
+/* line 282, ../nuvem/static/sass/_product.scss */
 .section-product .jThumbnailScroller .jTscroller a {
   display: block;
 }
 
-/* line 271, ../nuvem/static/sass/_product.scss */
+/* line 284, ../nuvem/static/sass/_product.scss */
 .section-product .jThumbnailScroller#tS1 {
   width: 100%;
   height: 460px;
@@ -12696,7 +12748,7 @@ body {
   margin-bottom: -40px;
 }
 
-/* line 272, ../nuvem/static/sass/_product.scss */
+/* line 285, ../nuvem/static/sass/_product.scss */
 .section-product .jThumbnailScroller#tS1 .jTscrollerNextButton {
   background: none;
   margin: 0;
@@ -12706,7 +12758,7 @@ body {
   height: 33px;
 }
 
-/* line 273, ../nuvem/static/sass/_product.scss */
+/* line 286, ../nuvem/static/sass/_product.scss */
 .section-product .jThumbnailScroller#tS1 .jTscrollerPrevButton {
   background: none;
   margin: 0;
@@ -12716,19 +12768,19 @@ body {
   height: 33px;
 }
 
-/* line 274, ../nuvem/static/sass/_product.scss */
+/* line 287, ../nuvem/static/sass/_product.scss */
 .section-product .jThumbnailScroller#tS1 .jTscrollerNextButton:hover, .section-product .jThumbnailScroller#tS1 .jTscrollerPrevButton:hover {
   opacity: 0.6;
 }
 
-/* line 276, ../nuvem/static/sass/_product.scss */
+/* line 289, ../nuvem/static/sass/_product.scss */
 .section-product .jThumbnailScroller#tS2 {
   width: 100%;
   height: 125px;
   margin: 30px auto;
 }
 
-/* line 277, ../nuvem/static/sass/_product.scss */
+/* line 290, ../nuvem/static/sass/_product.scss */
 .section-product .jThumbnailScroller#tS2 .jTscroller a {
   opacity: 1;
   width: 110px;
@@ -12737,17 +12789,17 @@ body {
   float: left;
 }
 
-/* line 278, ../nuvem/static/sass/_product.scss */
+/* line 291, ../nuvem/static/sass/_product.scss */
 .section-product .jThumbnailScroller#tS2 .jTscroller a:last-child {
   margin-right: 0;
 }
 
-/* line 279, ../nuvem/static/sass/_product.scss */
+/* line 292, ../nuvem/static/sass/_product.scss */
 .section-product .jThumbnailScroller#tS2 .jTscroller a:hover {
   opacity: 1;
 }
 
-/* line 280, ../nuvem/static/sass/_product.scss */
+/* line 293, ../nuvem/static/sass/_product.scss */
 .section-product .jThumbnailScroller#tS2 .jTscrollerNextButton {
   margin: 0;
   right: 0;
@@ -12756,7 +12808,7 @@ body {
   height: 120px;
 }
 
-/* line 281, ../nuvem/static/sass/_product.scss */
+/* line 294, ../nuvem/static/sass/_product.scss */
 .section-product .jThumbnailScroller#tS2 .jTscrollerPrevButton {
   margin: 0;
   left: 0;
@@ -12765,13 +12817,13 @@ body {
   height: 120px;
 }
 
-/* line 282, ../nuvem/static/sass/_product.scss */
+/* line 295, ../nuvem/static/sass/_product.scss */
 .section-product .jThumbnailScroller#tS2 .jTscroller a img {
   border: none;
   max-height: 120px;
 }
 
-/* line 286, ../nuvem/static/sass/_product.scss */
+/* line 299, ../nuvem/static/sass/_product.scss */
 .section-product .jThumbnailScroller#tS3-recent .jTscrollerContainer,
 .section-product .jThumbnailScroller#tS3-offer .jTscrollerContainer,
 .section-product .jThumbnailScroller#tS3-coming .jTscrollerContainer,
@@ -12781,7 +12833,7 @@ body {
   width: 100%;
 }
 
-/* line 295, ../nuvem/static/sass/_product.scss */
+/* line 308, ../nuvem/static/sass/_product.scss */
 .section-product .jThumbnailScroller#tS3-recent,
 .section-product .jThumbnailScroller#tS3-offer,
 .section-product .jThumbnailScroller#tS3-coming {
@@ -12790,7 +12842,7 @@ body {
   margin: 0 auto 0 auto;
 }
 
-/* line 299, ../nuvem/static/sass/_product.scss */
+/* line 312, ../nuvem/static/sass/_product.scss */
 .section-product .jThumbnailScroller#tS3-recent .jTscroller a,
 .section-product .jThumbnailScroller#tS3-offer .jTscroller a,
 .section-product .jThumbnailScroller#tS3-coming .jTscroller a {
@@ -12798,14 +12850,14 @@ body {
   width: 100%;
 }
 
-/* line 303, ../nuvem/static/sass/_product.scss */
+/* line 316, ../nuvem/static/sass/_product.scss */
 .section-product .jThumbnailScroller#tS3-recent .jTscroller a:hover,
 .section-product .jThumbnailScroller#tS3-offer .jTscroller a:hover,
 .section-product .jThumbnailScroller#tS3-coming .jTscroller a:hover {
   opacity: 1;
 }
 
-/* line 307, ../nuvem/static/sass/_product.scss */
+/* line 320, ../nuvem/static/sass/_product.scss */
 .section-product .jThumbnailScroller#tS3-recent .jTscrollerNextButton,
 .section-product .jThumbnailScroller#tS3-offer .jTscrollerNextButton,
 .section-product .jThumbnailScroller#tS3-coming .jTscrollerNextButton {
@@ -12817,7 +12869,7 @@ body {
   height: 20px;
 }
 
-/* line 311, ../nuvem/static/sass/_product.scss */
+/* line 324, ../nuvem/static/sass/_product.scss */
 .section-product .jThumbnailScroller#tS3-recent .jTscrollerPrevButton,
 .section-product .jThumbnailScroller#tS3-offer .jTscrollerPrevButton,
 .section-product .jThumbnailScroller#tS3-coming .jTscrollerPrevButton {
@@ -12829,7 +12881,7 @@ body {
   height: 20px;
 }
 
-/* line 316, ../nuvem/static/sass/_product.scss */
+/* line 329, ../nuvem/static/sass/_product.scss */
 .section-product .jThumbnailScroller#tS3-recent .jTscrollerPrevButton:hover,
 .section-product .jThumbnailScroller#tS3-offer .jTscrollerPrevButton:hover,
 .section-product .jThumbnailScroller#tS3-coming .jTscrollerPrevButton:hover,
@@ -12839,20 +12891,20 @@ body {
   opacity: 0.6;
 }
 
-/* line 324, ../nuvem/static/sass/_product.scss */
+/* line 337, ../nuvem/static/sass/_product.scss */
 .section-product .jThumbnailScroller#tS3-recent .jTscroller a img,
 .section-product .jThumbnailScroller#tS3-offer .jTscroller a img,
 .section-product .jThumbnailScroller#tS3-coming .jTscroller a img {
   border: none;
 }
 
-/* line 332, ../nuvem/static/sass/_product.scss */
+/* line 345, ../nuvem/static/sass/_product.scss */
 .section-related-products .section-product__content h2 {
   margin: 0 20px 20px;
 }
 
 @media (min-width: 992px) {
-  /* line 332, ../nuvem/static/sass/_product.scss */
+  /* line 345, ../nuvem/static/sass/_product.scss */
   .section-related-products .section-product__content h2 {
     margin: 0;
   }
@@ -12873,8 +12925,8 @@ body {
 
 /* line 9, ../nuvem/static/sass/_login.scss */
 .section-login__form {
-  max-width: 400px;
-  min-width: 400px;
+  max-width: 370px;
+  min-width: 370px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12885,15 +12937,17 @@ body {
   /* line 9, ../nuvem/static/sass/_login.scss */
   .section-login__form {
     margin: 0 auto;
+    max-width: 400px;
+    min-width: 400px;
   }
 }
 
-/* line 21, ../nuvem/static/sass/_login.scss */
+/* line 23, ../nuvem/static/sass/_login.scss */
 .section-login__form form {
   width: 100%;
 }
 
-/* line 25, ../nuvem/static/sass/_login.scss */
+/* line 27, ../nuvem/static/sass/_login.scss */
 .section-login__form h1 {
   font-size: 20px;
   margin-bottom: 60px;
@@ -12901,19 +12955,19 @@ body {
   font-weight: normal;
 }
 
-/* line 32, ../nuvem/static/sass/_login.scss */
+/* line 34, ../nuvem/static/sass/_login.scss */
 .section-login__form .actions {
   text-align: center;
   padding-top: 20px;
 }
 
-/* line 36, ../nuvem/static/sass/_login.scss */
+/* line 38, ../nuvem/static/sass/_login.scss */
 .section-login__form .actions a, .section-login__form .actions span {
   display: block;
   font-size: 12px;
 }
 
-/* line 42, ../nuvem/static/sass/_login.scss */
+/* line 44, ../nuvem/static/sass/_login.scss */
 .section-login__form .actions span a {
   display: inline;
 }
@@ -12933,8 +12987,8 @@ body {
 
 /* line 9, ../nuvem/static/sass/_reset.scss */
 .section-reset__form {
-  max-width: 400px;
-  min-width: 400px;
+  max-width: 370px;
+  min-width: 370px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12945,15 +12999,17 @@ body {
   /* line 9, ../nuvem/static/sass/_reset.scss */
   .section-reset__form {
     margin: 0 auto;
+    max-width: 400px;
+    min-width: 400px;
   }
 }
 
-/* line 21, ../nuvem/static/sass/_reset.scss */
+/* line 23, ../nuvem/static/sass/_reset.scss */
 .section-reset__form form {
   width: 100%;
 }
 
-/* line 25, ../nuvem/static/sass/_reset.scss */
+/* line 27, ../nuvem/static/sass/_reset.scss */
 .section-reset__form h1 {
   font-size: 20px;
   margin-bottom: 60px;
@@ -12961,7 +13017,7 @@ body {
   font-weight: normal;
 }
 
-/* line 31, ../nuvem/static/sass/_reset.scss */
+/* line 33, ../nuvem/static/sass/_reset.scss */
 .section-reset__form h1 small {
   display: block;
 }
@@ -13153,27 +13209,30 @@ body {
 .section-institutional .block-content .block-center h2 {
   color: #ffffff;
   font-size: 45px;
+  text-shadow: 2px 3px #000;
+  font-family: 'Poiret One', cursive;
+  font-weight: 700;
 }
 
-/* line 61, ../nuvem/static/sass/_institutional.scss */
+/* line 64, ../nuvem/static/sass/_institutional.scss */
 .section-institutional .block-content .block-center p {
   color: #ffffff;
   font-size: 12px;
 }
 
-/* line 68, ../nuvem/static/sass/_institutional.scss */
+/* line 71, ../nuvem/static/sass/_institutional.scss */
 .section-institutional .banner {
   display: flex;
   flex-direction: column;
   position: relative;
 }
 
-/* line 73, ../nuvem/static/sass/_institutional.scss */
+/* line 76, ../nuvem/static/sass/_institutional.scss */
 .section-institutional .banner-margin {
   margin-bottom: 100px;
 }
 
-/* line 77, ../nuvem/static/sass/_institutional.scss */
+/* line 80, ../nuvem/static/sass/_institutional.scss */
 .section-institutional .banner .banner-panel {
   padding: 50px 0;
   position: relative;
@@ -13182,14 +13241,14 @@ body {
   justify-content: center;
 }
 
-/* line 85, ../nuvem/static/sass/_institutional.scss */
+/* line 88, ../nuvem/static/sass/_institutional.scss */
 .section-institutional .banner .banner-content {
   padding: 0 20px;
   margin: 0 auto;
   width: 100%;
 }
 
-/* line 90, ../nuvem/static/sass/_institutional.scss */
+/* line 93, ../nuvem/static/sass/_institutional.scss */
 .section-institutional .banner .banner-content__center {
   margin: 0 auto;
   position: relative;
@@ -13197,20 +13256,30 @@ body {
   text-align: center;
 }
 
-/* line 97, ../nuvem/static/sass/_institutional.scss */
+/* line 100, ../nuvem/static/sass/_institutional.scss */
 .section-institutional .banner .banner-content__title {
   color: #000000;
-  font-size: 38px;
+  font-size: 48px;
   margin: 24px 0;
+  font-family: 'Poiret One', cursive;
+  font-weight: 900;
+  text-shadow: 0px 0px #000;
 }
 
-/* line 103, ../nuvem/static/sass/_institutional.scss */
+/* line 109, ../nuvem/static/sass/_institutional.scss */
 .section-institutional .banner .banner-content__text {
   text-align: center;
   margin: 24px 0;
 }
 
-/* line 108, ../nuvem/static/sass/_institutional.scss */
+/* line 113, ../nuvem/static/sass/_institutional.scss */
+.section-institutional .banner .banner-content__text p {
+  font-family: 'Poiret One', cursive;
+  font-weight: 900;
+  font-size: 20px;
+}
+
+/* line 120, ../nuvem/static/sass/_institutional.scss */
 .section-institutional .banner .banner-content__image {
   margin: 24px 0;
   vertical-align: middle;
@@ -13218,19 +13287,19 @@ body {
   height: auto;
 }
 
-/* line 117, ../nuvem/static/sass/_institutional.scss */
+/* line 129, ../nuvem/static/sass/_institutional.scss */
 .section-institutional .box {
   background-color: #ebede6;
   margin-bottom: 100px;
 }
 
-/* line 121, ../nuvem/static/sass/_institutional.scss */
+/* line 133, ../nuvem/static/sass/_institutional.scss */
 .section-institutional .box-fixheight {
   max-height: 400px;
   margin-bottom: 200px;
 }
 
-/* line 125, ../nuvem/static/sass/_institutional.scss */
+/* line 137, ../nuvem/static/sass/_institutional.scss */
 .section-institutional .box-fixheight .box-content {
   padding: 0;
   align-items: flex-start;
@@ -13238,30 +13307,30 @@ body {
 }
 
 @media (min-width: 768px) {
-  /* line 117, ../nuvem/static/sass/_institutional.scss */
+  /* line 129, ../nuvem/static/sass/_institutional.scss */
   .section-institutional .box {
     padding: 100px 0;
   }
 }
 
-/* line 140, ../nuvem/static/sass/_institutional.scss */
+/* line 152, ../nuvem/static/sass/_institutional.scss */
 .section-institutional .box-strip {
   margin: 0 -20px;
 }
 
 @media (min-width: 768px) {
-  /* line 140, ../nuvem/static/sass/_institutional.scss */
+  /* line 152, ../nuvem/static/sass/_institutional.scss */
   .section-institutional .box-strip {
     margin: 0;
   }
 }
 
-/* line 147, ../nuvem/static/sass/_institutional.scss */
+/* line 159, ../nuvem/static/sass/_institutional.scss */
 .section-institutional .box-strip img {
   max-width: 100%;
 }
 
-/* line 152, ../nuvem/static/sass/_institutional.scss */
+/* line 164, ../nuvem/static/sass/_institutional.scss */
 .section-institutional .box-content {
   padding: 60px 0;
   height: 100%;
@@ -13270,37 +13339,46 @@ body {
   justify-content: center;
 }
 
-/* line 164, ../nuvem/static/sass/_institutional.scss */
+/* line 176, ../nuvem/static/sass/_institutional.scss */
 .section-institutional .box-content__text-big {
   max-width: 60%;
 }
 
-/* line 167, ../nuvem/static/sass/_institutional.scss */
+/* line 179, ../nuvem/static/sass/_institutional.scss */
 .section-institutional .box-content__text-big p {
+  font-family: 'Poiret One', cursive;
   font-size: 19px;
+  font-weight: 900;
 }
 
-/* line 174, ../nuvem/static/sass/_institutional.scss */
+/* line 186, ../nuvem/static/sass/_institutional.scss */
+.section-institutional .box-content__text p {
+  font-family: 'Poiret One', cursive;
+  font-size: 18px;
+  font-weight: 900;
+}
+
+/* line 194, ../nuvem/static/sass/_institutional.scss */
 .section-institutional .box-content__title h4 {
   font-size: 30px;
   text-transform: uppercase;
 }
 
-/* line 181, ../nuvem/static/sass/_institutional.scss */
+/* line 201, ../nuvem/static/sass/_institutional.scss */
 .section-institutional .box-flex-center {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* line 189, ../nuvem/static/sass/_institutional.scss */
+/* line 209, ../nuvem/static/sass/_institutional.scss */
 .section-institutional .box-puzzle__text {
   text-align: center;
   padding: 30px 0;
   border-bottom: 1px solid #4d4d4d;
 }
 
-/* line 194, ../nuvem/static/sass/_institutional.scss */
+/* line 214, ../nuvem/static/sass/_institutional.scss */
 .section-institutional .box-puzzle__text h2 {
   font-size: 22px;
   font-weight: normal;
@@ -13308,36 +13386,36 @@ body {
   text-transform: uppercase;
 }
 
-/* line 200, ../nuvem/static/sass/_institutional.scss */
+/* line 220, ../nuvem/static/sass/_institutional.scss */
 .section-institutional .box-puzzle__text h2 a {
   color: #4d4d4d;
 }
 
-/* line 205, ../nuvem/static/sass/_institutional.scss */
+/* line 225, ../nuvem/static/sass/_institutional.scss */
 .section-institutional .box-puzzle__text p {
   font-size: 12px;
 }
 
-/* line 209, ../nuvem/static/sass/_institutional.scss */
+/* line 229, ../nuvem/static/sass/_institutional.scss */
 .section-institutional .box-puzzle__text a {
   color: #4d4d4d;
   font-size: 12px;
   text-transform: uppercase;
 }
 
-/* line 216, ../nuvem/static/sass/_institutional.scss */
+/* line 236, ../nuvem/static/sass/_institutional.scss */
 .section-institutional .box-puzzle__image {
   text-align: center;
   width: 100%;
   position: relative;
 }
 
-/* line 221, ../nuvem/static/sass/_institutional.scss */
+/* line 241, ../nuvem/static/sass/_institutional.scss */
 .section-institutional .box-puzzle__image img {
   max-width: 100%;
 }
 
-/* line 225, ../nuvem/static/sass/_institutional.scss */
+/* line 245, ../nuvem/static/sass/_institutional.scss */
 .section-institutional .box-puzzle__image-overlay {
   background-color: rgba(0, 0, 0, 0.6);
   position: absolute;
@@ -13351,13 +13429,13 @@ body {
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
-  /* line 225, ../nuvem/static/sass/_institutional.scss */
+  /* line 245, ../nuvem/static/sass/_institutional.scss */
   .section-institutional .box-puzzle__image-overlay {
     transition: none;
   }
 }
 
-/* line 237, ../nuvem/static/sass/_institutional.scss */
+/* line 257, ../nuvem/static/sass/_institutional.scss */
 .section-institutional .box-puzzle__image-info {
   position: absolute;
   top: 50%;
@@ -13373,13 +13451,13 @@ body {
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
-  /* line 237, ../nuvem/static/sass/_institutional.scss */
+  /* line 257, ../nuvem/static/sass/_institutional.scss */
   .section-institutional .box-puzzle__image-info {
     transition: none;
   }
 }
 
-/* line 246, ../nuvem/static/sass/_institutional.scss */
+/* line 266, ../nuvem/static/sass/_institutional.scss */
 .section-institutional .box-puzzle__image-info h2 {
   color: #ffffff;
   font-size: 22px;
@@ -13388,42 +13466,42 @@ body {
   text-transform: uppercase;
 }
 
-/* line 253, ../nuvem/static/sass/_institutional.scss */
+/* line 273, ../nuvem/static/sass/_institutional.scss */
 .section-institutional .box-puzzle__image-info h2 a {
   color: #ffffff;
 }
 
-/* line 258, ../nuvem/static/sass/_institutional.scss */
+/* line 278, ../nuvem/static/sass/_institutional.scss */
 .section-institutional .box-puzzle__image-info p {
   color: #ffffff;
   font-size: 12px;
 }
 
-/* line 263, ../nuvem/static/sass/_institutional.scss */
+/* line 283, ../nuvem/static/sass/_institutional.scss */
 .section-institutional .box-puzzle__image-info a {
   color: #ffffff;
   font-size: 12px;
   text-transform: uppercase;
 }
 
-/* line 271, ../nuvem/static/sass/_institutional.scss */
+/* line 291, ../nuvem/static/sass/_institutional.scss */
 .section-institutional .box-puzzle__image:hover .box-puzzle__image-overlay, .section-institutional .box-puzzle__image:hover .box-puzzle__image-info, .section-institutional .box-puzzle__image:focus .box-puzzle__image-overlay, .section-institutional .box-puzzle__image:focus .box-puzzle__image-info, .section-institutional .box-puzzle__image:active .box-puzzle__image-overlay, .section-institutional .box-puzzle__image:active .box-puzzle__image-info {
   opacity: 1;
 }
 
-/* line 279, ../nuvem/static/sass/_institutional.scss */
+/* line 299, ../nuvem/static/sass/_institutional.scss */
 .page-institutional {
   padding-bottom: 50px;
 }
 
 @media (min-width: 992px) {
-  /* line 279, ../nuvem/static/sass/_institutional.scss */
+  /* line 299, ../nuvem/static/sass/_institutional.scss */
   .page-institutional {
     padding-top: 100px;
   }
 }
 
-/* line 286, ../nuvem/static/sass/_institutional.scss */
+/* line 306, ../nuvem/static/sass/_institutional.scss */
 .page-institutional__title {
   margin: 40px 0 25px;
   border-bottom: solid 1px #e6e6e6;
@@ -13432,20 +13510,20 @@ body {
 }
 
 @media (min-width: 992px) {
-  /* line 286, ../nuvem/static/sass/_institutional.scss */
+  /* line 306, ../nuvem/static/sass/_institutional.scss */
   .page-institutional__title {
     text-align: left;
   }
 }
 
-/* line 296, ../nuvem/static/sass/_institutional.scss */
+/* line 316, ../nuvem/static/sass/_institutional.scss */
 .page-institutional__title h1 {
   font-size: 21px;
   text-transform: uppercase;
   font-weight: 700;
 }
 
-/* line 303, ../nuvem/static/sass/_institutional.scss */
+/* line 323, ../nuvem/static/sass/_institutional.scss */
 .page-institutional__sidebar {
   border-top: 1px solid #e6e6e6;
   margin-top: 30px;
@@ -13453,14 +13531,14 @@ body {
 }
 
 @media (min-width: 992px) {
-  /* line 303, ../nuvem/static/sass/_institutional.scss */
+  /* line 323, ../nuvem/static/sass/_institutional.scss */
   .page-institutional__sidebar {
     border-top: 0;
     margin-top: 10px;
   }
 }
 
-/* line 313, ../nuvem/static/sass/_institutional.scss */
+/* line 333, ../nuvem/static/sass/_institutional.scss */
 .page-institutional__sidebar h6 {
   font-size: 16px;
   font-weight: 700;
@@ -13468,7 +13546,7 @@ body {
   margin: 0 0 40px 0;
 }
 
-/* line 320, ../nuvem/static/sass/_institutional.scss */
+/* line 340, ../nuvem/static/sass/_institutional.scss */
 .page-institutional__sidebar ul {
   list-style: none;
   padding: 0;
@@ -13476,13 +13554,13 @@ body {
   text-transform: uppercase;
 }
 
-/* line 324, ../nuvem/static/sass/_institutional.scss */
+/* line 344, ../nuvem/static/sass/_institutional.scss */
 .page-institutional__sidebar ul li {
   margin-bottom: 15px;
   padding-left: 20px;
 }
 
-/* line 328, ../nuvem/static/sass/_institutional.scss */
+/* line 348, ../nuvem/static/sass/_institutional.scss */
 .page-institutional__sidebar ul li a {
   color: #4d4d4d;
   font-size: 14px;
@@ -13504,8 +13582,8 @@ body {
 
 /* line 9, ../nuvem/static/sass/_register.scss */
 .section-register__form {
-  max-width: 400px;
-  min-width: 400px;
+  max-width: 370px;
+  min-width: 370px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13516,15 +13594,17 @@ body {
   /* line 9, ../nuvem/static/sass/_register.scss */
   .section-register__form {
     margin: 0 auto;
+    max-width: 400px;
+    min-width: 400px;
   }
 }
 
-/* line 21, ../nuvem/static/sass/_register.scss */
+/* line 23, ../nuvem/static/sass/_register.scss */
 .section-register__form form {
   width: 100%;
 }
 
-/* line 25, ../nuvem/static/sass/_register.scss */
+/* line 27, ../nuvem/static/sass/_register.scss */
 .section-register__form h1 {
   font-size: 20px;
   margin-bottom: 60px;
@@ -13532,19 +13612,19 @@ body {
   font-weight: normal;
 }
 
-/* line 32, ../nuvem/static/sass/_register.scss */
+/* line 34, ../nuvem/static/sass/_register.scss */
 .section-register__form .actions {
   text-align: center;
   padding-top: 20px;
 }
 
-/* line 36, ../nuvem/static/sass/_register.scss */
+/* line 38, ../nuvem/static/sass/_register.scss */
 .section-register__form .actions a, .section-register__form .actions span {
   display: block;
   font-size: 12px;
 }
 
-/* line 42, ../nuvem/static/sass/_register.scss */
+/* line 44, ../nuvem/static/sass/_register.scss */
 .section-register__form .actions span a {
   display: inline;
 }
@@ -13587,6 +13667,16 @@ body {
 .section-orders .card-pedidos .card-body:nth-child(2) .wrapper {
   border-top: 0;
   padding-top: 20px;
+}
+
+/* line 2, ../nuvem/static/sass/_search.scss */
+.section-search .section-title {
+  margin-bottom: 50px;
+}
+
+/* line 6, ../nuvem/static/sass/_search.scss */
+.section-search .section-category--list:nth-child(2) .col-6 {
+  padding-top: 0;
 }
 
 /*# sourceMappingURL=maps/style.css.map */

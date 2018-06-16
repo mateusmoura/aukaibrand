@@ -1,16 +1,17 @@
+{% set show_sidebar = settings.product_filters and (filter_categories or insta_colors or other_colors or size_properties_values or variants_properties) %}
+{% paginate by 60 %}
+{# Only remove this if you want to take away the theme onboarding advices #}
+{% set show_help = not has_products %}
+
 <!-- NOVO SITE -->
     <section class="section-category">
       <div class="container-fluid">
         {% snipplet "product/product-grid.tpl" %}
       </div>
     </section>
-
 <!-- FIM NOVO SITE -->
 
-{% set show_sidebar = settings.product_filters and (filter_categories or insta_colors or other_colors or size_properties_values or variants_properties) %}
-{% paginate by 60 %}
-{# Only remove this if you want to take away the theme onboarding advices #}
-{% set show_help = not has_products %}
+
 {% if settings.category_banner_top %} 
     {% include 'snipplets/banner.tpl' %}
 {% endif %} 

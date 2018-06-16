@@ -132,6 +132,8 @@
                             {% include "snipplets/variants.tpl" with {'quickshop': false} %}
                         {% endif %}
 
+                        <a href="https://drive.google.com/file/d/0Bw1wirL_r8UUcTNubGQtNzZBUmQ0STF3ZXhsclR0RGZPNXRZ/view" class="btn btn-link btn-sizeguide" target="_blank">{{ "Guia de tamanhos" | translate }}</a>
+
                         {% if product.available and product.display_price %}
                             <div class="product-quantity">
                                 <label for="selectQuantity">

@@ -75,13 +75,13 @@ const site = {
                   'position': 'fixed',
                 });
                 
-                if (documentWidth > 990) {
-                  $('.logo-preta', header).addClass('fadeOut');
+                // if (documentWidth > 990) {
+                //   $('.logo-preta', header).addClass('fadeOut');
                   
-                  setTimeout(() => {
-                    $('.logo-preta-2', header).addClass('fadeIn');
-                  }, 500);
-                }
+                //   setTimeout(() => {
+                //     $('.logo-preta-2', header).addClass('fadeIn');
+                //   }, 500);
+                // }
             } else {
                 $("#header-slim").stop().animate({  top: -140  }, 120);
                 $(".header__content").removeClass("header-branca");
@@ -90,10 +90,10 @@ const site = {
                   'position': 'absolute',
                 });
 
-                if (documentWidth > 990) {
-                  $('.logo-preta', header).removeClass('fadeOut');
-                  $('.logo-preta-2', header).removeClass('fadeIn');
-                }
+                // if (documentWidth > 990) {
+                //   $('.logo-preta', header).removeClass('fadeOut');
+                //   $('.logo-preta-2', header).removeClass('fadeIn');
+                // }
             }
         });
     } else {

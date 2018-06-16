@@ -114,20 +114,20 @@ es "Inicio"
 pt "Home"
 en "Home"
 
-es "Carrito de Compras"
 pt "Carrinho de Compras"
+es "Carrito de Compras"
 en "Shopping Cart"
 
-es "Carrito de compras"
 pt "Carrinho de compras"
+es "Carrito de compras"
 en "Shopping cart"
 
 es "Producto"
 pt "Produto"
 en "Product"
 
-es "Cantidad"
 pt "Quantidade"
+es "Cantidad"
 en "Quantity"
 
 es "Precio"
@@ -154,8 +154,8 @@ es "Cambiar Cantidades"
 pt "Alterar Quantidades"
 en "Update quantities"
 
-es "Iniciar Compra"
 pt "Finalizar Compra"
+es "Iniciar Compra"
 en "Go to Checkout"
 
 es "Seguir comprando"
@@ -920,8 +920,9 @@ pt "Mostrar o botão de 'Continuar comprando' no carrinho de compras"
 es "Edición avanzada de CSS"
 pt "Edição de CSS avançada"
 
-es "Carrito de compras"
 pt "Carrinho de compras"
+es "Carrito de compras"
+en "Shopping Cart"
 
 es "Acá podés escribir código CSS para que se muestre en tu sitio web."
 pt "Aqui, você poderá colocar código css para que se mostre em sua página"
@@ -1368,8 +1369,8 @@ es "En hasta 12 cuotas con tarjeta de crédito"
 pt "Em até 12x sem juros"
 en "Upto 12x without interests"
 
-es "Talle"
 pt "Tamanho"
+es "Talle"
 en "Size"
 
 es "S"
@@ -1388,8 +1389,8 @@ es "XL"
 pt "GG"
 en "XL"
 
-es "Color"
 pt "Cor"
+es "Color"
 en "Color"
 
 es "Más colores"
@@ -1527,8 +1528,8 @@ es "¿Te gusta lo que ves? ¡Suscribite y recibí todas nuestras novedades!"
 pt "Inscreva-se para receber novidades!"
 en "Susbscribe and get all the news!"
 
-es "Editar carrito"
 pt "Editar carrinho"
+es "Editar carrito"
 en "Edit my cart"
 
 es "Carrito de compras rápidas"
@@ -1562,3 +1563,12 @@ en "Follow the latest trends, sales and styles"
 
 pt "Ver opções"
 en "View options"
+
+pt "Sobre nós"
+en "About us"
+
+pt "Informações"
+en "Information"
+
+pt "Guia de tamanhos"
+en "Size Guide"
