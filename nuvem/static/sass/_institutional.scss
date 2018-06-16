@@ -131,8 +131,11 @@
     margin-bottom: 100px;
 
     &-fixheight {
-      max-height: 400px;
-      margin-bottom: 200px;
+      margin-bottom: 20%;
+
+      @include desktops {
+        max-height: 400px;
+      }
 
       .box-content {
         padding: 0;
