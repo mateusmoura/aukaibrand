@@ -45,14 +45,14 @@
 
       <div class="product-price-wrapper {% if not product.display_price%}hidden{% endif %}" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
         <span class="product-price-compare {% if not product.compare_at_price %}hidden{% endif %}">
-          {{ "De" | translate }}
+          {# {{ "De" | translate }} #}
           <span class="product-compare-price-display"><strike>{{ product.compare_at_price | money }}</strike></span>
         </span>
 
         <meta itemprop="priceCurrency" content="{{ product.currency }}" />
 
         <span class="product-price" itemprop="price" content="{{ product.price / 100 }}" {% if not product.display_price %}class="hidden"{% endif %}>
-          {{ "Por" | translate }}
+          {# {{ "Por" | translate }} #}
           <span>{{ product.price | money }}</span>
         </span>
         

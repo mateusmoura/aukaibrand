@@ -1,6 +1,12 @@
 
 
 .section-category {
+  margin-top: 60px;
+
+  @include desktops {
+    margin-top: 0;
+  }
+
   .container-fluid {
     padding: 0;
   }
@@ -85,7 +91,7 @@
       min-height: 70px;
       bottom: 0;
       position: absolute;
-      padding-bottom: 15px;
+      padding-bottom: 2px;
       z-index: 10;
       text-align: center;
       width: 100%;
@@ -94,6 +100,7 @@
       @include desktops {
         bottom: auto;
         top: 0px;
+        padding-bottom: 15px;
         padding: 15% 0 0;
         @include opacity(0);
        // height: 100%;

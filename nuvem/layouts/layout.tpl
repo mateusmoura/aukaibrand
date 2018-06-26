@@ -1,11 +1,21 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:og="http://opengraphprotocol.org/schema/">
 <head>
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'GA_TRACKING_ID');
+    </script>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
     <title>{{ page_title }}</title>
     <meta name="description" content="{{ page_description }}" />
+    <meta name="google-site-verification" content="5rDVbicVR5vmRgNGmjVm3DAFGYzV0qsH6MzTAhJ112o" />
     {% if settings.fb_admins %}
         <meta property="fb:admins" content="{{ settings.fb_admins }}" />
     {% endif %}
@@ -62,7 +72,7 @@
     #}
 
     {{ '//fonts.googleapis.com/css?family=Roboto:300,400,700' | css_tag }}
-    {{ '//fonts.googleapis.com/css?family=Poiret+One' | css_tag }}
+    {{ '//fonts.googleapis.com/css?family=Cinzel:400,700,900' | css_tag }}
     
     {% set nojquery = true %}
     {{ "//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" | script_tag }}
@@ -284,7 +294,7 @@
                                 <h4>Aukai Journey</h4>
                         
                                 <div class="footer__info-text">
-                                    <p>{{ "Explore o mundo da Aukai atraves de brilhantes historias e estradas percorridas em Joias" | translate }}</p>
+                                    <p>{{ "Explore o mundo Aukai" | translate }}</p>
                                 </div>
                         
                                 <div class="footer__info-link">

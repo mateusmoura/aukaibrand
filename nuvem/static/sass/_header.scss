@@ -10,7 +10,7 @@
   width: 100%;
   padding: 0;
   background: transparent;
-  z-index: 52;
+  z-index: 9999;
 
   &.black {
     .header__content .nav__bar .nav__bar--links > li > .nav__bar--link
@@ -350,7 +350,7 @@
   border: none;
   max-width: 315px;
   width: calc(100% - 60px);
-  z-index: 1002;
+  z-index: 99999;
   @include transition(all 0.4s cubic-bezier(0.46, 0.01, 0.32, 1));
 
   &.nav__bar--opended {

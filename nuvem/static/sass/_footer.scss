@@ -29,8 +29,7 @@
       font-size: 20px;
       margin-bottom: 20px;
       text-transform: uppercase;
-      font-family: 'Poiret One', cursive;
-      font-weight: 900;
+      font-family: 'Cinzel', serif;
     }
 
     &-text {
@@ -183,7 +182,6 @@
       font-size: 14px;
       margin-bottom: 20px;
       text-align: center;
-      display: block;
 
       @include desktops {
         display: block;

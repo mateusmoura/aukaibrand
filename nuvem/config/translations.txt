@@ -1555,8 +1555,8 @@ en "Sign up"
 pt "Atendimento ao consumidor"
 en "Customer Care"
 
-pt "Explore o mundo da Aukai atraves de brilhantes historias e estradas percorridas em Joias"
-en "Explore the world of Aukai through brilliant stories and roads covered in Jewels"
+pt "Explore o mundo Aukai"
+en "Explore the world Aukai"
 
 pt "Siga as últimas tendências, vendas e estilos"
 en "Follow the latest trends, sales and styles"

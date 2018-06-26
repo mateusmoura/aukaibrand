@@ -207,11 +207,9 @@
     </div>
 
     <div class="product-details__description">
-        <div class="container no-gutters">
-            <div class="row no-gutters">
-                <div class="col-12 col-lg-4">
-                    {{ product.description }}
-                </div>
+        <div class="container">
+            <div class="row">
+                {{ product.description }}
             </div>
         </div>
     </div>
