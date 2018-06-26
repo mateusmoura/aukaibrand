@@ -114,10 +114,10 @@
                                         <div class="row">
                                             <div class="col-4 col-lg-4">
                                                 <figure>
-                                                    <img class="d-block w-100" src="{{ 'images/new/carousel/carousel-foto-004.jpg' | static_url }}" alt="First slide">
+                                                    <img class="d-block w-100" src="{{ 'images/new/carousel/carousel-013.png' | static_url }}" alt="First slide">
 
                                                     <figcaption>
-                                                        Japão
+                                                        Brasília
                                                     </figcaption>
                                                 </figure>
                                             </div>

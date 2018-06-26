@@ -12936,6 +12936,11 @@ body {
   font-size: 10px !important;
 }
 
+/* line 365, ../nuvem/static/sass/_product.scss */
+.section-related-products .product-price {
+  margin-bottom: 0 !important;
+}
+
 /* line 1, ../nuvem/static/sass/_login.scss */
 .section-login {
   margin-bottom: 60px;
@@ -13324,10 +13329,10 @@ body {
 @media (min-width: 992px) {
   /* line 130, ../nuvem/static/sass/_institutional.scss */
   .section-institutional .box-fixheight {
+
     max-height: 480px;
   }
 }
-
 
 /* line 137, ../nuvem/static/sass/_institutional.scss */
 .section-institutional .box-fixheight .box-content {
