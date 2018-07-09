@@ -121,6 +121,11 @@
 {# Only remove this if you want to take away the theme onboarding advices #}
 {% set show_help = not has_products %}
 <body itemscope itemtype="http://schema.org/WebPage" itemid="body">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MJV9P63"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
     {{ social_js }}
     {% if template == 'account.login' or template == 'account.register' %}
     <script>
