@@ -1,21 +1,29 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:og="http://opengraphprotocol.org/schema/">
 <head>
-    <!-- Global Site Tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121403340-1"></script>
     <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
-    gtag('config', 'GA_TRACKING_ID');
+    gtag('config', 'UA-121403340-1');
     </script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MJV9P63');</script>
+    <!-- End Google Tag Manager -->
+    <meta name="google-site-verification" content="5rDVbicVR5vmRgNGmjVm3DAFGYzV0qsH6MzTAhJ112o" />
+
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
     <title>{{ page_title }}</title>
     <meta name="description" content="{{ page_description }}" />
-    <meta name="google-site-verification" content="5rDVbicVR5vmRgNGmjVm3DAFGYzV0qsH6MzTAhJ112o" />
     {% if settings.fb_admins %}
         <meta property="fb:admins" content="{{ settings.fb_admins }}" />
     {% endif %}
